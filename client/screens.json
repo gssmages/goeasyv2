@@ -1,6 +1,6 @@
 {
   "id": "app",
-  "name": "goeasymobile",
+  "name": "goeasyv2",
   "startScreen": "app.login",
   "screens": [
     {

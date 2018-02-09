@@ -1,14 +1,14 @@
 {
-  "name": "goeasymobile",
-  "description": "",
+  "name": "goeasyv2",
+  "description": "Goeasy mobile app using API",
   "defaultLayout": "phone-portrait",
   "previewToken": "0abfb0e3",
-  "uiCommonVersion": "5.2.1",
+  "uiCommonVersion": "5.2.14",
   "creatorId": "gssmages",
-  "id": "goeasymobile",
-  "previewImageURL": "/previews/0abfb0e3-goeasymobile/app/login.png",
+  "id": "goeasyv2_2",
+  "previewImageURL": "/previews/0abfb0e3-goeasyv2_2/app/login.png",
   "creatorName": "Magesh Babu S",
   "isVersioned": true,
-  "githubRepo": "https://github.com/gssmages/goeasymobile",
+  "githubRepo": "https://github.com/gssmages/goeasyv2",
   "sdks": []
 }
