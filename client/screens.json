@@ -101,12 +101,6 @@
       "model": "adhoctripcancellation"
     },
     {
-      "id": "adhocpopup",
-      "name": "adhocpopup",
-      "sourceScreenId": "app.blank",
-      "sourceAppId": "_blank"
-    },
-    {
       "id": "approvalvalidation",
       "name": "approvalvalidation",
       "sourceScreenId": "app.blank",
