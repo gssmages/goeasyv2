@@ -1,0 +1,133 @@
+{
+  "id": "app",
+  "name": "goeasymobile",
+  "startScreen": "app.login",
+  "screens": [
+    {
+      "id": "menu",
+      "name": "menu",
+      "sourceAppId": "_blank",
+      "sourceScreenId": "app.menu",
+      "model": "menus"
+    },
+    {
+      "id": "multiselect",
+      "name": "multiselect",
+      "sourceAppId": "_blank",
+      "sourceScreenId": "app.multiselect",
+      "model": "menus"
+    },
+    {
+      "id": "myapprovals",
+      "name": "myapprovals",
+      "sourceScreenId": "app.tableview.tabledatacaptivating",
+      "sourceAppId": "universaltemplates",
+      "model": "myapprovals"
+    },
+    {
+      "id": "mytrips",
+      "name": "mytrips",
+      "sourceScreenId": "app.tabbednavigation.tabscool",
+      "sourceAppId": "universaltemplates",
+      "model": "mytripstab"
+    },
+    {
+      "id": "popup",
+      "name": "popup",
+      "sourceScreenId": "app.popup",
+      "sourceAppId": "JSPopup",
+      "model": "popup"
+    },
+    {
+      "id": "alertwin",
+      "name": "alertwin",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank",
+      "model": "alertwin"
+    },
+    {
+      "id": "adhocrequest",
+      "name": "adhocrequest",
+      "sourceAppId": "_blank",
+      "sourceScreenId": "app.blank",
+      "model": "adhocrequest"
+    },
+    {
+      "id": "alertmsg",
+      "name": "alertmsg",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank"
+    },
+    {
+      "id": "login",
+      "name": "login",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank",
+      "model": "login"
+    },
+    {
+      "id": "home",
+      "name": "Home",
+      "sourceScreenId": "app.tabbednavigation.tabsconfident",
+      "sourceAppId": "universaltemplates",
+      "model": "home"
+    },
+    {
+      "id": "sidemenu",
+      "name": "sidemenu",
+      "sourceScreenId": "app.slideoutmenu.sidemenucool",
+      "sourceAppId": "universaltemplates",
+      "model": "sidemenu"
+    },
+    {
+      "id": "testadhocscreen",
+      "name": "testAdhocScreen",
+      "sourceScreenId": "app.listview.listviewcool",
+      "sourceAppId": "universaltemplates",
+      "model": "adhocrequest"
+    },
+    {
+      "id": "tripcancellation",
+      "name": "tripCancellation",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank",
+      "model": "tripCancellation"
+    },
+    {
+      "id": "adhoctripcancellation",
+      "name": "adhocTripCancellation",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank",
+      "model": "adhoctripcancellation"
+    },
+    {
+      "id": "adhocpopup",
+      "name": "adhocpopup",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank"
+    },
+    {
+      "id": "approvalvalidation",
+      "name": "approvalvalidation",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank",
+      "model": "approvalvalidation"
+    },
+    {
+      "id": "adhocfieldalerts",
+      "name": "adhocFieldAlerts",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank",
+      "model": "adhocfieldalerts"
+    },
+    {
+      "id": "privacyalertwin",
+      "name": "privacyAlertWin",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank",
+      "model": "privacyalertwin"
+    }
+  ],
+  "sourceAppId": "_blank",
+  "sourceScreenId": "app"
+}

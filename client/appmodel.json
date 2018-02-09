@@ -1,0 +1,654 @@
+{
+  "myapprovals": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "listItems": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "date": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "Bdpoint": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "requesttype": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "requestfor": {
+              "type": "string"
+            },
+            "isselect": {
+              "type": "boolean",
+              "update": {
+                "type": "change",
+                "dynamic": false,
+                "field": "listItems[item].isselect"
+              }
+            }
+          }
+        },
+        "update": {
+          "type": "change",
+          "dynamic": false
+        }
+      },
+      "approve": {
+        "type": "action"
+      },
+      "reject": {
+        "type": "action"
+      }
+    }
+  },
+  "mytrips": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "requesttype": {
+        "type": "string"
+      },
+      "requestfor": {
+        "type": "string"
+      },
+      "date": {
+        "type": "date",
+        "format": "DD-MMM-YYYY"
+      },
+      "shifttime": {
+        "type": "string"
+      }
+    }
+  },
+  "mytripstab": {
+    "type": "object",
+    "comment": "Tabs",
+    "properties": {
+      "tabs": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "icon": {
+              "type": "string"
+            },
+            "selected": {
+              "type": "boolean"
+            },
+            "action": {
+              "type": "action"
+            }
+          }
+        },
+        "update": {
+          "type": "none"
+        }
+      },
+      "mytrips": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "requesttype": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "requestfor": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "shifttime": {
+              "type": "string"
+            },
+            "cancel": {
+              "type": "action"
+            }
+          }
+        },
+        "update": {
+          "type": "action",
+          "action": [
+            "mytrips[item].cancel"
+          ]
+        }
+      },
+      "cancelledtrips": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "requesttype": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "fromdate": {
+              "type": "string"
+            },
+            "todate": {
+              "type": "string"
+            },
+            "shifttime": {
+              "type": "string"
+            },
+            "requestfor": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            }
+          }
+        },
+        "update": {
+          "type": "none"
+        }
+      },
+      "noshowlist": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "shift": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "pickupdrop": {
+              "type": "string"
+            },
+            "routeno": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "tripsheetno": {
+              "type": "string"
+            }
+          }
+        },
+        "update": {
+          "type": "none"
+        }
+      },
+      "getnoshows": {
+        "type": "action"
+      },
+      "getadhochistory": {
+        "type": "action"
+      },
+      "selectmonth": {
+        "type": "date",
+        "format": "MMM-YYYY"
+      },
+      "adhochistory": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "requesttype": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "fromdate": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "todate": {
+              "type": "string"
+            },
+            "requestfor": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "shifttime": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "approver": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            }
+          }
+        },
+        "update": {
+          "type": "none"
+        }
+      }
+    }
+  },
+  "menus": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "menulink": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "menuname": {
+              "type": "string"
+            },
+            "icons": {
+              "type": "string"
+            },
+            "link": {
+              "type": "action"
+            }
+          }
+        }
+      }
+    }
+  },
+  "popup": {
+    "type": "object",
+    "properties": {
+      "alert": {
+        "type": "action"
+      },
+      "confirm": {
+        "type": "action"
+      },
+      "alertConfirmationMessage": {
+        "type": "string"
+      },
+      "confirmPopupText": {
+        "type": "string"
+      },
+      "confirmMessage": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  },
+  "alertwin": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "comments": {
+        "type": "string",
+        "update": {
+          "type": "action",
+          "action": [
+            "ok"
+          ]
+        }
+      },
+      "ok": {
+        "type": "action"
+      },
+      "back": {
+        "type": "action"
+      }
+    }
+  },
+  "adhocrequest": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "RequestType": {
+        "type": "select"
+      },
+      "Date": {
+        "type": "date",
+        "format": "DD/MM/YYYY"
+      },
+      "FromDate": {
+        "type": "date",
+        "format": "DD/MM/YYYY"
+      },
+      "ToDate": {
+        "type": "date",
+        "format": "MM/DD/YYYY"
+      },
+      "RequestFor": {
+        "type": "select"
+      },
+      "Timing": {
+        "type": "select"
+      },
+      "Area": {
+        "type": "select"
+      },
+      "BordingPoint": {
+        "type": "select"
+      },
+      "SpecialNeed": {
+        "type": "select",
+        "update": {
+          "type": "none"
+        }
+      },
+      "ReasonForAdhoc": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "PleaseSpecify": {
+        "type": "select"
+      },
+      "sendRequest": {
+        "type": "action"
+      },
+      "Reset": {
+        "type": "action"
+      }
+    }
+  },
+  "home": {
+    "type": "object",
+    "comment": "Tabs",
+    "properties": {
+      "pickupreqtype": {
+        "type": "string"
+      },
+      "pickuparea": {
+        "type": "string"
+      },
+      "pickupshift": {
+        "type": "string"
+      },
+      "pickuproute": {
+        "type": "string"
+      },
+      "pickupboardtime": {
+        "type": "string"
+      },
+      "pickupvehiclemodel": {
+        "type": "string"
+      },
+      "pickupvehicleno": {
+        "type": "string"
+      },
+      "pickupdrivername": {
+        "type": "string"
+      },
+      "pickupdrivercontact": {
+        "type": "string"
+      },
+      "dropreqtype": {
+        "type": "string"
+      },
+      "droparea": {
+        "type": "string"
+      },
+      "dropshift": {
+        "type": "string"
+      },
+      "droproute": {
+        "type": "string"
+      },
+      "droporder": {
+        "type": "string"
+      },
+      "dropvehiclemodel": {
+        "type": "string"
+      },
+      "dropvehicleno": {
+        "type": "string"
+      },
+      "dropdrivername": {
+        "type": "string"
+      },
+      "dropdrivercontact": {
+        "type": "string"
+      }
+    }
+  },
+  "sidemenu": {
+    "type": "object",
+    "comment": "SlideOutMenu",
+    "properties": {
+      "logout": {
+        "type": "action"
+      },
+      "sidemenuitem": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "menuname": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "link": {
+              "type": "action"
+            }
+          }
+        },
+        "update": {
+          "type": "none"
+        }
+      }
+    }
+  },
+  "testadhocscreen": {
+    "type": "object",
+    "comment": "ListView",
+    "properties": {
+      "listItems": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "string": {
+              "type": "string",
+              "update": {
+                "type": "none"
+              }
+            },
+            "action": {
+              "type": "action"
+            },
+            "icon": {
+              "type": "string"
+            }
+          }
+        },
+        "update": {
+          "type": "none"
+        }
+      }
+    }
+  },
+  "tripcancellation": {
+    "type": "object",
+    "properties": {
+      "FromDate": {
+        "type": "date",
+        "format": "DD/MM/YYYY"
+      },
+      "ToDate": {
+        "type": "date",
+        "format": "DD/MM/YYYY"
+      },
+      "RequestFor": {
+        "type": "select"
+      },
+      "saveButton": {
+        "type": "action"
+      },
+      "closebutton": {
+        "type": "action"
+      }
+    }
+  },
+  "adhoctripcancellation": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "tripInfo": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "yes": {
+        "type": "action"
+      },
+      "no": {
+        "type": "action"
+      },
+      "back": {
+        "type": "action"
+      }
+    }
+  },
+  "tripCancellation": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "FromDate": {
+        "type": "date",
+        "format": "DD/MM/YYYY"
+      },
+      "ToDate": {
+        "type": "date",
+        "format": "DD/MM/YYYY"
+      },
+      "RequestFor": {
+        "type": "select"
+      },
+      "saveButton": {
+        "type": "action",
+        "selectContains": "Save"
+      },
+      "closebutton": {
+        "type": "action",
+        "selectContains": "Close"
+      }
+    }
+  },
+  "adhocfieldalerts": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "errorInfo": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "okButton": {
+        "type": "action"
+      },
+      "back": {
+        "type": "action"
+      }
+    }
+  },
+  "approvalvalidation": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "back": {
+        "type": "action"
+      },
+      "ok": {
+        "type": "action"
+      },
+      "message": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      }
+    }
+  },
+  "privacyalertwin": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "privacyInfo": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "No": {
+        "type": "action"
+      },
+      "Yes": {
+        "type": "action"
+      }
+    }
+  },
+  "login": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "username": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "error": {
+        "type": "string",
+        "update": {
+          "type": "none"
+        }
+      },
+      "submit": {
+        "type": "action"
+      }
+    }
+  }
+}

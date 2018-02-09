@@ -1,0 +1,71 @@
+{
+  "tabs": [
+    {
+      "name": "My Trips",
+      "icon": "ion-android-pin",
+      "selected": true
+    },
+    {
+      "name": "Cancelled Trips",
+      "icon": "ion-ios-close-outline",
+      "selected": false
+    },
+    {
+      "name": "No Shows",
+      "icon": "ion-android-hand",
+      "selected": false
+    }
+  ],
+  "mytrips": [
+    {
+      "date": "25-Aug-2017",
+      "requesttype": "Adhoc",
+      "requestfor": "pickup",
+      "shifttime": "17:00",
+      "cancel": null
+    },
+    {
+      "date": "25-Aug-2017",
+      "requesttype": "Adhoc",
+      "requestfor": "drop",
+      "shifttime": "17:00",
+      "cancel": null
+    },
+    {
+      "date": "-",
+      "requesttype": "REgular",
+      "requestfor": "Pickup and Drop",
+      "shifttime": "11:00 - 20:00",
+      "cancel": null
+    }
+  ],
+  "adhochistory": [
+    {
+      "requesttype": "Adhoc",
+      "fromdate": "31-Oct-2017",
+      "todate": "31-Oct-2017",
+      "requestfor": "Pickup and Drop",
+      "shifttime": "17:00 - 02:00",
+      "status": "Requested",
+      "approver": "James Ananth Geetha Ponkalan"
+    },
+    {
+      "requesttype": "Month end",
+      "fromdate": "29-Oct-2017",
+      "todate": "29-Oct-2017",
+      "requestfor": "Pickup",
+      "shifttime": "07:00",
+      "status": "Cancelled",
+      "approver": "Magesh Babu S"
+    },
+    {
+      "requesttype": "Holiday",
+      "fromdate": "14-Oct-2017",
+      "todate": "14-Oct-2017",
+      "requestfor": "Pickup and Drop",
+      "shifttime": "08:00 - 17:00",
+      "status": "Cancelled",
+      "approver": null
+    }
+  ]
+}

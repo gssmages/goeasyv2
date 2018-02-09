@@ -1,0 +1,39 @@
+<ion-view data-comp-id="ionic-view.1">
+    <ion-nav-bar align-title="" class=" bar-positive" data-comp-id="nav-bar.1">
+        <ion-nav-buttons side="left"></ion-nav-buttons>
+        <ion-nav-title data-comp-id="nav-title.1">Login</ion-nav-title>
+        <ion-nav-buttons side="right"></ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="" data-comp-id="ionic-content.1"
+        style="background: url('images/transportbg.jpg') center/100% 100% no-repeat;">
+        <div data-comp-id="div.1"
+            style="padding: 0px; background: rgba(124, 124, 124, 0.7); margin: 30% auto 0px; max-width: 400px; width: 90%;">
+            <div class="row" data-comp-id="row.1">
+                <div class="col nocolor light-border nocolor-bg" data-comp-id="column.1">
+                    <div data-comp-id="div.2" style="margin: auto; text-align:center;"><img data-comp-id="image.1" data-img="" ng-src="images/flex.png" style="">
+                        <div class=" light" data-comp-id="text.1"
+                            style="font-size: 20px; font-weight: bold;">Go Easy</div>
+                    </div>
+                    <div class=" light-bg" data-comp-id="div.3"
+                        style="margin: 20px 10px 0px; padding: 10px;">
+                        <label class="item item-input" data-comp-id="textInput.1">
+                            <i class="icon ion-person placeholder-icon">Label</i>
+                            <input ng-model="data.username" placeholder="adid" type="text">
+                        </label>
+                        <label class="item item-input" data-comp-id="textInput.2">
+                            <i class="icon ion-key placeholder-icon">Label</i>
+                            <input ng-model="data.password" placeholder="password" type="password">
+                        </label>
+                        <button class="button button-block button-positive" data-comp-id="button.1"
+                            ng-click="login()">Login</button>
+                    </div>
+                    <div class="row" data-comp-id="row.2">
+                        <div class="col" data-comp-id="column.2">
+                            <div class=" assertive" data-comp-id="text.2" ng-bind="data.error">Some text</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

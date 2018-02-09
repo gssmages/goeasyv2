@@ -1,0 +1,133 @@
+<ion-view data-comp-id="ionic-view.1">
+    <ion-content data-comp-id="ionic-content.1"></ion-content>
+    <ion-nav-bar align-title="" class=" bar-positive" data-comp-id="nav-bar.1">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon ion-navicon" data-comp-id="button.1"
+                ng-click="app.showMenu()"></button>
+        </ion-nav-buttons>
+        <ion-nav-title data-comp-id="nav-title.1">Adhoc Request</ion-nav-title>
+        <ion-nav-buttons side="right"></ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content data-comp-id="ionic-content.2">
+        <div data-comp-id="div.1">
+            <div class="row" data-comp-id="row.1">
+                <div class="col" data-comp-id="column.1">
+                    <div data-comp-id="text.1">Request Type</div>
+                    <select-list data-comp-id="selectList.1" ng-change="typeChange();"
+                        ng-model="data.RequestType" no-label="true"></select-list>
+                </div>
+            </div>
+            <div class="row" data-comp-id="row.2" ng-if="dateField">
+                <div class="col" data-comp-id="column.2">
+                    <div data-comp-id="text.2">Date</div>
+                    <label class="item item-input item-date-icon positive-icon"
+                        data-comp-id="dateInput.1">
+                        <span class="input-label" style="width: 0%;"></span>
+                        <input date-format="DD-MMM-YYYY" max="2100-12-12" min="1900-01-01"
+                            ng-change="submitApprovals()" ng-model-options="{allowInvalid: true}"
+                            ng-model="data.Date" type="date">
+                    </label>
+                </div>
+            </div>
+            <div class="row" data-comp-id="row.3" style="">
+                <div class="col col-50" data-comp-id="column.3" ng-if="fromDateField" style="">
+                    <div data-comp-id="text.3">From Date</div>
+                    <label class="item item-input item-date-icon positive-icon"
+                        data-comp-id="dateInput.2" style="padding:0;">
+                        <span class="input-label" style="width: 0%;"></span>
+                        <input date-format="DD-MMM-YYYY" max="2100-12-12" min="1900-01-01"
+                            ng-model-options="{allowInvalid: true}" ng-model="data.FromDate" type="date">
+                    </label>
+                </div>
+                <div class="col col-50" data-comp-id="column.4" ng-if="toDateField" style="">
+                    <div data-comp-id="text.4">To Date</div>
+                    <label class="item item-input item-date-icon positive-icon"
+                        data-comp-id="dateInput.3" style="padding:0;">
+                        <span class="input-label" style="width: 0px;"></span>
+                        <input date-format="DD-MM-YYYY" max="2100-12-12" min="1900-01-01"
+                            ng-model-options="{allowInvalid: true}" ng-model="data.ToDate" type="date">
+                    </label>
+                </div>
+            </div>
+            <div class="row" data-comp-id="row.4">
+                <div class="col" data-comp-id="column.5">
+                    <div data-comp-id="text.5">Request For</div>
+                    <select-list data-comp-id="selectList.2" ng-change="submitApprovals()"
+                        ng-model="data.RequestFor" no-label="true"></select-list>
+                </div>
+            </div>
+            <div class="row" data-comp-id="row.5">
+                <div class="col" data-comp-id="column.6">
+                    <div data-comp-id="text.6">Timing</div>
+                    <select-list data-comp-id="selectList.3" ng-change="submitApprovals()"
+                        ng-model="data.Timing" no-label="true"></select-list>
+                </div>
+            </div>
+            <div class="row" data-comp-id="row.6">
+                <div class="col" data-comp-id="column.7">
+                    <div data-comp-id="text.7">Area</div>
+                    <select-list data-comp-id="selectList.4" ng-change="submitApprovals()"
+                        ng-model="data.Area" no-label="true" select-class=" item-stacked-label"></select-list>
+                </div>
+            </div>
+            <div class="row" data-comp-id="row.7">
+                <div class="col" data-comp-id="column.8">
+                    <div data-comp-id="text.8">Boarding/Drop Point</div>
+                    <select-list data-comp-id="selectList.5" ng-change="submitApprovals()"
+                        ng-model="data.BordingPoint" no-label="true"></select-list>
+                </div>
+            </div>
+            <div class="row" data-comp-id="row.8">
+                <div class="col" data-comp-id="column.9">
+                    <div data-comp-id="text.9">Special Need</div>
+                    <div class="row" data-comp-id="row.9" style="padding: 0px; margin: 0px;">
+                        <div class="col" data-comp-id="column.10"
+                            ng-repeat="item in data.SpecialNeed.options" style="">
+                            <ion-radio class="radio-button" data-comp-id="radio.1"
+                                ng-change="submitApprovals()" ng-model="data.SpecialNeed.selected"
+                                ng-value="item" style="padding: 0px;">{{item.label}}</ion-radio>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="col light-border text-right" data-comp-id="column.17"-->
+                <!--    style="border-width: 0px; border-style: initial; border-color: initial;">-->
+                <!--<ion-toggle class="toggle-item toggle-inline" data-comp-id="toggle.1"-->
+                <!--    ng-model="data.SpecialNeed" style="border-radius: 0px;"></ion-toggle>-->
+                <!--</div>-->
+            </div>
+            <div class="row" data-comp-id="row.10" ng-if="data.PleaseSpecify">
+                <div class="col" data-comp-id="column.11">
+                    <div data-comp-id="text.10">Please Specify</div>
+                    <select-list data-comp-id="selectList.6" ng-change="submitApprovals()"
+                        ng-model="data.PleaseSpecify" no-label="true" select-class=" item-stacked-label"></select-list>
+                </div>
+            </div>
+            <div class="row" data-comp-id="row.11">
+                <div class="col" data-comp-id="column.12">
+                    <div data-comp-id="text.11" style="margin: 0px;">Reason For Adhoc</div>
+                    <label class="item item-input" data-comp-id="textInput.1"
+                        style="margin: 0px; padding: 0px;">
+                        <span class="input-label" style="width: 0px;"></span>
+                        <input ng-blur="submitApprovals()" ng-model="data.ReasonForAdhoc" type="text">
+                    </label>
+                </div>
+                <!--<div class="col col-66" data-comp-id="column.21">-->
+                <!--</div>-->
+            </div>
+        </div>
+    </ion-content>
+    <div class="footer-button-bar" data-comp-id="footer-bar-buttons.1"
+        dynamic-floating-footer="" style="padding: 0px;">
+        <div class="row" data-comp-id="row.12" style="padding: 0px;">
+            <div class="col" data-comp-id="column.13" style="padding: 0px; margin: 0px;">
+                <button class="button button-block button-positive" data-comp-id="button.2"
+                    ng-click="app.action('adhocrequest', 'sendRequest', this)" style="margin: 0px;">Send Request</button>
+            </div>
+            <div class="col text-center" data-comp-id="column.14" style="padding: 0px;">
+                <button class="button button-block button-positive" data-comp-id="button.3"
+                    ng-click="app.action('adhocrequest', 'Reset', this)"
+                    style="margin: 0px; border-radius: 0px;">Reset</button>
+            </div>
+        </div>
+    </div>
+</ion-view>

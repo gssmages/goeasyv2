@@ -1,0 +1,20 @@
+{
+  "menulinks": [
+    {
+      "menuname": "Dashboard",
+      "link": null
+    },
+    {
+      "menuname": "Adhoc Request",
+      "link": null
+    },
+    {
+      "menuname": "My Trips",
+      "link": null
+    },
+    {
+      "menuname": "My Approvals",
+      "link": null
+    }
+  ]
+}

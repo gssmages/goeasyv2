@@ -1,0 +1,14 @@
+{
+  "name": "goeasymobile",
+  "description": "",
+  "defaultLayout": "phone-portrait",
+  "previewToken": "0abfb0e3",
+  "uiCommonVersion": "5.2.1",
+  "creatorId": "gssmages",
+  "id": "goeasymobile",
+  "previewImageURL": "/previews/0abfb0e3-goeasymobile/app/login.png",
+  "creatorName": "Magesh Babu S",
+  "isVersioned": true,
+  "githubRepo": "https://github.com/gssmages/goeasymobile",
+  "sdks": []
+}

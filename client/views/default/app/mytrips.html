@@ -1,0 +1,171 @@
+<ion-view data-comp-id="ionic-view.1">
+    <ion-nav-bar align-title="" class=" bar-positive" data-comp-id="nav-bar.1">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon ion-navicon" data-comp-id="button.1"
+                ng-click="app.showMenu()"></button>
+        </ion-nav-buttons>
+        <ion-nav-title data-comp-id="nav-title.1">My Trips</ion-nav-title>
+        <ion-nav-buttons side="right"></ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="" data-comp-id="ionic-content.1">
+        <!--Tabs-->
+        <div data-comp-id="div.1">
+            <div class="row light-bg" data-comp-id="row.1" style="padding: 0px;">
+                <div class="col text-center" data-comp-id="column.1"
+                    ng-click="app.action('mytripstab', 'tabs[item].action', this)"
+                    ng-repeat="item in data.tabs"
+                    ng-style="item.selected ? {borderBottom: '3px solid rgb(67, 152, 210)'} : {backgroundColor: 'rgb(243,243,243)'}"
+                    style="margin: 0px 0px -5px;">
+                    <i class="icon {{item.icon}} positive ion-android-pin" data-comp-id="icon.1"
+                        ng-if="item.selected" style="font-size: 30px;"></i>
+                    <i class="icon {{item.icon}} calm ion-ios-clock" data-comp-id="icon.2"
+                        ng-if="!item.selected" style="font-size: 30px;"></i>
+                    <div class=" positive" data-comp-id="text.1" ng-bind="item.name"
+                        ng-if="item.selected" style="font-weight: normal;">Mytrips</div>
+                    <div class=" calm" data-comp-id="text.2" ng-bind="item.name"
+                        ng-if="!item.selected" style="font-weight: normal;">Tab 1</div>
+                </div>
+            </div>
+        </div>
+        <div data-comp-id="div.2" ng-if="data.tabs[0].selected">
+            <div class="card" data-comp-id="div.3"
+                ng-if="item.date!=&quot;No data available in table&quot;"
+                ng-repeat="item in data.mytrips" style="padding: 0px;">
+                <div class="row stable" data-comp-id="row.2" style="padding: 0px;">
+                    <div class="col text-left stable-bg" data-comp-id="column.2" style="">
+                        <div class="text-center" data-comp-id="text.3" ng-bind="item.requesttype"
+                            style="color: rgb(4, 3, 3); font-weight: bold; float: left;">Adhoc</div>
+                    </div>
+                    <div class="col stable stable-bg" data-comp-id="column.3">
+                        <button
+                            class="button fa-icon fa-car button-positive button-footer-right button-small icon-left"
+                            data-comp-id="button.2" ng-click="noShowPopup(item)"
+                            style="border-radius: 4px; font-size: 16px; padding: 0px 4px; float: right;">Cancel</button>
+                    </div>
+                </div>
+                <div class="row" data-comp-id="row.3">
+                    <div class="col" data-comp-id="column.4">
+                        <div class="row" data-comp-id="row.4">
+                            <div class="col col-20" data-comp-id="column.5">
+                                <i class="icon ion-calendar positive" data-comp-id="icon.3"
+                                    style="font-size: 32px;"></i>
+                            </div>
+                            <div class="col" data-comp-id="column.6">
+                                <div data-comp-id="text.4" ng-bind="item.date" ng-if="item.date !=&quot;-&quot;"
+                                    style="font-weight: bold;"></div>
+                                <div data-comp-id="text.5"
+                                    ng-bind="item.requestfor +&quot; at &quot;+ item.shifttime">Drop at 5:00 pm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-comp-id="div.4" ng-if="data.tabs[1].selected">
+            <div class="card" data-comp-id="div.5"
+                ng-if="item.requesttype!=&quot;No data available in table&quot;"
+                ng-repeat="item in data.cancelledtrips" style="padding: 0px;">
+                <div class="row stable" data-comp-id="row.5" style="padding: 0px;">
+                    <div class="col text-left stable-bg" data-comp-id="column.7" style="">
+                        <div class="text-center" data-comp-id="text.6" ng-bind="item.requesttype"
+                            style="color: rgb(4, 3, 3); font-weight: bold; float: left;">Adhoc</div>
+                    </div>
+                    <div class="col stable stable-bg" data-comp-id="column.8"></div>
+                </div>
+                <div class="row" data-comp-id="row.6">
+                    <div class="col" data-comp-id="column.9">
+                        <div class="row" data-comp-id="row.7">
+                            <div class="col col-20" data-comp-id="column.10">
+                                <i class="icon ion-calendar positive" data-comp-id="icon.4"
+                                    style="font-size: 32px;"></i>
+                            </div>
+                            <div class="col" data-comp-id="column.11">
+                                <div data-comp-id="text.7"
+                                    ng-bind="item.fromdate +&quot;- &quot; +item.fromdate"
+                                    style="font-weight: bold;"></div>
+                                <div data-comp-id="text.8"
+                                    ng-bind="item.requestfor +&quot;- &quot;+ item.shifttime">Drop at 5:00 pm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-comp-id="div.6" ng-if="data.tabs[2].selected">
+            <div class="row" data-comp-id="row.8">
+                <div class="col" data-comp-id="column.12">
+                    <label class="item item-input item-date-icon positive-icon item-stacked-label"
+                        data-comp-id="dateInput.1">
+                        <span class="input-label">Select Month</span>
+                        <input date-format="MMM-YYYY" max="2100-12-12" min="1900-01-01"
+                            ng-model-options="{allowInvalid: true}" ng-model="data.selectmonth" type="date">
+                    </label>
+                </div>
+            </div>
+            <div class="row" data-comp-id="row.9">
+                <div class="col" data-comp-id="column.13">
+                    <button class="button button-block button-positive" data-comp-id="button.3"
+                        ng-click="app.action('mytripstab', 'getnoshows', this)">Get No Shows</button>
+                </div>
+                <div class="col" data-comp-id="column.14">
+                    <button class="button button-block button-positive" data-comp-id="button.4"
+                        ng-click="app.action('mytripstab', 'getadhochistory', this)">Get Adhoc History</button>
+                </div>
+            </div>
+            <div class="card" data-comp-id="div.7"
+                ng-if="item.date!=&quot;No data available in table&quot;"
+                ng-repeat="item in data.noshowlist" style="padding: 0px;">
+                <div class="row stable" data-comp-id="row.10" style="padding: 0px;">
+                    <div class="col text-left stable-bg" data-comp-id="column.15" style="">
+                        <div class="text-center" data-comp-id="text.9" ng-bind="item.date"
+                            style="color: rgb(4, 3, 3); font-weight: bold; float: left;">Adhoc</div>
+                    </div>
+                    <div class="col stable stable-bg" data-comp-id="column.16"></div>
+                </div>
+                <div class="row" data-comp-id="row.11">
+                    <div class="col" data-comp-id="column.17">
+                        <div class="row" data-comp-id="row.12">
+                            <div class="col col-20" data-comp-id="column.18">
+                                <i class="icon ion-calendar positive" data-comp-id="icon.5"
+                                    style="font-size: 32px;"></i>
+                            </div>
+                            <div class="col" data-comp-id="column.19">
+                                <div data-comp-id="text.10"
+                                    ng-bind="item.shift +&quot;- &quot;+ item.pickupdrop" style="font-weight: bold;">Date :
+                                    {{item.date}}</div>
+                                <div data-comp-id="text.11"
+                                    ng-bind="&quot;Route : &quot;+item.routeno +&quot; and &quot;+ &quot;Tripsheet No &quot;+ item.tripsheetno"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" card" data-comp-id="div.8"
+                ng-if="item.requesttype!=&quot;No data available in table&quot;"
+                ng-repeat="item in data.adhochistory">
+                <div class="row" data-comp-id="row.13" style="padding: 0px; margin: 0px;">
+                    <div class="col stable-bg dark" data-comp-id="column.20">
+                        <div data-comp-id="text.12" ng-bind="item.requesttype"
+                            style="font-weight: bold;">Some text</div>
+                    </div>
+                </div>
+                <div class="row" data-comp-id="row.14">
+                    <div class="col col-20 text-center" data-comp-id="column.21"
+                        style="padding: 10px 0px 0px;">
+                        <i class="icon ion-calendar positive" data-comp-id="icon.6"
+                            style="font-size: 32px;"></i>
+                    </div>
+                    <div class="col" data-comp-id="column.22" style="padding: 10px;">
+                        <div data-comp-id="text.13" ng-bind="item.fromdate" style="font-weight: bold;">Some text</div>
+                        <div data-comp-id="text.14"
+                            ng-bind="item.requestfor +&quot; at &quot;+ item.shifttime">Some text</div>
+                        <div class=" positive" data-comp-id="text.15"
+                            ng-bind="&quot;Status : &quot; + item.status" style="font-weight: bold;">Some text</div>
+                        <div data-comp-id="text.16" ng-bind="&quot;Approver : &quot; + item.approver"
+                            ng-if="item.approver!=&quot;&quot;" style="font-size: 10px;">Some text</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

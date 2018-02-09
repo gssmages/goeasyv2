@@ -1,0 +1,45 @@
+<ion-view data-comp-id="ionic-view.1">
+    <ion-nav-bar align-title="" class=" bar-positive" data-comp-id="nav-bar.1">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon ion-navicon" data-comp-id="button.1"></button>
+        </ion-nav-buttons>
+        <ion-nav-title data-comp-id="nav-title.1">Alert/Confirm</ion-nav-title>
+        <ion-nav-buttons side="right">
+            <button class="button button-icon ion-home" data-comp-id="button.2"></button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content data-comp-id="ionic-content.1"
+        style="background-color: rgb(238, 238, 238);">
+        <div data-comp-id="div.1">
+            <div class="row" data-comp-id="row.1">
+                <div class="col" data-comp-id="column.1">
+                    <div class="row" data-comp-id="row.2">
+                        <div class="col text-center" data-comp-id="column.2">
+                            <button class="button button-block button-positive ion-alert-circled"
+                                data-comp-id="button.3" ng-click="alert()"
+                                style="border-color: rgba(255, 255, 255, 0);">&nbsp;&nbsp;&nbsp;Alert</button>
+                        </div>
+                    </div>
+                    <div class="row" data-comp-id="row.3">
+                        <div class="col" data-comp-id="column.3">
+                            <div data-comp-id="text.1">{{app.data.alertConfirmationMessage}}</div>
+                        </div>
+                    </div>
+                    <div class="row" data-comp-id="row.4">
+                        <div class="col" data-comp-id="column.4">
+                            <button class="button button-block button-positive ion-checkmark-circled"
+                                data-comp-id="button.4" ng-click="confirm()"
+                                style="border-color: rgba(255, 255, 255, 0);">&nbsp;&nbsp;&nbsp;Confirm</button>
+                            <div class="row" data-comp-id="row.5">
+                                <div class="col" data-comp-id="column.5">{{app.data.confirmPopupText}}</div>
+                            </div>
+                            <div class="row" data-comp-id="row.6">
+                                <div class="col" data-comp-id="column.6">{{app.data.confirmMessage}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,31 @@
+<ion-view data-comp-id="ionic-view.1">
+    <ion-nav-bar align-title="" class=" bar-positive" data-comp-id="nav-bar.1">
+        <ion-nav-buttons side="left"></ion-nav-buttons>
+        <ion-nav-title data-comp-id="nav-title.1">Goeasy Message</ion-nav-title>
+        <ion-nav-buttons side="right">
+            <button class="button button-icon ion-ios-arrow-back" data-comp-id="button.1"
+                ng-click="app.action('alertwin', 'back', this)"></button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content data-comp-id="ionic-content.1">
+        <div class="row" data-comp-id="row.1">
+            <div class="col" data-comp-id="column.1">
+                <label class="item item-input item-stacked-label" data-comp-id="textAreaInput.1">
+                    <span class="input-label">Enter Comments</span>
+                    <textarea ng-model="data.comments" rows="4"></textarea>
+                </label>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar align-title="center" class=" bar-positive"
+        data-comp-id="footer-bar.1" dynamic-fixed-footer=""
+        style="padding: 0px; margin: 0px;">
+        <div class="row" data-comp-id="row.2" style="margin: 0px; padding: 0px;">
+            <div class="col" data-comp-id="column.2" style="margin: 0px; padding: 0px;">
+                <a class="button button-positive button-full" data-comp-id="button.2"
+                    ng-click="app.action('alertwin', 'ok', this)"
+                    style="margin: 0px; padding: 0px; float: none;">Ok</a>
+            </div>
+        </div>
+    </ion-footer-bar>
+</ion-view>

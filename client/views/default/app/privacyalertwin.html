@@ -1,0 +1,36 @@
+<ion-view data-comp-id="ionic-view.1">
+    <ion-nav-bar align-title="" class=" bar-positive" data-comp-id="nav-bar.1">
+        <ion-nav-buttons side="left"></ion-nav-buttons>
+        <ion-nav-title data-comp-id="nav-title.1">Privacy Confirmation</ion-nav-title>
+        <ion-nav-buttons side="right"></ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content data-comp-id="ionic-content.1">
+        <div class="row" data-comp-id="row.1">
+            <div class="col" data-comp-id="column.1">
+                <div data-comp-id="text.1" ng-bind-html="data.privacyInfo">Some text</div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class=" bar-positive" data-comp-id="footer-bar.1"
+        dynamic-fixed-footer="" style="padding: 0px; margin: 0px;">
+        <div class="row" data-comp-id="row.2" style="margin: 0px; padding: 0px;">
+            <div class="col" data-comp-id="column.2" style="margin: 0px; padding: 0px;">
+                <div class="row" data-comp-id="row.3"
+                    style="padding: 0px; margin: 0px; border-width: 0px; border-style: initial; border-color: initial; border-radius: 0px;">
+                    <div class="col" data-comp-id="column.3"
+                        style="margin: 0px; padding: 0px; border-width: 0px; border-style: initial; border-color: initial; border-radius: 0px;">
+                        <button class="button button-block" data-comp-id="button.1"
+                            ng-click="app.action('privacyalertwin', 'Yes', this)"
+                            style="margin: 0px; padding: 0px;">Accept</button>
+                    </div>
+                    <div class="col" data-comp-id="column.4"
+                        style="padding: 0px; border-width: 0px; border-style: initial; border-color: initial; border-radius: 0px; margin: 0px;">
+                        <button class="button button-block" data-comp-id="button.2"
+                            ng-click="app.action('privacyalertwin', 'No', this)"
+                            style="margin: 0px; padding: 0px;">Decline</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-footer-bar>
+</ion-view>
