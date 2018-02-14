@@ -18,7 +18,8 @@
       "type": "action"
     },
     "IsLogin": {
-      "type": "identifier"
+      "type": "identifier",
+      "control": "exists"
     }
   },
   "connect": []
