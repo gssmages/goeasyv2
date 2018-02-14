@@ -18,7 +18,7 @@
       "type": "action"
     },
     "IsLogin": {
-      "type": "string"
+      "type": "identifier"
     }
   },
   "connect": []
