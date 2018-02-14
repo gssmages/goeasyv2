@@ -20,7 +20,7 @@
     "IsLogin": {
       "type": "identifier",
       "control": "exists",
-      "selector": "body"
+      "selector": "#viewport"
     }
   },
   "connect": []
