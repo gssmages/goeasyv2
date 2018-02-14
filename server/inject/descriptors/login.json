@@ -20,7 +20,7 @@
     "IsLogin": {
       "type": "identifier",
       "control": "exists",
-      "selector": "b"
+      "selector": "body"
     }
   },
   "connect": []
