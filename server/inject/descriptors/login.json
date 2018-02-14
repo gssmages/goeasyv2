@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "comment": "",
+  "properties": {
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "error": {
+      "type": "string",
+      "update": {
+        "type": "none"
+      }
+    },
+    "submit": {
+      "type": "action"
+    }
+  },
+  "connect": []
+}
