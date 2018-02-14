@@ -19,7 +19,8 @@
     },
     "IsLogin": {
       "type": "identifier",
-      "control": "exists"
+      "control": "exists",
+      "selector": "body"
     }
   },
   "connect": []
