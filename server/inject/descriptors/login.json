@@ -16,6 +16,9 @@
     },
     "submit": {
       "type": "action"
+    },
+    "IsLogin": {
+      "type": "string"
     }
   },
   "connect": []
