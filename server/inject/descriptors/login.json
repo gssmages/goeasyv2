@@ -23,5 +23,14 @@
       "selector": "body"
     }
   },
-  "connect": []
+  "connect": [
+    {
+      "match": [
+        "IsLogin"
+      ],
+      "screens": [
+        "login"
+      ]
+    }
+  ]
 }
