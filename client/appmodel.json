@@ -447,6 +447,13 @@
       },
       "dropdrivercontact": {
         "type": "string"
+      },
+      "home": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {}
+        }
       }
     }
   },
