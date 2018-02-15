@@ -25,12 +25,6 @@
   },
   "connect": [
     {
-      "match": [
-        "IsLogin"
-      ],
-      "event": "getMytrips"
-    },
-    {
       "match": [],
       "screens": [
         "login"
