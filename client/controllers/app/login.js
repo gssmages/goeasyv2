@@ -16,7 +16,7 @@ function app_login($scope, app, $q, powwowLoginNew) {
     // var credentials = {'username': $scope.data.username, 'password': $scope.data.password};
     // app.call('login.loginBasic', credentials);
     var params={};
-     app.action('goeasymethods.getMytrips',params);
+     app.('goeasymethods.getMytrips',params);
     };
  
     app.origEstablishConnection = app.establishConnection;
