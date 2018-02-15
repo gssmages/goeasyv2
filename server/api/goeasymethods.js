@@ -35,10 +35,10 @@ exports.getMytrips = function (page,params) {
         if (this.readyState == 4 && this.status == 200) {
             var response = JSON.parse(this.responseText);
 
-            // page.data(function(data) {
-            //     data.dashboard_list = response;
-            // })
-            //     .screen("dashboard");
+             page.data(function(data) {
+                 data.mytrips = response;
+             })
+                 .screen("mytripstab");
         }
     };
     xmlhttp.open("GET", url, false);
