@@ -13,8 +13,8 @@ function app_login($scope, app, $q, powwowLoginNew) {
     $scope.login = function () {
       //  $scope.app.showLoading('Logging in');
     //    app.action('login', 'login', this);
-    var credentials = {'username': $scope.data.username, 'password': $scope.data.password};
-    app.call('login.loginBasic', credentials);
+    // var credentials = {'username': $scope.data.username, 'password': $scope.data.password};
+    // app.call('login.loginBasic', credentials);
     };
  
     app.origEstablishConnection = app.establishConnection;
