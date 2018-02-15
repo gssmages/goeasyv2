@@ -23,12 +23,5 @@
       "selector": "body"
     }
   },
-  "connect": [
-    {
-      "match": [],
-      "screens": [
-        "login"
-      ]
-    }
-  ]
+  "connect": []
 }
