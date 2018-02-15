@@ -25,9 +25,7 @@
   },
   "connect": [
     {
-      "match": [
-        "IsLogin"
-      ],
+      "match": [],
       "screens": [
         "login"
       ]
