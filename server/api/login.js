@@ -23,8 +23,11 @@ exports.login = function (page,params) {
                 .screen("home");
         }
     };
-    xmlhttp.open("POST", url, false);
-    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xmlhttp.send(JSON.stringify(enCredential));
+    // xmlhttp.open("POST", url, false);
+    // xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    // xmlhttp.send(JSON.stringify(enCredential));
+    xmlhttp.open("GET", url, false);
+     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+     xmlhttp.send();
 
 }
