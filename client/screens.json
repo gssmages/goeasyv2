@@ -1,7 +1,7 @@
 {
   "id": "app",
   "name": "goeasyv2",
-  "startScreen": "app.login",
+  "startScreen": "app.home",
   "screens": [
     {
       "id": "menu",
