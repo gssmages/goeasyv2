@@ -268,13 +268,6 @@
         "update": {
           "type": "none"
         }
-      },
-      "mytripstab": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {}
-        }
       }
     }
   },
