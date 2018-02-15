@@ -23,5 +23,12 @@
       "selector": "body"
     }
   },
-  "connect": []
+  "connect": [
+    {
+      "match": [
+        "IsLogin"
+      ],
+      "event": "getMytrips"
+    }
+  ]
 }
