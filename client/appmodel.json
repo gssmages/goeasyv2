@@ -655,6 +655,13 @@
       },
       "submit": {
         "type": "action"
+      },
+      "login": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {}
+        }
       }
     }
   }
