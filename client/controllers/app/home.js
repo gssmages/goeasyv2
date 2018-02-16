@@ -1,7 +1,9 @@
 angular.module('app').controller('app_home', app_home);
 function app_home($scope, app) {
     'use strict';
-    app.init($scope);
+    app.init($scope,function(){
+        console.log('data in home page-->', $scope.data);
+    });
     $scope.pickupdiv = true;
        $scope.dropdiv = false;
     $scope.showdiv = function(data) {
