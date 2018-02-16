@@ -8,15 +8,15 @@ function app_login($scope, app,$ionicLoading) {
 angular.module('app').controller('app_login', app_login);
 function app_login($scope, app, $q, powwowLoginNew) {
     'use strict';
-    app.init($scope);
+    app.init($scope,function(){
+        console.log("login-->"+$scope.data);
+    });
  
     $scope.login = function () {
-      //  $scope.app.showLoading('Logging in');
-    //    app.action('login', 'login', this);
+     
     var credentials = {'username': $scope.data.username, 'password': $scope.data.password};
     app.call('login.login', credentials);
-    // var params={};
-    //  app.call ('goeasymethods.getMytrips',params);
+    
     };
  
     app.origEstablishConnection = app.establishConnection;
