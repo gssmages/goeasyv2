@@ -13,7 +13,7 @@ function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
         if($scope.data){
         var alertPopup = $ionicPopup.alert({
          title: 'Error',
-         template: login.Message
+         template: $scope.data.login.Message
       });
 
       alertPopup.then(function(res) {
