@@ -10,21 +10,22 @@ function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
     'use strict';
     app.init($scope,function(){
         //console.log("login-->"+$scope.data);
+        invalidUser();
         if(!$scope.data){
             
         }
     });
     
-    // var invalidUser = function(){
-    //     var alertPopup = $ionicPopup.alert({
-    //      title: 'Error',
-    //      template: $scope.data.login.Message
-    //   });
+    var invalidUser = function(){
+        var alertPopup = $ionicPopup.alert({
+         title: 'Error',
+         template: $scope.data.login.Message
+      });
 
-    //   alertPopup.then(function(res) {
-    //      // Custom functionality....
-    //   });
-    // }
+      alertPopup.then(function(res) {
+         // Custom functionality....
+      });
+    }
     
     $scope.login = function () {
      
