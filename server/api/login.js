@@ -21,6 +21,12 @@ exports.login = function (page,params) {
             //     data.home = response;
             // })
             //     .screen("home");
+        }else{
+            var response = JSON.parse(this.responseText);
+             page.data(function(data) {
+                data.login = response;
+            })
+                .screen("login");
         }
     };
     xmlhttp.open("GET", url, false);
