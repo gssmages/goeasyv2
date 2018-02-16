@@ -11,6 +11,12 @@ function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
     app.init($scope,function(){
         //console.log("login-->"+$scope.data);
         if($scope.data){
+            invalidUser();
+        
+        }
+    });
+    
+    var invalidUser = function(){
         var alertPopup = $ionicPopup.alert({
          title: 'Error',
          template: $scope.data.login.Message
@@ -19,8 +25,7 @@ function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
       alertPopup.then(function(res) {
          // Custom functionality....
       });
-        }
-    });
+    }
     
     $scope.login = function () {
      
