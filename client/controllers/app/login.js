@@ -9,7 +9,7 @@ angular.module('app').controller('app_login', app_login);
 function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
     'use strict';
     app.init($scope,function(){
-        console.log("login-->"+$scope.data);
+        //console.log("login-->"+$scope.data);
         if($scope.data){
         var alertPopup = $ionicPopup.alert({
          title: 'Error',
