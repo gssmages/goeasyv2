@@ -76,7 +76,7 @@
                         <div class=" text-center" data-comp-id="text.13"
                             style="font-weight: bold; font-size: 10px;">Vehicle Model</div>
                         <div class=" text-center" data-comp-id="text.14"
-                            ng-bind="data.pickupvehiclemodel">Some text</div>
+                            ng-bind="data.home.PickupRequestDetail.VehicleTypeName">Some text</div>
                     </div>
                 </div>
             </div>
@@ -85,14 +85,16 @@
                     <div class=" calm-bg" data-comp-id="div.9">
                         <div class=" text-center" data-comp-id="text.15"
                             style="font-weight: bold; font-size: 10px;">Vehicle No</div>
-                        <div class=" text-center" data-comp-id="text.16" ng-bind="data.pickupvehicleno">Some text</div>
+                        <div class=" text-center" data-comp-id="text.16"
+                            ng-bind="data.home.PickupRequestDetail.RegNumber">Some text</div>
                     </div>
                 </div>
                 <div class="col" data-comp-id="column.10">
                     <div class=" calm-bg" data-comp-id="div.10">
                         <div class=" text-center" data-comp-id="text.17"
                             style="font-weight: bold; font-size: 10px;">Driver Name</div>
-                        <div class=" text-center" data-comp-id="text.18" ng-bind="data.pickupdrivername">Some text</div>
+                        <div class=" text-center" data-comp-id="text.18"
+                            ng-bind="data.home.PickupRequestDetail.pickupdrivername">Some text</div>
                     </div>
                 </div>
                 <div class="col" data-comp-id="column.11">
@@ -100,7 +102,7 @@
                         <div class=" text-center" data-comp-id="text.19"
                             style="font-weight: bold; font-size: 10px;">Driver Contact</div>
                         <div class=" text-center" data-comp-id="text.20"
-                            ng-bind="data.pickupdrivercontact">Some text</div>
+                            ng-bind="data.home.PickupRequestDetail.DriverContact">Some text</div>
                     </div>
                 </div>
             </div>
