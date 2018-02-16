@@ -12,14 +12,14 @@ function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
         //console.log("login-->"+$scope.data);
         if($scope.data){
             invalidUser();
-        
         }
     });
     
     var invalidUser = function(){
         var alertPopup = $ionicPopup.alert({
          title: 'Error',
-         template: $scope.data.login.Message
+         //template: $scope.data.login.Message
+         template:"invalid user.Try again"
       });
 
       alertPopup.then(function(res) {
