@@ -10,7 +10,7 @@ function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
     'use strict';
     app.init($scope,function(){
         //console.log("login-->"+$scope.data);
-        if($scope.data){
+        if(!$scope.data){
             invalidUser();
         }
     });
@@ -18,8 +18,7 @@ function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
     var invalidUser = function(){
         var alertPopup = $ionicPopup.alert({
          title: 'Error',
-         //template: $scope.data.login.Message
-         template:"invalid user.Try again"
+         template: $scope.data.login.Message
       });
 
       alertPopup.then(function(res) {
