@@ -10,10 +10,13 @@ function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
     'use strict';
     app.init($scope,function(){
         //console.log("login-->"+$scope.data);
-        
-        if(!$scope.data){
+        if($scope.data.login.Message!="")
+        {
             invalidUser();
         }
+        /*if(!$scope.data){
+            invalidUser();
+        }*/
     });
     
     var invalidUser = function(){
