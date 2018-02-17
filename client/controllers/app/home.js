@@ -17,6 +17,8 @@ function app_home($scope, app) {
      {
             $scope.pickupdropdiv = false;
        $scope.nopickupdiv = true;
+       $scope.pickupdiv = false;
+             $scope.dropdiv = false;
      }
     });
   
