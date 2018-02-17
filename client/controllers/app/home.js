@@ -3,11 +3,20 @@ function app_home($scope, app) {
     'use strict';
     app.init($scope,function(){
         console.log('data in home page-->',$scope.data.home.PickupRequestDetail);
-    });
-    $scope.pickupdropdiv = true;
+          $scope.pickupdropdiv = true;
        $scope.nopickupdiv = false;
      if($scope.data.home.PickupRequestDetail!==null)
      {
+           $scope.pickupdropdiv = true;
+       $scope.nopickupdiv = false;
+     }
+     else
+     {
+            $scope.pickupdropdiv = false;
+       $scope.nopickupdiv = true;
+     }
+    });
+  
     $scope.pickupdiv = true;
        $scope.dropdiv = false;
     $scope.showdiv = function(data) {
@@ -22,10 +31,5 @@ function app_home($scope, app) {
             $scope.dropdiv = true;
         }
     };
-     }
-     else
-     {
-            $scope.pickupdropdiv = false;
-       $scope.nopickupdiv = true;
-     }
+    
 }
