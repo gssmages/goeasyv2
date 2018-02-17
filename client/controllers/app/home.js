@@ -4,6 +4,10 @@ function app_home($scope, app) {
     app.init($scope,function(){
         //console.log('data in home page-->', $scope.data);
     });
+    $scope.pickupdropdiv = true;
+       $scope.nopickupdiv = false;
+     if($scope.data.home.PickupRequestDetail.RequestTypeName !== '')
+     {
     $scope.pickupdiv = true;
        $scope.dropdiv = false;
     $scope.showdiv = function(data) {
@@ -18,4 +22,9 @@ function app_home($scope, app) {
             $scope.dropdiv = true;
         }
     };
+     }
+     else
+     {
+         
+     }
 }
