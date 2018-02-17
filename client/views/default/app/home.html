@@ -9,7 +9,7 @@
     </ion-nav-bar>
     <ion-content class="" data-comp-id="ionic-content.1"
         style="background: url('images/transportbg.jpg') center/100% 100% no-repeat;">
-        <div data-comp-id="div.1">
+        <div data-comp-id="div.1" ng-show="pickupdropdiv">
             <div class="row light-bg" data-comp-id="row.1" style="padding: 0px;">
                 <div class="col text-center positive-bg " data-comp-id="column.1"
                     ng-click="showdiv('pickup')"
@@ -187,27 +187,27 @@
                 </div>
             </div>
         </div>
-        <div data-comp-id="div.26">
-            <div class="card" data-comp-display="card.1" data-comp-id="div.22"></div>
+        <div data-comp-id="div.22" ng-show="nopickupdiv">
+            <div class="card" data-comp-display="card.1" data-comp-id="div.23"></div>
         </div>
     </ion-content>
     <ion-footer-bar data-comp-id="footer-bar.1" dynamic-fixed-footer=""
         style="padding: 0px; margin: 0px;">
-        <div data-comp-id="div.23">
+        <div data-comp-id="div.24">
             <div class="row light-bg" data-comp-id="row.8" style="padding: 0px;">
                 <div class="col text-center positive-bg " data-comp-id="column.21"
                     ng-click="app.action('menuleft','mytrips')"
                     style="margin: 0px; padding: 10px 15px; border-right: 1px solid rgb(221, 221, 221);">
                     <i class="icon  ion-android-pin light" data-comp-id="icon.3"
                         style="font-size: 20px; float: left;"></i>
-                    <div class="light" data-comp-id="div.24" style="font-weight: bold;">My Trip</div>
+                    <div class="light" data-comp-id="div.25" style="font-weight: bold;">My Trip</div>
                 </div>
                 <div class="col text-center positive-bg" data-comp-id="column.22"
                     ng-click="app.action('menuleft','adhocrequest')"
                     style="margin: 0px; padding: 10px 15px; border-right: 1px solid rgb(221, 221, 221);">
                     <i class="icon  ion-android-time light" data-comp-id="icon.4"
                         style="font-size: 20px; float: left;"></i>
-                    <div class="light" data-comp-id="div.25" style="font-weight: bold;">Adhoc</div>
+                    <div class="light" data-comp-id="div.26" style="font-weight: bold;">Adhoc</div>
                 </div>
             </div>
         </div>
