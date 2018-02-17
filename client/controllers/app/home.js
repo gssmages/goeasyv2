@@ -17,7 +17,7 @@ function app_home($scope, app) {
      }
     });
   
-    $scope.pickupdiv = true;
+    $scope.pickupdiv = false;
        $scope.dropdiv = false;
     $scope.showdiv = function(data) {
         if(data=="pickup")
