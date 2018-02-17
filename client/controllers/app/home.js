@@ -25,6 +25,7 @@ function app_home($scope, app) {
      }
      else
      {
-         
+            $scope.pickupdropdiv = false;
+       $scope.nopickupdiv = true;
      }
 }
