@@ -5,10 +5,13 @@ function app_home($scope, app) {
         console.log('data in home page-->',$scope.data.home.PickupRequestDetail);
           $scope.pickupdropdiv = true;
        $scope.nopickupdiv = false;
+       $scope.pickupdiv; $scope.dropdiv;
      if($scope.data.home.PickupRequestDetail!==null)
      {
            $scope.pickupdropdiv = true;
             $scope.nopickupdiv = false;
+              $scope.pickupdiv = true;
+             $scope.dropdiv = false;
      }
      else
      {
@@ -17,8 +20,7 @@ function app_home($scope, app) {
      }
     });
   
-    $scope.pickupdiv = false;
-       $scope.dropdiv = false;
+  
     $scope.showdiv = function(data) {
         if(data=="pickup")
         {
