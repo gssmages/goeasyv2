@@ -8,7 +8,7 @@ function app_home($scope, app) {
      if($scope.data.home.PickupRequestDetail!==null)
      {
            $scope.pickupdropdiv = true;
-       $scope.nopickupdiv = false;
+            $scope.nopickupdiv = false;
      }
      else
      {
