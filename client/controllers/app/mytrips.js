@@ -2,6 +2,22 @@ angular.module('app').controller('app_mytrips', app_mytrips);
 function app_mytrips($scope, app) {
     'use strict';
     app.init($scope,function(){
+        var tabs={"tabs": [
+    {
+      "name": "My Trips",
+      "icon": "ion-android-pin",
+      "selected": true
+    },
+    {
+      "name": "Cancelled Trips",
+      "icon": "ion-ios-close-outline",
+      "selected": false
+    },
+    {
+      "name": "No Shows",
+      "icon": "ion-android-hand",
+      "selected": false
+    }]};
         //app.call('goeasymethods.getMytrips');
     });
     $scope.noShowPopup = function(item){
