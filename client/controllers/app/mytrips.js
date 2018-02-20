@@ -17,6 +17,7 @@ function app_mytrips($scope, app) {
         }
         else  if(data=="cancel")
         {
+            app.call('goeasymethods.getcanceltrips')
               $scope.mytripslist = false;
            $scope.cancellist=true;
       $scope.noshowlist=false;
