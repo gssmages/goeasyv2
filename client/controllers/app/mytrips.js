@@ -9,13 +9,13 @@ function app_mytrips($scope, app) {
      $scope.cancellist=false;
       $scope.noshowlist=false;
      $scope.showdiv = function(data) {
-        if(data=="one")
+        if(data=="mytrips")
         {
              $scope.mytripslist = true;
            $scope.cancellist=false;
       $scope.noshowlist=false;
         }
-        else  if(data=="two")
+        else  if(data=="cancel")
         {
               $scope.mytripslist = false;
            $scope.cancellist=true;
