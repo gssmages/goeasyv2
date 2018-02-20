@@ -2,19 +2,18 @@ angular.module('app').controller('app_mytrips', app_mytrips);
 function app_mytrips($scope, app) {
     'use strict';
     app.init($scope,function(){
-       
-        //app.call('goeasymethods.getMytrips');
-    });
-    $scope.mytripslist=true;
+       $scope.mytripslist=true;
      $scope.cancellist=false;
       $scope.noshowlist=false;
+        //app.call('goeasymethods.getMytrips');
+    });
+    
      $scope.showdiv = function(data) {
         if(data=="mytrips")
         {
              $scope.mytripslist = true;
            $scope.cancellist=false;
       $scope.noshowlist=false;
-      $scope.tabselected1=true;
         }
         else  if(data=="cancel")
         {
