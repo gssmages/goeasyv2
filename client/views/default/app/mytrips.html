@@ -91,7 +91,7 @@
                 ng-repeat="item in data.cancelledtrips" style="padding: 0px;">
                 <div class="row stable" data-comp-id="row.6" style="padding: 0px;">
                     <div class="col text-left stable-bg" data-comp-id="column.10" style="">
-                        <div class="text-center" data-comp-id="text.9" ng-bind="item.requesttype"
+                        <div class="text-center" data-comp-id="text.9" ng-bind="item.RequestTypeName"
                             style="color: rgb(4, 3, 3); font-weight: bold; float: left;">Adhoc</div>
                     </div>
                     <div class="col stable stable-bg" data-comp-id="column.11"></div>
@@ -104,11 +104,10 @@
                                     style="font-size: 32px;"></i>
                             </div>
                             <div class="col" data-comp-id="column.14">
-                                <div data-comp-id="text.10"
-                                    ng-bind="item.fromdate +&quot;- &quot; +item.fromdate"
+                                <div data-comp-id="text.10" ng-bind="item.FromDate +&quot;- &quot; +item.ToDate"
                                     style="font-weight: bold;"></div>
                                 <div data-comp-id="text.11"
-                                    ng-bind="item.requestfor +&quot;- &quot;+ item.shifttime">Drop at 5:00 pm</div>
+                                    ng-bind="item.RequestForName +&quot;- &quot;+ item.longShiftStartTime">Drop at 5:00 pm</div>
                             </div>
                         </div>
                     </div>
