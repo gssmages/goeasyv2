@@ -7,7 +7,7 @@ exports.getDashboard = function (page,params) {
 
     var xmlhttp = new XMLHttpRequest();
     //params are hard coded , need to make it dynamic.
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/DashBoardApi/GetDashboardDetails/?todaysdate=16-feb-2018&location=Chennai&employeeID=972088";
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/DashBoardApi/GetDashboardDetails/?todaysdate=17-feb-2018&location=Chennai&employeeID=941364";
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -28,7 +28,7 @@ exports.getMytrips = function (page,params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/MyTripsApi/GetMyTripsDetails/?employeeID=941364&todaydate=12-01-2017";
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/MyTripsApi/GetMyTripsDetails?todaydate=12-10-2017&employeeID=941364";
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -38,7 +38,7 @@ exports.getMytrips = function (page,params) {
              page.data(function(data) {
                  data.mytrips = response;
              })
-                 .screen("mytripstab");
+                 .screen("mytrips");
         }
     };
     xmlhttp.open("GET", url, false);
