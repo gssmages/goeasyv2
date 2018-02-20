@@ -14,6 +14,7 @@ function app_mytrips($scope, app) {
              $scope.mytripslist = true;
            $scope.cancellist=false;
       $scope.noshowlist=false;
+      $scope.tabselected1=true;
         }
         else  if(data=="cancel")
         {

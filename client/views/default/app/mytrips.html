@@ -29,19 +29,21 @@
         <div data-comp-id="div.2" style="padding: 0px;">
             <div class="row positive-bg" data-comp-id="row.2" style="padding: 0px;">
                 <div class="col text-center" data-comp-id="column.2"
-                    ng-click="showdiv(&quot;mytrips&quot;)"
+                    ng-click="showdiv('mytrips')"
                     ng-style="tabselected1 ? {borderBottom: '3px solid rgb(67, 152, 210)'} : {backgroundColor: '#c6ace2'}">
                     <i class="icon ion-android-pin light" data-comp-id="icon.3"
                         style="font-size: 30px;"></i>
                     <div class=" light" data-comp-id="text.3">My Trips</div>
                 </div>
                 <div class="col text-center" data-comp-id="column.3"
+                    ng-click="showdiv('cancel')"
                     ng-style="tabselected2 ? {borderBottom: '3px solid rgb(67, 152, 210)'} : {backgroundColor: '#c6ace2'}">
                     <i class="icon ion-android-cancel light" data-comp-id="icon.4"
                         style="font-size: 30px;"></i>
                     <div class=" light" data-comp-id="text.4">Cancelled Trips</div>
                 </div>
                 <div class="col text-center" data-comp-id="column.4"
+                    ng-click="showdiv('noshow')"
                     ng-style="tabselected3 ? {borderBottom: '3px solid rgb(67, 152, 210)'} : {backgroundColor: '#c6ace2'}">
                     <i class="icon ion-ios-clock light" data-comp-id="icon.5"
                         style="font-size: 30px;"></i>
