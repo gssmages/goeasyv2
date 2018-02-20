@@ -5,16 +5,27 @@ function app_mytrips($scope, app) {
        
         //app.call('goeasymethods.getMytrips');
     });
+    $scope.mytripslist=true;
+     $scope.cancellist=false;
+      $scope.noshowlist=false;
      $scope.showdiv = function(data) {
         if(data=="one")
         {
-             $scope.pickupdiv = true;
-            $scope.dropdiv = false;
+             $scope.mytripslist = true;
+           $scope.cancellist=false;
+      $scope.noshowlist=false;
+        }
+        else  if(data=="two")
+        {
+              $scope.mytripslist = false;
+           $scope.cancellist=true;
+      $scope.noshowlist=false;
         }
         else
         {
-             $scope.pickupdiv = false;
-            $scope.dropdiv = true;
+                $scope.mytripslist = false;
+           $scope.cancellist=false;
+      $scope.noshowlist=true;
         }
     };
     $scope.noShowPopup = function(item){
