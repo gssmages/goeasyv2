@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div data-comp-id="div.3">
+        <div data-comp-id="div.3" ng-show="mytripslist">
             <div class="card" data-comp-id="div.4"
                 ng-if="item.date!=&quot;No data available in table&quot;"
                 ng-repeat="item in data.mytrips.CancelMyTripDetails" style="padding: 0px;">
@@ -82,7 +82,7 @@
                 </div>
             </div>
         </div>
-        <div data-comp-id="div.5">
+        <div data-comp-id="div.5" ng-show="cancellist">
             <div class="card" data-comp-id="div.6"
                 ng-if="item.requesttype!=&quot;No data available in table&quot;"
                 ng-repeat="item in data.cancelledtrips" style="padding: 0px;">
@@ -112,7 +112,7 @@
                 </div>
             </div>
         </div>
-        <div data-comp-id="div.7">
+        <div data-comp-id="div.7" ng-show="noshowlist">
             <div class="row" data-comp-id="row.9">
                 <div class="col" data-comp-id="column.15">
                     <label class="item item-input item-date-icon positive-icon item-stacked-label"

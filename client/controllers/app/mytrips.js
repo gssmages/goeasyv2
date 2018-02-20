@@ -5,11 +5,18 @@ function app_mytrips($scope, app) {
        
         //app.call('goeasymethods.getMytrips');
     });
-    $scope.showmytrips = function(item){
-        console.log("no show click...!!!");
-     app.action('mytripstab', 'mytrips[item].cancel', this);
-    //  app.call('tripcancellation');
-    }
+     $scope.showdiv = function(data) {
+        if(data=="one")
+        {
+             $scope.pickupdiv = true;
+            $scope.dropdiv = false;
+        }
+        else
+        {
+             $scope.pickupdiv = false;
+            $scope.dropdiv = true;
+        }
+    };
     $scope.noShowPopup = function(item){
         console.log("no show click...!!!");
      app.action('mytripstab', 'mytrips[item].cancel', this);
