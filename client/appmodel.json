@@ -387,6 +387,13 @@
       },
       "Reset": {
         "type": "action"
+      },
+      "adhocDataList": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {}
+        }
       }
     }
   },
