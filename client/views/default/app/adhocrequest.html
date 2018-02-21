@@ -14,7 +14,7 @@
                 <div class="col" data-comp-id="column.1">
                     <div data-comp-id="text.1">Request Type</div>
                     <select-list data-comp-id="selectList.1" ng-change="typeChange();"
-                        ng-model="data.RequestType" no-label="true"></select-list>
+                        ng-model="data.adhocDataList.RequestTypeDetails" no-label="true"></select-list>
                 </div>
             </div>
             <div class="row" data-comp-id="row.2" ng-if="dateField">
@@ -53,14 +53,14 @@
                 <div class="col" data-comp-id="column.5">
                     <div data-comp-id="text.5">Request For</div>
                     <select-list data-comp-id="selectList.2" ng-change="submitApprovals()"
-                        ng-model="data.RequestFor" no-label="true"></select-list>
+                        ng-model="data.adhocDataList.RequestForDetails" no-label="true"></select-list>
                 </div>
             </div>
             <div class="row" data-comp-id="row.5">
                 <div class="col" data-comp-id="column.6">
                     <div data-comp-id="text.6">Timing</div>
                     <select-list data-comp-id="selectList.3" ng-change="submitApprovals()"
-                        ng-model="data.Timing" no-label="true"></select-list>
+                        ng-model="data.adhocDataList.ShiftTimeDetails" no-label="true"></select-list>
                 </div>
             </div>
             <div class="row" data-comp-id="row.6">
