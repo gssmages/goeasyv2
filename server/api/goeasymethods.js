@@ -38,7 +38,7 @@ exports.getMytrips = function (page,params) {
              page.data(function(data) {
                  data.mytrips = response;
              })
-                 .screen("mytripstab");
+                 .screen("mytrips");
         }
     };
     xmlhttp.open("GET", url, false);

@@ -24,7 +24,7 @@ exports.login = function (page,params) {
         }else{
             var response = JSON.parse(this.responseText);
              page.data(function(data) {
-                data.login = response;
+                data.error = response.Message;
             })
                 .screen("login");
         }
