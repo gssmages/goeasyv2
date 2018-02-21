@@ -1,5 +1,5 @@
 angular.module('app').controller('app_mytrips', app_mytrips);
-function app_mytrips($scope, app) {
+function app_mytrips($scope, app,$ionicPopup) {
     'use strict';
     app.init($scope,function(){
        $scope.mytripslist=true;
