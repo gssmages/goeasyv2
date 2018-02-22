@@ -46,11 +46,11 @@ exports.getMytrips = function (page,params) {
     xmlhttp.send();
 }
 
-exports.getAdhocdetails = function (page,params) {
+exports.getAdhocdetails = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/AdhocCabRequestApi/ReadAdhocCabRequestValues/?employeeID=988378";
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/AdhocCabRequestApi/ReadAdhocCabRequestValues/?employeeID=930754&locationID=1";
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -61,6 +61,48 @@ exports.getAdhocdetails = function (page,params) {
                  data.adhocDataList = response;
              })
                  .screen("adhocrequest");
+        }
+    };
+    xmlhttp.open("GET", url, false);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send();
+}
+exports.getMyApprovals = function (page, params) {
+
+    var xmlhttp = new XMLHttpRequest();
+    
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?status=1&loggedUser=880781";
+    var reqResponse = [];
+    
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+
+             page.data(function(data) {
+                 data.pendinglistitems = response;
+             })
+                 .screen("myapprovals");
+        }
+    };
+    xmlhttp.open("GET", url, false);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send();
+}
+exports.sendNoshow = function (page, params) {
+
+    var xmlhttp = new XMLHttpRequest();
+    
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?status=1&loggedUser=880781";
+    var reqResponse = [];
+    
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+
+             page.data(function(data) {
+                 data.pendinglistitems = response;
+             })
+                 .screen("myapprovals");
         }
     };
     xmlhttp.open("GET", url, false);
