@@ -26,7 +26,7 @@ function app_tripcancellation($scope, app) {
 }
      $scope.tripcancel = function(){
      
-		app.call('myapprovals.tripcancel', $scope.data);
+		app.call('goeasymethods.sendNoshow');
 
    };
 }
