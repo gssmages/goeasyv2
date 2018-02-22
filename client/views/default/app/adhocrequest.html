@@ -15,6 +15,11 @@
                     <div data-comp-id="text.1">Request Type</div>
                     <select-list data-comp-id="selectList.1" ng-change="typeChange();"
                         ng-model="data.adhocDataList.RequestTypeDetails" no-label="true"></select-list>
+                    <label class="item  item-input item-select-icon positive-icon"
+                        data-comp-id="selectInput.1">
+                        <span class="input-label">Select Label</span>
+                        <select ng-model="data.adhocDataList" ng-options="item.RequestTypeDetails"></select>
+                    </label>
                 </div>
             </div>
             <div class="row" data-comp-id="row.2" ng-if="dateField">
