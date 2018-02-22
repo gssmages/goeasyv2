@@ -5,7 +5,7 @@ function app_tripcancellation($scope, app) {
         $scope.Requestfor=[
             { "RequestForID":"1","RequestForName":"Pickup and Drop"},
             { "RequestForID":"2","RequestForName":"Pickup"},
-            { "RequestForID":"1","RequestForName":"Drop"}
+            { "RequestForID":"3","RequestForName":"Drop"}
             ];
     });
      $scope.tripcancel = function(){
