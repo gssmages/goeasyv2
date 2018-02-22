@@ -2,6 +2,8 @@ angular.module('app').controller('app_tripcancellation', app_tripcancellation);
 function app_tripcancellation($scope, app) {
     'use strict';
     app.init($scope,function(){
+        $scope.fromdate="";
+        $scope.fromdate="";
         $scope.requestfor=[
             { "RequestForID":"1","RequestForName":"Pickup and Drop"},
             { "RequestForID":"2","RequestForName":"Pickup"},
