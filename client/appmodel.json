@@ -275,6 +275,13 @@
         "update": {
           "type": "none"
         }
+      },
+      "noshow": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {}
+        }
       }
     }
   },
