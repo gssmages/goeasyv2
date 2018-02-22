@@ -6,14 +6,15 @@ function app_tripcancellation($scope, app) {
         $scope.todate="";
         $scope.minDate="21-02-2018";
         $scope.maxDate='23-02-2018';
-        $scope.requestfor=[
+      /*  $scope.requestfor=[
             { RequestForID:"1",RequestForName:"Pickup and Drop"},
             { RequestForID:"2",RequestForName:"Pickup"},
             { RequestForID:"3",RequestForName:"Drop"}
-            ];
+            ];*/
             
         console.log(requestfor);
     });
+    $scope.requestfor = [];
     $scope.loadOptions = function() {
   if ($scope.requestfor.length === 0) {
     $scope.requestfor=[
