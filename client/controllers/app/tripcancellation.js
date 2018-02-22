@@ -14,6 +14,15 @@ function app_tripcancellation($scope, app) {
             
         console.log(requestfor);
     });
+    $scope.loadOptions = function() {
+  if ($scope.requestfor.length === 0) {
+    $scope.requestfor=[
+            { RequestForID:"1",RequestForName:"Pickup and Drop"},
+            { RequestForID:"2",RequestForName:"Pickup"},
+            { RequestForID:"3",RequestForName:"Drop"}
+            ];
+  }
+}
      $scope.tripcancel = function(){
      
 		app.call('myapprovals.tripcancel', $scope.data);
