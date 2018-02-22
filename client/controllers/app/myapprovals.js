@@ -64,7 +64,7 @@ function app_myapprovals($scope, app){
             }
         });
         if(selectiontype=="approve"){
-            console.log($scope.listarray);
+            console.log($scope.listarray+"approve" );
         }
         else{
             console.log($scope.listarray);
