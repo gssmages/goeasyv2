@@ -55,6 +55,23 @@ function app_myapprovals($scope, app){
         });
     };
     $scope.submitApprovals=function(selectiontype){
-        if(selectiontype=="approve"){app.call('myapprovals.approve',$scope.data);}
-        else{app.call('myapprovals.reject',$scope.data);}};
+         $scope.listarray = [];
+        $(".card").each(function(){
+            if($(this).find(".approvallist").hasClass("selected"))
+            {
+                var selectedvalue=$(this).find(".approvallist").find(".id").html();
+                $scope.listarray.push(selectedvalue);
+            }
+        });
+        if(selectiontype=="approve"){
+            console.log($scope.listarray);
+        }
+        else{
+            console.log($scope.listarray);
+        }
+        
+    };
+        
 }
+
+//ng-click="selectbox({{$index}})"
