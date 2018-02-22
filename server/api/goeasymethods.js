@@ -100,7 +100,7 @@ exports.sendNoshow = function (page, params) {
             var response = JSON.parse(this.responseText);
 
              page.data(function(data) {
-                 data.noshow = response;
+                 data.successmsg = response;
              })
                  .screen("mytrips");
         }
