@@ -12,7 +12,7 @@ function app_tripcancellation($scope, app) {
             { RequestForID:"3",RequestForName:"Drop"}
             ];*/
             
-        console.log(requestfor);
+        console.log($scope.data.minDate);
     });
     $scope.requestfor = [];
     $scope.loadOptions = function() {
