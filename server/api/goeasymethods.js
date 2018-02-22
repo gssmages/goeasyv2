@@ -92,7 +92,7 @@ exports.sendNoshow = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?status=1&loggedUser=880781";
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CancelTransportRequestApi/SaveCancelRequests/?employeeID=941364&locationID=1&RequestTypeID=2 RequestForID=1&RequestTypeName=&RequestForName=&ShiftTimeID=&CabRequestID=&FromDateOpnNoShow=&ToDateOpnNoShow=";
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -100,9 +100,9 @@ exports.sendNoshow = function (page, params) {
             var response = JSON.parse(this.responseText);
 
              page.data(function(data) {
-                 data.pendinglistitems = response;
+                 data.noshow = response;
              })
-                 .screen("myapprovals");
+                 .screen("mytrips");
         }
     };
     xmlhttp.open("GET", url, false);
