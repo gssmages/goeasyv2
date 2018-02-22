@@ -7,12 +7,12 @@ function app_tripcancellation($scope, app) {
         $scope.minDate="21-02-2018";
         $scope.maxDate='23-02-2018';
         $scope.requestfor=[
-            { "RequestForID":"1","RequestForName":"Pickup and Drop"},
-            { "RequestForID":"2","RequestForName":"Pickup"},
-            { "RequestForID":"3","RequestForName":"Drop"}
+            { RequestForID:"1",RequestForName:"Pickup and Drop"},
+            { RequestForID:"2",RequestForName:"Pickup"},
+            { RequestForID:"3",RequestForName:"Drop"}
             ];
             
-        console.log(requestfor)
+        console.log(requestfor);
     });
      $scope.tripcancel = function(){
      
