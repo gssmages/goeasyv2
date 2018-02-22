@@ -21,6 +21,7 @@ function app_mytrips($scope, app,$ionicPopup) {
         }
     };
     $scope.noShowPopup = function(item){
+        app.go("tripcancellation");
         console.log("no show click...!!!");
          //app.call('goeasymethods.getMytrips');
     // app.action('mytripstab', 'mytrips[item].cancel', this);
