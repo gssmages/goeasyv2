@@ -7,7 +7,11 @@ function app_tripcancellation($scope, app) {
             { "RequestForID":"2","RequestForName":"Pickup"},
             { "RequestForID":"3","RequestForName":"Drop"}
             ];
-             $scope.names = ["Emil", "Tobias", "Linus"];
+             $scope.cars = [
+        {model : "Ford Mustang", color : "red"},
+        {model : "Fiat 500", color : "white"},
+        {model : "Volvo XC90", color : "black"}
+    ];
     });
      $scope.tripcancel = function(){
      
