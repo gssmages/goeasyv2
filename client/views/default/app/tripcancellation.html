@@ -19,7 +19,7 @@
             class="item item-input item-date-icon positive-icon item-stacked-label item-outside-label"
             data-comp-id="dateInput.2">
             <span class="input-label">To Date</span>
-            <input date-format="DD-MMM-YYYY" max="maxDate" min="1900-01-01"
+            <input date-format="DD-MMM-YYYY" max="{{maxDate}}" min="{{minDate}}"
                 ng-model-options="{allowInvalid: true}" ng-model="todate" type="date">
         </label>
         <label
