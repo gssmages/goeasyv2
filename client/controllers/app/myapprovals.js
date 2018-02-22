@@ -12,12 +12,15 @@ function app_myapprovals($scope, app){
     'use strict';
     app.init($scope);
     $scope.selectbox = function(idvalue,elem) {
-        $(".card").each(function($index){
+        
             if($(this).find(".approvallist").not("selected"))
             {	
                 $(this).find(".approvallist").addClass("selected").css('border-top','5px solid #000');
             }
-        });
+            else
+            {
+                $(this).find(".approvallist").removeClass("selected").css('border-top','5px solid #ddd');
+            }
     };    
     $scope.selectionall = function() {
         $(".card").each(function($index){
