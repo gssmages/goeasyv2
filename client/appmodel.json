@@ -601,6 +601,20 @@
       "closebutton": {
         "type": "action",
         "selectContains": "Close"
+      },
+      "requestfor": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "requestforid": {
+              "type": "string"
+            },
+            "requestforname": {
+              "type": "string"
+            }
+          }
+        }
       }
     }
   },
