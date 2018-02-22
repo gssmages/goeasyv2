@@ -4,7 +4,7 @@
         <ion-nav-title data-comp-id="nav-title.1">Trip cancellation</ion-nav-title>
         <ion-nav-buttons side="right">
             <button class="button button-icon ion-ios-arrow-back" data-comp-id="button.1"
-                ng-click="app.go('app.mytrips');"></button>
+                ng-click="app.call('goeasymethods.getMytrips');"></button>
         </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content data-comp-id="ionic-content.1">
@@ -12,14 +12,14 @@
             class="item item-input item-date-icon positive-icon item-stacked-label item-outside-label"
             data-comp-id="dateInput.1">
             <span class="input-label" style="">From Date</span>
-            <input date-format="DD-MMM-YYYY" max="maxDate" min="minDate"
+            <input date-format="DD-MMM-YYYY" max="{{maxDate}}" min="{{minDate}}"
                 ng-model-options="{allowInvalid: true}" ng-model="fromdate" type="date">
         </label>
         <label
             class="item item-input item-date-icon positive-icon item-stacked-label item-outside-label"
             data-comp-id="dateInput.2">
             <span class="input-label">To Date</span>
-            <input date-format="DD-MMM-YYYY" max="2100-12-12" min="1900-01-01"
+            <input date-format="DD-MMM-YYYY" max="maxDate" min="1900-01-01"
                 ng-model-options="{allowInvalid: true}" ng-model="todate" type="date">
         </label>
         <label
@@ -39,14 +39,12 @@
                     <div class="col" data-comp-id="column.2"
                         style="margin: 0px; padding: 0px; border-width: 0px; border-style: initial; border-color: initial; border-radius: 0px;">
                         <button class="button button-block" data-comp-id="button.2"
-                            ng-click="app.action('tripCancellation', 'saveButton', this)"
-                            style="margin: 0px; padding: 0px;">Save</button>
+                            style="margin: 0px; padding: 0px;">Cancel</button>
                     </div>
                     <div class="col" data-comp-id="column.3"
                         style="padding: 0px; border-width: 0px; border-style: initial; border-color: initial; border-radius: 0px; margin: 0px;">
                         <button class="button button-block" data-comp-id="button.3"
-                            ng-click="app.action('tripCancellation', 'closebutton', this)"
-                            style="margin: 0px; padding: 0px;">Close</button>
+                            style="margin: 0px; padding: 0px;">OK</button>
                     </div>
                 </div>
             </div>
