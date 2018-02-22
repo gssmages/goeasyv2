@@ -55,6 +55,13 @@
       },
       "reject": {
         "type": "action"
+      },
+      "pendinglistitems": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {}
+        }
       }
     }
   },
@@ -267,6 +274,13 @@
         },
         "update": {
           "type": "none"
+        }
+      },
+      "noshow": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {}
         }
       }
     }
