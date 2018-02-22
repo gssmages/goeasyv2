@@ -55,6 +55,13 @@
       },
       "reject": {
         "type": "action"
+      },
+      "pendinglistitems": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {}
+        }
       }
     }
   },
