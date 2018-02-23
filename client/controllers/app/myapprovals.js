@@ -56,7 +56,7 @@ function app_myapprovals($scope, app){
     };
     $scope.submitApprovals=function(selectiontype){
          $scope.listarray = [];
-         $scope.sendtoconfirm= [];
+         $scope.sendtoconfirm= '';
         $(".card").each(function(){
             if($(this).find(".approvallist").hasClass("selected"))
             {
