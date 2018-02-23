@@ -4,8 +4,8 @@ function app_tripcancellation($scope, app) {
     app.init($scope,function(){
         $scope.fromdate="";
         $scope.todate="";
-        $scope.data.mi="2018-02-21";
-        $scope.data.ma="2018-02-23";
+        $scope.data.minDate="2018-02-21";
+        $scope.data.maxDate="2018-02-23";
       /*  $scope.requestfor=[
             { RequestForID:"1",RequestForName:"Pickup and Drop"},
             { RequestForID:"2",RequestForName:"Pickup"},
