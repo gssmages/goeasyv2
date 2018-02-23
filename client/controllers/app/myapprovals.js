@@ -56,7 +56,7 @@ function app_myapprovals($scope, app){
     };
     $scope.submitApprovals=function(selectiontype){
          $scope.listarray = [];
-         $scope.sendtoconfirm= '';
+    var sendtoconfirm = '';
         $(".card").each(function(){
             if($(this).find(".approvallist").hasClass("selected"))
             {
@@ -64,13 +64,17 @@ function app_myapprovals($scope, app){
                 $scope.listarray.push(selectedvalue);
             }
         });
+        console.log($scope.listarray)
+            console.log(JSON.stringify($scope.listarray))
         if(selectiontype=="approve"){
-            $scope.sendtoconfirm={"cabRequestID":$scope.listarray,"status":"1"}
+           // console.log($scope.listarray)
+            //console.log(JSON.stringify($scope.listarray))
+            sendtoconfirm={"cabRequestID":$scope.listarray,"status":"1"}
             app.go("goeasymethods.approvalconfirm",sendtoconfirm);
             console.log($scope.sendtoconfirm+"approve" );
         }
         else{
-            $scope.sendtoconfirm={"cabRequestID":$scope.listarray,"status":"2"}
+            sendtoconfirm={"cabRequestID":$scope.listarray,"status":"2"}
              app.go("goeasymethods.approvalconfirm",sendtoconfirm);
             console.log($scope.sendtoconfirm+"rejectlist");
         }
