@@ -70,7 +70,7 @@
                         data-comp-id="selectInput.3">
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-model="selectedtiming"
-                            ng-options="item.StartTime as item.StartTime for item in timing"></select>
+                            ng-options="item.StartTime as item.StartTime +' - '+ item.EndTime for item in timing"></select>
                     </label>
                 </div>
             </div>
