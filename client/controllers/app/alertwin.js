@@ -10,7 +10,7 @@ function app_alertwin($scope, app) {
           var sendtoconfirm = '';
          var cabreqid= JSON.stringify($scope.data.approvalinfo.cabRequestID);
          var statusid=$scope.data.approvalinfo.status;
-         sendtoconfirm={"cabRequestID":cabreqid,"status":statusid,"approver":"880781","remarks":comments}
+         sendtoconfirm={"cabRequestID":cabreqid,"status":statusid,"approver":"880781","remarks":$scope.comments}
        console.log(sendtoconfirm);
           // app.call("goeasymethods.approvalrequest",sendtoconfirm);
       };
