@@ -66,6 +66,12 @@
             <div class="row" data-comp-id="row.5">
                 <div class="col" data-comp-id="column.6">
                     <div data-comp-id="text.6">Timing</div>
+                    <label class="item  item-input item-select-icon positive-icon"
+                        data-comp-id="selectInput.3">
+                        <span class="input-label">Select Label</span>
+                        <select ng-model="selectedtiming"
+                            ng-options="item.StartTime as item.StartTime for item in timing"></select>
+                    </label>
                     <select-list data-comp-id="selectList.1" ng-change="submitApprovals()"
                         ng-model="data.adhocDataList.ShiftTimeDetails" no-label="true"></select-list>
                 </div>
