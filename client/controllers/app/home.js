@@ -9,6 +9,8 @@ function app_home($scope, app, $localStorage) {
        $scope.pickupdropdiv = true;
        $scope.nopickupdiv = false;
        $scope.pickupdiv; $scope.dropdiv;
+        $scope.displayName = $localStorage.displayName;
+        $scope.businessTitle = $localStorage.businessTitle;
      if($scope.data.home.PickupRequestDetail!==null)
      {
            $scope.pickupdropdiv = true;
