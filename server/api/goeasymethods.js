@@ -109,3 +109,11 @@ exports.sendNoshow = function (page, params) {
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send();
 }
+exports.approvalconfirm = function (page, params) { 
+                page.data(function(data) {
+                 data.approvalinfo = params;
+             })
+                 .screen("alertwin");
+        
+    
+}
