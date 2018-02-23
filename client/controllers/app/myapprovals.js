@@ -70,12 +70,12 @@ function app_myapprovals($scope, app){
            // console.log($scope.listarray)
             //console.log(JSON.stringify($scope.listarray))
             sendtoconfirm={"cabRequestID":$scope.listarray,"status":"1"}
-            app.go("goeasymethods.approvalconfirm",sendtoconfirm);
+            app.call("goeasymethods.approvalconfirm",sendtoconfirm);
             console.log($scope.sendtoconfirm+"approve" );
         }
         else{
             sendtoconfirm={"cabRequestID":$scope.listarray,"status":"2"}
-             app.go("goeasymethods.approvalconfirm",sendtoconfirm);
+             app.call("goeasymethods.approvalconfirm",sendtoconfirm);
             console.log($scope.sendtoconfirm+"rejectlist");
         }
         
