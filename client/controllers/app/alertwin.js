@@ -2,10 +2,11 @@ angular.module('app').controller('app_alertwin', app_alertwin);
 function app_alertwin($scope, app) {
     'use strict';
     app.init($scope,function(data){
-        $scope.comments="test";
+       
       
      //$scope.cancellist=false;
     });
+     $scope.comments="test";
       $scope.sendrequest=function(){
           var sendtoconfirm = '';
          var cabreqid= JSON.stringify($scope.data.approvalinfo.cabRequestID);
