@@ -2,7 +2,7 @@ angular.module('app').controller('app_adhocrequest', app_adhocrequest);
 function app_adhocrequest($scope, app) {
     'use strict';
     app.init($scope, function () {
-        console.log('data objects in adhoc-->', $scope.data);
+        console.log('data objects in adhoc-->', $scope.data.adhocDataList.RequestTypeDetails);
         $scope.typeChange = function () {
             // console.log('---Request Type---' + JSON.stringify($scope.data.RequestType.selected.label));
             // var selectedReqTyp = $scope.data.RequestType.selected.value;
