@@ -13,8 +13,6 @@
             <div class="row" data-comp-id="row.1">
                 <div class="col" data-comp-id="column.1">
                     <div data-comp-id="text.1">Request Type</div>
-                    <select-list data-comp-id="selectList.1" ng-change="typeChange();"
-                        ng-model="data.adhocDataList.RequestTypeDetails" no-label="true"></select-list>
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.1">
                         <select ng-model="selectedreqtype"
@@ -57,28 +55,34 @@
             <div class="row" data-comp-id="row.4">
                 <div class="col" data-comp-id="column.5">
                     <div data-comp-id="text.5">Request For</div>
-                    <select-list data-comp-id="selectList.2" ng-change="submitApprovals()"
+                    <label class="item  item-input item-select-icon positive-icon"
+                        data-comp-id="selectInput.2">
+                        <!--<span class="input-label">Select Label</span>-->
+                        <select ng-model="selectedreqFor"
+                            ng-options="item.RequestForName as item.RequestTypeName for item in reqFor"></select>
+                    </label>
+                    <select-list data-comp-id="selectList.1" ng-change="submitApprovals()"
                         ng-model="data.adhocDataList.RequestForDetails" no-label="true"></select-list>
                 </div>
             </div>
             <div class="row" data-comp-id="row.5">
                 <div class="col" data-comp-id="column.6">
                     <div data-comp-id="text.6">Timing</div>
-                    <select-list data-comp-id="selectList.3" ng-change="submitApprovals()"
+                    <select-list data-comp-id="selectList.2" ng-change="submitApprovals()"
                         ng-model="data.adhocDataList.ShiftTimeDetails" no-label="true"></select-list>
                 </div>
             </div>
             <div class="row" data-comp-id="row.6">
                 <div class="col" data-comp-id="column.7">
                     <div data-comp-id="text.7">Area</div>
-                    <select-list data-comp-id="selectList.4" ng-change="submitApprovals()"
+                    <select-list data-comp-id="selectList.3" ng-change="submitApprovals()"
                         ng-model="data.Area" no-label="true" select-class=" item-stacked-label"></select-list>
                 </div>
             </div>
             <div class="row" data-comp-id="row.7">
                 <div class="col" data-comp-id="column.8">
                     <div data-comp-id="text.8">Boarding/Drop Point</div>
-                    <select-list data-comp-id="selectList.5" ng-change="submitApprovals()"
+                    <select-list data-comp-id="selectList.4" ng-change="submitApprovals()"
                         ng-model="data.BordingPoint" no-label="true"></select-list>
                 </div>
             </div>
@@ -103,7 +107,7 @@
             <div class="row" data-comp-id="row.10" ng-if="data.PleaseSpecify">
                 <div class="col" data-comp-id="column.11">
                     <div data-comp-id="text.10">Please Specify</div>
-                    <select-list data-comp-id="selectList.6" ng-change="submitApprovals()"
+                    <select-list data-comp-id="selectList.5" ng-change="submitApprovals()"
                         ng-model="data.PleaseSpecify" no-label="true" select-class=" item-stacked-label"></select-list>
                 </div>
             </div>
