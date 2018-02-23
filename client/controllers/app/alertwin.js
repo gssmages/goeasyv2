@@ -3,7 +3,7 @@ function app_alertwin($scope, app) {
     'use strict';
     app.init($scope,function(data){
          var sendtoconfirm = '';
-         sendtoconfirm={"cabRequestID":$scope.data.approvalinfo,"status":"2","approver":"880781","remarks":comments}
+         sendtoconfirm={"cabRequestID":$scope.data.approvalinfo,"status":"2","approver":"880781","remarks":data.comments}
        console.log(sendtoconfirm);
        app.call("goeasymethods.approvalconfirm",sendtoconfirm);
      //$scope.cancellist=false;
