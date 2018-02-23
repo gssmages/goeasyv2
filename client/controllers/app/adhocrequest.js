@@ -7,7 +7,7 @@ function app_adhocrequest($scope, app) {
         $scope.reqFor= $scope.data.adhocDataList[0].RequestForDetails;
         $scope.timing= $scope.data.adhocDataList[0].ShiftTimeDetails;
         $scope.area= $scope.data.adhocDataList[0].AreaDetails;
-        $scope.bordingPoint= $scope.data.adhocDataList[0].BoardingPointDetails;
+        $scope.boardingPoint= $scope.data.adhocDataList[0].RelBoardingPointDetails;
         $scope.typeChange = function () {
             // console.log('---Request Type---' + JSON.stringify($scope.data.RequestType.selected.label));
             // var selectedReqTyp = $scope.data.RequestType.selected.value;
