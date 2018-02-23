@@ -69,14 +69,14 @@ function app_myapprovals($scope, app){
         if(selectiontype=="approve"){
            // console.log($scope.listarray)
             //console.log(JSON.stringify($scope.listarray))
-            sendtoconfirm={"cabRequestID":$scope.listarray,"status":"1"}
+            sendtoconfirm={"cabRequestID":$scope.listarray,"status":"2"}
             app.call("goeasymethods.approvalconfirm",sendtoconfirm);
-            console.log($scope.sendtoconfirm+"approve" );
+            //console.log($scope.sendtoconfirm+"approve" );
         }
         else{
-            sendtoconfirm={"cabRequestID":$scope.listarray,"status":"2"}
+            sendtoconfirm={"cabRequestID":$scope.listarray,"status":"3"}
              app.call("goeasymethods.approvalconfirm",sendtoconfirm);
-            console.log($scope.sendtoconfirm+"rejectlist");
+            //console.log($scope.sendtoconfirm+"rejectlist");
         }
         
     };
