@@ -64,6 +64,7 @@ function app_myapprovals($scope, app){
             }
         });
         if(selectiontype=="approve"){
+            app.go("goeasymethods.approvalconfirm",param);
             console.log($scope.listarray+"approve" );
         }
         else{
