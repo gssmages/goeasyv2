@@ -7,7 +7,7 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
            // elem.css('border-top','5px solid #ccc');  
             // onHold => start select box by `onHold` => working good
           $ionicGesture.on('hold', function() {
-            elem.addClass("selected");
+            elem.addClass("selected").css('border-top','5px solid #000');
             $rootScope.startSelect = true; // to enable select box by click
           }, elem);
           
@@ -15,9 +15,9 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
 					$ionicGesture.on('tap', function() {
           	if ($rootScope.startSelect) {
            		if (elem.hasClass('selected')) {
-              	elem.removeClass('selected');
+              	elem.removeClass('selected').css('border-top','5px solid #ddd');
               } else {
-              	elem.addClass('selected');
+              	elem.addClass('selected').css('border-top','5px solid #000');
               }
             }
           }, elem);
