@@ -3,6 +3,7 @@ function app_adhocrequest($scope, app) {
     'use strict';
     app.init($scope, function () {
         console.log('data objects ', $scope.data);
+        $scope.reqtype= $scope.data.adhocDataList[0].RequestTypeDetails;
         $scope.typeChange = function () {
             // console.log('---Request Type---' + JSON.stringify($scope.data.RequestType.selected.label));
             // var selectedReqTyp = $scope.data.RequestType.selected.value;
