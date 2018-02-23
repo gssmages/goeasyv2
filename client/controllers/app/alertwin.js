@@ -8,8 +8,8 @@ function app_alertwin($scope, app) {
     });
       $scope.sendrequest=function(){
           var sendtoconfirm = '';
-         var cabreqid= JSON.stringify(data.approvalinfo.cabRequestID);
-         var statusid=data.approvalinfo.status;
+         var cabreqid= JSON.stringify($scope.data.approvalinfo.cabRequestID);
+         var statusid=$scope.data.approvalinfo.status;
          sendtoconfirm={"cabRequestID":cabreqid,"status":statusid,"approver":"880781","remarks":comments}
        console.log(sendtoconfirm);
           // app.call("goeasymethods.approvalrequest",sendtoconfirm);
