@@ -64,10 +64,13 @@ function app_myapprovals($scope, app){
             }
         });
         if(selectiontype=="approve"){
+            $scope.sendtoconfirm={"cabRequestID":$scope.listarray,"status":"1"}
             app.go("goeasymethods.approvalconfirm",param);
             console.log($scope.listarray+"approve" );
         }
         else{
+            $scope.sendtoconfirm={"cabRequestID":$scope.listarray,"status":"2"}
+             app.go("goeasymethods.approvalconfirm",param);
             console.log($scope.listarray+"rejectlist");
         }
         
