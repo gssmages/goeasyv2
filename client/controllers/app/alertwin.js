@@ -3,9 +3,13 @@ function app_alertwin($scope, app) {
     'use strict';
     app.init($scope,function(data){
          var sendtoconfirm = '';
-         sendtoconfirm={"cabRequestID":$scope.data.approvalinfo,"status":"2","approver":"880781","remarks":data.comments}
+         sendtoconfirm={"cabRequestID":data.approvalinfo.cabRequestID,"status":data.approvalinfo.status,"approver":"880781","remarks":comments}
        console.log(sendtoconfirm);
-       app.call("goeasymethods.approvalconfirm",sendtoconfirm);
+      
      //$scope.cancellist=false;
     });
+      $scope.submitApprovals=function(){
+          // app.call("goeasymethods.approvalrequest",sendtoconfirm);
+      };
+      
 }
