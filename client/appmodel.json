@@ -336,10 +336,7 @@
       "comments": {
         "type": "string",
         "update": {
-          "type": "action",
-          "action": [
-            "ok"
-          ]
+          "type": "none"
         }
       },
       "ok": {
