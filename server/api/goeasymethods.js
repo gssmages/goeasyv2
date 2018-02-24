@@ -113,7 +113,27 @@ exports.approvalconfirm = function (page, params) {
                 page.data(function(data) {
                  data.approvalinfo = params;
              })
-                 .screen("alertwin");
-        
+                 .screen("alertwin");    
+}
+exports.approvalrequest = function (page, params) {
+
+    var xmlhttp = new XMLHttpRequest();
     
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/cabapprovalapi/ApprovePendingRequests?cabRequestID="+params.cabRequestID+"&remarks="+params.remarks+"&status="+params.status+"&approver="+params.approver;
+    
+    var reqResponse = [];
+    
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+
+             page.data(function(data) {
+                 data.successmsg = response;
+             })
+                 .screen("myapprovals");
+        }
+    };
+    xmlhttp.open("GET", url, false);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send();
 }
