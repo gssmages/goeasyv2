@@ -4,7 +4,7 @@ function app_mytrips($scope, app,$ionicPopup) {
     app.init($scope,function(){
        $scope.mytripslist=true;
      $scope.cancellist=false;
-     if($scope.data.mytrips.CancelMyTripDetails==='')
+     if($scope.data.mytrips.CancelMyTripDetails=='')
      {
          $scope.recordlist=true;
      }
