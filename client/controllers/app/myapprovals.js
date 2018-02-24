@@ -29,7 +29,8 @@ function app_myapprovals($scope, app, $ionicPopup){
      app.init($scope,function(data){
         
      });
-      if(angular.isDefined($scope.data.successmsg))
+     var success=$scope.data.successmsg;
+      if(success!=='')
          {
           var alertPopup = $ionicPopup.alert({
      title: 'Goeasy message',
