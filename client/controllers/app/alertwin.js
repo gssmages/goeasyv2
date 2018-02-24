@@ -9,12 +9,17 @@ function app_alertwin($scope, app) {
     
       $scope.sendrequest=function(){
           var sendtoconfirm = '';
-         var cabreqid= JSON.stringify($scope.data.approvalinfo.cabRequestID);
+           var cabreqid= $scope.data.approvalinfo.cabRequestID;
+          var cabid = [];
+angular.forEach(cabreqid, function(value, key) {
+  this.push(value);
+}, cabid);
+        
          var statusid=$scope.data.approvalinfo.status;
          var comment=$scope.data.comments;
-         sendtoconfirm={"cabRequestID":cabreqid,"status":statusid,"approver":"880781","remarks":comment};
+         sendtoconfirm={"cabRequestID":cabid,"status":statusid,"approver":"880781","remarks":comment};
        console.log(sendtoconfirm);
-          // app.call("goeasymethods.approvalrequest",sendtoconfirm);
+          app.call("goeasymethods.approvalrequest",sendtoconfirm);
       };
       
 }
