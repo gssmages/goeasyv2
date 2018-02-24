@@ -4,6 +4,14 @@ function app_mytrips($scope, app,$ionicPopup) {
     app.init($scope,function(){
        $scope.mytripslist=true;
      $scope.cancellist=false;
+     if($data.mytrips.CancelMyTripDetails==='')
+     {
+         $scope.recordlist=true;
+     }
+     else
+     {
+         $scope.recordlist=false;
+     }
      // $scope.noshowlist=false;
         //app.call('goeasymethods.getMytrips');
     });
