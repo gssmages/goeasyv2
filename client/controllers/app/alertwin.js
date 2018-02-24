@@ -6,7 +6,7 @@ function app_alertwin($scope, app, $ionicPopup) {
       
      //$scope.cancellist=false;
     });
-      if(angular.isDefined($scope.data.approvalinfo))
+      if(!$scope.data.approvalinfo)
          {
           var alertPopup = $ionicPopup.alert({
      title: 'Goeasy message',
