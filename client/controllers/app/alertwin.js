@@ -6,7 +6,7 @@ function app_alertwin($scope, app, $ionicPopup) {
       
      //$scope.cancellist=false;
     });
-      if($scope.data.approvalinfo.status !== undefined || $scope.data.approvalinfo.status  !== "")
+      if($scope.data.approvalinfo !== undefined)
          {
           var alertPopup = $ionicPopup.alert({
      title: 'Goeasy message',
