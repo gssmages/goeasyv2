@@ -85,7 +85,8 @@
             </div>
             <div class="row" data-comp-id="row.6">
                 <div class="col" data-comp-id="column.10">
-                    <div data-comp-id="text.9">Some text</div>
+                    <div data-comp-id="text.9" ng-bind="recordlist"
+                        ng-if="data.mytrips.CancelMyTripDetails.ReqTypeName">No record to be displayed</div>
                 </div>
             </div>
         </div>
