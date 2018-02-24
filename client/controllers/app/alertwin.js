@@ -6,6 +6,18 @@ function app_alertwin($scope, app) {
       
      //$scope.cancellist=false;
     });
+      if($scope.data.approvalinfo)
+         {
+          var alertPopup = $ionicPopup.alert({
+     title: 'Goeasy message',
+     template: $scope.data.approvalinfo
+   });
+
+   alertPopup.then(function(res) {
+     console.log('Reload same approval page');
+     app.call('goeasymethods.getMyApprovals');
+   });
+         }
     
       $scope.sendrequest=function(){
           var sendtoconfirm = '';
