@@ -29,7 +29,8 @@ function app_mytrips($scope, app,$ionicPopup) {
         }
     };
     $scope.noShowPopup = function(item){
-        app.call("goeasymethods.gettripinfo");
+         var tripinfo ={"cabRequestID":$scope.listarray,"status":"2"};
+        app.call("goeasymethods.gettripinfo",tripinfo);
         console.log("no show click...!!!");
          //app.call('goeasymethods.getMytrips');
     // app.action('mytripstab', 'mytrips[item].cancel', this);
