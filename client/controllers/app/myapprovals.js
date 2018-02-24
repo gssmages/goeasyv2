@@ -31,11 +31,11 @@ function app_myapprovals($scope, app, $ionicPopup){
      });
      var success=$scope.data.successmsg;
      console.log(success+"thisissuccesmsg");
-      if(success!==undefined)
+      if(success!=="undefined")
          {
           var alertPopup = $ionicPopup.alert({
      title: 'Goeasy message',
-     template: $scope.data.successmsg
+     template: success
    });
 
    alertPopup.then(function(res) {
