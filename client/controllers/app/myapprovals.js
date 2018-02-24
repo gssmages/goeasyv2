@@ -24,10 +24,11 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
         }
     };
 });
-function app_myapprovals($scope, app){
+function app_myapprovals($scope, app, $ionicPopup){
     'use strict';
      app.init($scope,function(data){
-         
+         if($scope.data.successmsg!=='')
+         {
           var alertPopup = $ionicPopup.alert({
      title: 'Goeasy message',
      template: $scope.data.successmsg
@@ -37,6 +38,7 @@ function app_myapprovals($scope, app){
      console.log('Reload same approval page');
      app.call('goeasymethods.getMyApprovals');
    });
+         }
      });
     $scope.selectbox = function(idvalue,elem) {
         
