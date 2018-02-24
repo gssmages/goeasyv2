@@ -27,7 +27,7 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
 function app_myapprovals($scope, app, $ionicPopup){
     'use strict';
      app.init($scope,function(data){
-         if($scope.data.successmsg!=='')
+         if(!$scope.data.successmsg)
          {
           var alertPopup = $ionicPopup.alert({
      title: 'Goeasy message',
