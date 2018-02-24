@@ -71,7 +71,7 @@ exports.getMyApprovals = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?status=1&loggedUser=880781";
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?status=1&loggedUser=941364"; //880781
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -114,6 +114,13 @@ exports.approvalconfirm = function (page, params) {
                  data.approvalinfo = params;
              })
                  .screen("alertwin");    
+}
+
+exports.gettripinfo = function (page, params) { 
+                page.data(function(data) {
+                 data.tripinfo = params;
+             })
+                 .screen("tripcancellation");    
 }
 exports.approvalrequest = function (page, params) {
 
