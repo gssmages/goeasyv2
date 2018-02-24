@@ -80,20 +80,28 @@ function app_myapprovals($scope, app, $ionicPopup){
                 $scope.listarray.push(selectedvalue);
             }
         });
-        console.log($scope.listarray)
-            console.log(JSON.stringify($scope.listarray))
+        //console.log($scope.listarray)
+          //  console.log(JSON.stringify($scope.listarray))
+            if($scope.listarray.length>0)
+            {
         if(selectiontype=="approve"){
            // console.log($scope.listarray)
             //console.log(JSON.stringify($scope.listarray))
-            sendtoconfirm={"cabRequestID":$scope.listarray,"status":"2"}
+            sendtoconfirm={"cabRequestID":$scope.listarray,"status":"2"};
             app.call("goeasymethods.approvalconfirm",sendtoconfirm);
             //console.log($scope.sendtoconfirm+"approve" );
         }
         else{
-            sendtoconfirm={"cabRequestID":$scope.listarray,"status":"3"}
+            sendtoconfirm={"cabRequestID":$scope.listarray,"status":"3"};
              app.call("goeasymethods.approvalconfirm",sendtoconfirm);
             //console.log($scope.sendtoconfirm+"rejectlist");
         }
+            }
+            else
+            {
+                $scope.recordcount="No Request to approval";
+            }
+            
         
     };
         
