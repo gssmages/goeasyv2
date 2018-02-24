@@ -27,9 +27,7 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
 function app_myapprovals($scope, app, $ionicPopup){
     'use strict';
      app.init($scope,function(data){
-        
-     });
-     var success=$scope.data.successmsg;
+         var success=$scope.data.successmsg;
      console.log(success+"thisissuccesmsg");
       if(success!=undefined)
          {
@@ -43,6 +41,8 @@ function app_myapprovals($scope, app, $ionicPopup){
      app.call('goeasymethods.getMyApprovals');
    });
          }
+     });
+    
     $scope.selectbox = function(idvalue,elem) {
         
             if($(this).find(".approvallist").not("selected"))
