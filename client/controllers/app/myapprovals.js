@@ -30,6 +30,7 @@ function app_myapprovals($scope, app, $ionicPopup){
         
      });
      var success=$scope.data.successmsg;
+     console.log(success+"thisissuccesmsg");
       if(success!=='')
          {
           var alertPopup = $ionicPopup.alert({
