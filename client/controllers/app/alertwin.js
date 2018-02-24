@@ -1,5 +1,5 @@
 angular.module('app').controller('app_alertwin', app_alertwin);
-function app_alertwin($scope, app) {
+function app_alertwin($scope, app, $ionicPopup) {
     'use strict';
     app.init($scope,function(data){
        
