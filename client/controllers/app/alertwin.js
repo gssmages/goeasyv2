@@ -6,11 +6,11 @@ function app_alertwin($scope, app, $ionicPopup) {
       
      //$scope.cancellist=false;
     });
-      if($scope.data.approvalinfo !== undefined || $scope.test !== "")
+      if($scope.data.approvalinfo.status !== undefined || $scope.data.approvalinfo.status  !== "")
          {
           var alertPopup = $ionicPopup.alert({
      title: 'Goeasy message',
-     template: $scope.data.approvalinfo
+     template: $scope.data.approvalinfo.status
    });
 
    alertPopup.then(function(res) {
