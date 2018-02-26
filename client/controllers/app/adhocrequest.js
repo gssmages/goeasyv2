@@ -3,6 +3,7 @@ function app_adhocrequest($scope, app) {
     'use strict';
     app.init($scope, function () {
         console.log('data objects ', $scope.data);
+        $scope.boardAreaId ="";
         $scope.reqtype= $scope.data.adhocDataList[0].RequestTypeDetails;
         $scope.reqFor= $scope.data.adhocDataList[0].RequestForDetails;
         $scope.timing= $scope.data.adhocDataList[0].ShiftTimeDetails;
@@ -16,10 +17,14 @@ function app_adhocrequest($scope, app) {
             if ($scope.data.adhocDataList[0].AreaDetails[i].AreaName == $scope.data.selectedarea){
                 
                 console.log("selec area id-->"+$scope.data.adhocDataList[0].AreaDetails[i].RelAreaID);
+                $scope.boardAreaId = $scope.data.adhocDataList[0].AreaDetails[i].RelAreaID;
                 break;
             }
          }
         }
+        $scope.filterExpression = function() {
+                return ($scope.boardingPoint.Area === $scope.boardAreaId );
+            };
         $scope.typeChange = function () {
             // console.log('---Request Type---' + JSON.stringify($scope.data.RequestType.selected.label));
             // var selectedReqTyp = $scope.data.RequestType.selected.value;
