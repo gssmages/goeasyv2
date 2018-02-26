@@ -45,7 +45,6 @@ $scope.GetValue = function (item) {
                 selectid = $.grep($scope.requestfor, function (item) {
                     return item.RequestForName == selectname;
                 })[0].RequestForID;
-               
             }
      $scope.tripcancel = function(){
         // console.log($scope.data.reqfor.RequestForName+"fromdate"+$scope.fromdate+$scope.data.reqfor)
@@ -66,7 +65,7 @@ $scope.GetValue = function (item) {
          "RequestForID":RequestForID,"RequestTypeID":RequestTypeID,
          "FromDateOpnNoShow":FromDate,
          "ToDateOpnNoShow":ToDate};
-         //console.log(tripinfo);
+         console.log(tripinfo);
 		app.call('goeasymethods.sendNoshow',tripinfo);
 
    };

@@ -92,7 +92,8 @@ exports.sendNoshow = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CancelTransportRequestApi/SaveCancelRequests/?employeeID=941364&locationID=1&RequestTypeID=2 RequestForID=1&RequestTypeName=&RequestForName=&ShiftTimeID=&CabRequestID=&FromDateOpnNoShow=&ToDateOpnNoShow=";
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CancelTransportRequestApi/SaveCancelRequests/?employeeID="+params.employeeID+"&locationID="+params.locationID+"&RequestTypeID="+params.RequestTypeID+"RequestForID="+params.RequestForID+"&RequestTypeName="+params.RequestTypeName+"&RequestForName="+params.RequestForName+"&ShiftTimeID="+params.ShiftTimeID+"&CabRequestID="+params.CabRequestID+"&FromDateOpnNoShow="+params.FromDateOpnNoShow+"&ToDateOpnNoShow="+params.ToDateOpnNoShow;
+    
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
