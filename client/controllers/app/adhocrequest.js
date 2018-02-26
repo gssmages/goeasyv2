@@ -8,6 +8,10 @@ function app_adhocrequest($scope, app) {
         $scope.timing= $scope.data.adhocDataList[0].ShiftTimeDetails;
         $scope.area= $scope.data.adhocDataList[0].AreaDetails;
         $scope.boardingPoint= $scope.data.adhocDataList[0].RelBoardingPointDetails;
+        $scope.areaSelect = function () {
+            console.log("area selected-->"+ $scope.selectedarea );
+        }
+       
         $scope.typeChange = function () {
             // console.log('---Request Type---' + JSON.stringify($scope.data.RequestType.selected.label));
             // var selectedReqTyp = $scope.data.RequestType.selected.value;
