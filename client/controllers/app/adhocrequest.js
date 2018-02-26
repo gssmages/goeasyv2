@@ -9,6 +9,8 @@ function app_adhocrequest($scope, app) {
         $scope.timing= $scope.data.adhocDataList[0].ShiftTimeDetails;
         $scope.area= $scope.data.adhocDataList[0].AreaDetails;
         $scope.boardingPoint= $scope.data.adhocDataList[0].RelBoardingPointDetails;
+        
+        $scope.dateField
         $scope.areaSelect = function () {
             console.log("area selected-->"+ $scope.data.selectedarea);
             var i=0;
@@ -26,7 +28,7 @@ function app_adhocrequest($scope, app) {
                 return ($scope.boardingPoint.Area === $scope.boardAreaId );
             };
         $scope.typeChange = function () {
-            // console.log('---Request Type---' + JSON.stringify($scope.data.RequestType.selected.label));
+            console.log('---Request Type---' +  $scope.data.selectedreqtype);
             // var selectedReqTyp = $scope.data.RequestType.selected.value;
             // $scope.submitApprovals();
             // switch (selectedReqTyp) {
