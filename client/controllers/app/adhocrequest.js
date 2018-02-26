@@ -27,7 +27,7 @@ function app_adhocrequest($scope, app) {
            $scope.boardingPoint = $scope.boardingPoint.filter(function(d) {
                 return d.Area === $scope.boardAreaId 
             });
-            console.log("bording--->"+JSON.stringfy($scope.boardingPoint));
+            console.log("bording--->"+$scope.boardingPoint);
         }
         
         // $scope.filterExpression = function() {
