@@ -24,10 +24,10 @@ function app_adhocrequest($scope, app) {
             }
           }
           
-           $scope.boardingPoint = $scope.boardingPoint.filter(function(d) {
+           $scope.boardingPoint = $scope.data.adhocDataList[0].RelBoardingPointDetails.filter(function(d) {
                 return d.Area === $scope.boardAreaId 
             });
-            console.log("bording--->"+$scope.boardingPoint);
+            console.log($scope.boardingPoint);
         }
         
         // $scope.filterExpression = function() {
