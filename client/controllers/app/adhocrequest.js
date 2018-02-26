@@ -29,31 +29,31 @@ function app_adhocrequest($scope, app) {
             };
         $scope.typeChange = function () {
             console.log('---Request Type---' +  $scope.data.selectedreqtype);
-            // var selectedReqTyp = $scope.data.RequestType.selected.value;
+             var selectedReqTyp = $scope.data.selectedreqtype;
             // $scope.submitApprovals();
-            // switch (selectedReqTyp) {
-            // case '2':
-            //     $scope.dateField = true;
-            //     $scope.fromDateField = false;
-            //     $scope.toDateField = false;
-            //     break;
-            // case '3':
-            //     $scope.dateField = true;
-            //     $scope.fromDateField = false;
-            //     $scope.toDateField = false;
-            //     break;
-            // case '4':
-            //     $scope.dateField = false;
-            //     $scope.fromDateField = true;
-            //     $scope.toDateField = true;
-            //     break;
-            // default:
-            //     console.log('in default--' + selectedReqTyp);
-            //     $scope.dateField = false;
-            //     $scope.fromDateField = false;
-            //     $scope.toDateField = false;
-            //     break;
-            // }
+            switch (selectedReqTyp) {
+            case 'Adhoc':
+                $scope.dateField = true;
+                $scope.fromDateField = false;
+                $scope.toDateField = false;
+                break;
+            case 'Holiday':
+                $scope.dateField = true;
+                $scope.fromDateField = false;
+                $scope.toDateField = false;
+                break;
+            case 'Month end':
+                $scope.dateField = false;
+                $scope.fromDateField = true;
+                $scope.toDateField = true;
+                break;
+            default:
+                console.log('in default--' + selectedReqTyp);
+                $scope.dateField = false;
+                $scope.fromDateField = false;
+                $scope.toDateField = false;
+                break;
+            }
         };
         $scope.submitApprovals = function () {
             app.call('myapprovals.sendRequest', $scope.data);
