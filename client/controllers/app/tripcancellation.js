@@ -50,7 +50,7 @@ $scope.GetValue = function (item) {
         // console.log($scope.data.reqfor.RequestForName+"fromdate"+$scope.fromdate+$scope.data.reqfor)
          var employeeID=$scope.data.tripinfo.employeeID;
         var locationID=$scope.data.tripinfo.locationID; 
-        var RequestForID=selectid;
+        var RequestForID=parseInt(selectid, 10);
         var RequestTypeID=$scope.data.tripinfo.RequestTypeID;
         var RequestTypeName=$scope.data.tripinfo.RequestTypeName; 
         var RequestForName=$scope.data.reqfor;
