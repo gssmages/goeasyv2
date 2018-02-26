@@ -37,14 +37,14 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage) {
         var RequestForName=item.RequestForName;
         var ShiftTimeID=item.ShiftTimeID;
         var CabRequestID=item.CabRequestID;
-        var FromDateOpnNoShow=item.FromDateOpnNoShow;
-        var ToDateOpnNoShow=item.ToDateOpnNoShow;
+        var FromDate=item.FromDate;
+        var ToDate=item.ToDate;
          
          var tripinfo ={"locationID":locationID,"employeeID":employeeID,
          "RequestTypeName":RequestTypeName,"RequestForName":RequestForName,
          "ShiftTimeID":ShiftTimeID,"CabRequestID":CabRequestID,
-         "FromDateOpnNoShow":FromDateOpnNoShow,
-         "ToDateOpnNoShow":ToDateOpnNoShow};
+         "FromDateOpnNoShow":FromDate,
+         "ToDateOpnNoShow":ToDate};
         //app.call("goeasymethods.gettripinfo",tripinfo);
         console.log(tripinfo);
          //app.call('goeasymethods.getMytrips');
