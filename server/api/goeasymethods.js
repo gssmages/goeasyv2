@@ -92,7 +92,7 @@ exports.sendNoshow = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CancelTransportRequestApi/SaveCancelRequests/?employeeID="+params.employeeID+"&locationID="+params.locationID+"&RequestTypeID="+params.RequestTypeID+"RequestForID="+params.RequestForID+"&RequestTypeName="+params.RequestTypeName+"&RequestForName="+params.RequestForName+"&ShiftTimeID="+params.ShiftTimeID+"&CabRequestID="+params.CabRequestID+"&FromDateOpnNoShow="+params.FromDateOpnNoShow+"&ToDateOpnNoShow="+params.ToDateOpnNoShow;
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CancelTransportRequestApi/SaveCancelRequests/?employeeID="+params.employeeID+"&locationID="+params.locationID+"&RequestTypeID="+params.RequestTypeID+"&RequestForID="+params.RequestForID+"&RequestTypeName="+params.RequestTypeName+"&RequestForName="+params.RequestForName+"&ShiftTimeID="+params.ShiftTimeID+"&CabRequestID="+params.CabRequestID+"&FromDateOpnNoShow="+params.FromDateOpnNoShow+"&ToDateOpnNoShow="+params.ToDateOpnNoShow;
     
     var reqResponse = [];
     
