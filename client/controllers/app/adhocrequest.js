@@ -28,7 +28,7 @@ function app_adhocrequest($scope, app) {
                 return ($scope.boardingPoint.Area === $scope.boardAreaId );
             };
         $scope.typeChange = function () {
-            console.log('---Request Type---' + data.selectedreqtype);
+            console.log('---Request Type---' +  $scope.data.selectedreqtype);
             // var selectedReqTyp = $scope.data.RequestType.selected.value;
             // $scope.submitApprovals();
             // switch (selectedReqTyp) {
