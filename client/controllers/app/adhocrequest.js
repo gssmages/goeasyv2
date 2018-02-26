@@ -16,6 +16,7 @@ function app_adhocrequest($scope, app) {
             if ($scope.data.adhocDataList[0].AreaDetails[i].AreaName == $scope.data.selectedarea){
                 
                 console.log("selec area id-->"+$scope.data.adhocDataList[0].AreaDetails[i].RelAreaID);
+                break;
             }
          }
         }
