@@ -65,7 +65,7 @@ $scope.GetValue = function (item) {
          "RequestForID":RequestForID,"RequestTypeID":RequestTypeID,
          "FromDateOpnNoShow":FromDate,
          "ToDateOpnNoShow":ToDate};
-         //console.log(tripinfo);
+         console.log(tripinfo);
 		app.call('goeasymethods.sendNoshow',tripinfo);
 
    };
