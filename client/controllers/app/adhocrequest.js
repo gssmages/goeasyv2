@@ -3,6 +3,7 @@ function app_adhocrequest($scope, app) {
     'use strict';
     app.init($scope, function () {
         console.log('data objects ', $scope.data);
+        
         $scope.boardAreaId ="";
         $scope.reqtype= $scope.data.adhocDataList[0].RequestTypeDetails;
         $scope.reqFor= $scope.data.adhocDataList[0].RequestForDetails;
@@ -10,7 +11,6 @@ function app_adhocrequest($scope, app) {
         $scope.area= $scope.data.adhocDataList[0].AreaDetails;
         $scope.boardingPoint= $scope.data.adhocDataList[0].RelBoardingPointDetails;
         
-        $scope.dateField
         $scope.areaSelect = function () {
             console.log("area selected-->"+ $scope.data.selectedarea);
             var i=0;
@@ -22,13 +22,20 @@ function app_adhocrequest($scope, app) {
                 $scope.boardAreaId = $scope.data.adhocDataList[0].AreaDetails[i].RelAreaID;
                 break;
             }
-         }
+          }
         }
+        
         $scope.filterExpression = function() {
-                return ($scope.boardingPoint.Area === $scope.boardAreaId );
+           
+                var i = 0;
+                for(i;i<$scope.boardingPoint.length;i++){
+                   return ($scope.boardingPoint[i].Area === $scope.boardAreaId ); 
+                    }
+               
             };
+        
         $scope.typeChange = function () {
-            console.log('---Request Type---' +  $scope.data.selectedreqtype);
+            //console.log('---Request Type---' +  $scope.data.selectedreqtype);
              var selectedReqTyp = $scope.data.selectedreqtype;
             // $scope.submitApprovals();
             switch (selectedReqTyp) {
@@ -48,15 +55,15 @@ function app_adhocrequest($scope, app) {
                 $scope.toDateField = true;
                 break;
             default:
-                console.log('in default--' + selectedReqTyp);
+                //console.log('in default--' + selectedReqTyp);
                 $scope.dateField = false;
                 $scope.fromDateField = false;
                 $scope.toDateField = false;
                 break;
             }
         };
-        $scope.submitApprovals = function () {
-            app.call('myapprovals.sendRequest', $scope.data);
-        };
+        // $scope.submitApprovals = function () {
+        //     app.call('myapprovals.sendRequest', $scope.data);
+        // };
     });
 }
