@@ -74,10 +74,10 @@
                                     style="font-size: 32px;"></i>
                             </div>
                             <div class="col" data-comp-id="column.9">
-                                <div data-comp-id="text.7" ng-bind="item.StartDate"
+                                <div data-comp-id="text.7" ng-bind="item.FromDate+' - '+item.ToDate"
                                     ng-if="item.date !=&quot;-&quot;" style="font-weight: bold;"></div>
                                 <div data-comp-id="text.8"
-                                    ng-bind="item.ReqForName+&quot; at &quot;+ item.ShiftStart">Drop at 5:00 pm</div>
+                                    ng-bind="item.ReqForName+&quot; at &quot;+ item.ShiftStartTime + '-' item.ShiftEndTime ">Drop at 5:00 pm</div>
                             </div>
                         </div>
                     </div>
