@@ -15,7 +15,7 @@
                     <div data-comp-id="text.1">Request Type</div>
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.1">
-                        <select ng-model="selectedreqtype"
+                        <select ng-model="data.selectedreqtype"
                             ng-options="item.RequestTypeName as item.RequestTypeName for item in reqtype"></select>
                     </label>
                 </div>
@@ -58,7 +58,7 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.2">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select ng-model="selectedreqFor"
+                        <select ng-model="data.selectedreqFor"
                             ng-options="item.RequestForName as item.RequestForName for item in reqFor"></select>
                     </label>
                 </div>
@@ -69,7 +69,7 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.3">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select ng-model="selectedtiming"
+                        <select ng-model="data.selectedtiming"
                             ng-options="item.StartTime as item.StartTime +' - '+ item.EndTime for item in timing"></select>
                     </label>
                 </div>
@@ -82,7 +82,7 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.4">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select ng-blur="areaSelect();" ng-model="selectedarea"
+                        <select ng-blur="areaSelect();" ng-model="data.selectedarea"
                             ng-options="item.AreaName as item.AreaName for item in area"></select>
                     </label>
                 </div>
@@ -95,7 +95,7 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.5">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select ng-model="selectedboarding"
+                        <select ng-model="data.selectedboarding"
                             ng-options="item.BoardingPointName as item.BoardingPointName for item in boardingPoint"></select>
                     </label>
                 </div>
