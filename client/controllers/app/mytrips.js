@@ -46,8 +46,8 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage) {
          "RequestForID":RequestForID,"RequestTypeID":RequestTypeID,
          "FromDateOpnNoShow":FromDate,
          "ToDateOpnNoShow":ToDate};
-        //app.call("goeasymethods.gettripinfo",tripinfo);
-        console.log(tripinfo);
+        app.call("goeasymethods.gettripinfo",tripinfo);
+        //console.log(tripinfo);
          //app.call('goeasymethods.getMytrips');
     // app.action('mytripstab', 'mytrips[item].cancel', this);
     //  app.call('tripcancellation');
