@@ -96,7 +96,7 @@
                         data-comp-id="selectInput.5">
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-model="data.selectedboarding"
-                            ng-options="item.BoardingPointName as item.BoardingPointName for item in boardingPoint"></select>
+                            ng-options="item.BoardingPointName as item.BoardingPointName for item in boardingPoint | filter: filterExpression"></select>
                     </label>
                 </div>
             </div>
