@@ -4,7 +4,7 @@ function app_mytrips($scope, app,$ionicPopup) {
     app.init($scope,function(){
        $scope.mytripslist=true;
      $scope.cancellist=false;
-     if($scope.data.mytrips.CancelMyTripDetails==null)
+     if($scope.data.mytrips.CancelTransportDetails==null)
      {
          $scope.recordlist=true;
      }
@@ -29,7 +29,18 @@ function app_mytrips($scope, app,$ionicPopup) {
         }
     };
     $scope.noShowPopup = function(item){
-         var tripinfo ={"cabRequestID":$scope.listarray,"status":"2"};
+        var employeeID=localStorage.employeeId;
+        var locationID=1; 
+        var RequestForID=localStaorage.employeeId;
+        var RequestTypeID=localStaorage.employeeId;
+        var RequestTypeName=localStaorage.employeeId; 
+        var RequestForName=localStaorage.employeeId;
+        var ShiftTimeID=localStaorage.employeeId;
+        var CabRequestID=localStaorage.employeeId; 
+        var FromDateOpnNoShow=localStaorage.employeeId;
+        var ToDateOpnNoShow=localStaorage.employeeId;
+         
+         var tripinfo ={"locationID":locationID,"employeeID":employeeID,"RequestTypeName":"1","RequestForName":localStaorage.employeeId,"ShiftTimeID":"1","CabRequestID":localStaorage.employeeId,"FromDateOpnNoShow":localStaorage.employeeId,"ToDateOpnNoShow":localStaorage.employeeId};
         app.call("goeasymethods.gettripinfo",tripinfo);
         console.log("no show click...!!!");
          //app.call('goeasymethods.getMytrips');
