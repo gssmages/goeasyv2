@@ -17,11 +17,26 @@ function app_tripcancellation($scope, app) {
     $scope.requestfor = [];
     $scope.loadOptions = function() {
   if ($scope.requestfor.length === 0) {
+      if($scope.data.tripinfo.RequestForName=="Pickup and Drop")
+      {
     $scope.requestfor=[
             { RequestForID:"1",RequestForName:"Pickup and Drop"},
             { RequestForID:"2",RequestForName:"Pickup"},
             { RequestForID:"3",RequestForName:"Drop"}
             ];
+      }
+      else if($scope.data.tripinfo.RequestForName=="Pickup"){
+          
+            $scope.requestfor=[
+            { RequestForID:"2",RequestForName:"Pickup"}
+            ];
+      }
+      else
+      {
+           $scope.requestfor=[
+            { RequestForID:"3",RequestForName:"Drop"}
+            ];
+      }
   }
 }
      $scope.tripcancel = function(){
