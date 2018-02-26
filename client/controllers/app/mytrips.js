@@ -4,6 +4,22 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage) {
     app.init($scope,function(){
        $scope.mytripslist=true;
      $scope.cancellist=false;
+     
+      var success=$scope.data.successmsg;
+     console.log(success+"thisissuccesmsg");
+      if(success!=undefined)
+         {
+          var alertPopup = $ionicPopup.alert({
+     title: 'Goeasy message',
+     template: success
+   });
+
+   alertPopup.then(function(res) {
+     console.log('Reload mytrips page');
+     app.call('goeasymethods.getMytrips');
+   });
+         }
+         
      if($scope.data.mytrips.CancelTransportDetails==null)
      {
          $scope.recordlist=true;
