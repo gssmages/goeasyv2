@@ -26,7 +26,7 @@
             class="item item-input item-select-icon positive-icon item-stacked-label icon-position-middle"
             data-comp-id="selectInput.1">
             <span class="input-label">Request For</span>
-            <select ng-focus="loadOptions()" ng-model="data.reqfor"
+            <select ng-change="GetValue()" ng-focus="loadOptions()" ng-model="data.reqfor"
                 ng-options="item.RequestForName as item.RequestForName for item in requestfor"></select>
         </label>
     </ion-content>
