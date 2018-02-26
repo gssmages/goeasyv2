@@ -48,7 +48,7 @@ $scope.GetValue = function (item) {
                
             }
      $scope.tripcancel = function(){
-         console.log($scope.data.reqfor.RequestForName+"fromdate"+$scope.fromdate+$scope.data.reqfor)
+        // console.log($scope.data.reqfor.RequestForName+"fromdate"+$scope.fromdate+$scope.data.reqfor)
          var employeeID=$scope.data.tripinfo.employeeID;
         var locationID=$scope.data.tripinfo.locationID; 
         var RequestForID=selectid;
