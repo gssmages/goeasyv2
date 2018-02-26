@@ -40,8 +40,25 @@ function app_tripcancellation($scope, app) {
   }
 }
      $scope.tripcancel = function(){
-     
-		app.call('goeasymethods.sendNoshow');
+         var employeeID=$scope.data.tripinfo.employeeID;
+        var locationID=$scope.data.tripinfo.locationID; 
+        var RequestForID=requestfor.RequestForID;
+        var RequestTypeID=$scope.data.tripinfo.RequestTypeID;
+        var RequestTypeName=$scope.data.tripinfo.RequestTypeName; 
+        var RequestForName=requestfor.RequestForName;
+        var ShiftTimeID=$scope.data.tripinfo.ShiftTimeID;
+        var CabRequestID=$scope.data.tripinfo.CabRequestID;
+        var FromDate=$scope.fromdate;
+        var ToDate= $scope.todate;
+         
+         var tripinfo ={"locationID":locationID,"employeeID":employeeID,
+         "RequestTypeName":RequestTypeName,"RequestForName":RequestForName,
+         "ShiftTimeID":ShiftTimeID,"CabRequestID":CabRequestID,
+         "RequestForID":RequestForID,"RequestTypeID":RequestTypeID,
+         "FromDateOpnNoShow":FromDate,
+         "ToDateOpnNoShow":ToDate};
+         console.log(tripinfo);
+		//app.call('goeasymethods.sendNoshow');
 
    };
 }
