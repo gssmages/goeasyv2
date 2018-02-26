@@ -40,6 +40,7 @@ function app_tripcancellation($scope, app) {
   }
 }
      $scope.tripcancel = function(){
+         console.log($scope.data.reqfor.RequestForName+"fromdate"+$scope.fromdate+$scope.data.reqfor)
          var employeeID=$scope.data.tripinfo.employeeID;
         var locationID=$scope.data.tripinfo.locationID; 
         var RequestForID=$scope.data.reqfor.RequestForID;
