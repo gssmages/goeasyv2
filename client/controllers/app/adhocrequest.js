@@ -26,12 +26,12 @@ function app_adhocrequest($scope, app) {
         }
         
         $scope.filterExpression = function() {
-           
                 var i = 0;
                 for(i;i<$scope.boardingPoint.length;i++){
-                   return ($scope.boardingPoint[i].Area === $scope.boardAreaId ); 
+                    if($scope.boardingPoint[i].Area === $scope.boardAreaId){
+                       return ($scope.boardingPoint[i].Area === $scope.boardAreaId );  
+                     }
                     }
-               
             };
         
         $scope.typeChange = function () {
