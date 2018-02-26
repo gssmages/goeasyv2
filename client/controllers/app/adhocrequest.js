@@ -9,7 +9,7 @@ function app_adhocrequest($scope, app) {
         $scope.reqFor= $scope.data.adhocDataList[0].RequestForDetails;
         $scope.timing= $scope.data.adhocDataList[0].ShiftTimeDetails;
         $scope.area= $scope.data.adhocDataList[0].AreaDetails;
-        $scope.boardingPoint= $scope.data.adhocDataList[0].RelBoardingPointDetails;
+        $scope.boardingPoint= [];
         
         $scope.areaSelect = function () {
             console.log("area selected-->"+ $scope.data.selectedarea);
