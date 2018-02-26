@@ -31,18 +31,22 @@ function app_mytrips($scope, app,$ionicPopup) {
     $scope.noShowPopup = function(item){
         var employeeID=localStorage.employeeId;
         var locationID=1; 
-        var RequestForID=localStaorage.employeeId;
-        var RequestTypeID=localStaorage.employeeId;
-        var RequestTypeName=localStaorage.employeeId; 
-        var RequestForName=localStaorage.employeeId;
-        var ShiftTimeID=localStaorage.employeeId;
-        var CabRequestID=localStaorage.employeeId; 
-        var FromDateOpnNoShow=localStaorage.employeeId;
-        var ToDateOpnNoShow=localStaorage.employeeId;
+        var RequestForID=item.RequestForID;
+        var RequestTypeID=item.RequestTypeID;
+        var RequestTypeName=item.RequestTypeName; 
+        var RequestForName=item.RequestTypeName;
+        var ShiftTimeID=item.RequestTypeName;
+        var CabRequestID=item.RequestTypeName;
+        var FromDateOpnNoShow=item.FromDateOpnNoShow;
+        var ToDateOpnNoShow=item.ToDateOpnNoShow;
          
-         var tripinfo ={"locationID":locationID,"employeeID":employeeID,"RequestTypeName":"1","RequestForName":localStaorage.employeeId,"ShiftTimeID":"1","CabRequestID":localStaorage.employeeId,"FromDateOpnNoShow":localStaorage.employeeId,"ToDateOpnNoShow":localStaorage.employeeId};
-        app.call("goeasymethods.gettripinfo",tripinfo);
-        console.log("no show click...!!!");
+         var tripinfo ={"locationID":locationID,"employeeID":employeeID,
+         "RequestTypeName":RequestTypeName,"RequestForName":RequestForName,
+         "ShiftTimeID":ShiftTimeID,"CabRequestID":CabRequestID,
+         "FromDateOpnNoShow":FromDateOpnNoShow,
+         "ToDateOpnNoShow":ToDateOpnNoShow};
+        //app.call("goeasymethods.gettripinfo",tripinfo);
+        console.log(tripinfo);
          //app.call('goeasymethods.getMytrips');
     // app.action('mytripstab', 'mytrips[item].cancel', this);
     //  app.call('tripcancellation');
