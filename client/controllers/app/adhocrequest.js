@@ -9,7 +9,13 @@ function app_adhocrequest($scope, app) {
         $scope.area= $scope.data.adhocDataList[0].AreaDetails;
         $scope.boardingPoint= $scope.data.adhocDataList[0].RelBoardingPointDetails;
         $scope.areaSelect = function () {
-            console.log("area selected-->"+ $scope.data.selectedarea.RelAreaID);
+            console.log("area selected-->"+ $scope.data.selectedarea);
+            for(i;i<$scope.data.adhocDataList[0].AreaDetails.length;i++){
+                
+            if ($scope.data.adhocDataList[0].AreaDetails[i].AreaName == $scope.data.selectedarea){
+                
+                console.log("selec area id-->"+$scope.data.adhocDataList[0].AreaDetails[i].RelAreaID);
+            }
         }
        
         $scope.typeChange = function () {
