@@ -82,7 +82,7 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.4">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select ng-change="areaSelect(item);" ng-model="selectedarea"
+                        <select ng-blur="areaSelect();" ng-model="selectedarea"
                             ng-options="item.AreaName as item.AreaName for item in area"></select>
                     </label>
                 </div>
