@@ -56,7 +56,7 @@
                 ng-repeat="item in data.mytrips.CancelTransportDetails" style="padding: 0px;">
                 <div class="row stable" data-comp-id="row.3" style="padding: 0px;">
                     <div class="col text-left stable-bg" data-comp-id="column.5" style="">
-                        <div class="text-center" data-comp-id="text.6" ng-bind="item.ReqTypeName"
+                        <div class="text-center" data-comp-id="text.6" ng-bind="item.RequestTypeName"
                             style="color: rgb(4, 3, 3); font-weight: bold; float: left;">Adhoc</div>
                     </div>
                     <div class="col stable stable-bg" data-comp-id="column.6">
@@ -74,10 +74,10 @@
                                     style="font-size: 32px;"></i>
                             </div>
                             <div class="col" data-comp-id="column.9">
-                                <div data-comp-id="text.7" ng-bind="item.FromDate+' - '+item.ToDate"
+                                <div data-comp-id="text.7" ng-bind="item.FromDate +&quot;- &quot; +item.ToDate"
                                     ng-if="item.date !=&quot;-&quot;" style="font-weight: bold;"></div>
                                 <div data-comp-id="text.8"
-                                    ng-bind="item.ReqForName+'at'+ item.ShiftStartTime +'-'+item.ShiftEndTime">Drop at 5:00 pm</div>
+                                    ng-bind="item.RequestForName +&quot;- &quot;+ item.ShiftStartTime +&quot;- &quot;+ item.ShiftEndTime">Drop at 5:00 pm</div>
                             </div>
                         </div>
                     </div>
