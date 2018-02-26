@@ -1,5 +1,5 @@
 angular.module('app').controller('app_mytrips', app_mytrips);
-function app_mytrips($scope, app,$ionicPopup) {
+function app_mytrips($scope, app,$ionicPopup,$localStorage) {
     'use strict';
     app.init($scope,function(){
        $scope.mytripslist=true;
@@ -29,14 +29,14 @@ function app_mytrips($scope, app,$ionicPopup) {
         }
     };
     $scope.noShowPopup = function(item){
-        var employeeID=localStorage.employeeId;
+        var employeeID=$localStorage.employeeId;
         var locationID=1; 
         var RequestForID=item.RequestForID;
         var RequestTypeID=item.RequestTypeID;
         var RequestTypeName=item.RequestTypeName; 
-        var RequestForName=item.RequestTypeName;
-        var ShiftTimeID=item.RequestTypeName;
-        var CabRequestID=item.RequestTypeName;
+        var RequestForName=item.RequestForName;
+        var ShiftTimeID=item.ShiftTimeID;
+        var CabRequestID=item.CabRequestID;
         var FromDateOpnNoShow=item.FromDateOpnNoShow;
         var ToDateOpnNoShow=item.ToDateOpnNoShow;
          
