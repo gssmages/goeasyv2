@@ -46,11 +46,11 @@ function app_tripcancellation($scope, app) {
         var RequestForID=$scope.data.reqfor.RequestForID;
         var RequestTypeID=$scope.data.tripinfo.RequestTypeID;
         var RequestTypeName=$scope.data.tripinfo.RequestTypeName; 
-        var RequestForName=$scope.data.reqfor.RequestForName;
+        var RequestForName=$scope.data.reqfor;
         var ShiftTimeID=$scope.data.tripinfo.ShiftTimeID;
         var CabRequestID=$scope.data.tripinfo.CabRequestID;
-        var FromDate=$scope.fromdate;
-        var ToDate= $scope.todate;
+        var FromDate=$scope.data.fromdate;
+        var ToDate= $scope.data.todate;
          
          var tripinfo ={"locationID":locationID,"employeeID":employeeID,
          "RequestTypeName":RequestTypeName,"RequestForName":RequestForName,
