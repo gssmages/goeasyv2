@@ -26,12 +26,13 @@ function app_adhocrequest($scope, app) {
         }
         
         $scope.filterExpression = function() {
-                var i = 0;
-                for(i;i<$scope.boardingPoint.length;i++){
-                    if($scope.boardingPoint[i].Area === $scope.boardAreaId){
-                       return ($scope.boardingPoint[i].Area === $scope.boardAreaId );  
-                     }
-                    }
+                // var i = 0;
+                // for(i;i<$scope.boardingPoint.length;i++){
+                //     if($scope.boardingPoint[i].Area === $scope.boardAreaId){
+                //       return ($scope.boardingPoint[i].Area === $scope.boardAreaId );  
+                //      }
+                //     }
+                $scope.boardingPoint.Area === $scope.boardAreaId
             };
         
         $scope.typeChange = function () {
