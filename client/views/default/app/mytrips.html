@@ -91,10 +91,10 @@
         </div>
         <div data-comp-id="div.5" ng-show="cancellist">
             <div class="card" data-comp-id="div.6"
-                ng-repeat="item in data.mytrips.CancelTransportDetails" style="padding: 0px;">
+                ng-repeat="item in data.mytrips.CancelMyTripDetails" style="padding: 0px;">
                 <div class="row stable" data-comp-id="row.7" style="padding: 0px;">
                     <div class="col text-left stable-bg" data-comp-id="column.11" style="">
-                        <div class="text-center" data-comp-id="text.10" ng-bind="item.RequestTypeName"
+                        <div class="text-center" data-comp-id="text.10" ng-bind="item.ReqTypeName"
                             style="color: rgb(4, 3, 3); font-weight: bold; float: left;">Adhoc</div>
                     </div>
                     <div class="col stable stable-bg" data-comp-id="column.12"></div>
@@ -107,10 +107,11 @@
                                     style="font-size: 32px;"></i>
                             </div>
                             <div class="col" data-comp-id="column.15">
-                                <div data-comp-id="text.11" ng-bind="item.FromDate +&quot;- &quot; +item.ToDate"
+                                <div data-comp-id="text.11"
+                                    ng-bind="item.StartDate +&quot;- &quot; +item.EndDate"
                                     style="font-weight: bold;"></div>
                                 <div data-comp-id="text.12"
-                                    ng-bind="item.RequestForName +&quot;- &quot;+ item.longShiftStartTime">Drop at 5:00 pm</div>
+                                    ng-bind="item.ReqForName +&quot;at &quot;+ item.ShiftStart+&quot;- &quot;+item.ShiftEnd">Drop at 5:00 pm</div>
                             </div>
                         </div>
                     </div>
