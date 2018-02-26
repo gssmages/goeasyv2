@@ -9,7 +9,7 @@ function app_adhocrequest($scope, app) {
         $scope.area= $scope.data.adhocDataList[0].AreaDetails;
         $scope.boardingPoint= $scope.data.adhocDataList[0].RelBoardingPointDetails;
         $scope.areaSelect = function () {
-            console.log("area selected-->"+ $scope.data.selectedarea );
+            console.log("area selected-->"+ $scope.data.selectedarea.RelAreaID);
         }
        
         $scope.typeChange = function () {
