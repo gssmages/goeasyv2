@@ -23,18 +23,23 @@ function app_adhocrequest($scope, app) {
                 break;
             }
           }
+          
+           $scope.boardingPoint = $scope.boardingPoint.filter(function(d) {
+                return d.Area === $scope.boardAreaId 
+            });
+            console.log("bording--->"+JSON.stringfy($scope.boardingPoint));
         }
         
-        $scope.filterExpression = function() {
-                // var i = 0;
-                // for(i;i<$scope.boardingPoint.length;i++){
-                //     if($scope.boardingPoint[i].Area === $scope.boardAreaId){
-                //       return ($scope.boardingPoint[i].Area === $scope.boardAreaId );  
-                //      }
-                //     }
-                $scope.boardingPoint.Area === $scope.boardAreaId
-            };
-        
+        // $scope.filterExpression = function() {
+        //         // var i = 0;
+        //         // for(i;i<$scope.boardingPoint.length;i++){
+        //         //     if($scope.boardingPoint[i].Area === $scope.boardAreaId){
+        //         //       return ($scope.boardingPoint[i].Area === $scope.boardAreaId );  
+        //         //      }
+        //         //     }
+        //         $scope.boardingPoint.Area === $scope.boardAreaId
+        //     };
+            
         $scope.typeChange = function () {
             //console.log('---Request Type---' +  $scope.data.selectedreqtype);
              var selectedReqTyp = $scope.data.selectedreqtype;
