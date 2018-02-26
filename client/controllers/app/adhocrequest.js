@@ -10,6 +10,7 @@ function app_adhocrequest($scope, app) {
         $scope.boardingPoint= $scope.data.adhocDataList[0].RelBoardingPointDetails;
         $scope.areaSelect = function () {
             console.log("area selected-->"+ $scope.data.selectedarea);
+            var i=0;
             for(i;i<$scope.data.adhocDataList[0].AreaDetails.length;i++){
                 
             if ($scope.data.adhocDataList[0].AreaDetails[i].AreaName == $scope.data.selectedarea){
