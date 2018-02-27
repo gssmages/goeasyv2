@@ -105,7 +105,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         
         $scope.submitApprovals = function () {
             //perform field validation befor submit
-            validate();
+            //validate();
             
             //Data to be sent for Adhoc Request
             var EmployeeCabDetails = {
