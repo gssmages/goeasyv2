@@ -103,7 +103,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 }else{ errorMsg(); }   
             }
         
-        $scope.submitApprovals = function () {
+        var submitApprovals = function () {
             //perform field validation befor submit
             //validate();
             
