@@ -1,5 +1,5 @@
 angular.module('app').controller('app_adhocrequest', app_adhocrequest);
-function app_adhocrequest($scope, app) {
+function app_adhocrequest($scope, app, $ionicPopup) {
     'use strict';
     app.init($scope, function () {
         console.log('data objects ', $scope.data);
@@ -77,9 +77,29 @@ function app_adhocrequest($scope, app) {
             }
         };
         
+        var errorMsg = function(){
+            var alertPopup = $ionicPopup.alert({
+                 title: 'Warning',
+                 template: 'Please select all the required field.'
+            });
+
+             alertPopup.then(function(res) {
+               // Custom functionality....
+             });
+        }
+        
+        var validate = function(){
+            if(data.selectedreqtype && data.Date && data.selectedreqFor && data.selectedtiming
+                && data.selectedarea && data.selectedboarding){
+                    return;
+                } else{
+                    errorMsg();
+                }
+        }
+        
         $scope.submitApprovals = function () {
             //perform field validation befor submit
-            
+            validate();
             
             //Data to be sent for Adhoc Request
             var EmployeeCabDetails = {
