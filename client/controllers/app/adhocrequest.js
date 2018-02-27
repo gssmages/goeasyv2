@@ -96,14 +96,9 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                       if($scope.data.FromDate && $scope.data.ToDate){
                         return;
                       }else{errorMsg();}
-                    }else{
-                      return;
-                   }
-                } else{
-                    errorMsg();
-                }
-               
-        }
+                    }else{ return; }
+                }else{ errorMsg(); }   
+            }
         
         $scope.submitApprovals = function () {
             //perform field validation befor submit
