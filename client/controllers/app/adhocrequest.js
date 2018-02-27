@@ -92,10 +92,17 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             if($scope.data.selectedreqtype && $scope.data.Date && $scope.data.selectedreqFor 
                 && $scope.data.selectedtiming && $scope.data.selectedarea 
                  && $scope.data.selectedboarding){
-                    return;
+                  if($scope.data.selectedreqtype =="Month end"){
+                      if($scope.data.FromDate && $scope.data.ToDate){
+                        return;
+                      }else{errorMsg();}
+                    }else{
+                      return;
+                   }
                 } else{
                     errorMsg();
                 }
+               
         }
         
         $scope.submitApprovals = function () {
