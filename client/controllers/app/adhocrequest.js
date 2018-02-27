@@ -3,7 +3,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
     'use strict';
     app.init($scope, function () {
         console.log('data objects ', $scope.data);
-        
+        $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.boardingPoint= [];
         $scope.reqtype= $scope.data.adhocDataList[0].RequestTypeDetails;
@@ -126,7 +126,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 //BoardingPointID: $('#ddlBoardingPoint').val(),
                 BoardingPointName:$scope.data.selectedboarding,
                 // BoardingPointName:$('#ddlBoardingPoint option:selected').text(),
-                // SpecialNeed: $('input[name=optradio]:checked').val(),
+                SpecialNeed: $scope.data.SpecialNeed,
                 // SpecialNeedReason: splNeeed,
                 // ManagerEmpID: $('#RepManagaerEmID').val(),
                 Reason: $scope.data.ReasonForAdhoc,
