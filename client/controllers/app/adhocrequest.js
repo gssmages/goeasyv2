@@ -21,6 +21,15 @@ function app_adhocrequest($scope, app) {
             
         }
         
+        $scope.NeedCheck = function(){
+            $scope.data.displaySpecify;
+            if($scope.data.SpecialNeed === "YES"){
+                $scope.data.displaySpecify = true;
+            }else{
+                $scope.data.displaySpecify= false;
+            }
+        }
+        
         $scope.areaSelect = function () {
             // console.log("area selected-->"+ $scope.data.selectedarea);
             var i=0;

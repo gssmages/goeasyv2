@@ -105,14 +105,12 @@
                     <div data-comp-id="text.9">Special Need</div>
                     <div class="row" data-comp-id="row.9" style="padding: 0px; margin: 0px;">
                         <div class="col" data-comp-id="column.10">
-                            <ion-radio class="radio-button" data-comp-id="radio.1"
-                                ng-change="submitApprovals()" ng-model="data.SpecialNeed.selected"
-                                style="padding: 0px;" value="1">YES</ion-radio>
+                            <ion-radio class="radio-button" data-comp-id="radio.1" ng-change="NeedCheck()"
+                                ng-model="data.SpecialNeed" style="padding: 0px;" value="1">YES</ion-radio>
                         </div>
                         <div class="col" data-comp-id="column.11">
-                            <ion-radio class="radio-button" data-comp-id="radio.2"
-                                ng-change="submitApprovals()" ng-model="data.SpecialNeed.selected"
-                                style="padding: 0px;" value="2">NO</ion-radio>
+                            <ion-radio class="radio-button" data-comp-id="radio.2" ng-change="NeedCheck()"
+                                ng-model="data.SpecialNeed" style="padding: 0px;" value="2">NO</ion-radio>
                         </div>
                     </div>
                 </div>
@@ -122,7 +120,7 @@
                 <!--    ng-model="data.SpecialNeed" style="border-radius: 0px;"></ion-toggle>-->
                 <!--</div>-->
             </div>
-            <div class="row" data-comp-id="row.10" ng-if="data.PleaseSpecif">
+            <div class="row" data-comp-id="row.10" ng-if="$scope.data.displaySpecify">
                 <div class="col" data-comp-id="column.12">
                     <div data-comp-id="text.10">Please Specify</div>
                     <select-list data-comp-id="selectList.1" ng-change="submitApprovals()"
