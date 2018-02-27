@@ -23,7 +23,7 @@ function app_adhocrequest($scope, app) {
         
         $scope.NeedCheck = function(){
             $scope.data.displaySpecify;
-            if($scope.data.SpecialNeed === "YES"){
+            if($scope.data.SpecialNeed === "1"){
                 $scope.data.displaySpecify = true;
             }else{
                 $scope.data.displaySpecify= false;
