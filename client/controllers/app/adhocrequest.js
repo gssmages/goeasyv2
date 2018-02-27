@@ -5,41 +5,30 @@ function app_adhocrequest($scope, app) {
         console.log('data objects ', $scope.data);
         
         $scope.boardAreaId ="";
+        $scope.boardingPoint= [];
         $scope.reqtype= $scope.data.adhocDataList[0].RequestTypeDetails;
         $scope.reqFor= $scope.data.adhocDataList[0].RequestForDetails;
         $scope.timing= $scope.data.adhocDataList[0].ShiftTimeDetails;
         $scope.area= $scope.data.adhocDataList[0].AreaDetails;
-        $scope.boardingPoint= [];
         
         $scope.areaSelect = function () {
-            console.log("area selected-->"+ $scope.data.selectedarea);
+            // console.log("area selected-->"+ $scope.data.selectedarea);
             var i=0;
             for(i;i<$scope.data.adhocDataList[0].AreaDetails.length;i++){
                 
             if ($scope.data.adhocDataList[0].AreaDetails[i].AreaName == $scope.data.selectedarea){
                 
-                console.log("selec area id-->"+$scope.data.adhocDataList[0].AreaDetails[i].RelAreaID);
                 $scope.boardAreaId = $scope.data.adhocDataList[0].AreaDetails[i].RelAreaID;
                 break;
             }
           }
           
+          //method to process json array as filter
            $scope.boardingPoint = $scope.data.adhocDataList[0].RelBoardingPointDetails.filter(function(d) {
                 return d.Area === $scope.boardAreaId 
             });
-            console.log($scope.boardingPoint);
         }
         
-        // $scope.filterExpression = function() {
-        //         // var i = 0;
-        //         // for(i;i<$scope.boardingPoint.length;i++){
-        //         //     if($scope.boardingPoint[i].Area === $scope.boardAreaId){
-        //         //       return ($scope.boardingPoint[i].Area === $scope.boardAreaId );  
-        //         //      }
-        //         //     }
-        //         $scope.boardingPoint.Area === $scope.boardAreaId
-        //     };
-            
         $scope.typeChange = function () {
             //console.log('---Request Type---' +  $scope.data.selectedreqtype);
              var selectedReqTyp = $scope.data.selectedreqtype;
