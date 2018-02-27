@@ -57,8 +57,43 @@ function app_adhocrequest($scope, app) {
                 break;
             }
         };
-        // $scope.submitApprovals = function () {
-        //     app.call('myapprovals.sendRequest', $scope.data);
-        // };
+        
+        $scope.submitApprovals = function () {
+            //perform field validation befor submit
+            
+            
+            //Data to be sent for Adhoc Request
+            var EmployeeCabDetails = {
+                // LocationID: global_locationID,
+                // EmployeeID: $('#EmpNumber').val(),
+                // RequestTypeID: $('#ddlReqType').val(),
+                RequestTypeName: $scope.data.selectedreqtype,
+                //RequestForID: $('#ddlReqFor').val(),
+                RequestForName:$scope.data.selectedreqFor,
+                FromDate: $scope.data.FromDate,
+                Todate: $scope.data.ToDate,
+                CommonDate: $scope.data.Date,
+                // Shift: $('#ddlShiftTime').val(),
+                // ShiftTimeName: $("#ddlShiftTime option:selected").text(),
+                AreaID: $scope.boardAreaId,
+                AreaName: $scope.data.selectedarea,
+                // AreaName: $("#ddlArea option:selected").text(),
+                //BoardingPointID: $('#ddlBoardingPoint').val(),
+                BoardingPointName:$scope.data.selectedboarding,
+                // BoardingPointName:$('#ddlBoardingPoint option:selected').text(),
+                // SpecialNeed: $('input[name=optradio]:checked').val(),
+                // SpecialNeedReason: splNeeed,
+                // ManagerEmpID: $('#RepManagaerEmID').val(),
+                Reason: $scope.data.ReasonForAdhoc,
+                // ManagerMailID: $('#ManagerMailID').val(),
+                // EmployeeName: $('#EmpDisplayName').val(),
+                // ManagerName:$('#ManagerName').val(),
+                // StatusID: StatusId,
+                // IsActive: true,
+                // EmpEmailID: $('#EmpEmail').val(),
+                // OutOfBoundary:saveOUBdata,
+            };
+            //app.call('myapprovals.sendRequest', $scope.data);
+        };
     });
 }
