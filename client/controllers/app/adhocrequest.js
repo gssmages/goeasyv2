@@ -86,6 +86,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
              alertPopup.then(function(res) {
                // Custom functionality....
              });
+             break;
         }
         
         var validate = function(){
