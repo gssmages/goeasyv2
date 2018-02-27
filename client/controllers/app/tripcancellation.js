@@ -4,8 +4,8 @@ function app_tripcancellation($scope, app) {
     app.init($scope,function(){
         $scope.fromdate="";
         $scope.todate="";
-        $scope.data.minDate=$scope.data.tripinfo.FromDateOpnNoShow.split('T')[0];
-        $scope.data.maxDate=$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0];
+        $scope.data.minDate=$scope.data.tripinfo.FromDateOpnNoShow==null?$scope.data.tripinfo.FromDateOpnNoShow:$scope.data.tripinfo.FromDateOpnNoShow.split('T')[0];
+        $scope.data.maxDate=$scope.data.tripinfo.ToDateOpnNoShow==null?$scope.data.tripinfo.ToDateOpnNoShow:$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0];
       /*  $scope.requestfor=[
             { RequestForID:"1",RequestForName:"Pickup and Drop"},
             { RequestForID:"2",RequestForName:"Pickup"},
