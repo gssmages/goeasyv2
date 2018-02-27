@@ -86,18 +86,20 @@ function app_adhocrequest($scope, app, $ionicPopup) {
              alertPopup.then(function(res) {
                // Custom functionality....
              });
-             return;
         }
         
-        var validate = function(){
+        $scope.validate = function(){
             if($scope.data.selectedreqtype && $scope.data.Date && $scope.data.selectedreqFor 
                 && $scope.data.selectedtiming && $scope.data.selectedarea 
                  && $scope.data.selectedboarding){
                   if($scope.data.selectedreqtype =="Month end"){
                       if($scope.data.FromDate && $scope.data.ToDate){
-                        return;
+                        //return;
+                        submitApprovals();
                       }else{errorMsg();}
-                    }else{ return; }
+                    }else{ //return;
+                        submitApprovals();
+                    }
                 }else{ errorMsg(); }   
             }
         
