@@ -66,7 +66,7 @@ $scope.GetValue = function (item) {
          "FromDateOpnNoShow":FromDate,
          "ToDateOpnNoShow":ToDate};
          console.log(tripinfo);
-		app.call('goeasymethods.sendNoshow',tripinfo);
+		app.call('goeasymethods.',tripinfo);
 
    };
 }
