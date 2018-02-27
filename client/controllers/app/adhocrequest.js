@@ -77,7 +77,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             }
         };
         
-        var errorMsg = function(){
+        $scope.errorMsg = function(){
             var alertPopup = $ionicPopup.alert({
                  title: 'Warning',
                  template: 'Please select all the required field.'
@@ -88,18 +88,18 @@ function app_adhocrequest($scope, app, $ionicPopup) {
              });
         }
         
-        var validate = function(){
+        $scope.validate = function(){
             if(data.selectedreqtype && data.Date && data.selectedreqFor && data.selectedtiming
                 && data.selectedarea && data.selectedboarding){
                     return;
                 } else{
-                    errorMsg();
+                    $scope.errorMsg();
                 }
         }
         
         $scope.submitApprovals = function () {
             //perform field validation befor submit
-            validate();
+            $scope.validate();
             
             //Data to be sent for Adhoc Request
             var EmployeeCabDetails = {
