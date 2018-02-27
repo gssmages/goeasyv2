@@ -9,7 +9,17 @@ function app_adhocrequest($scope, app) {
         $scope.reqtype= $scope.data.adhocDataList[0].RequestTypeDetails;
         $scope.reqFor= $scope.data.adhocDataList[0].RequestForDetails;
         $scope.timing= $scope.data.adhocDataList[0].ShiftTimeDetails;
-        $scope.area= $scope.data.adhocDataList[0].AreaDetails;
+        $scope.area= $scope.data.adhocDataList[0].AreaDetails
+        
+        $scope.shiftSelection = function(){
+            var date = new Date();
+            var hrs;
+             if(date.getHours()/12 > 0)
+                hrs = date.getHours()%12 + "PM"
+             else hrs = date.getHours()%12 +"AM"
+            console.log("shift selected-->"+$scope.data.selectedtiming);
+            
+        }
         
         $scope.areaSelect = function () {
             // console.log("area selected-->"+ $scope.data.selectedarea);
