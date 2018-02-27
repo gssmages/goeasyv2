@@ -1,5 +1,5 @@
 angular.module('app').controller('app_tripcancellation', app_tripcancellation);
-function app_tripcancellation($scope, app) {
+function app_tripcancellation($scope, app,$filter) {
     'use strict';
     app.init($scope,function(){
         $scope.fromdate="";
