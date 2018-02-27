@@ -89,8 +89,9 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         }
         
         $scope.validate = function(){
-            if(data.selectedreqtype && data.Date && data.selectedreqFor && data.selectedtiming
-                && data.selectedarea && data.selectedboarding){
+            if($scope.data.selectedreqtype && $scope.data.Date && $scope.data.selectedreqFor 
+                && $scope.data.selectedtiming && $scope.data.selectedarea 
+                 && $scope.data.selectedboarding){
                     return;
                 } else{
                     $scope.errorMsg();
