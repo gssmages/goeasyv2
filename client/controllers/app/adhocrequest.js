@@ -93,6 +93,7 @@ function app_adhocrequest($scope, app) {
                 // EmpEmailID: $('#EmpEmail').val(),
                 // OutOfBoundary:saveOUBdata,
             };
+            console.log("req Data--->"+EmployeeCabDetails);
             //app.call('myapprovals.sendRequest', $scope.data);
         };
     });
