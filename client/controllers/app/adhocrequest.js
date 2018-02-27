@@ -136,5 +136,8 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             console.log("req Data--->"+JSON.stringify(EmployeeCabDetails));
             //app.call('myapprovals.sendRequest', $scope.data);
         };
+        $scope.reset = function() {
+            //reset all the field in the page.
+        }
     });
 }
