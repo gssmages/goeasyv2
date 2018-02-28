@@ -74,7 +74,8 @@
                                     style="font-size: 32px;"></i>
                             </div>
                             <div class="col" data-comp-id="column.9">
-                                <div data-comp-id="text.7" ng-bind="item.FromDate +&quot;- &quot; +item.ToDate"
+                                <div data-comp-id="text.7"
+                                    ng-bind="item.FromDate.split('T')[0] +&quot;- &quot; +item.ToDate.split('T')[0]"
                                     ng-if="item.FromDate!=null" style="font-weight: bold;"></div>
                                 <div data-comp-id="text.8"
                                     ng-bind="item.RequestForName +&quot;- &quot;+ item.ShiftStartTime +&quot;- &quot;+ item.ShiftEndTime">Drop at 5:00 pm</div>
@@ -108,7 +109,7 @@
                             </div>
                             <div class="col" data-comp-id="column.15">
                                 <div data-comp-id="text.11"
-                                    ng-bind="item.StartDate +&quot;- &quot; +item.EndDate"
+                                    ng-bind="item.StartDate.split('T')[0] +&quot;- &quot; +item.EndDate.split('T')[0]"
                                     style="font-weight: bold;"></div>
                                 <div data-comp-id="text.12"
                                     ng-bind="item.ReqForName +&quot;at &quot;+ item.ShiftStart+&quot;- &quot;+item.ShiftEnd">Drop at 5:00 pm</div>
