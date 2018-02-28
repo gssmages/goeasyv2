@@ -28,7 +28,7 @@ exports.getMytrips = function (page,params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/MyTripsApi/GetMyTripsDetails?todaydate=02-26-2018&employeeID=941364";
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/MyTripsApi/GetMyTripsDetails?todaydate=02-28-2018&employeeID=941364";
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -104,6 +104,13 @@ exports.sendNoshow = function (page, params) {
                  data.successmsg = response;
              })
                  .screen("mytrips");
+        }
+        else{
+            var response = JSON.parse(this.responseText);
+             page.data(function(data) {
+                data.successmsg = response;
+            })
+                .screen("mytrips");
         }
     };
     xmlhttp.open("GET", url, false);
