@@ -122,11 +122,9 @@
             <div class="row" data-comp-id="row.10" ng-if="displaySpecify">
                 <div class="col" data-comp-id="column.12">
                     <div data-comp-id="text.10">Please Specify</div>
-                    <select-list data-comp-id="selectList.1" ng-change=""
-                        ng-model="data.PleaseSpecify" no-label="true">
-                        <option>Please select</option>
-                        <option>Pregnant</option>
-                        <option>Undergoing Medical Treatment</option>
+                    <select-list data-comp-id="selectList.1" ng-change="submitApprovals()"
+                        ng-model="data.PleaseSpecify" no-label="true" select-class=" item-stacked-label">
+                        <option ng-repeat="options in specialNeedList">{{options}}</option>
                     </select-list>
                 </div>
             </div>

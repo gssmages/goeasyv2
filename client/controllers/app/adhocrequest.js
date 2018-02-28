@@ -3,6 +3,8 @@ function app_adhocrequest($scope, app, $ionicPopup) {
     'use strict';
     app.init($scope, function () {
         console.log('data objects ', $scope.data);
+        $scope.specialNeedList =["Please Specify","Pregnant","Undergoing Medical Treatment"];
+        
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.boardingPoint= [];
