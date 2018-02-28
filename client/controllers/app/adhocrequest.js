@@ -3,8 +3,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
     'use strict';
     app.init($scope, function () {
         console.log('data objects ', $scope.data);
-        $scope.specialNeedList =["Please Specify","Pregnant","Undergoing Medical Treatment"];
-        
+       
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.boardingPoint= [];
@@ -12,7 +11,8 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         $scope.reqFor= $scope.data.adhocDataList[0].RequestForDetails;
         $scope.timing= $scope.data.adhocDataList[0].ShiftTimeDetails;
         $scope.area= $scope.data.adhocDataList[0].AreaDetails
-        
+        $scope.specialNeedList = ["Please Specify","Pregnant","Undergoing Medical Treatment"];
+         
         $scope.shiftSelection = function(){
             var date = new Date();
             var hrs;
