@@ -6,7 +6,7 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage) {
      $scope.cancellist=false;
      
       var success=$scope.data.successmsg;
-     console.log(success+"thisissuccesmsg");
+    // console.log(success+"thisissuccesmsg");
       if(success!=undefined)
          {
           var alertPopup = $ionicPopup.alert({
