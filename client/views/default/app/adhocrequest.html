@@ -122,10 +122,16 @@
             <div class="row" data-comp-id="row.10" ng-if="displaySpecify">
                 <div class="col" data-comp-id="column.12">
                     <div data-comp-id="text.10">Please Specify</div>
-                    <select-list data-comp-id="selectList.1" ng-change="submitApprovals()"
-                        ng-model="data.PleaseSpecify" no-label="true" select-class=" item-stacked-label">
-                        <option ng-repeat="options in specialNeedList">{{options}}</option>
-                    </select-list>
+                    <!--<select-list data-comp-id="selectList.1" ng-change="submitApprovals()"-->
+                    <!--    ng-model="data.PleaseSpecify" no-label="true" select-class=" item-stacked-label">-->
+                    <!--    <option ng-repeat="options in specialNeedList">{{options}}</option>-->
+                    <!--</select-list>-->
+                    <label class="item  item-input item-select-icon positive-icon"
+                        data-comp-id="selectInput.6">
+                        <!--<span class="input-label">Select Label</span>-->
+                        <select ng-model="data.PleaseSpecify"
+                            ng-options="item.specialNeedList as item.specialNeedList for item in specialNeedList"></select>
+                    </label>
                 </div>
             </div>
             <div class="row" data-comp-id="row.11">
