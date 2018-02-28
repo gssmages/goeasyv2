@@ -8,4 +8,9 @@ function app($scope, app,$localStorage) {
        // $scope.displayName = $localStorage.displayName;
         //$scope.businessTitle = $localStorage.businessTitle;
     });
+    
+    setInterval(function(){
+ $scope.displayName = $localStorage.displayName;
+ $scope.businessTitle = $localStorage.businessTitle;
+}, 1000);
 }
