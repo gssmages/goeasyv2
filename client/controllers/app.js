@@ -1,5 +1,5 @@
 angular.module('app').controller('app', app);
-function app($scope, app) {
+function app($scope, app,$localStorage) {
     'use strict';
      app.init($scope,function(){
        console.log("getting display name : "+$localStorage.displayName);
