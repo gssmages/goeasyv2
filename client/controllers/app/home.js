@@ -8,8 +8,7 @@ function app_home($scope, app, $localStorage) {
        $localStorage.businessTitle = $scope.data.home.EmployeeDetails.BusinessTitle;
        $localStorage.employeeId = $scope.data.home.EmployeeDetails.EmployeeID;
        
-        $scope.data.displayName = $localStorage.displayName;
-        $scope.data.businessTitle = $localStorage.businessTitle;
+       
         
        $scope.pickupdropdiv = true;
        $scope.nopickupdiv = false;
@@ -31,7 +30,10 @@ function app_home($scope, app, $localStorage) {
      }
     });
   
-  
+  $scope.showdetails=function(){
+       $scope.data.displayName = $localStorage.displayName;
+        $scope.data.businessTitle = $localStorage.businessTitle;
+  };
     $scope.showdiv = function(data) {
         if(data=="pickup")
         {
