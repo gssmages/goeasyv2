@@ -145,7 +145,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 // OutOfBoundary:saveOUBdata,
             };
             console.log("req Data--->"+JSON.stringify(EmployeeCabDetails));
-            app.call('goeasymethods.adhocRequest', JSON.stringify(EmployeeCabDetails));
+            app.call('goeasymethods.adhocRequest', EmployeeCabDetails);
         };
         $scope.reset = function() {
             //reset all the field in the page.
