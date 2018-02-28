@@ -2,12 +2,15 @@ angular.module('app').controller('app_home', app_home);
 function app_home($scope, app, $localStorage) {
     'use strict';
     app.init($scope,function(){
-         $scope.data.displayName = $localStorage.displayName;
-        $scope.data.businessTitle = $localStorage.businessTitle;
+        
         //console.log('data in home page-->',$scope.data.home.PickupRequestDetail);
        $localStorage.displayName = $scope.data.home.EmployeeDetails.DisplayName;
        $localStorage.businessTitle = $scope.data.home.EmployeeDetails.BusinessTitle;
        $localStorage.employeeId = $scope.data.home.EmployeeDetails.EmployeeID;
+       
+        $scope.data.displayName = $localStorage.displayName;
+        $scope.data.businessTitle = $localStorage.businessTitle;
+        
        $scope.pickupdropdiv = true;
        $scope.nopickupdiv = false;
        $scope.pickupdiv; $scope.dropdiv;
