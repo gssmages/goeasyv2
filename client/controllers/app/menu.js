@@ -3,7 +3,7 @@ function app_menu($scope,app,$localStorage) {
     'use strict';
     app.init($scope,function(){
        console.log("getting display name : "+$localStorage.displayName);
-        /*$scope.data.displayName = $localStorage.displayName;
-        $scope.data.businessTitle = $localStorage.businessTitle;*/
+        $scope.displayName = $localStorage.displayName;
+        $scope.businessTitle = $localStorage.businessTitle;
     });
 }

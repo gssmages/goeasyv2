@@ -30,10 +30,6 @@ function app_home($scope, app, $localStorage) {
      }
     });
   
-  $scope.showdetails=function(){
-       $scope.displayName = $localStorage.displayName;
-        $scope.businessTitle = $localStorage.businessTitle;
-  };
     $scope.showdiv = function(data) {
         if(data=="pickup")
         {
