@@ -696,5 +696,10 @@
         }
       }
     }
+  },
+  "homescreen": {
+    "type": "object",
+    "comment": "",
+    "properties": {}
   }
 }
