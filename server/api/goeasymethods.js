@@ -28,7 +28,7 @@ exports.getMytrips = function (page,params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/MyTripsApi/GetMyTripsDetails?todaydate=03-01-2018&employeeID=941364";
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/MyTripsApi/GetMyTripsDetails?todaydate="+params.todaysdate+"&employeeID="+params.employeeID;
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
