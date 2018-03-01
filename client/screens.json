@@ -125,7 +125,8 @@
       "id": "homesuccess",
       "name": "homesuccess",
       "sourceScreenId": "app.blank",
-      "sourceAppId": "_blank"
+      "sourceAppId": "_blank",
+      "model": "homescreen"
     }
   ],
   "sourceAppId": "_blank",
