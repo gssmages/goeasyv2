@@ -42,16 +42,16 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         
         $scope.areaSelect = function (item) {
             console.log("area selected-->"+ JSON.stringify(item));
-            var i=0;
-            for(i;i<$scope.data.adhocDataList[0].AreaDetails.length;i++){
+        //     var i=0;
+        //     for(i;i<$scope.data.adhocDataList[0].AreaDetails.length;i++){
                 
-            if ($scope.data.adhocDataList[0].AreaDetails[i].AreaName == $scope.data.selectedarea){
+        //     if ($scope.data.adhocDataList[0].AreaDetails[i].AreaName == $scope.data.selectedarea){
                 
-                $scope.boardAreaId = $scope.data.adhocDataList[0].AreaDetails[i].RelAreaID;
-                break;
-            }
-          }
-          
+        //         $scope.boardAreaId = $scope.data.adhocDataList[0].AreaDetails[i].RelAreaID;
+        //         break;
+        //     }
+        //   }
+          $scope.boardAreaId = item.RelAreaID;
           //method to process json array as filter
            $scope.boardingPoint = $scope.data.adhocDataList[0].RelBoardingPointDetails.filter(function(d) {
                 return d.Area === $scope.boardAreaId 
