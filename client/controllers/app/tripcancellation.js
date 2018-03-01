@@ -57,6 +57,7 @@ $scope.GetValue = function (item) {
         var RequestTypeID=$scope.data.tripinfo.RequestTypeID;
         var RequestTypeName=$scope.data.tripinfo.RequestTypeName; 
         var RequestForName=$scope.data.reqfor;
+         var RequestedForName=$scope.data.tripinfo.RequestForName;
         var ShiftTimeID=$scope.data.tripinfo.ShiftTimeID;
         var CabRequestID=$scope.data.tripinfo.CabRequestID;
         var FromDate=$scope.data.fromdate;
@@ -67,7 +68,7 @@ $scope.GetValue = function (item) {
          "ShiftTimeID":ShiftTimeID,"CabRequestID":CabRequestID,
          "RequestForID":RequestForID,"RequestTypeID":RequestTypeID,
          "FromDateOpnNoShow":FromDate,
-         "ToDateOpnNoShow":ToDate};
+         "ToDateOpnNoShow":ToDate,"RequestedForName":RequestedForName,};
          console.log(tripinfo);
 		app.call('goeasymethods.sendNoshow',tripinfo);
 
