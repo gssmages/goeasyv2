@@ -135,25 +135,25 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 // EmployeeID: $('#EmpNumber').val(),
                 // EmployeeName: $('#EmpDisplayName').val(),
                 RequestTypeID: RequestTypeID,
-                RequestTypeName: $scope.data.selectedreqtype,
+                RequestTypeName: $scope.data.selectedreqtype.RequestTypeName,
                 RequestForID: RequestForID,
-                RequestForName:$scope.data.selectedreqFor,
+                RequestForName:$scope.data.selectedreqFor.RequestForName,
                 FromDate: $scope.data.FromDate,
                 Todate: $scope.data.ToDate,
                 CommonDate: $scope.data.Date,
                 Shift: shiftID,
                 ShiftTimeName:shiftTiming,
                 AreaID: $scope.boardAreaId,
-                AreaName: $scope.data.selectedarea,
+                AreaName: $scope.data.selectedarea.AreaName,
                 BoardingPointID: boardingPointID,
-                BoardingPointName:$scope.data.selectedboarding,
+                BoardingPointName:$scope.data.selectedboarding.BoardingPointName,
                 SpecialNeed: $scope.data.SpecialNeed,
                 SpecialNeedReason:$scope.data.PleaseSpecify,
                 Reason: $scope.data.ReasonForAdhoc,
                 StatusID: "1",
                 IsActive: "1",
             };
-            console.log("req Data--->"+JSON.stringify(EmployeeCabDetails));
+            //console.log("req Data--->"+JSON.stringify(EmployeeCabDetails));
             app.call('goeasymethods.adhocRequest', EmployeeCabDetails);
         };
         $scope.reset = function() {
