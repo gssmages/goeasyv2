@@ -18,14 +18,13 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         $scope.area= $scope.data.adhocDataList[0].AreaDetails
         $scope.specialNeedList = ["Please Specify","Pregnant","Undergoing Medical Treatment"];
          
-        $scope.shiftSelection = function(){
-            var date = new Date();
-            var hrs;
-             if(date.getHours()/12 > 0)
-                hrs = date.getHours()%12 + "PM"
-             else hrs = date.getHours()%12 +"AM"
-            console.log("shift selected-->"+$scope.data.selectedtiming);
-            
+        $scope.shiftSelection = function(item){
+            // var date = new Date();
+            // var hrs;
+            //  if(date.getHours()/12 > 0)
+            //     hrs = date.getHours()%12 + "PM"
+            //  else hrs = date.getHours()%12 +"AM"
+            console.log("shift selected-->"+item);
         }
         
         $scope.NeedCheck = function(){
@@ -35,10 +34,6 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             }else{
                 $scope.displaySpecify= false;
             }
-        }
-        
-        $scope.shiftSelection = function(item){
-            console.log("timing obj->"+item);
         }
         
         $scope.areaSelect = function () {
