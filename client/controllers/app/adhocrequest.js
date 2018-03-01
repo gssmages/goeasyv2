@@ -45,7 +45,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         }
         
         $scope.areaSelect = function (item) {
-            console.log("area selected-->"+ JSON.stringify(item));
+           
         //     var i=0;
         //     for(i;i<$scope.data.adhocDataList[0].AreaDetails.length;i++){
                 
@@ -56,6 +56,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         //     }
         //   }
           $scope.boardAreaId = item.RelAreaID;
+          console.log("area selected-->"+ $scope.boardAreaId );
           //method to process json array as filter
            $scope.boardingPoint = $scope.data.adhocDataList[0].RelBoardingPointDetails.filter(function(d) {
                 return d.Area === $scope.boardAreaId 
