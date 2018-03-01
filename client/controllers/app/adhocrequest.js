@@ -154,7 +154,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 IsActive: "1",
             };
             //console.log("req Data--->"+JSON.stringify(EmployeeCabDetails));
-            app.call('goeasymethods.adhocRequest', EmployeeCabDetails);
+            app.call('goeasymethods.adhocRequest', JSON.stringify(EmployeeCabDetails));
         };
         $scope.reset = function() {
             //reset all the field in the page.
