@@ -2,7 +2,7 @@ angular.module('app').controller('app_adhocrequest', app_adhocrequest);
 function app_adhocrequest($scope, app, $ionicPopup) {
     'use strict';
     app.init($scope, function () {
-        console.log('data objects ', $scope.data);
+       console.log('data objects ', $scope.data);
        var RequestTypeID ="";
        var RequestForID ="";
        var shiftTiming ="";
@@ -33,8 +33,9 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         }
         $scope.selectedBoarding = function(boardingPoint){
             boardingPointID=boardingPoint.ID;
-            console.log("selected boardingPoint ID--->"+JSON.stringify(boardingPoint));
+            //console.log("selected boardingPoint ID--->"+JSON.stringify(boardingPoint));
         }
+       
         $scope.NeedCheck = function(){
             $scope.data.displaySpecify;
             if($scope.data.SpecialNeed === "1"){
@@ -97,6 +98,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             console.log("req for id-->"+item.RequestForID);
             RequestForID = item.RequestForID;
         }
+       
         var errorMsg = function(){
             var alertPopup = $ionicPopup.alert({
                  title: 'Warning',
