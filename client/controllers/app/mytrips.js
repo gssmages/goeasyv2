@@ -19,7 +19,7 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage) {
      app.call('goeasymethods.getMytrips');
    });
          }
-         
+         if($scope.data.mytrips.CancelTransportDetails!=undefined) {
      if($scope.data.mytrips.CancelTransportDetails==null)
      {
          $scope.recordlist=true;
@@ -28,6 +28,7 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage) {
      {
          $scope.recordlist=false;
      }
+         }
      // $scope.noshowlist=false;
         //app.call('goeasymethods.getMytrips');
     });
