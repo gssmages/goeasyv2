@@ -7,6 +7,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
        var RequestForID ="";
        var shiftTiming ="";
        var shiftID ="";
+       var boardingPointID="";
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.data.PleaseSpecify="";
@@ -30,7 +31,10 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             shiftTiming = item.StartTime+"-"+item.EndTime;
             console.log("shift selected-->"+shiftTiming);
         }
-        
+        $scope.selectedBoarding = function(boardingPoint){
+            boardingPointID=boardingPoint.ID;
+            console.log("selected boardingPoint ID--->"+boardingPointID);
+        }
         $scope.NeedCheck = function(){
             $scope.data.displaySpecify;
             if($scope.data.SpecialNeed === "1"){
@@ -138,7 +142,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 ShiftTimeName:shiftTiming,
                 AreaID: $scope.boardAreaId,
                 AreaName: $scope.data.selectedarea,
-                //BoardingPointID: $('#ddlBoardingPoint').val(),
+                BoardingPointID: boardingPointID,
                 BoardingPointName:$scope.data.selectedboarding,
                 SpecialNeed: $scope.data.SpecialNeed,
                 SpecialNeedReason:$scope.data.PleaseSpecify,
