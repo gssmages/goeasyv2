@@ -54,8 +54,8 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             });
         }
         
-        $scope.typeChange = function () {
-            //console.log('---Request Type---' +  $scope.data.selectedreqtype);
+        $scope.typeChange = function (item) {
+            console.log('---Request Type id---' + item.RequestTypeID);
              var selectedReqTyp = $scope.data.selectedreqtype;
             // $scope.submitApprovals();
             switch (selectedReqTyp) {
