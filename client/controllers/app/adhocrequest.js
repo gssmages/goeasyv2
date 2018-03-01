@@ -37,6 +37,10 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             }
         }
         
+        $scope.shiftSelection = function(item){
+            console.log("timing obj->"+item);
+        }
+        
         $scope.areaSelect = function () {
             console.log("area selected-->"+ $scope.data.selectedarea);
             var i=0;
