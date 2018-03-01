@@ -4,6 +4,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
     app.init($scope, function () {
         console.log('data objects ', $scope.data);
        var RequestTypeID ="";
+       var RequestForID ="";
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.data.PleaseSpecify="";
@@ -85,6 +86,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         
         $scope.reqForChange = function(item){
             console.log("req for id-->"+item.RequestForID);
+            RequestForID = item.RequestForID;
         }
         var errorMsg = function(){
             var alertPopup = $ionicPopup.alert({
