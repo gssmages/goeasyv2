@@ -33,7 +33,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         }
         $scope.selectedBoarding = function(boardingPoint){
             boardingPointID=boardingPoint.ID;
-            console.log("selected boardingPoint ID--->"+boardingPointID);
+            console.log("selected boardingPoint ID--->"+JSON.stringify(boardingPoint));
         }
         $scope.NeedCheck = function(){
             $scope.data.displaySpecify;
