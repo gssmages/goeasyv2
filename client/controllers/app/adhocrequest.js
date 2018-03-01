@@ -37,6 +37,10 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             }
         }
         
+        $scope.shiftSelection = function(item){
+            console.log("timing obj->"+item);
+        }
+        
         $scope.areaSelect = function () {
             console.log("area selected-->"+ $scope.data.selectedarea);
             var i=0;
@@ -123,6 +127,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             var EmployeeCabDetails = {
                 // LocationID: global_locationID,
                 // EmployeeID: $('#EmpNumber').val(),
+                // EmployeeName: $('#EmpDisplayName').val(),
                 RequestTypeID: RequestTypeID,
                 RequestTypeName: $scope.data.selectedreqtype,
                 RequestForID: RequestForID,
@@ -139,15 +144,9 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 // BoardingPointName:$('#ddlBoardingPoint option:selected').text(),
                 SpecialNeed: $scope.data.SpecialNeed,
                 SpecialNeedReason:$scope.data.PleaseSpecify,
-                // ManagerEmpID: $('#RepManagaerEmID').val(),
                 Reason: $scope.data.ReasonForAdhoc,
-                // ManagerMailID: $('#ManagerMailID').val(),
-                // EmployeeName: $('#EmpDisplayName').val(),
-                // ManagerName:$('#ManagerName').val(),
-                // StatusID: StatusId,
-                // IsActive: true,
-                // EmpEmailID: $('#EmpEmail').val(),
-                // OutOfBoundary:saveOUBdata,
+                StatusID: "1",
+                IsActive: "1",
             };
             console.log("req Data--->"+JSON.stringify(EmployeeCabDetails));
             app.call('goeasymethods.adhocRequest', EmployeeCabDetails);
