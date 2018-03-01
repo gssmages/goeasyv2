@@ -72,7 +72,7 @@
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-change="shiftSelection(data.selectedtiming)"
                             ng-model="data.selectedtiming"
-                            ng-options="item.StartTime +' - '+ item.EndTime in timing track by item.TimeID"></select>
+                            ng-options="item.StartTime +' - '+ item.EndTime for item in timing track by item.TimeID"></select>
                     </label>
                 </div>
             </div>
