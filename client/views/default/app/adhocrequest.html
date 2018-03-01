@@ -99,7 +99,7 @@
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-change="selectedBoarding(data.selectedboarding)"
                             ng-model="data.selectedboarding"
-                            ng-options="item.BoardingPointName for item in boardingPoint track by item.ID | filter: filterExpression"></select>
+                            ng-options="item.BoardingPointName for item in boardingPoint | filter: filterExpression"></select>
                     </label>
                 </div>
             </div>
