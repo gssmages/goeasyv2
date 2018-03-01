@@ -5,6 +5,8 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         console.log('data objects ', $scope.data);
        var RequestTypeID ="";
        var RequestForID ="";
+       var shiftTiming ="";
+       var shiftID ="";
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.data.PleaseSpecify="";
