@@ -65,9 +65,9 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         }
         
         $scope.typeChange = function (item) {
-            console.log('---Request Type id---' + JSON.stringify(item));
+            console.log('---Request Type id---' + JSON.stringify(item.RequestTypeName));
             RequestTypeID = item.RequestTypeID;
-             var selectedReqTyp = $scope.data.selectedreqtype;
+             var selectedReqTyp = item.RequestTypeName;
             // $scope.submitApprovals();
             switch (selectedReqTyp) {
             case 'Adhoc':
