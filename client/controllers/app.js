@@ -14,15 +14,20 @@ function app($scope, app,$localStorage,$filter) {
  $scope.businessTitle = $localStorage.businessTitle;
 }, 1000);
    
-    
+    var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
  $scope.menudata = function(data) {
           console.log("calling mytrips in menu call");
         if(data=="mytrips")
         {
-            var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
             var params={"employeeID":$localStorage.employeeId,"todaysdate":todaysdate};
             console.log(params);
             app.call('goeasymethods.getMytrips',params);
+        }
+        else if(data=="dashboard")
+        {
+            var params={"employeeID":$localStorage.employeeId,"todaysdate":todaysdate};
+            console.log(params);
+            app.call('goeasymethods.getDashboard',params);
         }
        
     };
