@@ -1,11 +1,14 @@
 angular.module('app').controller('app_tripcancellation', app_tripcancellation);
-function app_tripcancellation($scope, app) {
+function app_tripcancellation($scope, app,$filter) {
     'use strict';
     app.init($scope,function(){
         $scope.fromdate="";
         $scope.todate="";
-        $scope.data.minDate=$scope.data.tripinfo.FromDateOpnNoShow.split('T')[0];
-        $scope.data.maxDate=$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0];
+        $scope.date = $filter('date')(new Date(), 'MM-dd-yyyy');
+        $scope.data.fromdate=$scope.data.tripinfo.FromDateOpnNoShow==null?$scope.date:$scope.data.tripinfo.FromDateOpnNoShow.split('T')[0];
+        $scope.data.todate=$scope.data.tripinfo.ToDateOpnNoShow==null?$scope.date:$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0];
+        $scope.data.minDate=$scope.data.tripinfo.FromDateOpnNoShow==null?$scope.date:$scope.data.tripinfo.FromDateOpnNoShow.split('T')[0];
+        $scope.data.maxDate=$scope.data.tripinfo.ToDateOpnNoShow==null?$scope.date:$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0];
       /*  $scope.requestfor=[
             { RequestForID:"1",RequestForName:"Pickup and Drop"},
             { RequestForID:"2",RequestForName:"Pickup"},
@@ -54,6 +57,7 @@ $scope.GetValue = function (item) {
         var RequestTypeID=$scope.data.tripinfo.RequestTypeID;
         var RequestTypeName=$scope.data.tripinfo.RequestTypeName; 
         var RequestForName=$scope.data.reqfor;
+         var RequestedForName=$scope.data.tripinfo.RequestForName;
         var ShiftTimeID=$scope.data.tripinfo.ShiftTimeID;
         var CabRequestID=$scope.data.tripinfo.CabRequestID;
         var FromDate=$scope.data.fromdate;
@@ -64,7 +68,7 @@ $scope.GetValue = function (item) {
          "ShiftTimeID":ShiftTimeID,"CabRequestID":CabRequestID,
          "RequestForID":RequestForID,"RequestTypeID":RequestTypeID,
          "FromDateOpnNoShow":FromDate,
-         "ToDateOpnNoShow":ToDate};
+         "ToDateOpnNoShow":ToDate,"RequestedForName":RequestedForName,};
          console.log(tripinfo);
 		app.call('goeasymethods.sendNoshow',tripinfo);
 

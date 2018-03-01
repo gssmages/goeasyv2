@@ -3,14 +3,20 @@ function app_adhocrequest($scope, app, $ionicPopup) {
     'use strict';
     app.init($scope, function () {
         console.log('data objects ', $scope.data);
+       
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
+        $scope.data.PleaseSpecify="";
+        $scope.data.Date="";
+        $scope.data.FromDate="";
+        $scope.data.ToDate="";
         $scope.boardingPoint= [];
         $scope.reqtype= $scope.data.adhocDataList[0].RequestTypeDetails;
         $scope.reqFor= $scope.data.adhocDataList[0].RequestForDetails;
         $scope.timing= $scope.data.adhocDataList[0].ShiftTimeDetails;
         $scope.area= $scope.data.adhocDataList[0].AreaDetails
-        
+        $scope.specialNeedList = ["Please Specify","Pregnant","Undergoing Medical Treatment"];
+         
         $scope.shiftSelection = function(){
             var date = new Date();
             var hrs;
@@ -118,7 +124,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 FromDate: $scope.data.FromDate,
                 Todate: $scope.data.ToDate,
                 CommonDate: $scope.data.Date,
-                // Shift: $('#ddlShiftTime').val(),
+                Shift: $scope.data.selectedtiming,
                 // ShiftTimeName: $("#ddlShiftTime option:selected").text(),
                 AreaID: $scope.boardAreaId,
                 AreaName: $scope.data.selectedarea,
@@ -127,7 +133,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 BoardingPointName:$scope.data.selectedboarding,
                 // BoardingPointName:$('#ddlBoardingPoint option:selected').text(),
                 SpecialNeed: $scope.data.SpecialNeed,
-                // SpecialNeedReason: splNeeed,
+                SpecialNeedReason:$scope.data.PleaseSpecify,
                 // ManagerEmpID: $('#RepManagaerEmID').val(),
                 Reason: $scope.data.ReasonForAdhoc,
                 // ManagerMailID: $('#ManagerMailID').val(),
@@ -139,7 +145,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 // OutOfBoundary:saveOUBdata,
             };
             console.log("req Data--->"+JSON.stringify(EmployeeCabDetails));
-            //app.call('myapprovals.sendRequest', $scope.data);
+            app.call('goeasymethods.adhocRequest', EmployeeCabDetails);
         };
         $scope.reset = function() {
             //reset all the field in the page.

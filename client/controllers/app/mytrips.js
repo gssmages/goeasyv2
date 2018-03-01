@@ -1,12 +1,12 @@
 angular.module('app').controller('app_mytrips', app_mytrips);
-function app_mytrips($scope, app,$ionicPopup,$localStorage) {
+function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
     'use strict';
     app.init($scope,function(){
        $scope.mytripslist=true;
      $scope.cancellist=false;
      
       var success=$scope.data.successmsg;
-     console.log(success+"thisissuccesmsg");
+    // console.log(success+"thisissuccesmsg");
       if(success!=undefined)
          {
           var alertPopup = $ionicPopup.alert({
@@ -16,10 +16,14 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage) {
 
    alertPopup.then(function(res) {
      console.log('Reload mytrips page');
-     app.call('goeasymethods.getMytrips');
+      var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
+ var params={"employeeID":$localStorage.employeeId,"todaysdate":todaysdate};
+     app.call('goeasymethods.getMytrips',params);
    });
          }
-         
+         var canceldata=$scope.data.mytrips;
+         console.log(canceldata + "---checking mytrips details");
+         if(canceldata!=undefined) {
      if($scope.data.mytrips.CancelTransportDetails==null)
      {
          $scope.recordlist=true;
@@ -28,6 +32,7 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage) {
      {
          $scope.recordlist=false;
      }
+         }
      // $scope.noshowlist=false;
         //app.call('goeasymethods.getMytrips');
     });

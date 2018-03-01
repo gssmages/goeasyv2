@@ -12,14 +12,14 @@
             class="item item-input item-date-icon positive-icon item-stacked-label item-outside-label"
             data-comp-id="dateInput.1">
             <span class="input-label" style="">From Date</span>
-            <input date-format="DD-MMM-YYYY" max="{{data.maxDate}}" min="{{data.minDate}}"
+            <input date-format="MM-DD-YYYY" max="{{data.maxDate}}" min="{{data.minDate}}"
                 ng-model-options="{allowInvalid: true}" ng-model="data.fromdate" type="date">
         </label>
         <label
             class="item item-input item-date-icon positive-icon item-stacked-label item-outside-label"
             data-comp-id="dateInput.2">
             <span class="input-label">To Date</span>
-            <input date-format="DD-MMM-YYYY" max="{{data.maxDate}}" min="{{data.minDate}}"
+            <input date-format="MM-DD-YYYY" max="{{data.maxDate}}" min="{{data.minDate}}"
                 ng-model-options="{allowInvalid: true}" ng-model="data.todate" type="date">
         </label>
         <label
@@ -39,6 +39,7 @@
                     <div class="col" data-comp-id="column.2"
                         style="margin: 0px; padding: 0px; border-width: 0px; border-style: initial; border-color: initial; border-radius: 0px;">
                         <button class="button button-block" data-comp-id="button.2"
+                            ng-click="app.call('goeasymethods.getMytrips');"
                             style="margin: 0px; padding: 0px;">Cancel</button>
                     </div>
                     <div class="col" data-comp-id="column.3"

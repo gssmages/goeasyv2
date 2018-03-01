@@ -52,7 +52,7 @@
             </div>
         </div>
         <div data-comp-id="div.3" ng-show="mytripslist">
-            <div class="card" data-comp-id="div.4"
+            <div class="card" data-comp-id="div.4" ng-if="item.RequestTypeName!=undefined"
                 ng-repeat="item in data.mytrips.CancelTransportDetails" style="padding: 0px;">
                 <div class="row stable" data-comp-id="row.3" style="padding: 0px;">
                     <div class="col text-left stable-bg" data-comp-id="column.5" style="">
@@ -74,8 +74,9 @@
                                     style="font-size: 32px;"></i>
                             </div>
                             <div class="col" data-comp-id="column.9">
-                                <div data-comp-id="text.7" ng-bind="item.FromDate +&quot;- &quot; +item.ToDate"
-                                    ng-if="item.date !=&quot;-&quot;" style="font-weight: bold;"></div>
+                                <div data-comp-id="text.7"
+                                    ng-bind="item.FromDate.split('T')[0] +&quot;- &quot; +item.ToDate.split('T')[0]"
+                                    ng-if="item.FromDate!=null" style="font-weight: bold;"></div>
                                 <div data-comp-id="text.8"
                                     ng-bind="item.RequestForName +&quot;- &quot;+ item.ShiftStartTime +&quot;- &quot;+ item.ShiftEndTime">Drop at 5:00 pm</div>
                             </div>
@@ -108,7 +109,7 @@
                             </div>
                             <div class="col" data-comp-id="column.15">
                                 <div data-comp-id="text.11"
-                                    ng-bind="item.StartDate +&quot;- &quot; +item.EndDate"
+                                    ng-bind="item.StartDate.split('T')[0] +&quot;- &quot; +item.EndDate.split('T')[0]"
                                     style="font-weight: bold;"></div>
                                 <div data-comp-id="text.12"
                                     ng-bind="item.ReqForName +&quot;at &quot;+ item.ShiftStart+&quot;- &quot;+item.ShiftEnd">Drop at 5:00 pm</div>
