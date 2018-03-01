@@ -16,12 +16,12 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage) {
 
    alertPopup.then(function(res) {
      console.log('Reload mytrips page');
-     app.call('goeasymethods.getMytrips');
+     menudata("mytrips")
+     //app.call('goeasymethods.getMytrips');
    });
          }
          var canceldata=$scope.data.mytrips.CancelTransportDetails;
          console.log(canceldata);
-         
          if(canceldata!=undefined) {
      if($scope.data.mytrips.CancelTransportDetails==null)
      {
