@@ -84,8 +84,8 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.4">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select ng-change="areaSelect();" ng-model="data.selectedarea"
-                            ng-options="item.AreaName as item.AreaName for item in area"></select>
+                        <select ng-change="areaSelect(data.selectedarea);" ng-model="data.selectedarea"
+                            ng-options="item.AreaName for item in area track by item.RelAreaID"></select>
                     </label>
                 </div>
             </div>

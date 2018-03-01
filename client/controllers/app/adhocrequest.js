@@ -40,8 +40,8 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             }
         }
         
-        $scope.areaSelect = function () {
-            console.log("area selected-->"+ $scope.data.selectedarea);
+        $scope.areaSelect = function (item) {
+            console.log("area selected-->"+ JSON.stringify(item));
             var i=0;
             for(i;i<$scope.data.adhocDataList[0].AreaDetails.length;i++){
                 
@@ -134,13 +134,12 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 FromDate: $scope.data.FromDate,
                 Todate: $scope.data.ToDate,
                 CommonDate: $scope.data.Date,
-                Shift: $scope.data.selectedtiming,
-                // ShiftTimeName: $("#ddlShiftTime option:selected").text(),
+                Shift: shiftID,
+                ShiftTimeName:shiftTiming,
                 AreaID: $scope.boardAreaId,
                 AreaName: $scope.data.selectedarea,
                 //BoardingPointID: $('#ddlBoardingPoint').val(),
                 BoardingPointName:$scope.data.selectedboarding,
-                // BoardingPointName:$('#ddlBoardingPoint option:selected').text(),
                 SpecialNeed: $scope.data.SpecialNeed,
                 SpecialNeedReason:$scope.data.PleaseSpecify,
                 Reason: $scope.data.ReasonForAdhoc,
