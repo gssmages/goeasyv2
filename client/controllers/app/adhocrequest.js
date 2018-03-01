@@ -37,7 +37,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         }
         
         $scope.areaSelect = function () {
-            // console.log("area selected-->"+ $scope.data.selectedarea);
+            console.log("area selected-->"+ $scope.data.selectedarea);
             var i=0;
             for(i;i<$scope.data.adhocDataList[0].AreaDetails.length;i++){
                 
