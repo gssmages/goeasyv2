@@ -3,7 +3,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
     'use strict';
     app.init($scope, function () {
         console.log('data objects ', $scope.data);
-       
+       var RequestTypeID ="";
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.data.PleaseSpecify="";
@@ -83,6 +83,9 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             }
         };
         
+        $scope.reqForChange = function(item){
+            console.log("req for id-->"+item.RequestForID);
+        }
         var errorMsg = function(){
             var alertPopup = $ionicPopup.alert({
                  title: 'Warning',

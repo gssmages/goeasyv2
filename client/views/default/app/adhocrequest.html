@@ -58,8 +58,9 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.2">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select ng-model="data.selectedreqFor"
-                            ng-options="item.RequestForName as item.RequestForName for item in reqFor"></select>
+                        <select ng-change="reqForChange(data.selectedreqFor)"
+                            ng-model="data.selectedreqFor"
+                            ng-options="item.RequestForName  for item in reqFor track by item.RequestForID"></select>
                     </label>
                 </div>
             </div>
