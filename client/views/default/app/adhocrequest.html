@@ -70,8 +70,9 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.3">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select ng-change="shiftSelection(item)" ng-model="data.selectedtiming"
-                            ng-options="item.StartTime as item.StartTime +' - '+ item.EndTime for item in timing"></select>
+                        <select ng-change="shiftSelection(data.selectedtiming)"
+                            ng-model="data.selectedtiming"
+                            ng-options="item.StartTime +' - '+ item.EndTime in timing track by item.TimeID"></select>
                     </label>
                 </div>
             </div>
