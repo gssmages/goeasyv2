@@ -6,7 +6,7 @@ function app_homesuccess($scope, app,$filter) {
           $localStorage.employeeID=$scope.data.home.EmployeeID;
            $localStorage.locationName=$scope.data.home.LocationName;
             $localStorage.locationID=$scope.data.home.LocationID;
-         var params={"employeeID":$localStorage.employeeId,"todaysdate":todaysdate,"location":$localStorage.location};
+         var params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate,"location":$localStorage.locationName};
             console.log(params);
             app.call('goeasymethods.getDashboard',params);
     });
