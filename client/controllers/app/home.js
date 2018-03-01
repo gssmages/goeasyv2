@@ -7,6 +7,7 @@ function app_home($scope, app, $localStorage) {
        $localStorage.displayName = $scope.data.home.EmployeeDetails.DisplayName;
        $localStorage.businessTitle = $scope.data.home.EmployeeDetails.BusinessTitle;
        $localStorage.employeeId = $scope.data.home.EmployeeDetails.EmployeeID;
+        $localStorage.location = $scope.data.home.EmployeeDetails.location;
         
        $scope.pickupdropdiv = true;
        $scope.nopickupdiv = false;
