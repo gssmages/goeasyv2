@@ -19,7 +19,10 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage) {
      app.call('goeasymethods.getMytrips');
    });
          }
-         if($scope.data.mytrips.CancelTransportDetails!=undefined) {
+         var canceldata=$scope.data.mytrips.CancelTransportDetails;
+         console.log(canceldata);
+         
+         if(canceldata!=undefined) {
      if($scope.data.mytrips.CancelTransportDetails==null)
      {
          $scope.recordlist=true;
