@@ -152,3 +152,25 @@ exports.approvalrequest = function (page, params) {
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send();
 }
+exports.adhocRequest = function (page, params) {
+
+    var xmlhttp = new XMLHttpRequest();
+    
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/AdhocCabRequestApi/SaveCabOperationDetails/"+params;
+    
+    var reqResponse = [];
+    
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+
+            //  page.data(function(data) {
+            //      data.successmsg = response;
+            //  })
+            //      .screen("");
+        }
+    };
+    xmlhttp.open("GET", url, false);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send();
+}
