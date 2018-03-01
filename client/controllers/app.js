@@ -1,5 +1,5 @@
 angular.module('app').controller('app', app);
-function app($scope, app,$localStorage) {
+function app($scope, app,$localStorage,$filter) {
     'use strict';
      app.init($scope,function(){
          $scope.displayName = '';
