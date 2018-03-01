@@ -1,5 +1,5 @@
 angular.module('app').controller('app_homesuccess', app_homesuccess);
-function app_homesuccess($scope, app,$filter) {
+function app_homesuccess($scope, app,$filter,$localStorage) {
     'use strict';
     app.init($scope,function(){
          var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
