@@ -31,6 +31,18 @@ function app($scope, app,$localStorage,$filter) {
             console.log(params);
             app.call('goeasymethods.getDashboard',params);
         }
+        else if(data=="adhoc")
+        {
+            params={"employeeID":$localStorage.employeeID,"locationID":$localStorage.locationID};
+            console.log(params);
+            app.call('goeasymethods.getAdhocdetails',params);
+        }
+        else if(data=="myapprovals")
+        {
+            params={"employeeID":$localStorage.employeeID};
+            console.log(params);
+            app.call('goeasymethods.getMyApprovals',params);
+        }
        
     };
 }
