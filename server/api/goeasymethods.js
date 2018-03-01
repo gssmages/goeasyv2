@@ -7,7 +7,7 @@ exports.getDashboard = function (page,params) {
 
     var xmlhttp = new XMLHttpRequest();
     //params are hard coded , need to make it dynamic.
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/DashBoardApi/GetDashboardDetails/?todaysdate="+params.todaysdate+"&location=Chennai&employeeID="+params.employeeID;
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/DashBoardApi/GetDashboardDetails/?todaysdate=01-mar-2018&location=Chennai&employeeID=941364";
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
