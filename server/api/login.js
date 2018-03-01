@@ -14,11 +14,11 @@ exports.login = function (page,params) {
         if (this.readyState == 4 && this.status == 200) {
             var response = JSON.parse(this.responseText);
             
-            goEasyMethods.getDashboard(page,response);
-            // page.data(function(data) {
-            //     data.home = response;
-            // })
-            //     .screen("home");
+            //goEasyMethods.getDashboard(page,response);
+             page.data(function(data) {
+                data.home = response;
+             })
+             .screen("homesuccess");
         }else{
             var response = JSON.parse(this.responseText);
              page.data(function(data) {
