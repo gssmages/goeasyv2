@@ -56,7 +56,8 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         }
         
         $scope.typeChange = function (item) {
-            console.log('---Request Type id---' + item.RequestTypeID);
+            //console.log('---Request Type id---' + item.RequestTypeID);
+            RequestTypeID = item.RequestTypeID;
              var selectedReqTyp = $scope.data.selectedreqtype;
             // $scope.submitApprovals();
             switch (selectedReqTyp) {
@@ -122,9 +123,9 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             var EmployeeCabDetails = {
                 // LocationID: global_locationID,
                 // EmployeeID: $('#EmpNumber').val(),
-                // RequestTypeID: $('#ddlReqType').val(),
+                RequestTypeID: RequestTypeID,
                 RequestTypeName: $scope.data.selectedreqtype,
-                //RequestForID: $('#ddlReqFor').val(),
+                RequestForID: RequestForID,
                 RequestForName:$scope.data.selectedreqFor,
                 FromDate: $scope.data.FromDate,
                 Todate: $scope.data.ToDate,
@@ -133,7 +134,6 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 // ShiftTimeName: $("#ddlShiftTime option:selected").text(),
                 AreaID: $scope.boardAreaId,
                 AreaName: $scope.data.selectedarea,
-                // AreaName: $("#ddlArea option:selected").text(),
                 //BoardingPointID: $('#ddlBoardingPoint').val(),
                 BoardingPointName:$scope.data.selectedboarding,
                 // BoardingPointName:$('#ddlBoardingPoint option:selected').text(),
