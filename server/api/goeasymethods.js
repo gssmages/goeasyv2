@@ -50,7 +50,7 @@ exports.getAdhocdetails = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/AdhocCabRequestApi/ReadAdhocCabRequestValues/?employeeID=930754&locationID=1";
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/AdhocCabRequestApi/ReadAdhocCabRequestValues/?employeeID="+params.employeeID+"&locationID="+params.locationID;
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -71,7 +71,7 @@ exports.getMyApprovals = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?status=1&loggedUser=941364"; //880781
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?status=1&loggedUser="+params.employeeID; //880781
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
