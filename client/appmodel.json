@@ -696,5 +696,18 @@
         }
       }
     }
+  },
+  "homescreen": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "home": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    }
   }
 }
