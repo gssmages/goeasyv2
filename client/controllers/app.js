@@ -25,7 +25,7 @@ function app($scope, app,$localStorage,$filter) {
         }
         else if(data=="dashboard")
         {
-            var params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate,"location":$localStorage.locationName};
+            var params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate,"":$localStorage.locationName};
             console.log(params);
             app.call('goeasymethods.getDashboard',params);
         }
