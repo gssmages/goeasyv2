@@ -120,6 +120,12 @@
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank",
       "model": "privacyalertwin"
+    },
+    {
+      "id": "homesuccess",
+      "name": "homesuccess",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank"
     }
   ],
   "sourceAppId": "_blank",

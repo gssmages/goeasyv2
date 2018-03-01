@@ -15,7 +15,8 @@
                     <div data-comp-id="text.1">Request Type</div>
                     <label class="item item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.1">
-                        <select ng-change="typeChange()" ng-model="data.selectedreqtype"
+                        <select ng-change="typeChange(data.selectedreqtype)"
+                            ng-model="data.selectedreqtype"
                             ng-options="item.RequestTypeName for item in reqtype track by item.RequestTypeID"></select>
                     </label>
                 </div>
