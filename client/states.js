@@ -159,5 +159,14 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
+    }).state('app.homesuccess', {
+        views: {
+            app: {
+                controller: 'app_homesuccess',
+                templateProvider: function (app) {
+                    return app.templateProvider('app.homesuccess');
+                }
+            }
+        }
     });
 });
