@@ -1,5 +1,5 @@
 angular.module('app').controller('app_homesuccess', app_homesuccess);
-function app_homesuccess($scope, app,$filter,$localStorage) {
+function app_homesuccess($scope, app,$filter,$localStorage,$ionicLoading) {
     'use strict';
     app.init($scope,function(){
         $ionicLoading.show({
