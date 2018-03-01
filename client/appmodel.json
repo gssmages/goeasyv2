@@ -700,6 +700,14 @@
   "homescreen": {
     "type": "object",
     "comment": "",
-    "properties": {}
+    "properties": {
+      "home": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    }
   }
 }
