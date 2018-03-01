@@ -7,7 +7,7 @@ exports.getDashboard = function (page,params) {
 
     var xmlhttp = new XMLHttpRequest();
     //params are hard coded , need to make it dynamic.
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/DashBoardApi/GetDashboardDetails/?todaysdate=17-feb-2018&location=Chennai&employeeID=941364";
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/DashBoardApi/GetDashboardDetails/?todaysdate=01-mar-2018&location=Chennai&employeeID=941364";
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -28,7 +28,7 @@ exports.getMytrips = function (page,params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/MyTripsApi/GetMyTripsDetails?todaydate=02-28-2018&employeeID=941364";
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/MyTripsApi/GetMyTripsDetails?todaydate=03-01-2018&employeeID=941364";
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -92,7 +92,7 @@ exports.sendNoshow = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CancelTransportRequestApi/SaveCancelRequests?RequestTypeName="+params.RequestTypeName+"&RequestForName="+params.RequestForName+"&ShiftTimeID="+params.ShiftTimeID+"&CabRequestID="+params.CabRequestID+"&FromDateOpnNoShow="+params.FromDateOpnNoShow+"&ToDateOpnNoShow="+params.ToDateOpnNoShow+"&RequestTypeID="+params.RequestTypeID+"&RequestForID="+params.RequestForID+"&locationID="+params.locationID+"&employeeID="+params.employeeID;
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CancelTransportRequestApi/SaveCancelRequests?RequestTypeName="+params.RequestTypeName+"&RequestForName="+params.RequestForName+"&ShiftTimeID="+params.ShiftTimeID+"&CabRequestID="+params.CabRequestID+"&FromDateOpnNoShow="+params.FromDateOpnNoShow+"&ToDateOpnNoShow="+params.ToDateOpnNoShow+"&RequestTypeID="+params.RequestTypeID+"&RequestForID="+params.RequestForID+"&locationID="+params.locationID+"&employeeID="+params.employeeID+"&RequestedForName="+params.RequestedForName;
    
     var reqResponse = [];
     
