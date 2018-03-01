@@ -16,8 +16,9 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage) {
 
    alertPopup.then(function(res) {
      console.log('Reload mytrips page');
-     menudata("mytrips")
-     //app.call('goeasymethods.getMytrips');
+      var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
+ var params={"employeeID":$localStorage.employeeId,"todaysdate":todaysdate};
+     app.call('goeasymethods.getMytrips',params);
    });
          }
          var canceldata=$scope.data.mytrips.CancelTransportDetails;
