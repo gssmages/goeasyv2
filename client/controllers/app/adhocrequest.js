@@ -24,7 +24,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             //  if(date.getHours()/12 > 0)
             //     hrs = date.getHours()%12 + "PM"
             //  else hrs = date.getHours()%12 +"AM"
-            console.log("shift selected-->"+item);
+            console.log("shift selected-->"+JSON.stringify(item));
         }
         
         $scope.NeedCheck = function(){
