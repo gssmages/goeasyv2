@@ -5,6 +5,8 @@ function app_adhocrequest($scope, app, $ionicPopup) {
         console.log('data objects ', $scope.data);
        var RequestTypeID ="";
        var RequestForID ="";
+       var shiftTiming ="";
+       var shiftID ="";
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.data.PleaseSpecify="";
@@ -24,7 +26,9 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             //  if(date.getHours()/12 > 0)
             //     hrs = date.getHours()%12 + "PM"
             //  else hrs = date.getHours()%12 +"AM"
-            console.log("shift selected-->"+JSON.stringify(item));
+            shiftID = item.TimeID;
+            shiftTiming = item.StartTime+"-"+item.EndTime;
+            console.log("shift selected-->"+shiftTiming);
         }
         
         $scope.NeedCheck = function(){
