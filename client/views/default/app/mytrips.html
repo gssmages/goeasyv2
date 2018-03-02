@@ -118,10 +118,15 @@
                     </div>
                 </div>
             </div>
+            <div class="row" data-comp-id="row.10" ng-show="cancelllist">
+                <div class="col" data-comp-id="column.16">
+                    <div data-comp-id="text.13">No record to be displayed</div>
+                </div>
+            </div>
         </div>
         <div data-comp-id="div.7" ng-show="noshowlist">
-            <div class="row" data-comp-id="row.10">
-                <div class="col" data-comp-id="column.16">
+            <div class="row" data-comp-id="row.11">
+                <div class="col" data-comp-id="column.17">
                     <label class="item item-input item-date-icon positive-icon item-stacked-label"
                         data-comp-id="dateInput.1">
                         <span class="input-label">Select Month</span>
@@ -130,12 +135,12 @@
                     </label>
                 </div>
             </div>
-            <div class="row" data-comp-id="row.11">
-                <div class="col" data-comp-id="column.17">
+            <div class="row" data-comp-id="row.12">
+                <div class="col" data-comp-id="column.18">
                     <button class="button button-block button-positive" data-comp-id="button.3"
                         ng-click="app.action('mytripstab', 'getnoshows', this)">Get No Shows</button>
                 </div>
-                <div class="col" data-comp-id="column.18">
+                <div class="col" data-comp-id="column.19">
                     <button class="button button-block button-positive" data-comp-id="button.4"
                         ng-click="app.action('mytripstab', 'getadhochistory', this)">Get Adhoc History</button>
                 </div>
@@ -143,25 +148,25 @@
             <div class="card" data-comp-id="div.8"
                 ng-if="item.date!=&quot;No data available in table&quot;"
                 ng-repeat="item in data.noshowlist" style="padding: 0px;">
-                <div class="row stable" data-comp-id="row.12" style="padding: 0px;">
-                    <div class="col text-left stable-bg" data-comp-id="column.19" style="">
-                        <div class="text-center" data-comp-id="text.13" ng-bind="item.date"
+                <div class="row stable" data-comp-id="row.13" style="padding: 0px;">
+                    <div class="col text-left stable-bg" data-comp-id="column.20" style="">
+                        <div class="text-center" data-comp-id="text.14" ng-bind="item.date"
                             style="color: rgb(4, 3, 3); font-weight: bold; float: left;">Adhoc</div>
                     </div>
-                    <div class="col stable stable-bg" data-comp-id="column.20"></div>
+                    <div class="col stable stable-bg" data-comp-id="column.21"></div>
                 </div>
-                <div class="row" data-comp-id="row.13">
-                    <div class="col" data-comp-id="column.21">
-                        <div class="row" data-comp-id="row.14">
-                            <div class="col col-20" data-comp-id="column.22">
+                <div class="row" data-comp-id="row.14">
+                    <div class="col" data-comp-id="column.22">
+                        <div class="row" data-comp-id="row.15">
+                            <div class="col col-20" data-comp-id="column.23">
                                 <i class="icon ion-calendar positive" data-comp-id="icon.8"
                                     style="font-size: 32px;"></i>
                             </div>
-                            <div class="col" data-comp-id="column.23">
-                                <div data-comp-id="text.14"
+                            <div class="col" data-comp-id="column.24">
+                                <div data-comp-id="text.15"
                                     ng-bind="item.shift +&quot;- &quot;+ item.pickupdrop" style="font-weight: bold;">Date :
                                     {{item.date}}</div>
-                                <div data-comp-id="text.15"
+                                <div data-comp-id="text.16"
                                     ng-bind="&quot;Route : &quot;+item.routeno +&quot; and &quot;+ &quot;Tripsheet No &quot;+ item.tripsheetno"></div>
                             </div>
                         </div>
@@ -171,25 +176,25 @@
             <div class="card" data-comp-id="div.9"
                 ng-if="item.requesttype!=&quot;No data available in table&quot;"
                 ng-repeat="item in data.adhochistory">
-                <div class="row" data-comp-id="row.15" style="padding: 0px; margin: 0px;">
-                    <div class="col stable-bg dark" data-comp-id="column.24">
-                        <div data-comp-id="text.16" ng-bind="item.requesttype"
+                <div class="row" data-comp-id="row.16" style="padding: 0px; margin: 0px;">
+                    <div class="col stable-bg dark" data-comp-id="column.25">
+                        <div data-comp-id="text.17" ng-bind="item.requesttype"
                             style="font-weight: bold;">Some text</div>
                     </div>
                 </div>
-                <div class="row" data-comp-id="row.16">
-                    <div class="col col-20 text-center" data-comp-id="column.25"
+                <div class="row" data-comp-id="row.17">
+                    <div class="col col-20 text-center" data-comp-id="column.26"
                         style="padding: 10px 0px 0px;">
                         <i class="icon ion-calendar positive" data-comp-id="icon.9"
                             style="font-size: 32px;"></i>
                     </div>
-                    <div class="col" data-comp-id="column.26" style="padding: 10px;">
-                        <div data-comp-id="text.17" ng-bind="item.fromdate" style="font-weight: bold;">Some text</div>
-                        <div data-comp-id="text.18"
+                    <div class="col" data-comp-id="column.27" style="padding: 10px;">
+                        <div data-comp-id="text.18" ng-bind="item.fromdate" style="font-weight: bold;">Some text</div>
+                        <div data-comp-id="text.19"
                             ng-bind="item.requestfor +&quot; at &quot;+ item.shifttime">Some text</div>
-                        <div class=" positive" data-comp-id="text.19"
+                        <div class=" positive" data-comp-id="text.20"
                             ng-bind="&quot;Status : &quot; + item.status" style="font-weight: bold;">Some text</div>
-                        <div data-comp-id="text.20" ng-bind="&quot;Approver : &quot; + item.approver"
+                        <div data-comp-id="text.21" ng-bind="&quot;Approver : &quot; + item.approver"
                             ng-if="item.approver!=&quot;&quot;" style="font-size: 10px;">Some text</div>
                     </div>
                 </div>
