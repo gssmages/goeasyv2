@@ -1,5 +1,5 @@
 angular.module('app').controller('app_adhocrequest', app_adhocrequest);
-function app_adhocrequest($scope, app, $ionicPopup) {
+function app_adhocrequest($scope, app, $ionicPopup, $filter) {
     'use strict';
     app.init($scope, function () {
        console.log('data objects ', $scope.data);
@@ -8,6 +8,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
        var shiftTiming ="";
        var shiftID ="";
        var boardingPointID="";
+       var currentReqTime="";
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.data.PleaseSpecify="";
@@ -29,7 +30,8 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             //  else hrs = date.getHours()%12 +"AM"
             shiftID = item.TimeID;
             shiftTiming = item.StartTime+"-"+item.EndTime;
-            console.log("shift selected-->"+shiftTiming);
+            currentReqTime = $filter('date')(new Date(), 'MM-dd-yyyy');
+            console.log("shift selected-->"+currentReqTime);
         }
         $scope.selectedBoarding = function(boardingPoint){
             boardingPointID=boardingPoint.ID;
@@ -141,6 +143,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 FromDate: $scope.data.FromDate,
                 Todate: $scope.data.ToDate,
                 CommonDate: $scope.data.Date,
+                currentTime:,
                 Shift: shiftID,
                 ShiftTimeName:shiftTiming,
                 AreaID: $scope.boardAreaId,
@@ -154,7 +157,7 @@ function app_adhocrequest($scope, app, $ionicPopup) {
                 IsActive: "1",
             };
             //console.log("req Data--->"+JSON.stringify(EmployeeCabDetails));
-            app.call('goeasymethods.adhocRequest', JSON.stringify(EmployeeCabDetails));
+            app.call('goeasymethods.adhocRequest', EmployeeCabDetails);
         };
         $scope.reset = function() {
             //reset all the field in the page.
