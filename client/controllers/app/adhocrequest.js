@@ -30,7 +30,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter) {
             //  else hrs = date.getHours()%12 +"AM"
             shiftID = item.TimeID;
             shiftTiming = item.StartTime+"-"+item.EndTime;
-            currentReqTime = $filter('date')(new Date(), 'MM-dd-yyyy');
+            currentReqTime = $filter('date')(new Date(), 'HH:mm:ss');
             console.log("shift selected-->"+currentReqTime);
         }
         $scope.selectedBoarding = function(boardingPoint){
@@ -143,7 +143,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter) {
                 FromDate: $scope.data.FromDate,
                 Todate: $scope.data.ToDate,
                 CommonDate: $scope.data.Date,
-                currentTime:currentReqTime,
+                UserTime:currentReqTime,
                 Shift: shiftID,
                 ShiftTimeName:shiftTiming,
                 AreaID: $scope.boardAreaId,
