@@ -1,5 +1,5 @@
 angular.module('app').controller('app_adhocrequest', app_adhocrequest);
-function app_adhocrequest($scope, app, $ionicPopup) {
+function app_adhocrequest($scope, app, $ionicPopup, $filter) {
     'use strict';
     app.init($scope, function () {
        console.log('data objects ', $scope.data);
@@ -30,8 +30,8 @@ function app_adhocrequest($scope, app, $ionicPopup) {
             //  else hrs = date.getHours()%12 +"AM"
             shiftID = item.TimeID;
             shiftTiming = item.StartTime+"-"+item.EndTime;
-            // currentReqTime = $filter('date')(new Date(), 'MM-dd-yyyy');
-            // console.log("shift selected-->"+currentReqTime);
+            currentReqTime = $filter('date')(new Date(), 'MM-dd-yyyy');
+            console.log("shift selected-->"+currentReqTime);
         }
         $scope.selectedBoarding = function(boardingPoint){
             boardingPointID=boardingPoint.ID;
