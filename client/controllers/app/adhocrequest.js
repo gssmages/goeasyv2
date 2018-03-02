@@ -136,6 +136,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter) {
                 // LocationID: global_locationID,
                 // EmployeeID: $('#EmpNumber').val(),
                 // EmployeeName: $('#EmpDisplayName').val(),
+                LocationID: "1",
                 RequestTypeID: RequestTypeID,
                 RequestTypeName: $scope.data.selectedreqtype.RequestTypeName,
                 RequestForID: RequestForID,
