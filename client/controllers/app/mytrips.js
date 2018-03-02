@@ -32,6 +32,14 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
      {
          $scope.recordlist=false;
      }
+     if($scope.data.mytrips.CancelMyTripDetails==null)
+     {
+         $scope.cancelllist=true;
+     }
+     else
+     {
+         $scope.cancelllist=false;
+     }
          }
      // $scope.noshowlist=false;
         //app.call('goeasymethods.getMytrips');
