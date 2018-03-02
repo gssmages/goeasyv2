@@ -17,7 +17,7 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
    alertPopup.then(function(res) {
      console.log('Reload mytrips page');
       var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
- var params={"employeeID":$localStorage.employeeId,"todaysdate":todaysdate};
+ var params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate};
      app.call('goeasymethods.getMytrips',params);
    });
          }
@@ -50,7 +50,7 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
         }
     };
     $scope.noShowPopup = function(item){
-        var employeeID=$localStorage.employeeId;
+        var employeeID=$localStorage.employeeID;
         var locationID=1; 
         var RequestForID=item.RequestForID;
         var RequestTypeID=item.RequestTypeID;
