@@ -135,7 +135,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
             var EmployeeCabDetails = {
                 LocationID: $localStorage.locationID,
                 EmployeeID: $localStorage.employeeID,
-                // EmployeeName: $('#EmpDisplayName').val(),
+                 EmployeeName: $localStorage.displayName,
                 //LocationID: "1",
                 RequestTypeID: RequestTypeID,
                 RequestTypeName: $scope.data.selectedreqtype.RequestTypeName,
@@ -154,6 +154,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                 SpecialNeed: $scope.data.SpecialNeed,
                 SpecialNeedReason:$scope.data.PleaseSpecify,
                 Reason: $scope.data.ReasonForAdhoc,
+                CreatedBy:$localStorage.displayName,
                 StatusID: "1",
                 IsActive: "1",
             };
