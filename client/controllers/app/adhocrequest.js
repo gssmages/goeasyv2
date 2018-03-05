@@ -162,6 +162,25 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter) {
         };
         $scope.reset = function() {
             //reset all the field in the page.
+        RequestTypeID ="";
+        RequestForID ="";
+        shiftTiming ="";
+        shiftID ="";
+        boardingPointID="";
+        currentReqTime="";
+        $scope.data.SpecialNeed =2;
+        $scope.boardAreaId ="";
+        $scope.data.PleaseSpecify="";
+        $scope.data.Date="";
+        $scope.data.FromDate="";
+        $scope.data.ToDate="";
+        $scope.boardingPoint= [];
+        $scope.reqtype= $scope.data.adhocDataList[0].RequestTypeDetails;
+        $scope.reqFor= $scope.data.adhocDataList[0].RequestForDetails;
+        $scope.timing= $scope.data.adhocDataList[0].ShiftTimeDetails;
+        $scope.area= $scope.data.adhocDataList[0].AreaDetails
+        $scope.specialNeedList = ["Please Specify","Pregnant","Undergoing Medical Treatment"];
+         
         }
     });
 }
