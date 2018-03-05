@@ -165,9 +165,9 @@ exports.adhocRequest = function (page, params) {
             var response = JSON.parse(this.responseText);
 
               page.data(function(data) {
-                  data.successmsg = response;
+                  data.successmsg = this.status;
               })
-                  .screen("adhocrequest");
+                  .screen("alertmsg");
         }
     };
     xmlhttp.open("GET", url, false);
