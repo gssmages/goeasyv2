@@ -133,10 +133,10 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter) {
             
             //Data to be sent for Adhoc Request
             var EmployeeCabDetails = {
-                // LocationID: global_locationID,
-                // EmployeeID: $('#EmpNumber').val(),
+                LocationID: $localStorage.locationID,
+                EmployeeID: $localStorage.employeeID,
                 // EmployeeName: $('#EmpDisplayName').val(),
-                LocationID: "1",
+                //LocationID: "1",
                 RequestTypeID: RequestTypeID,
                 RequestTypeName: $scope.data.selectedreqtype.RequestTypeName,
                 RequestForID: RequestForID,
@@ -162,7 +162,11 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter) {
         };
         $scope.reset = function() {
             //reset all the field in the page.
-          app.call('goeasymethods.getAdhocdetails');
+            var params ={
+                locationID: $localStorage.locationID,
+                employeeID: $localStorage.employeeID,
+            }
+          app.call('goeasymethods.getAdhocdetails',params);
         }
     });
 }
