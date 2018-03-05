@@ -155,8 +155,8 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                 SpecialNeedReason:$scope.data.PleaseSpecify,
                 Reason: $scope.data.ReasonForAdhoc,
                 CreatedBy:$localStorage.displayName,
-                StatusID: "1",
-                IsActive: "1",
+                StatusID:1,
+                IsActive:1,
             };
             console.log("req Data--->"+JSON.stringify(EmployeeCabDetails));
             app.call('goeasymethods.adhocRequest', EmployeeCabDetails);
