@@ -158,7 +158,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                 StatusID: "1",
                 IsActive: "1",
             };
-            //console.log("req Data--->"+JSON.stringify(EmployeeCabDetails));
+            console.log("req Data--->"+JSON.stringify(EmployeeCabDetails));
             app.call('goeasymethods.adhocRequest', EmployeeCabDetails);
         };
         $scope.reset = function() {
