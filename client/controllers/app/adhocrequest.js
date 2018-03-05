@@ -162,7 +162,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter) {
         };
         $scope.reset = function() {
             //reset all the field in the page.
-          app.call('goeasymethods.getAdhocdetails',params);
+          app.call('goeasymethods.getAdhocdetails');
         }
     });
 }
