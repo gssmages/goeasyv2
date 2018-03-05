@@ -156,7 +156,7 @@ exports.adhocRequest = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/AdhocCabRequestApi/SaveCabOperationDetails/"+params;
+    var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/AdhocCabRequestApi/SaveCabOperationDetails?LocationID="+params.LocationID+"&EmployeeID="+params.EmployeeID+"&RequestTypeID="+params.RequestTypeID+"&RequestTypeName="+params.RequestTypeName+"&RequestForID="+params.RequestForID+"&RequestForName="+params.RequestForName+"&FromDate="+params.FromDate+"&Todate="+params.Todate+"&CommonDate="+params.CommonDate+"&UserTime="+params.UserTime+"&Shift="+params.Shift+"&ShiftTimeName="+params.ShiftTimeName+"&AreaID="+params.AreaID+"&AreaName="+params.AreaName+"&BoardingPointID="+params.BoardingPointID+"&BoardingPointName="+params.BoardingPointName+"&SpecialNeed="+params.SpecialNeed+"&SpecialNeedReason="+params.SpecialNeedReason+"&Reason="+params.Reason+"&StatusID="+params.StatusID+"&IsActive="+params.IsActive+"&EmployeeName="+params.EmployeeName+"&CreatedBy="+params.CreatedBy;
     
     var reqResponse = [];
     
@@ -164,10 +164,10 @@ exports.adhocRequest = function (page, params) {
         if (this.readyState == 4 && this.status == 200) {
             var response = JSON.parse(this.responseText);
 
-            //  page.data(function(data) {
-            //      data.successmsg = response;
-            //  })
-            //      .screen("");
+              page.data(function(data) {
+                  data.successmsg = response;
+              })
+                  .screen("adhocrequest");
         }
     };
     xmlhttp.open("GET", url, false);
