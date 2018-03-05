@@ -1,5 +1,5 @@
 angular.module('app').controller('app_adhocrequest', app_adhocrequest);
-function app_adhocrequest($scope, app, $ionicPopup, $filter) {
+function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
     'use strict';
     app.init($scope, function () {
        console.log('data objects ', $scope.data);
