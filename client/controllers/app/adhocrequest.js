@@ -18,7 +18,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
  var params={"employeeID":$localStorage.employeeID,"locationID":$localStorage.locationID};
      app.call('goeasymethods.getAdhocdetails',params);
    });
-   
+         }
        console.log('data objects ', $scope.data);
        var RequestTypeID ="";
        var RequestForID ="";
