@@ -169,6 +169,13 @@ exports.adhocRequest = function (page, params) {
               })
                   .screen("adhocrequest");
         }
+        else{
+            var response = JSON.parse(this.responseText);
+             page.data(function(data) {
+                data.successmsg = response.Message;
+            })
+                .screen("adhocrequest");
+        }
     };
     xmlhttp.open("GET", url, false);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
