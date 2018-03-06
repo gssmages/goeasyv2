@@ -34,7 +34,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
             console.log("shift selected-->"+currentReqTime);
         }
         $scope.selectedBoarding = function(boardingPoint){
-            boardingPointID=boardingPoint.ID;
+            boardingPointID=boardingPoint.BoardingPoint;
             //console.log("selected boardingPoint ID--->"+JSON.stringify(boardingPoint));
         }
        
@@ -58,7 +58,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         //         break;
         //     }
         //   }
-          $scope.boardAreaId = item.RelAreaID;
+          $scope.boardAreaId = item.AreaID;
           console.log("area selected-->"+ $scope.boardAreaId );
           //method to process json array as filter
            $scope.boardingPoint = $scope.data.adhocDataList[0].RelBoardingPointDetails.filter(function(d) {
