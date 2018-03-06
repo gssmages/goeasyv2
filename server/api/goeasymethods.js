@@ -165,7 +165,7 @@ exports.adhocRequest = function (page, params) {
             var response = JSON.parse(this.responseText);
 
               page.data(function(data) {
-                  data.successmsg = this.status;
+                  data.successmsg = response;
               })
                   .screen("alertmsg");
         }
