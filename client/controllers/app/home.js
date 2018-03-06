@@ -4,10 +4,9 @@ function app_home($scope, app, $localStorage) {
     app.init($scope,function(){
         
         //console.log('data in home page-->',$scope.data.home.PickupRequestDetail);
-       $localStorage.displayName = $scope.data.home.EmployeeDetails.DisplayName;
-       $localStorage.businessTitle = $scope.data.home.EmployeeDetails.BusinessTitle;
-       //$localStorage.employeeId = $scope.data.home.EmployeeDetails.EmployeeID;
-       // $localStorage.location = $scope.data.home.EmployeeDetails.location;
+       /*$localStorage.displayName = $scope.data.home.EmployeeDetails.DisplayName;
+       $localStorage.businessTitle = $scope.data.home.EmployeeDetails.BusinessTitle;*/
+      
         
        $scope.pickupdropdiv = true;
        $scope.nopickupdiv = false;
