@@ -75,7 +75,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         //         break;
         //     }
         //   }
-          $scope.boardAreaId = item.AreaID;
+          $scope.boardAreaId = item.RelAreaID;
           console.log("area selected-->"+ $scope.boardAreaId );
           //method to process json array as filter
            $scope.boardingPoint = $scope.data.adhocDataList[0].RelBoardingPointDetails.filter(function(d) {
