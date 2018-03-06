@@ -154,7 +154,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                 SpecialNeed: $scope.data.SpecialNeed,
                 SpecialNeedReason:$scope.data.PleaseSpecify,
                 Reason: $scope.data.ReasonForAdhoc,
-                CreatedBy:$localStorage.displayName,
+                CreatedBy:$localStorage.employeeID,
                 StatusID:1,
                 IsActive:1,
             };
