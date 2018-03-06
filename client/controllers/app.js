@@ -33,7 +33,7 @@ function app($scope, app,$localStorage,$filter) {
         }
         else if(data=="adhoc")
         {
-            params={"employeeID":$localStorage.employeeID,"locationID":$localStorage.locationID};
+            params={"employeeID":941364,"locationID":1};
             console.log(params);
             app.call('goeasymethods.getAdhocdetails',params);
         }
