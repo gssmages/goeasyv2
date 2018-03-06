@@ -12,7 +12,7 @@ function app_home($scope, app, $localStorage) {
        $scope.nopickupdiv = false;
        $scope.pickupdiv; $scope.dropdiv;
 
-     if($scope.data.home.PickupRequestDetail!==null)
+    /* if($scope.data.home.PickupRequestDetail!==null)
      {
            $scope.pickupdropdiv = true;
             $scope.nopickupdiv = false;
@@ -25,7 +25,7 @@ function app_home($scope, app, $localStorage) {
        $scope.nopickupdiv = true;
        $scope.pickupdiv = false;
              $scope.dropdiv = false;
-     }
+     }*/
     });
   
     $scope.showdiv = function(data) {
