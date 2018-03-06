@@ -167,7 +167,7 @@ exports.adhocRequest = function (page, params) {
               page.data(function(data) {
                   data.successmsg = response;
               })
-                  .screen("alertmsg");
+                  .screen("adhocrequest");
         }
     };
     xmlhttp.open("GET", url, false);
