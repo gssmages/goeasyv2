@@ -2,6 +2,23 @@ angular.module('app').controller('app_adhocrequest', app_adhocrequest);
 function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
     'use strict';
     app.init($scope, function () {
+        
+              var success=$scope.data.successmsg;
+    // console.log(success+"thisissuccesmsg");
+      if(success!=undefined)
+         {
+          var alertPopup = $ionicPopup.alert({
+     title: 'Goeasy message',
+     template: success
+   });
+
+   alertPopup.then(function(res) {
+     console.log('Reload adhoc page');
+      
+ var params={"employeeID":$localStorage.employeeID,"locationID":$localStorage.locationID};
+     app.call('goeasymethods.getAdhocdetails',params);
+   });
+   
        console.log('data objects ', $scope.data);
        var RequestTypeID ="";
        var RequestForID ="";
