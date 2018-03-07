@@ -19,6 +19,8 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
      app.call('goeasymethods.getAdhocdetails',params);
    });
          }
+         else
+         {
        console.log('data objects ', $scope.data);
        var RequestTypeID ="";
        var RequestForID ="";
@@ -188,5 +190,6 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
             }
           app.call('goeasymethods.getAdhocdetails',params);
         }
+         }
     });
 }
