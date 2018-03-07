@@ -147,6 +147,13 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                       if($scope.data.FromDate && $scope.data.ToDate){
                         //return;
                         submitApprovals();
+                        if($scope.data.SpecialNeed === "1"){
+                            if($scope.data.PleaseSpecify){
+                                submitApprovals();
+                            }else{
+                                errorMsg();
+                            }
+                        }
                       }else{errorMsg();}
                     }else{ //return;
                         submitApprovals();
