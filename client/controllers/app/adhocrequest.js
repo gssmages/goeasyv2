@@ -98,16 +98,21 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                 $scope.dateField = true;
                 $scope.fromDateField = false;
                 $scope.toDateField = false;
+                $scope.data.FromDate ="";
+                $scope.data.ToDate ="";
                 break;
             case 'Holiday':
                 $scope.dateField = true;
                 $scope.fromDateField = false;
                 $scope.toDateField = false;
+                $scope.data.FromDate ="";
+                $scope.data.ToDate ="";
                 break;
             case 'Month end':
                 $scope.dateField = false;
                 $scope.fromDateField = true;
                 $scope.toDateField = true;
+                $scope.data.Date = "";
                 break;
             default:
                 //console.log('in default--' + selectedReqTyp);
