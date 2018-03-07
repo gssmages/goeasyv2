@@ -140,27 +140,43 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         }
         
         $scope.validate = function(){
-            if($scope.data.selectedreqtype && $scope.data.Date && $scope.data.selectedreqFor 
+            if($scope.data.selectedreqtype && $scope.data.selectedreqFor 
                 && $scope.data.selectedtiming && $scope.data.selectedarea 
                  && $scope.data.selectedboarding && $scope.data.ReasonForAdhoc){
-                  if($scope.data.selectedreqtype =="Month end"){
-                      if($scope.data.FromDate && $scope.data.ToDate){
-                        //return;
-                        submitApprovals();
-                        if($scope.data.SpecialNeed === "1"){
-                            if($scope.data.PleaseSpecify){
-                                submitApprovals();
+                 
+                      if($scope.data.selectedreqtype =="Month end"){
+                          if($scope.data.FromDate && $scope.data.ToDate){
+                          
+                                if($scope.data.SpecialNeed === "1"){
+                                    if($scope.data.PleaseSpecify){
+                                        submitApprovals();
+                                    }else{
+                                        errorMsg();
+                                    }
+                                }else{
+                                 submitApprovals();//specialneed=no
+                                }
+                              }else{errorMsg();}
+                        }else{ 
+                            if($scope.data.Date){
+                            
+                                if($scope.data.SpecialNeed === "1"){
+                                    if($scope.data.PleaseSpecify){
+                                        submitApprovals();
+                                    }else{
+                                        errorMsg();
+                                    }
+                                }else{
+                                 submitApprovals();//specialneed=no
+                                }
+                                
                             }else{
                                 errorMsg();
                             }
                         }
-                      }else{errorMsg();}
-                    }else{ //return;
-                        submitApprovals();
-                    }
                 }else{ errorMsg(); }   
             }
-        
+            
         var submitApprovals = function () {
             //perform field validation befor submit
             //validate();
