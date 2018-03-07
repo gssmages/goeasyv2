@@ -53,8 +53,8 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
             currentReqTime = $filter('date')(new Date(), 'MM-dd-yyyy HH:mm:ss');
             console.log("shift selected-->"+currentReqTime);
         }
-        $scope.selectedBoarding = function(boardingPoint){
-            boardingPointID=boardingPoint.BoardingPoint;
+        $scope.selectedBoarding = function(boardingselected){
+            boardingPointID=boardingselected.BoardingPoint;
             //console.log("selected boardingPoint ID--->"+JSON.stringify(boardingPoint));
         }
        
