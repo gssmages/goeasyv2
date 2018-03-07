@@ -172,7 +172,7 @@ exports.adhocRequest = function (page, params) {
         else{
             var response = JSON.parse(this.responseText);
              page.data(function(data) {
-                data.successmsg = response.Message;
+                data.successmsg = response;
             })
                 .screen("adhocrequest");
         }
