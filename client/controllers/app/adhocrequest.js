@@ -50,7 +50,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
             //  else hrs = date.getHours()%12 +"AM"
             shiftID = item.TimeID;
             shiftTiming = item.StartTime+"-"+item.EndTime;
-            currentReqTime = $filter('date')(new Date(), 'HH:mm:ss');
+            currentReqTime = $filter('date')(new Date(), 'MM-dd-yyyy HH:mm:ss');
             console.log("shift selected-->"+currentReqTime);
         }
         $scope.selectedBoarding = function(boardingPoint){
