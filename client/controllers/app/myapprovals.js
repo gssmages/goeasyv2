@@ -11,7 +11,7 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
             $rootScope.startSelect = true; // to enable select box by click
           }, elem);
 		$ionicGesture.on('tap',function(){
-          	if ($rootScope.startSelect) {
+        if ($rootScope.startSelect) {
            		if (elem.hasClass('selected')) {
               	elem.removeClass('selected').css('border-top','5px solid #ddd');
               } else {
