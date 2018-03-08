@@ -12,7 +12,7 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
           }, elem);
 		$ionicGesture.on('tap',function(){
         if ($rootScope.startSelect) {
-           	if (elem.hasClass('selected')) {
+           if (elem.hasClass('selected')) {
               	elem.removeClass('selected').css('border-top','5px solid #ddd');
               } else {
               	elem.addClass('selected').css('border-top','5px solid #000');
