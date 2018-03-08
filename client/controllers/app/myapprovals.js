@@ -10,9 +10,7 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
             elem.addClass("selected").css('border-top','5px solid #000');
             $rootScope.startSelect = true; // to enable select box by click
           }, elem);
-          
-
-					$ionicGesture.on('tap', function() {
+		 $ionicGesture.on('tap', function() {
           	if ($rootScope.startSelect) {
            		if (elem.hasClass('selected')) {
               	elem.removeClass('selected').css('border-top','5px solid #ddd');
@@ -102,10 +100,7 @@ function app_myapprovals($scope, app, $ionicPopup){
             {
                 $scope.recordcount="No Request to approval";
             }
-            
-        
     };
-        
 }
 
 //ng-click="selectbox({{$index}})"
