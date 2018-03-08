@@ -13,9 +13,9 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
 		$ionicGesture.on('tap',function(){
         if ($rootScope.startSelect) {
            if (elem.hasClass('selected')) {
-              	elem.removeClass('selected').css('border-top','5px solid #ddd');
+               elem.removeClass('selected').css('border-top','5px solid #ddd');
               } else {
-              	elem.addClass('selected').css('border-top','5px solid #000');
+               elem.addClass('selected').css('border-top','5px solid #000');
               }
             }
           }, elem);
