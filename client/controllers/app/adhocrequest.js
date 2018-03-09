@@ -14,7 +14,9 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
 
    alertPopup.then(function(res) {
      console.log('Reload adhoc page');
-      
+      $scope.origData = $scope.data;
+      $scope.data = $scope.origData;
+    
  var params={"employeeID":$localStorage.employeeID,"locationID":$localStorage.locationID};
      app.call('goeasymethods.getAdhocdetails',params);
    });
