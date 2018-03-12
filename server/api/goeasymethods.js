@@ -103,14 +103,14 @@ exports.sendNoshow = function (page, params) {
              page.data(function(data) {
                  data.successmsg = response;
              })
-                 .screen("mytrips");
+                 .screen("mytripsmsg");
         }
         else{
             var response = JSON.parse(this.responseText);
              page.data(function(data) {
                 data.successmsg = response.Message;
             })
-                .screen("mytrips");
+                .screen("mytripsmsg");
         }
     };
     xmlhttp.open("GET", url, false);
@@ -145,7 +145,7 @@ exports.approvalrequest = function (page, params) {
              page.data(function(data) {
                  data.successmsg = response;
              })
-                 .screen("myapprovals");
+                 .screen("approvalmsg");
         }
     };
     xmlhttp.open("GET", url, false);
@@ -167,7 +167,7 @@ exports.adhocRequest = function (page, params) {
               page.data(function(data) {
                   data.successmsg = response;
               })
-                  .screen("adhocrequest");
+                  .screen("adhocmsg");
         }
         else{
             var response = JSON.parse(this.responseText);
@@ -180,7 +180,7 @@ exports.adhocRequest = function (page, params) {
              page.data(function(data) {
                 data.successmsg = responseMessage;
             })
-                .screen("adhocrequest");
+                .screen("adhocmsg");
         }
     };
     xmlhttp.open("GET", url, false);
