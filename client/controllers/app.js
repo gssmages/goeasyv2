@@ -21,6 +21,7 @@ function app($scope, app,$localStorage,$filter) {
           console.log("calling mytrips in menu call");
         if(data=="mytrips")
         {
+            console.log($scope.data);
             params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate};
             console.log(params);
             app.call('goeasymethods.getMytrips',params);
