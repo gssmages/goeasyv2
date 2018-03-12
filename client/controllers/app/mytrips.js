@@ -15,8 +15,8 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
    });
 
    alertPopup.then(function(res) {
-       $scope.data="";
-            console.log($scope.data+"-->Scopedata");
+       $scope = scope.$new(true);
+            console.log($scope+"-->Scopedata");
      console.log('Reload mytrips page');
       var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
  var params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate};
