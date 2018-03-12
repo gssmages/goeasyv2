@@ -3,7 +3,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
     'use strict';
     app.init($scope, function () {
         
-              var success=$scope.data.successmsg;
+  /*            var success=$scope.data.successmsg;
     // console.log(success+"thisissuccesmsg");
       if(success!=undefined)
          {
@@ -22,7 +22,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
    });
          }
          else
-         {
+         {*/
        console.log('data objects ', $scope.data);
        var RequestTypeID ="";
        var RequestForID ="";
@@ -221,6 +221,6 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
             }
           app.call('goeasymethods.getAdhocdetails',params);
         }
-         }
+        /* }*/
     });
 }
