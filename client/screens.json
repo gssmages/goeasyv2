@@ -53,8 +53,8 @@
       "model": "adhocrequest"
     },
     {
-      "id": "alertmsg",
-      "name": "alertmsg",
+      "id": "alertmsgformytrips",
+      "name": "alertmsgformytrips",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank"
     },

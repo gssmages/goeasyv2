@@ -69,12 +69,12 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
-    }).state('app.alertmsg', {
+    }).state('app.alertmsgformytrips', {
         views: {
             app: {
-                controller: 'app_alertmsg',
+                controller: 'app_alertmsgformytrips',
                 templateProvider: function (app) {
-                    return app.templateProvider('app.alertmsg');
+                    return app.templateProvider('app.alertmsgformytrips');
                 }
             }
         }
