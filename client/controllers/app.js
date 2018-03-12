@@ -21,16 +21,16 @@ function app($scope, app,$localStorage,$filter) {
           console.log("calling mytrips in menu call");
         if(menuname=="mytrips")
         {
-            $scope.data="";
-            console.log($scope.data+"-->Scopedata");
+           $scope = scope.$new(true);
+            console.log($scope+"-->Scopedata");
             params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate};
             console.log(params);
             app.call('goeasymethods.getMytrips',params);
         }
         else if(data=="dashboard")
         {
-            $scope.data="";
-            console.log($scope.data+"-->Scopedata");
+            $scope = scope.$new(true);
+            console.log($scope+"-->Scopedata");
             console.log($scope.data);
             params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate,"locationname":$localStorage.locationName};
             console.log(params);
@@ -38,16 +38,16 @@ function app($scope, app,$localStorage,$filter) {
         }
         else if(data=="adhoc")
         {
-            $scope.data="";
-            console.log($scope.data+"-->Scopedata");
+           $scope = scope.$new(true);
+            console.log($scope+"-->Scopedata");
             params={"employeeID":$localStorage.employeeID,"locationID":$localStorage.locationID};
             console.log(params);
             app.call('goeasymethods.getAdhocdetails',params);
         }
         else if(data=="myapprovals")
         {
-            $scope.data="";
-            console.log($scope.data+"-->Scopedata");
+           $scope = scope.$new(true);
+            console.log($scope+"-->Scopedata");
             params={"employeeID":$localStorage.employeeID};
             console.log(params);
             app.call('goeasymethods.getMyApprovals',params);
