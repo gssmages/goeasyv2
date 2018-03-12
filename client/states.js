@@ -132,12 +132,12 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
-    }).state('app.approvalvalidation', {
+    }).state('app.adhocmsg', {
         views: {
             app: {
-                controller: 'app_approvalvalidation',
+                controller: 'app_adhocmsg',
                 templateProvider: function (app) {
-                    return app.templateProvider('app.approvalvalidation');
+                    return app.templateProvider('app.adhocmsg');
                 }
             }
         }

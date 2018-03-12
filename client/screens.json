@@ -101,8 +101,8 @@
       "model": "adhoctripcancellation"
     },
     {
-      "id": "approvalvalidation",
-      "name": "approvalvalidation",
+      "id": "adhocmsg",
+      "name": "adhocmsg",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank",
       "model": "approvalvalidation"
