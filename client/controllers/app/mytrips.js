@@ -5,7 +5,7 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
        $scope.mytripslist=true;
      $scope.cancellist=false;
      
-      var success=$scope.data.successmsg;
+    /*  var success=$scope.data.successmsg;
     // console.log(success+"thisissuccesmsg");
       if(success!=undefined)
          {
@@ -21,7 +21,7 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
  var params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate};
      app.call('goeasymethods.getMytrips',params);
    });
-         }
+         }*/
          var canceldata=$scope.data.mytrips;
          console.log(canceldata + "---checking mytrips details");
          if(canceldata!=undefined) {
