@@ -16,30 +16,38 @@ function app($scope, app,$localStorage,$filter) {
    
     var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
     
- $scope.menudata = function(data) {
+ $scope.menudata = function(menuname) {
      var params='';
           console.log("calling mytrips in menu call");
-        if(data=="mytrips")
+        if(menuname=="mytrips")
         {
-            console.log($scope.data);
+            $scope.data="";
+            console.log($scope.data+"-->Scopedata");
             params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate};
             console.log(params);
             app.call('goeasymethods.getMytrips',params);
         }
         else if(data=="dashboard")
         {
+            $scope.data="";
+            console.log($scope.data+"-->Scopedata");
+            console.log($scope.data);
             params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate,"locationname":$localStorage.locationName};
             console.log(params);
             app.call('goeasymethods.getDashboard',params);
         }
         else if(data=="adhoc")
         {
+            $scope.data="";
+            console.log($scope.data+"-->Scopedata");
             params={"employeeID":$localStorage.employeeID,"locationID":$localStorage.locationID};
             console.log(params);
             app.call('goeasymethods.getAdhocdetails',params);
         }
         else if(data=="myapprovals")
         {
+            $scope.data="";
+            console.log($scope.data+"-->Scopedata");
             params={"employeeID":$localStorage.employeeID};
             console.log(params);
             app.call('goeasymethods.getMyApprovals',params);
