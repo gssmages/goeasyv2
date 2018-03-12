@@ -35,6 +35,8 @@ function app_myapprovals($scope, app, $ionicPopup){
    });
 
    alertPopup.then(function(res) {
+       $scope.data="";
+            console.log($scope.data+"-->Scopedata");
      console.log('Reload same approval page');
      var params={"employeeID":$localStorage.employeeID};
      app.call('goeasymethods.getMyApprovals',params);
