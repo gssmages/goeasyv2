@@ -53,8 +53,8 @@
       "model": "adhocrequest"
     },
     {
-      "id": "alertmsgformytrips",
-      "name": "alertmsgformytrips",
+      "id": "mytripsmsg",
+      "name": "mytripsmsg",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank"
     },
