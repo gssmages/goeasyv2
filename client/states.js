@@ -42,15 +42,6 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
-    }).state('app.popup', {
-        views: {
-            app: {
-                controller: 'app_popup',
-                templateProvider: function (app) {
-                    return app.templateProvider('app.popup');
-                }
-            }
-        }
     }).state('app.alertwin', {
         views: {
             app: {
@@ -69,12 +60,12 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
-    }).state('app.alertmsg', {
+    }).state('app.mytripsmsg', {
         views: {
             app: {
-                controller: 'app_alertmsg',
+                controller: 'app_mytripsmsg',
                 templateProvider: function (app) {
-                    return app.templateProvider('app.alertmsg');
+                    return app.templateProvider('app.mytripsmsg');
                 }
             }
         }
@@ -132,21 +123,21 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
-    }).state('app.approvalvalidation', {
+    }).state('app.adhocmsg', {
         views: {
             app: {
-                controller: 'app_approvalvalidation',
+                controller: 'app_adhocmsg',
                 templateProvider: function (app) {
-                    return app.templateProvider('app.approvalvalidation');
+                    return app.templateProvider('app.adhocmsg');
                 }
             }
         }
-    }).state('app.adhocfieldalerts', {
+    }).state('app.approvalmsg', {
         views: {
             app: {
-                controller: 'app_adhocfieldalerts',
+                controller: 'app_approvalmsg',
                 templateProvider: function (app) {
-                    return app.templateProvider('app.adhocfieldalerts');
+                    return app.templateProvider('app.approvalmsg');
                 }
             }
         }

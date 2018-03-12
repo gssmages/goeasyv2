@@ -32,13 +32,6 @@
       "model": "mytripstab"
     },
     {
-      "id": "popup",
-      "name": "popup",
-      "sourceScreenId": "app.popup",
-      "sourceAppId": "JSPopup",
-      "model": "popup"
-    },
-    {
       "id": "alertwin",
       "name": "alertwin",
       "sourceScreenId": "app.blank",
@@ -53,8 +46,8 @@
       "model": "adhocrequest"
     },
     {
-      "id": "alertmsg",
-      "name": "alertmsg",
+      "id": "mytripsmsg",
+      "name": "mytripsmsg",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank"
     },
@@ -101,15 +94,15 @@
       "model": "adhoctripcancellation"
     },
     {
-      "id": "approvalvalidation",
-      "name": "approvalvalidation",
+      "id": "adhocmsg",
+      "name": "adhocmsg",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank",
       "model": "approvalvalidation"
     },
     {
-      "id": "adhocfieldalerts",
-      "name": "adhocFieldAlerts",
+      "id": "approvalmsg",
+      "name": "approvalmsg",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank",
       "model": "adhocfieldalerts"

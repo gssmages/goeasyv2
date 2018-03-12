@@ -1,16 +1,13 @@
 <ion-view data-comp-id="ionic-view.1">
     <ion-nav-bar align-title="" class=" bar-positive" data-comp-id="nav-bar.1">
         <ion-nav-buttons side="left"></ion-nav-buttons>
-        <ion-nav-title data-comp-id="nav-title.1">Flex Transport</ion-nav-title>
-        <ion-nav-buttons side="right">
-            <button class="button button-icon ion-ios-arrow-back" data-comp-id="button.1"
-                ng-click="app.action('adhocfieldalerts', 'back', this)"></button>
-        </ion-nav-buttons>
+        <ion-nav-title data-comp-id="nav-title.1">Goeasy Message</ion-nav-title>
+        <ion-nav-buttons side="right"></ion-nav-buttons>
     </ion-nav-bar>
     <ion-content data-comp-id="ionic-content.1">
         <div class="row" data-comp-id="row.1">
             <div class="col" data-comp-id="column.1">
-                <div data-comp-id="text.1" ng-bind="data.errorInfo"></div>
+                <div data-comp-id="text.1" ng-bind="data.successmsg"></div>
             </div>
         </div>
     </ion-content>
@@ -19,8 +16,8 @@
         style="padding: 0px; margin: 0px;">
         <div class="row" data-comp-id="row.2" style="margin: 0px; padding: 0px;">
             <div class="col" data-comp-id="column.2" style="margin: 0px; padding: 0px;">
-                <a class="button button-positive button-full" data-comp-id="button.2"
-                    ng-click="app.action('adhocfieldalerts', 'okButton', this)"
+                <a class="button button-positive button-full" data-comp-id="button.1"
+                    ng-click="menudata(&quot;myapprovals&quot;);"
                     style="margin: 0px; padding: 0px; float: none;">Ok</a>
             </div>
         </div>
