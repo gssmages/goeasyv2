@@ -25,19 +25,19 @@ function app($scope, app,$localStorage,$filter) {
             console.log(params);
             app.call('goeasymethods.getMytrips',params);
         }
-        else if(data=="dashboard")
+        else if(menuname=="dashboard")
         {
             params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate,"locationname":$localStorage.locationName};
             console.log(params);
             app.call('goeasymethods.getDashboard',params);
         }
-        else if(data=="adhoc")
+        else if(menuname=="adhoc")
         {
             params={"employeeID":$localStorage.employeeID,"locationID":$localStorage.locationID};
             console.log(params);
             app.call('goeasymethods.getAdhocdetails',params);
         }
-        else if(data=="myapprovals")
+        else if(menuname=="myapprovals")
         {
             params={"employeeID":$localStorage.employeeID};
             console.log(params);
