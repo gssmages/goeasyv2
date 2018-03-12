@@ -32,13 +32,6 @@
       "model": "mytripstab"
     },
     {
-      "id": "popup",
-      "name": "popup",
-      "sourceScreenId": "app.popup",
-      "sourceAppId": "JSPopup",
-      "model": "popup"
-    },
-    {
       "id": "alertwin",
       "name": "alertwin",
       "sourceScreenId": "app.blank",

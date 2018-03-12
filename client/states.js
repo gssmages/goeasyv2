@@ -42,15 +42,6 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
-    }).state('app.popup', {
-        views: {
-            app: {
-                controller: 'app_popup',
-                templateProvider: function (app) {
-                    return app.templateProvider('app.popup');
-                }
-            }
-        }
     }).state('app.alertwin', {
         views: {
             app: {
