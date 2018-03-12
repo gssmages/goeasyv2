@@ -171,8 +171,14 @@ exports.adhocRequest = function (page, params) {
         }
         else{
             var response = JSON.parse(this.responseText);
+            var responseMessage;
+            if(response.Message){
+                responseMessage = response.Message;
+            }else{
+                responseMessage = response;
+            }
              page.data(function(data) {
-                data.successmsg = response;
+                data.successmsg = responseMessage;
             })
                 .screen("adhocrequest");
         }
