@@ -132,12 +132,12 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
-    }).state('app.adhocfieldalerts', {
+    }).state('app.approvalmsg', {
         views: {
             app: {
-                controller: 'app_adhocfieldalerts',
+                controller: 'app_approvalmsg',
                 templateProvider: function (app) {
-                    return app.templateProvider('app.adhocfieldalerts');
+                    return app.templateProvider('app.approvalmsg');
                 }
             }
         }

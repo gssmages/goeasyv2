@@ -101,8 +101,8 @@
       "model": "approvalvalidation"
     },
     {
-      "id": "adhocfieldalerts",
-      "name": "adhocFieldAlerts",
+      "id": "approvalmsg",
+      "name": "approvalmsg",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank",
       "model": "adhocfieldalerts"
