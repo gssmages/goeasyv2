@@ -47,18 +47,18 @@ function app_myapprovals($scope, app, $ionicPopup){
         
             if($(this).find(".approvallist").not("selected"))
             {	
-                $(this).find(".approvallist").addClass("selected").css('border-top','5px solid #000');
+                $(this).find(".approvallist").addClass("selected").css('background','#1c9ad6');
             }
             else
             {
-                $(this).find(".approvallist").removeClass("selected").css('border-top','5px solid #ddd');
+                $(this).find(".approvallist").removeClass("selected").css('background','#fff');
             }
     };    
     $scope.selectionall = function() {
         $(".card").each(function($index){
             if($(this).find(".approvallist").not("selected"))
             {	
-                $(this).find(".approvallist").addClass("selected").css('border-top','5px solid #000');
+                $(this).find(".approvallist").addClass("selected").css('background','#1c9ad6');
             }
         });
     };
@@ -66,7 +66,7 @@ function app_myapprovals($scope, app, $ionicPopup){
         $(".card").each(function($index){
             if($(this).find(".approvallist").hasClass("selected"))
             {
-                $(this).find(".approvallist").removeClass("selected").css('border-top','5px solid #ddd');
+                $(this).find(".approvallist").removeClass("selected").css('background','#fff');
             }
         });
     };
