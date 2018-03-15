@@ -54,7 +54,7 @@ function app_myapprovals($scope, app, $ionicPopup){
             else
             {
                // $scope.checkrequest=true;
-               $(this).find(".approvallist").removeClass("selected").find(".tickmark").css('background','block');
+               $(this).find(".approvallist").removeClass("selected").find(".tickmark").css('display','block');
             }
     };    
     $scope.selectbox = function(idvalue,elem) {
