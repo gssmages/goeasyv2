@@ -45,7 +45,7 @@ function app_myapprovals($scope, app, $ionicPopup){
      });
       
      
-    $scope.selectbox = function(idvalue,elem) {
+  /*  $scope.selectbox = function(idvalue,elem) {
         
             if($(this).find(".approvallist").not("selected"))
             {	
@@ -55,12 +55,12 @@ function app_myapprovals($scope, app, $ionicPopup){
             {
                 $(this).find(".approvallist").removeClass("selected").css('background','#fff');
             }
-    };    
+    };    */
     $scope.selectionall = function() {
         $(".card").each(function($index){
             if($(this).find(".approvallist").not("selected"))
             {	
-                $(this).find(".approvallist").addClass("selected").css('background','#1c9ad6');
+                $(this).find(".approvallist").addClass("selected").css('background','#bddfed');
             }
         });
     };
