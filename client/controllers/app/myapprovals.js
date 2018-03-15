@@ -14,10 +14,8 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
         if ($rootScope.startSelect) {
            if (elem.hasClass('selected')) {
                elem.removeClass('selected');
-               
               } else {
                elem.addClass('selected');
-               $scope.checkrequest=true;
               }
             }
           }, elem);
@@ -45,7 +43,20 @@ function app_myapprovals($scope, app, $ionicPopup){
    });
          }*/
      });
-    
+      
+     $scope.selectreq = function(elem) {
+        
+            if($(this).find(".approvallist").not("selected"))
+            {	
+                //$scope.checkrequest=false;
+               $(this).find(".approvallist").addClass("selected").find(".tickmark").css('display','none');
+            }
+            else
+            {
+               // $scope.checkrequest=true;
+               $(this).find(".approvallist").removeClass("selected").find(".tickmark").css('background','block');
+            }
+    };    
     $scope.selectbox = function(idvalue,elem) {
         
             if($(this).find(".approvallist").not("selected"))
