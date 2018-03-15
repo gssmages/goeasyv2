@@ -23,7 +23,7 @@ exports.login = function (page,params) {
         }else{
             var response = JSON.parse(this.responseText);
              page.data(function(data) {
-                data.error = response.Message;
+                data.errorMessage = response.Message;
             })
                 .screen("login");
         }
