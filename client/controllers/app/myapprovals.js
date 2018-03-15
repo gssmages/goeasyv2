@@ -45,17 +45,17 @@ function app_myapprovals($scope, app, $ionicPopup){
      });
       
      
-  /*  $scope.selectbox = function(idvalue,elem) {
+ $scope.selectbox = function(idvalue,elem) {
         
             if($(this).find(".approvallist").not("selected"))
             {	
-                $(this).find(".approvallist").addClass("selected").css('background','#1c9ad6');
+                $(this).find(".approvallist").addClass("selected").css('background','#bddfed').find(".tickmark").css("display","block");
             }
             else
             {
-                $(this).find(".approvallist").removeClass("selected").css('background','#fff');
+                $(this).find(".approvallist").removeClass("selected").css('background','#fff').find(".tickmark").css("display","none");
             }
-    };    */
+    };  
     $scope.selectionall = function() {
         $(".card").each(function($index){
             if($(this).find(".approvallist").not("selected"))
