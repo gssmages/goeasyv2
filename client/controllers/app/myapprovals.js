@@ -18,6 +18,7 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
                elem.find("tickmark").css("display","none");
               } else {
                elem.addClass('selected');
+               elem.find("tickmark").css("display","block");
               }
             }
           }, elem);
