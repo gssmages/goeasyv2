@@ -8,13 +8,14 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
             // onHold => start select box by `onHold` => working good
           $ionicGesture.on('hold', function() {
             elem.addClass("selected");
-            elem.find("tickmark").css()
+            elem.find("tickmark").css("display","block");
             $rootScope.startSelect = true; // to enable select box by click
           }, elem);
 		$ionicGesture.on('tap',function(){
         if ($rootScope.startSelect) {
            if (elem.hasClass('selected')) {
                elem.removeClass('selected');
+               elem.find("tickmark").css("display","none");
               } else {
                elem.addClass('selected');
               }
