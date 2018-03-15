@@ -68,7 +68,7 @@ function app_myapprovals($scope, app, $ionicPopup){
         $(".card").each(function($index){
             if($(this).find(".approvallist").hasClass("selected"))
             {
-                $(this).find(".approvallist").removeClass("selected").css('background','#fff').find(".tickmark").css("display","none");;
+                $(this).find(".approvallist").removeClass("selected").css('background','#fff').find(".tickmark").css("display","none");
             }
         });
     };
