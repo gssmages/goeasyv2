@@ -7,7 +7,21 @@ function app($scope, app,$localStorage,$filter) {
        console.log("getting display name : "+$localStorage.displayName);
        // $scope.displayName = $localStorage.displayName;
         //$scope.businessTitle = $localStorage.businessTitle;
+        if(StatusBar)
+        {
+         StatusBar.hide();
+        }
+        if(screen&&screen.orientation)
+        {
+         screen.orientation.lock('portrait');
+        }
     });
+    
+app.loginScreen = 'app.login';
+app.loginModel = 'login';
+app.loginAction = 'login';
+app.loginErrorField = 'errorMessage';
+app.loginIsAction = false;
     
     setInterval(function(){
  $scope.displayName = $localStorage.displayName;
