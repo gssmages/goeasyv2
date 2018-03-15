@@ -44,7 +44,7 @@ function app_myapprovals($scope, app, $ionicPopup){
          }*/
      });
       
-     $scope.selectreq = function(elem) {
+     $scope.selectreq = function() {
         
             if($(this).find(".approvallist").not("selected"))
             {	
