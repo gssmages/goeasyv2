@@ -144,7 +144,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         $scope.validate = function(){
             if($scope.data.selectedreqtype && $scope.data.selectedreqFor 
                 && $scope.data.selectedtiming && $scope.data.selectedarea 
-                 && $scope.data.selectedboarding && $scope.data.ReasonForAdhoc){
+                 && $scope.data.selectedboarding){
                  
                       if($scope.data.selectedreqtype.RequestTypeName === "Month end"){
                           if($scope.data.FromDate && $scope.data.ToDate){
