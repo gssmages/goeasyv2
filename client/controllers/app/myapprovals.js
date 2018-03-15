@@ -46,7 +46,7 @@ function app_myapprovals($scope, app, $ionicPopup){
       
      $scope.selectreq = function() {
         
-            if($(this).find(".approvallist").not("selected"))
+           if($(this).find(".approvallist").hasClass("selected"))
             {	
                 //$scope.checkrequest=false;
                $(this).find(".approvallist").addClass("selected").find(".tickmark").css('display','none');
