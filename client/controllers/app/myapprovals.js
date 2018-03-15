@@ -50,13 +50,14 @@ function app_myapprovals($scope, app, $ionicPopup){
      
  $scope.selectbox = function(idvalue,elem) {
         
-            if($(this).find(".approvallist").not("selected"))
+            if($(this).hasClass("selected"))
             {	
-                $(this).find(".approvallist").addClass("selected").css('background','#bddfed').find(".tickmark").css("display","block");
+                $(this).removeClass("selected").css('background','#fff').find(".tickmark").css("display","none");
             }
             else
             {
-                $(this).find(".approvallist").removeClass("selected").css('background','#fff').find(".tickmark").css("display","none");
+                $(this).addClass("selected").css('background','#bddfed').find(".tickmark").css("display","block");
+                
             }
     };  
     $scope.selectionall = function() {
