@@ -9,14 +9,18 @@ function app($scope, app,$localStorage,$filter) {
         //$scope.businessTitle = $localStorage.businessTitle;
         if(StatusBar)
         {
-         StatusBar.hide();
+            StatusBar.hide();
         }
         if(screen&&screen.orientation)
         {
-         screen.orientation.lock('portrait');
+            screen.orientation.lock('portrait');
+        }
+        if(Keyboard)
+        {
+            Keyboard.hideKeyboardAccessoryBar(false);
+            Keyboard.disableScroll(true);
         }
     });
-    
 app.loginScreen = 'app.login';
 app.loginModel = 'login';
 app.loginAction = 'login';
