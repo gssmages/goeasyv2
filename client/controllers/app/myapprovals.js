@@ -8,17 +8,14 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
             // onHold => start select box by `onHold` => working good
           $ionicGesture.on('hold', function() {
             elem.addClass("selected").css("background","#bddfed");
-            elem.querySelector('.tickmark').css("display","block");
             $rootScope.startSelect = true; // to enable select box by click
           }, elem);
 		$ionicGesture.on('tap',function(){
         if ($rootScope.startSelect) {
            if (elem.hasClass('selected')) {
                elem.removeClass('selected').css("background","#fff");
-               elem.querySelector('.tickmark').css("display","none");
               } else {
                elem.addClass('selected').css("background","#bddfed");
-               elem.querySelector('.tickmark').css("display","block");
               }
             }
           }, elem);
@@ -64,7 +61,8 @@ function app_myapprovals($scope, app, $ionicPopup){
         $(".card").each(function($index){
             if($(this).find(".approvallist").not("selected"))
             {	
-                $(this).find(".approvallist").addClass("selected").css('background','#bddfed').find(".tickmark").css("display","block");
+                $(this).find(".approvallist").addClass("selected").css('background','#bddfed');
+                //.find(".tickmark").css("display","block");
             }
         });
     };
@@ -72,7 +70,8 @@ function app_myapprovals($scope, app, $ionicPopup){
         $(".card").each(function($index){
             if($(this).find(".approvallist").hasClass("selected"))
             {
-                $(this).find(".approvallist").removeClass("selected").css('background','#fff').find(".tickmark").css("display","none");
+                $(this).find(".approvallist").removeClass("selected").css('background','#fff');
+                //.find(".tickmark").css("display","none");
             }
         });
     };
