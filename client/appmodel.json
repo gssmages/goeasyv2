@@ -658,12 +658,6 @@
       "password": {
         "type": "string"
       },
-      "error": {
-        "type": "string",
-        "update": {
-          "type": "none"
-        }
-      },
       "submit": {
         "type": "action"
       },
@@ -672,6 +666,12 @@
         "items": {
           "type": "object",
           "properties": {}
+        }
+      },
+      "errorMessage": {
+        "type": "string",
+        "update": {
+          "type": "none"
         }
       }
     }
