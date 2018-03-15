@@ -3,12 +3,13 @@ function app_tripcancellation($scope, app,$filter) {
     'use strict';
     app.init($scope,function(){
         $scope.date = $filter('date')(new Date(), 'MM-dd-yyyy');
+        $scope.dbdate = $filter('date')(new Date(), 'yyyy-dd-MM');
         var fromdate=$filter('date')($scope.data.tripinfo.FromDateOpnNoShow==null?$scope.date:$scope.data.tripinfo.FromDateOpnNoShow.split('T')[0],'MM-dd-yyyy');
         var todate=$filter('date')($scope.data.tripinfo.ToDateOpnNoShow==null?$scope.date:$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0],'MM-dd-yyyy');
         $scope.data.fromdate=$scope.data.tripinfo.FromDateOpnNoShow==null?$scope.date:fromdate;
         $scope.data.todate=$scope.data.tripinfo.ToDateOpnNoShow==null?$scope.date:todate;
-        $scope.data.minDate=$scope.data.tripinfo.FromDateOpnNoShow==null?$scope.date:$scope.data.tripinfo.FromDateOpnNoShow.split('T')[0];
-        $scope.data.maxDate=$scope.data.tripinfo.ToDateOpnNoShow==null?$scope.date:$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0];
+        $scope.data.minDate=$scope.data.tripinfo.FromDateOpnNoShow==null?$scope.dbdate:$scope.data.tripinfo.FromDateOpnNoShow.split('T')[0];
+        $scope.data.maxDate=$scope.data.tripinfo.ToDateOpnNoShow==null?$scope.dbdate:$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0];
       /*  $scope.requestfor=[
             { RequestForID:"1",RequestForName:"Pickup and Drop"},
             { RequestForID:"2",RequestForName:"Pickup"},
