@@ -38,6 +38,7 @@
             <div approvallist="" class="light-bg approvallist" data-comp-id="div.1"
                 ng-click="selectreq();" style="border-radius: 0px; margin: 5px;">
                 <div class="row" data-comp-id="row.3"
+                    ng-if="$(this).find(&quot;.approvallist&quot;).hasClass(&quot;selected&quot;)"
                     style="margin: 0px; padding: 0px; border-radius: 0px;">
                     <div class="col col-10 text-center" data-comp-id="column.4"
                         style="padding: 10px 5px;">
@@ -60,7 +61,7 @@
                     </div>
                     <div class="col positive-bg col-10 text-center tickmark" data-comp-id="column.6"
                         style="padding: 0px; margin: 0px;">
-                        <i class="icon ion-checkmark light" data-comp-id="icon.2" ng-show="checkrequest"
+                        <i class="icon ion-checkmark light" data-comp-id="icon.2"
                             style="font-size: 24px; margin: 30% 0px 0px;"></i>
                     </div>
                 </div>
