@@ -36,7 +36,7 @@
             ng-if="item.date!=&quot;No data available in table&quot;"
             ng-repeat="item in data.pendinglistitems" type=" card">
             <div approvallist="" class="light-bg approvallist" data-comp-id="div.1"
-                style="border-radius: 0px; margin: 5px;">
+                ng-click="selectreq();" style="border-radius: 0px; margin: 5px;">
                 <div class="row" data-comp-id="row.3"
                     style="margin: 0px; padding: 0px; border-radius: 0px;">
                     <div class="col col-10 text-center" data-comp-id="column.4"
@@ -60,7 +60,7 @@
                     </div>
                     <div class="col positive-bg col-10 text-center" data-comp-id="column.6"
                         style="padding: 0px; margin: 0px;">
-                        <i class="icon ion-checkmark light" data-comp-id="icon.2"
+                        <i class="icon ion-checkmark light" data-comp-id="icon.2" ng-show="checkrequest"
                             style="font-size: 24px; margin: 30% 0px 0px;"></i>
                     </div>
                 </div>
