@@ -3,7 +3,7 @@ function app_tripcancellation($scope, app,$filter) {
     'use strict';
     app.init($scope,function(){
         $scope.date = $filter('date')(new Date(), 'MM-dd-yyyy');
-        $scope.dbdate = $filter('date')(new Date(), 'yyyy-dd-MM');
+        $scope.dbdate = $filter('date')(new Date(), 'yyyy-MM-dd');
         var fromdate=$filter('date')($scope.data.tripinfo.FromDateOpnNoShow==null?$scope.date:$scope.data.tripinfo.FromDateOpnNoShow.split('T')[0],'MM-dd-yyyy');
         var todate=$filter('date')($scope.data.tripinfo.ToDateOpnNoShow==null?$scope.date:$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0],'MM-dd-yyyy');
         $scope.data.fromdate=$scope.data.tripinfo.FromDateOpnNoShow==null?$scope.date:fromdate;
