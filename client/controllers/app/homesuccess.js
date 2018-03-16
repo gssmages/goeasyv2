@@ -3,11 +3,11 @@ function app_homesuccess($scope, app,$filter,$localStorage,$ionicLoading) {
     'use strict';
     app.init($scope,function(){
          $ionicLoading.show({
- *       template: 'Loading...',
- *       duration: 3000
- *     }).then(function(){
- *        console.log("The loading indicator is now displayed");
- *     });
+       template: 'Loading...',
+        duration: 3000
+      }).then(function(){
+         console.log("The loading indicator is now displayed");
+      });
  
          var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
           $localStorage.employeeID=$scope.data.home.EmployeeID;
