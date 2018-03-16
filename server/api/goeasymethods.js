@@ -42,7 +42,7 @@ exports.getMytrips = function (page,params) {
         }
         else{
              page.data(function(data) {
-                 data.errormsg = response;
+                 data.errormsg = "No Trip details";
              })
                  .screen("mytrips");
         }
