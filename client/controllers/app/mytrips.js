@@ -7,9 +7,11 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
          if(errordata!=undefined) {
             $scope.mytripslist=false;
             $scope.cancellist=false;
+           $scope.mytripstabs=false;
          }
          else
          {
+            $scope.mytripstabs=true;
             $scope.mytripslist=true;
             $scope.cancellist=false;
          }
