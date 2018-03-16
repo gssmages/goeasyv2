@@ -5,12 +5,14 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
         var errordata=$scope.data.errormsg;
          console.log(errordata + "---mytrips error msg");
          if(errordata!=undefined) {
-              $scope.mytripslist=false;
-     $scope.cancellist=false;
+            $scope.mytripslist=false;
+            $scope.cancellist=false;
          }
-       $scope.mytripslist=true;
-     $scope.cancellist=false;
-     
+         else
+         {
+            $scope.mytripslist=true;
+            $scope.cancellist=false;
+         }
     /*  var success=$scope.data.successmsg;
     // console.log(success+"thisissuccesmsg");
       if(success!=undefined)
