@@ -2,6 +2,12 @@ angular.module('app').controller('app_mytrips', app_mytrips);
 function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
     'use strict';
     app.init($scope,function(){
+        var errordata=$scope.data.errormsg;
+         console.log(errordata + "---mytrips error msg");
+         if(errordata!=undefined) {
+              $scope.mytripslist=false;
+     $scope.cancellist=false;
+         }
        $scope.mytripslist=true;
      $scope.cancellist=false;
      
