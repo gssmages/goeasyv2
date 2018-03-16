@@ -40,6 +40,12 @@ exports.getMytrips = function (page,params) {
              })
                  .screen("mytrips");
         }
+        else{
+             page.data(function(data) {
+                 data.errormsg = response;
+             })
+                 .screen("mytrips");
+        }
     };
     xmlhttp.open("GET", url, false);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
