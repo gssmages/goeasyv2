@@ -9,6 +9,7 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
           $ionicGesture.on('hold', function() {
             elem.addClass("selected").css("background","#bddfed");
             elem[0].querySelector('.tickmark').style.display="block";
+            elem[0].querySelector('.calendericon').style.display="none";
             $rootScope.startSelect = true; // to enable select box by click
           }, elem);
 		$ionicGesture.on('tap',function(){
@@ -16,9 +17,11 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
            if (elem.hasClass('selected')) {
                elem.removeClass('selected').css("background","#fff");
                 elem[0].querySelector('.tickmark').style.display="none";
+                elem[0].querySelector('.calendericon').style.display="block";
               } else {
                elem.addClass('selected').css("background","#bddfed");
                 elem[0].querySelector('.tickmark').style.display="block";
+                elem[0].querySelector('.calendericon').style.display="none";
               }
             }
           }, elem);
@@ -65,6 +68,7 @@ function app_myapprovals($scope, app, $ionicPopup){
             if($(this).find(".approvallist").not("selected"))
             {	
                 $(this).find(".approvallist").addClass("selected").css('background','#bddfed').find(".tickmark").css("display","block");
+                $(this).find(".calendericon").css("display","none");
             }
         });
     };
@@ -73,6 +77,7 @@ function app_myapprovals($scope, app, $ionicPopup){
             if($(this).find(".approvallist").hasClass("selected"))
             {
                 $(this).find(".approvallist").removeClass("selected").css('background','#fff').find(".tickmark").css("display","none");
+                $(this).find(".calendericon").css("display","block");
             }
         });
     };
