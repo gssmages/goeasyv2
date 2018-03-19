@@ -64,7 +64,8 @@ $scope.GetValue = function (item) {
         var CabRequestID=$scope.data.tripinfo.CabRequestID;
         var FromDate=$scope.data.fromdate;
         var ToDate= $scope.data.todate;
-         
+         if(RequestForID!=0)
+         {
          var tripinfo ={"locationID":locationID,"employeeID":employeeID,
          "RequestTypeName":RequestTypeName,"RequestForName":RequestForName,
          "ShiftTimeID":ShiftTimeID,"CabRequestID":CabRequestID,
@@ -73,6 +74,21 @@ $scope.GetValue = function (item) {
          "ToDateOpnNoShow":ToDate,"RequestedForName":RequestedForName,};
          console.log(tripinfo);
 		app.call('goeasymethods.sendNoshow',tripinfo);
+         }
+         else
+         {
+             errorMsg();
+         }
 
    };
+    var errorMsg = function(){
+            var alertPopup = $ionicPopup.alert({
+                 title: 'Warning',
+                 template: 'Please select all the required field.'
+            });
+
+             alertPopup.then(function(res) {
+               // Custom functionality....
+             });
+        }
 }
