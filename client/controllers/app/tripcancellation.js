@@ -1,5 +1,5 @@
 angular.module('app').controller('app_tripcancellation', app_tripcancellation);
-function app_tripcancellation($scope, app,$filter) {
+function app_tripcancellation($scope, app,$filter,$localStorage) {
     'use strict';
     app.init($scope,function(){
         $scope.date = $filter('date')(new Date(), 'MM-dd-yyyy');
