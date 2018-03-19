@@ -39,12 +39,17 @@
                 ng-click="" style="border-radius: 0px;">
                 <div class="row" data-comp-id="row.3"
                     style="margin: 0px; padding: 0px; border-radius: 0px;">
-                    <div class="col col-10 text-center" data-comp-id="column.4"
+                    <div class="col positive-bg col-10 text-center tickmark" data-comp-id="column.4"
+                        style="padding: 0px; margin: 0px; display:none;">
+                        <i class="icon ion-checkmark light" data-comp-id="icon.1"
+                            style="font-size: 24px; line-height:100px;"></i>
+                    </div>
+                    <div class="col col-10 text-center" data-comp-id="column.5"
                         style="padding: 10px 5px;">
-                        <i class="icon ion-android-calendar positive" data-comp-id="icon.1"
+                        <i class="icon ion-android-calendar positive" data-comp-id="icon.2"
                             style="font-size: 24px;"></i>
                     </div>
-                    <div class="col" data-comp-id="column.5"
+                    <div class="col" data-comp-id="column.6"
                         style="padding: 10px; border-radius: 0px;">
                         <div class=" id" data-comp-id="text.2" ng-bind="item.ID" ng-show="false">Some text</div>
                         <div class=" energized" data-comp-id="text.3"
@@ -53,15 +58,10 @@
                         <div class=" dark" data-comp-id="text.4"
                             ng-bind="item.RequestTypeName + &quot; for &quot;+ item.RequestForName"
                             style="font-size: 12px; line-height: 24px;">Some text</div>
-                        <div class=" dark" data-comp-id="text.5" ng-bind="item.FromDate"
+                        <div class=" dark" data-comp-id="text.5" ng-bind="item.FromDate.split('T')[0]"
                             style="font-size: 12px;">Some text</div>
                         <div class=" dark" data-comp-id="text.6" ng-bind="item.BoardingPointName"
                             style="font-size: 12px;">Some text</div>
-                    </div>
-                    <div class="col positive-bg col-10 text-center tickmark" data-comp-id="column.6"
-                        style="padding: 0px; margin: 0px; display:none;">
-                        <i class="icon ion-checkmark light" data-comp-id="icon.2"
-                            style="font-size: 24px; line-height:100px;"></i>
                     </div>
                 </div>
             </div>
