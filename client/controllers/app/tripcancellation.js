@@ -43,7 +43,7 @@ function app_tripcancellation($scope, app,$filter) {
       }
   }
 }
-  var selectid='';
+  var selectid=0;
 $scope.GetValue = function (item) {
                 var selectname = $scope.data.reqfor;
                 selectid = $.grep($scope.requestfor, function (item) {
