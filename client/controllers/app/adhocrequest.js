@@ -34,16 +34,17 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.data.PleaseSpecify="";
-        $scope.data.Date="";
-        $scope.data.FromDate="";
-        $scope.data.ToDate="";
+        $scope.data.Date=$filter('date')(new Date(), 'MM-dd-yyyy');
+        $scope.data.FromDate=$filter('date')(new Date(), 'MM-dd-yyyy');
+        $scope.data.ToDate=$filter('date')(new Date(), 'MM-dd-yyyy');
         $scope.boardingPoint= [];
         $scope.reqtype= $scope.data.adhocDataList[0].RequestTypeDetails;
         $scope.reqFor= $scope.data.adhocDataList[0].RequestForDetails;
         $scope.timing= $scope.data.adhocDataList[0].ShiftTimeDetails;
         $scope.area= $scope.data.adhocDataList[0].AreaDetails
         $scope.specialNeedList = ["Please Specify","Pregnant","Undergoing Medical Treatment"];
-         
+        $scope.data.minDate = $filter('date')(new Date(), 'yyyy-MM-dd');
+          
         $scope.shiftSelection = function(item){
             // var date = new Date();
             // var hrs;
