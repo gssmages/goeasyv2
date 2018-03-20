@@ -137,6 +137,9 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
             }else{
                  $scope.start_time=true;
                  $scope.both_time=false;
+                 if(RequestForID == "2"){
+                     $scope.time_type = "StartTime";
+                 }else{ $scope.time_type = "EndTime";}
             }
         }
        
