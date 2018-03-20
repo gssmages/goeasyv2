@@ -32,6 +32,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
        var currentReqTime="";
        var areaID="";
        $scope.start_time=true;
+       $scope.end_time=false;
        $scope.both_time=false;
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
@@ -133,14 +134,17 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
             RequestForID = item.RequestForID;
             if(RequestForID == "1"){
                  $scope.start_time=false;
+                 $scope.end_time=false;
                  $scope.both_time=true;
-            }else{
+            }else if(RequestForID == "2"){
                  $scope.start_time=true;
+                 $scope.end_time=false;
                  $scope.both_time=false;
-                 if(RequestForID == "2"){
-                     $scope.time_type = "StartTime";
-                 }else{ $scope.time_type = "EndTime";}
-            }
+              }else{
+                 $scope.start_time=false;
+                 $scope.end_time=true;
+                 $scope.both_time=false;
+                }
         }
        
         var errorMsg = function(){
