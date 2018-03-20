@@ -33,7 +33,6 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
        var areaID="";
        $scope.start_time=true;
        $scope.both_time=false;
-       $scope.time_type = "StartTime";
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.data.PleaseSpecify="";
