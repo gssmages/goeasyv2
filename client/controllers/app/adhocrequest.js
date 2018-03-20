@@ -31,6 +31,8 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
        var boardingPointID="";
        var currentReqTime="";
        var areaID="";
+       $scope.start_time=true;
+       $scope.both_time=false;
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.data.PleaseSpecify="";
@@ -129,6 +131,13 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         $scope.reqForChange = function(item){
             console.log("req for id-->"+item.RequestForID);
             RequestForID = item.RequestForID;
+            if(RequestForID == "1"){
+                 $scope.start_time=false;
+                 $scope.both_time=true;
+            }else{
+                 $scope.start_time=true;
+                 $scope.both_time=false;
+            }
         }
        
         var errorMsg = function(){
