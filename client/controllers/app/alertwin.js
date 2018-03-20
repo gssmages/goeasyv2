@@ -13,7 +13,7 @@ angular.forEach(cabreqid, function(value, key) {
         var employeeID=$localStorage.employeeID;
          var statusid=$scope.data.approvalinfo.status;
          var comment=$scope.data.comments;
-         if(statusid==2)
+         if(statusid==3)
          {
              if($scope.data.comments)
              {
@@ -28,7 +28,7 @@ angular.forEach(cabreqid, function(value, key) {
        }
          else
          {
-             sendtoconfirm={"cabRequestID":cabid,"status":statusid,"approver":"880781","remarks":comment};
+             sendtoconfirm={"cabRequestID":cabid,"status":statusid,"approver":employeeID,"remarks":comment};
        console.log(sendtoconfirm);
           app.call("goeasymethods.approvalrequest",sendtoconfirm);
              
