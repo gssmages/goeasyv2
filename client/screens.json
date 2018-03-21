@@ -66,13 +66,6 @@
       "model": "home"
     },
     {
-      "id": "sidemenu",
-      "name": "sidemenu",
-      "sourceScreenId": "app.slideoutmenu.sidemenucool",
-      "sourceAppId": "universaltemplates",
-      "model": "sidemenu"
-    },
-    {
       "id": "testadhocscreen",
       "name": "testAdhocScreen",
       "sourceScreenId": "app.listview.listviewcool",
