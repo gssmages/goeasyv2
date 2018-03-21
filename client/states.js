@@ -87,15 +87,6 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
-    }).state('app.testadhocscreen', {
-        views: {
-            app: {
-                controller: 'app_testadhocscreen',
-                templateProvider: function (app) {
-                    return app.templateProvider('app.testadhocscreen');
-                }
-            }
-        }
     }).state('app.tripcancellation', {
         views: {
             app: {
