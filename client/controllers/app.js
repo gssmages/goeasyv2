@@ -7,18 +7,17 @@ function app($scope, app,$localStorage,$filter) {
        console.log("getting display name : "+$localStorage.displayName);
        // $scope.displayName = $localStorage.displayName;
         //$scope.businessTitle = $localStorage.businessTitle;
-        if(StatusBar)
-        {
+        if (window.isPlatform && window.isPlatform.powWow() && window.isPlatform.iOS() && window.cordova && window.cordova.plugins) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
+        }
+
+        if (window.StatusBar) {
             StatusBar.hide();
+            document.body.classList.add('nostatusbar');
         }
-        if(screen&&screen.orientation)
-        {
+
+        if (window.screen && window.screen.orientation) {
             screen.orientation.lock('portrait');
-        }
-        if(Keyboard)
-        {
-            Keyboard.hideKeyboardAccessoryBar(false);
-            Keyboard.disableScroll(true);
         }
     });
 app.loginScreen = 'app.login';
