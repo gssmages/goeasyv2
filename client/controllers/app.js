@@ -1,12 +1,7 @@
 angular.module('app').controller('app', app);
 function app($scope, app,$localStorage,$filter) {
     'use strict';
-     app.init($scope,function(){
-        $scope.displayName = '';
-        $scope.businessTitle='';
-       console.log("getting display name : "+$localStorage.displayName);
-       // $scope.displayName = $localStorage.displayName;
-        //$scope.businessTitle = $localStorage.businessTitle;
+    
         if (window.isPlatform && window.isPlatform.powWow() && window.isPlatform.iOS() && window.cordova && window.cordova.plugins) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
         }
@@ -19,7 +14,15 @@ function app($scope, app,$localStorage,$filter) {
         if (window.screen && window.screen.orientation) {
             screen.orientation.lock('portrait');
         }
+        
+     app.init($scope,function(){
+        $scope.displayName = '';
+        $scope.businessTitle='';
+       console.log("getting display name : "+$localStorage.displayName);
+       // $scope.displayName = $localStorage.displayName;
+        //$scope.businessTitle = $localStorage.businessTitle;
     });
+    
 app.loginScreen = 'app.login';
 app.loginModel = 'login';
 app.loginAction = 'login';
