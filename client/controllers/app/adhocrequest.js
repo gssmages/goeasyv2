@@ -31,6 +31,9 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
        var boardingPointID="";
        var currentReqTime="";
        var areaID="";
+       $scope.start_time=true;
+       $scope.end_time=false;
+       $scope.both_time=false;
         $scope.data.SpecialNeed =2;
         $scope.boardAreaId ="";
         $scope.data.PleaseSpecify="";
@@ -54,7 +57,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
             shiftID = item.TimeID;
             shiftTiming = item.StartTime+"-"+item.EndTime;
             currentReqTime = $filter('date')(new Date(), 'MM-dd-yyyy HH:mm:ss');
-            console.log("shift selected-->"+currentReqTime);
+            //console.log("shift selected-->"+JSON.stringify(item));
         }
         $scope.selectedBoarding = function(boardingselected){
             if(boardingselected)
@@ -84,7 +87,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         //   }
           $scope.boardAreaId = item.RelAreaID;
           areaID =item.AreaID;
-          console.log("area selected-->"+ areaID );
+          //console.log("area selected-->"+ areaID );
           //method to process json array as filter
            $scope.boardingPoint = $scope.data.adhocDataList[0].RelBoardingPointDetails.filter(function(d) {
                 return d.Area === $scope.boardAreaId 
@@ -92,7 +95,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         }
         
         $scope.typeChange = function (item) {
-            console.log('---Request Type id---' + JSON.stringify(item.RequestTypeName));
+            //console.log('---Request Type id---' + JSON.stringify(item.RequestTypeName));
             RequestTypeID = item.RequestTypeID;
              var selectedReqTyp = item.RequestTypeName;
             // $scope.submitApprovals();
@@ -127,8 +130,22 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         };
         
         $scope.reqForChange = function(item){
-            console.log("req for id-->"+item.RequestForID);
+            //console.log("req for id-->"+item.RequestForID);
             RequestForID = item.RequestForID;
+            
+            if(RequestForID == "1"){
+                 $scope.start_time=false;
+                 $scope.end_time=false;
+                 $scope.both_time=true;
+             }else if(RequestForID == "2"){
+                 $scope.start_time=true;
+                 $scope.end_time=false;
+                 $scope.both_time=false;
+             }else{
+                 $scope.start_time=false;
+                 $scope.end_time=true;
+                 $scope.both_time=false;
+             }
         }
        
         var errorMsg = function(){

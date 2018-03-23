@@ -80,7 +80,21 @@
                         <span style="color:red;">*</span>
                     </div>
                     <label class="item  item-input item-select-icon positive-icon"
-                        data-comp-id="selectInput.3">
+                        data-comp-id="selectInput.3" ng-if="start_time">
+                        <!--<span class="input-label">Select Label</span>-->
+                        <select ng-change="shiftSelection(data.selectedtiming)"
+                            ng-model="data.selectedtiming"
+                            ng-options="item.StartTime  for item in timing track by item.TimeID"></select>
+                    </label>
+                    <label class="item  item-input item-select-icon positive-icon"
+                        data-comp-id="selectInput.4" ng-if="end_time">
+                        <!--<span class="input-label">Select Label</span>-->
+                        <select ng-change="shiftSelection(data.selectedtiming)"
+                            ng-model="data.selectedtiming"
+                            ng-options="item.EndTime  for item in timing track by item.TimeID"></select>
+                    </label>
+                    <label class="item  item-input item-select-icon positive-icon"
+                        data-comp-id="selectInput.5" ng-if="both_time">
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-change="shiftSelection(data.selectedtiming)"
                             ng-model="data.selectedtiming"
@@ -96,7 +110,7 @@
                     <!--<select-list data-comp-id="selectList.1" ng-change="submitApprovals()"-->
                     <!--    ng-model="data.Area" no-label="true" select-class=" item-stacked-label"></select-list>-->
                     <label class="item  item-input item-select-icon positive-icon"
-                        data-comp-id="selectInput.4">
+                        data-comp-id="selectInput.6">
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-change="areaSelect(data.selectedarea);" ng-model="data.selectedarea"
                             ng-options="item.AreaName for item in area track by item.RelAreaID"></select>
@@ -111,7 +125,7 @@
                     <!--<select-list data-comp-id="selectList.2" ng-change="submitApprovals()"-->
                     <!--    ng-model="data.BordingPoint" no-label="true"></select-list>-->
                     <label class="item  item-input item-select-icon positive-icon"
-                        data-comp-id="selectInput.5">
+                        data-comp-id="selectInput.7">
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-change="selectedBoarding(data.selectedboarding)"
                             ng-model="data.selectedboarding"
@@ -151,7 +165,7 @@
                     <!--    <option ng-repeat="options in specialNeedList">{{options}}</option>-->
                     <!--</select-list>-->
                     <label class="item  item-input item-select-icon positive-icon"
-                        data-comp-id="selectInput.6">
+                        data-comp-id="selectInput.8">
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-model="data.PleaseSpecify"
                             ng-options="item as item for item in specialNeedList"></select>
@@ -175,9 +189,10 @@
     <div class="footer-button-bar" data-comp-id="footer-bar-buttons.1"
         dynamic-floating-footer="" style="padding: 0px;">
         <div class="row" data-comp-id="row.12" style="padding: 0px;">
-            <div class="col" data-comp-id="column.14" style="padding: 0px; margin: 0px;">
+            <div class="col" data-comp-id="column.14"
+                style="padding: 0px; margin: 0px; border-right: 1px solid rgb(221, 221, 221);">
                 <button class="button button-block button-positive" data-comp-id="button.2"
-                    ng-click="reset()" style="margin: 0px;">Reset</button>
+                    ng-click="reset()" style="margin: 0px; border-radius: 0px;">Reset</button>
             </div>
             <div class="col text-center" data-comp-id="column.15" style="padding: 0px;">
                 <button class="button button-block button-positive" data-comp-id="button.3"
