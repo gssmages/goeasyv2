@@ -6,7 +6,6 @@ function app($scope, app,$localStorage,$filter) {
         cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
         }
  
-        
         if (window.StatusBar) {
             StatusBar.hide();
             document.body.classList.add('nostatusbar');
