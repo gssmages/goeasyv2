@@ -84,14 +84,14 @@
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-change="shiftSelection(data.selectedtiming)"
                             ng-model="data.selectedtiming"
-                            ng-options="item.railwayTimeStart  for item in timing track by item.TimeID | orderBy"></select>
+                            ng-options="item.railwayTimeStart  for item in timing track by item.TimeID"></select>
                     </label>
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.4" ng-if="end_time">
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-change="shiftSelection(data.selectedtiming)"
                             ng-model="data.selectedtiming"
-                            ng-options="item.railwayTimeEnd  for item in timing track by item.TimeID | orderBy :'-railwayTimeEnd'"></select>
+                            ng-options="item.railwayTimeEnd  for item in timing track by item.TimeID"></select>
                     </label>
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.5" ng-if="both_time">
