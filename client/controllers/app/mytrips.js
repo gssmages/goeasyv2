@@ -82,14 +82,13 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
         var FromDate=item.FromDate;
         var ToDate=item.ToDate;
         var ShiftTimeName=item.ShiftStartTime+"-"+item.ShiftEndTime;
-        var UserTime = $filter('date')(new Date(), 'MM-dd-yyyy HH:mm:ss');
          
          var tripinfo ={"locationID":locationID,"employeeID":employeeID,
          "RequestTypeName":RequestTypeName,"RequestForName":RequestForName,
          "ShiftTimeID":ShiftTimeID,"CabRequestID":CabRequestID,
          "RequestForID":RequestForID,"RequestTypeID":RequestTypeID,
          "FromDateOpnNoShow":FromDate,
-         "ToDateOpnNoShow":ToDate,"ShiftTimeName":ShiftTimeName,"UserTime":UserTime};
+         "ToDateOpnNoShow":ToDate,"ShiftTimeName":ShiftTimeName};
         
         app.call("goeasymethods.gettripinfo",tripinfo);
         console.log(tripinfo);
