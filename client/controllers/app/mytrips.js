@@ -81,15 +81,18 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
         var CabRequestID=item.CabRequestID;
         var FromDate=item.FromDate;
         var ToDate=item.ToDate;
+        var ShiftTimeName=item.ShiftStartTime+"-"+item.ShiftEndTime;
+        var UserTime = $filter('date')(new Date(), 'MM-dd-yyyy HH:mm:ss');
          
          var tripinfo ={"locationID":locationID,"employeeID":employeeID,
          "RequestTypeName":RequestTypeName,"RequestForName":RequestForName,
          "ShiftTimeID":ShiftTimeID,"CabRequestID":CabRequestID,
          "RequestForID":RequestForID,"RequestTypeID":RequestTypeID,
          "FromDateOpnNoShow":FromDate,
-         "ToDateOpnNoShow":ToDate};
+         "ToDateOpnNoShow":ToDate,"ShiftTimeName":ShiftTimeName,"UserTime":UserTime};
+        
         app.call("goeasymethods.gettripinfo",tripinfo);
-        //console.log(tripinfo);
+        console.log(tripinfo);
          //app.call('goeasymethods.getMytrips');
     // app.action('mytripstab', 'mytrips[item].cancel', this);
     //  app.call('tripcancellation');
