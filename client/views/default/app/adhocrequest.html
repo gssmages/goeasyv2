@@ -98,7 +98,7 @@
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-change="shiftSelection(data.selectedtiming)"
                             ng-model="data.selectedtiming"
-                            ng-options="item.railwayTimeStart +' - '+ item.railwayTimeEnd for item in timing track by item.TimeID"></select>
+                            ng-options="item.railwayTimeStart +' - '+ item.railwayTimeEnd for item in timing |filter:{endFlag :'true',startFlag :'true'} track by item.TimeID"></select>
                     </label>
                 </div>
             </div>
