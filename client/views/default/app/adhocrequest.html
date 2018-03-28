@@ -84,7 +84,7 @@
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-change="shiftSelection(data.selectedtiming)"
                             ng-model="data.selectedtiming"
-                            ng-options="item.railwayTimeStart  for item in timing | orderBy:'railwayTimeStart' | filter:item.startFlag ='true' track by item.TimeID"></select>
+                            ng-options="item.railwayTimeStart  for item in timing | orderBy:'railwayTimeStart' | filter:item.startFlag==true track by item.TimeID"></select>
                     </label>
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.4" ng-if="end_time">
