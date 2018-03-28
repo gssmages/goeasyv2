@@ -92,9 +92,9 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
         
         app.call("goeasymethods.gettripinfo",tripinfo);
         console.log(tripinfo);
-         //app.call('goeasymethods.getMytrips');
-    // app.action('mytripstab', 'mytrips[item].cancel', this);
-    //  app.call('tripcancellation');
+      //app.call('goeasymethods.getMytrips');
+      // app.action('mytripstab', 'mytrips[item].cancel', this);
+     //  app.call('tripcancellation');
     }
     
 }
