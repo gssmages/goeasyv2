@@ -65,7 +65,7 @@ $scope.GetValue = function (item) {
         var FromDate=$scope.data.fromdate;
         var ToDate= $scope.data.todate;
         var ShiftTimeName=$scope.data.tripinfo.ShiftTimeName;
-        var UserTime = $scope.date;
+        var UserTime = $filter('date')(new Date(), 'MM-dd-yyyy HH:mm:ss');
          if(RequestForID!=0)
          {
          var tripinfo ={"locationID":locationID,"employeeID":employeeID,
