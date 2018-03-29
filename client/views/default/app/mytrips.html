@@ -87,7 +87,7 @@
                                     ng-if="item.FromDate!=null" style="font-weight: bold;">
                                     <!--ng-bind="item.FromDate.split('T')[0] +&quot; to &quot; +item.ToDate.split('T')[0]"-->
                                 </div>
-                                <div data-comp-id="text.9" ng-bind="item.RequestForName +&quot;- &quot;">
+                                <div data-comp-id="text.9" ng-bind="item.RequestForName +&quot;- &quot;">{{item.RequestForName}}
                                     <!--ng-bind="item.RequestForName +&quot;- &quot;+ item.ShiftStartTime +&quot; - &quot;+ item.ShiftEndTime"-->
                                     <span ng-if="item.RequestForName =='Pickup'">{{item.ShiftStartTime}}</span>
                                     <span ng-if="item.RequestForName =='Drop'">{{item.ShiftEndTime}}</span>
