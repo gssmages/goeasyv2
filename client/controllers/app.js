@@ -73,9 +73,6 @@ app.loginIsAction = false;
          confirmPopup.then(function(res) {
             if(res) {
                  console.log('yes!I am in emergency ');
-                 // params={"employeeID":$localStorage.employeeID};
-                 // console.log(params);
-                 // app.call('goeasymethods.sos',params);
                  if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(handle_geolocation_query,getPositionError,{timeout: 3000, enableHighAccuracy: true});
                     } else { 
@@ -90,8 +87,13 @@ app.loginIsAction = false;
         }
     };
     function handle_geolocation_query(position) {
-        // x.innerHTML = "Latitude: " + position.coords.latitude + 
-       // "<br>Longitude: " + position.coords.longitude;
+        //pass latitude and longitude to server as params in server 
+    //     var sosData = {
+    //     "employeeID":$localStorage.employeeID,
+    //     "Lat"  : position.coords.latitude,
+    //     "Lon" :position.coords.longitude
+    //   }
+    //   app.call('goeasymethods.sos',sosData);
      console.log("Latitude: " + position.coords.latitude +"--Longitude: " + position.coords.longitude);
     }
     function getPositionError(errorMsg){
