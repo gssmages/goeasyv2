@@ -87,10 +87,10 @@
                                     ng-if="item.FromDate!=null" style="font-weight: bold;">
                                     <!--ng-bind="item.FromDate.split('T')[0] +&quot; to &quot; +item.ToDate.split('T')[0]"-->
                                 </div>
-                                <span data-comp-id="text.9" ng-bind="item.RequestForName +&quot; - &quot;"></span>
-                                <span data-comp-id="text.10" ng-bind="item.ShiftStartTime +&quot; - &quot;"
+                                <span data-comp-id="text.9" ng-bind="item.RequestForName"></span>
+                                <span data-comp-id="text.10" ng-bind="&quot; - &quot; + item.ShiftStartTime "
                                     ng-if="item.RequestForID==1||item.RequestForID==2">Some text</span>
-                                <span data-comp-id="text.11" ng-bind="item.ShiftEndTime"
+                                <span data-comp-id="text.11" ng-bind="&quot; - &quot; +item.ShiftEndTime"
                                     ng-if="item.RequestForID==1||item.RequestForID==3">Some text</span>
                             </div>
                         </div>
