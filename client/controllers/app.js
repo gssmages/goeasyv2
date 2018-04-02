@@ -84,8 +84,14 @@ app.loginIsAction = false;
                 } else {
                     console.log('Not I am not!');
                 }
+                 
             });
             
         }
     };
+}
+function showPosition(position) {
+    // x.innerHTML = "Latitude: " + position.coords.latitude + 
+    // "<br>Longitude: " + position.coords.longitude;
+    console.log("Latitude: " + position.coords.latitude +"--Longitude: " + position.coords.longitude);
 }
