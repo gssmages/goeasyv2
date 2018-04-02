@@ -77,7 +77,7 @@ app.loginIsAction = false;
                  // console.log(params);
                  // app.call('goeasymethods.sos',params);
                  if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showPosition);
+                    navigator.geolocation.getCurrentPosition(handle_geolocation_query,getPositionError,{timeout: 3000, enableHighAccuracy: true});
                     } else { 
                     x.innerHTML = "Geolocation is not supported by this browser.";
                  }
@@ -89,9 +89,17 @@ app.loginIsAction = false;
             
         }
     };
-    function showPosition(position) {
+    function handle_geolocation_query(position) {
         // x.innerHTML = "Latitude: " + position.coords.latitude + 
        // "<br>Longitude: " + position.coords.longitude;
      console.log("Latitude: " + position.coords.latitude +"--Longitude: " + position.coords.longitude);
+    }
+    function getPositionError(errorMsg){
+      var alertPopup = $ionicPopup.alert({
+        title: 'Error',
+        // template: errorMsg.message
+        template:"Unable to get your loaction, make sure loaction is enabled in settings and try again."
+      });
+      
     }
 }
