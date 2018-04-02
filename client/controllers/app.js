@@ -76,6 +76,11 @@ app.loginIsAction = false;
                  // params={"employeeID":$localStorage.employeeID};
                  // console.log(params);
                  // app.call('goeasymethods.sos',params);
+                 if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                    } else { 
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                 }
                 } else {
                     console.log('Not I am not!');
                 }
