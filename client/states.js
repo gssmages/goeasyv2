@@ -24,6 +24,15 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
+    }).state('app.alertwin', {
+        views: {
+            app: {
+                controller: 'app_alertwin',
+                templateProvider: function (app) {
+                    return app.templateProvider('app.alertwin');
+                }
+            }
+        }
     }).state('app.myapprovals', {
         views: {
             app: {
@@ -39,15 +48,6 @@ angular.module('app').config(function ($stateProvider) {
                 controller: 'app_mytrips',
                 templateProvider: function (app) {
                     return app.templateProvider('app.mytrips');
-                }
-            }
-        }
-    }).state('app.alertwin', {
-        views: {
-            app: {
-                controller: 'app_alertwin',
-                templateProvider: function (app) {
-                    return app.templateProvider('app.alertwin');
                 }
             }
         }

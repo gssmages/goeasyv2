@@ -18,6 +18,13 @@
       "model": "menus"
     },
     {
+      "id": "alertwin",
+      "name": "alertwin",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank",
+      "model": "alertwin"
+    },
+    {
       "id": "myapprovals",
       "name": "myapprovals",
       "sourceScreenId": "app.tableview.tabledatacaptivating",
@@ -30,13 +37,6 @@
       "sourceScreenId": "app.tabbednavigation.tabscool",
       "sourceAppId": "universaltemplates",
       "model": "mytripstab"
-    },
-    {
-      "id": "alertwin",
-      "name": "alertwin",
-      "sourceScreenId": "app.blank",
-      "sourceAppId": "_blank",
-      "model": "alertwin"
     },
     {
       "id": "adhocrequest",
