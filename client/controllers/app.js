@@ -1,5 +1,5 @@
 angular.module('app').controller('app', app);
-function app($scope, app,$localStorage,$filter) {
+function app($scope, app,$localStorage,$ionicPopup,$filter) {
     'use strict';
     
          if (window.isPlatform && window.isPlatform.powWow() && window.isPlatform.iOS() && window.cordova && window.cordova.plugins) {
@@ -65,9 +65,21 @@ app.loginIsAction = false;
         }
         else if(menuname=="sos")
         {
-            // params={"employeeID":$localStorage.employeeID};
-            // console.log(params);
-            // app.call('goeasymethods.sos',params);
+            var confirmPopup = $ionicPopup.confirm({
+             title: 'SOS',
+             template: 'Do you really need help'
+             });
+                 
+         confirmPopup.then(function(res) {
+            if(res) {
+                 console.log('yes!I am in emergency ');
+                 // params={"employeeID":$localStorage.employeeID};
+                 // console.log(params);
+                 // app.call('goeasymethods.sos',params);
+                } else {
+                    console.log('Not I am not!');
+                }
+            });
             
         }
     };
