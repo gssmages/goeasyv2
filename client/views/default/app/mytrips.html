@@ -126,10 +126,11 @@
                                     style="font-weight: bold;">
                                     <!--ng-bind="item.StartDate.split('T')[0] +&quot; to &quot; +item.EndDate.split('T')[0]"-->
                                 </div>
-                                <div data-comp-id="text.15"
-                                    ng-bind="item.ReqForName +&quot; at &quot;+ item.ShiftStart+&quot; - &quot;+item.ShiftEnd">Drop at 5:00 pm</div>
-                                <div data-comp-id="text.16">Some text</div>
-                                <div data-comp-id="text.17">Some text</div>
+                                <span data-comp-id="text.15" ng-bind="item.ReqForName">Drop at 5:00 pm</span>
+                                <span data-comp-id="text.16" ng-bind="&quot; - &quot;+item.ShiftStart"
+                                    ng-if="item.ReqForID==1||item.ReqForID==2">Some text</span>
+                                <span data-comp-id="text.17" ng-bind="&quot; - &quot;+item.ShiftEnd"
+                                    ng-if="item.ReqForID==1||item.ReqForID==3">Some text</span>
                             </div>
                         </div>
                     </div>
