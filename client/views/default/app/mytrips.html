@@ -83,10 +83,12 @@
                             </div>
                             <div class="col" data-comp-id="column.10">
                                 <div data-comp-id="text.8"
-                                    ng-bind="item.FromDate.split('T')[0] +&quot; to &quot; +item.ToDate.split('T')[0]"
-                                    ng-if="item.FromDate!=null" style="font-weight: bold;"></div>
+                                    ng-bind="item.FromDateString +&quot; to &quot; +item.ToDateString"
+                                    ng-if="item.FromDate!=null" style="font-weight: bold;">
+                                    <!--ng-bind="item.FromDate.split('T')[0] +&quot; to &quot; +item.ToDate.split('T')[0]"-->
+                                </div>
                                 <div data-comp-id="text.9"
-                                    ng-bind="item.RequestForName +&quot;- &quot;+ item.ShiftStartTime +&quot; - &quot;+ item.ShiftEndTime">Drop at 5:00 pm</div>
+                                    ng-bind="item.RequestForName +&quot; - &quot;+ item.ShiftStartTime +&quot; - &quot;+ item.ShiftEndTime">Drop at 5:00 pm</div>
                             </div>
                         </div>
                     </div>
@@ -117,8 +119,10 @@
                             </div>
                             <div class="col" data-comp-id="column.16">
                                 <div data-comp-id="text.12"
-                                    ng-bind="item.StartDate.split('T')[0] +&quot; to &quot; +item.EndDate.split('T')[0]"
-                                    style="font-weight: bold;"></div>
+                                    ng-bind="item.StartDateString +&quot; to &quot; +item.EndDateString"
+                                    style="font-weight: bold;">
+                                    <!--ng-bind="item.StartDate.split('T')[0] +&quot; to &quot; +item.EndDate.split('T')[0]"-->
+                                </div>
                                 <div data-comp-id="text.13"
                                     ng-bind="item.ReqForName +&quot; at &quot;+ item.ShiftStart+&quot; - &quot;+item.ShiftEnd">Drop at 5:00 pm</div>
                             </div>
