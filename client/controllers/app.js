@@ -89,9 +89,9 @@ app.loginIsAction = false;
             
         }
     };
-    $scope.showPosition = function(position) {
-    // x.innerHTML = "Latitude: " + position.coords.latitude + 
-    // "<br>Longitude: " + position.coords.longitude;
-    console.log("Latitude: " + position.coords.latitude +"--Longitude: " + position.coords.longitude);
-}
+    function showPosition(position) {
+        // x.innerHTML = "Latitude: " + position.coords.latitude + 
+       // "<br>Longitude: " + position.coords.longitude;
+     console.log("Latitude: " + position.coords.latitude +"--Longitude: " + position.coords.longitude);
+    }
 }
