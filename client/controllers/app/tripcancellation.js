@@ -19,7 +19,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
        // console.log($scope.data.ma);
     });
     $scope.requestfor = [];
-    loadOptions();
+    //loadOptions();
     $scope.loadOptions = function() {
   if ($scope.requestfor.length === 0) {
       if($scope.data.tripinfo.RequestForName=="Pickup and Drop")
