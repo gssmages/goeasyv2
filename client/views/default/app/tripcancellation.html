@@ -14,9 +14,8 @@
             <span class="input-label" style="">From Date
                 <span style="color:red;">*</span>
             </span>
-            <input [max]="{{data.maxDate}}" [min]="{{data.minDate}}"
-                date-format="MM-DD-YYYY" ng-model-options="{allowInvalid: true}"
-                ng-model="data.fromdate" type="date">
+            <input date-format="MM-DD-YYYY" max="{{data.maxDate}}" min="{{data.minDate}}"
+                ng-model-options="{allowInvalid: true}" ng-model="data.fromdate" type="date">
         </label>
         <label
             class="item item-input item-date-icon positive-icon item-stacked-label item-outside-label"
@@ -24,9 +23,8 @@
             <span class="input-label">To Date
                 <span style="color:red;">*</span>
             </span>
-            <input [max]="{{data.maxDate}}" [min]="{{data.minDate}}"
-                date-format="MM-DD-YYYY" ng-model-options="{allowInvalid: true}"
-                ng-model="data.todate" type="date">
+            <input date-format="MM-DD-YYYY" max="{{data.maxDate}}" min="{{data.minDate}}"
+                ng-model-options="{allowInvalid: true}" ng-model="data.todate" type="date">
         </label>
         <label
             class="item item-input item-select-icon positive-icon item-stacked-label icon-position-middle"
