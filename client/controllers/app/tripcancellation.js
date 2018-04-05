@@ -18,7 +18,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
             
        // console.log($scope.data.ma);
        
-       loadOptions();
+       
     });
     $scope.requestfor = [];
     //loadOptions();
