@@ -17,8 +17,32 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
             ];*/
             
        // console.log($scope.data.ma);
-       
-       
+       $scope.requestfor = [];
+        if ($scope.requestfor.length === 0) {
+      if($scope.data.tripinfo.RequestForName=="Pickup and Drop")
+      {
+    $scope.requestfor=[
+            { RequestForID:"1",RequestForName:"Pickup and Drop"},
+            { RequestForID:"2",RequestForName:"Pickup"},
+            { RequestForID:"3",RequestForName:"Drop"}
+            ];
+            $scope.data.reqfor = $scope.requestfor[0].RequestForName;
+      }
+      else if($scope.data.tripinfo.RequestForName=="Pickup"){
+          
+            $scope.requestfor=[
+            { RequestForID:"2",RequestForName:"Pickup"}
+            ];
+            $scope.data.reqfor = $scope.requestfor[0].RequestForName;
+      }
+      else
+      {
+           $scope.requestfor=[
+            { RequestForID:"3",RequestForName:"Drop"}
+            ];
+            $scope.data.reqfor = $scope.requestfor[0].RequestForName;
+      }
+  }
     });
     $scope.requestfor = [];
     //loadOptions();
