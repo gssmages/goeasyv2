@@ -45,6 +45,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
   }
     });
     $scope.requestfor = [];
+     var selectid=0;
     //loadOptions();
     $scope.loadOptions = function() {
   if ($scope.requestfor.length === 0) {
@@ -56,6 +57,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
             { RequestForID:"3",RequestForName:"Drop"}
             ];
             $scope.data.reqfor = $scope.requestfor[0].RequestForName;
+            selectid=1;
       }
       else if($scope.data.tripinfo.RequestForName=="Pickup"){
           
@@ -63,6 +65,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
             { RequestForID:"2",RequestForName:"Pickup"}
             ];
             $scope.data.reqfor = $scope.requestfor[0].RequestForName;
+            selectid=2;
       }
       else
       {
@@ -70,10 +73,11 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
             { RequestForID:"3",RequestForName:"Drop"}
             ];
             $scope.data.reqfor = $scope.requestfor[0].RequestForName;
+            selectid=3;
       }
   }
 }
-  var selectid=0;
+ 
 $scope.GetValue = function (item) {
                 var selectname = $scope.data.reqfor;
                 selectid = $.grep($scope.requestfor, function (item) {
