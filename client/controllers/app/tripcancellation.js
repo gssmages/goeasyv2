@@ -1,6 +1,7 @@
 angular.module('app').controller('app_tripcancellation', app_tripcancellation);
 function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
     'use strict';
+    var selectid=0;
     app.init($scope,function(){
         $scope.date = $filter('date')(new Date(), 'MM-dd-yyyy');
         $scope.dbdate = $filter('date')(new Date(), 'yyyy-MM-dd');
@@ -18,7 +19,6 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
             
        // console.log($scope.data.ma);
        $scope.requestfor = [];
-       var selectid=0;
         if ($scope.requestfor.length === 0) {
       if($scope.data.tripinfo.RequestForName=="Pickup and Drop")
       {
@@ -81,7 +81,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
       }
   }
 }
- var selectid=0;
+ 
 $scope.GetValue = function (item) {
                 var selectname = $scope.data.reqfor;
                 selectid = $.grep($scope.requestfor, function (item) {
