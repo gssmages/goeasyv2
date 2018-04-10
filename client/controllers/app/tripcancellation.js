@@ -106,6 +106,8 @@ $scope.GetValue = function (item) {
         var UserTime = $filter('date')(new Date(), 'MM-dd-yyyy HH:mm:ss');
          if(RequestForID!=0)
          {
+             if(FromDate!='' && ToDate!='')
+             {
          var tripinfo ={"locationID":locationID,"employeeID":employeeID,
          "RequestTypeName":RequestTypeName,"RequestForName":RequestForName,
          "ShiftTimeID":ShiftTimeID,"CabRequestID":CabRequestID,
@@ -114,6 +116,11 @@ $scope.GetValue = function (item) {
          "ToDateOpnNoShow":ToDate,"RequestedForName":RequestedForName,"ShiftTimeName":ShiftTimeName,"UserTime":UserTime};
          console.log(tripinfo);
 		app.call('goeasymethods.sendNoshow',tripinfo);
+             }
+             else
+             {
+                  errorMsg();
+             }
          }
          else
          {
