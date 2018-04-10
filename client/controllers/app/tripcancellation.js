@@ -111,7 +111,7 @@ $scope.GetValue = function (item) {
                 var fromdatestring = new Date(FromDate);
                 var todatestring = new Date(ToDate);
                 
-                if(fromdatestring<todatestring)
+                if(fromdatestring<=todatestring)
                 {
          var tripinfo ={"locationID":locationID,"employeeID":employeeID,
          "RequestTypeName":RequestTypeName,"RequestForName":RequestForName,
