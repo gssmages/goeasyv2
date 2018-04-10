@@ -123,7 +123,10 @@ $scope.GetValue = function (item) {
 		app.call('goeasymethods.sendNoshow',tripinfo);
                 }
                 else
-                {errorMsg('To Date must be greater than From Date..');}
+                {
+                    errorMsg('To Date must be greater than From Date..');
+                    
+                }
              }
              else
              {
