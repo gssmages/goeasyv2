@@ -108,6 +108,11 @@ $scope.GetValue = function (item) {
          {
              if(FromDate!='' && ToDate!='')
              {
+                var fromdatestring = new Date(FromDate);
+                var todatestring = new Date(ToDate);
+                
+                if(fromdatestring<todatestring)
+                {
          var tripinfo ={"locationID":locationID,"employeeID":employeeID,
          "RequestTypeName":RequestTypeName,"RequestForName":RequestForName,
          "ShiftTimeID":ShiftTimeID,"CabRequestID":CabRequestID,
@@ -116,22 +121,25 @@ $scope.GetValue = function (item) {
          "ToDateOpnNoShow":ToDate,"RequestedForName":RequestedForName,"ShiftTimeName":ShiftTimeName,"UserTime":UserTime};
          console.log(tripinfo);
 		app.call('goeasymethods.sendNoshow',tripinfo);
+                }
+                else
+                {errorMsg('To Date must be greater than From Date..');}
              }
              else
              {
-                  errorMsg();
+                  errorMsg('Please select all the required field.');
              }
          }
          else
          {
-             errorMsg();
+             errorMsg('Please select all the required field.');
          }
 
    };
-    var errorMsg = function(){
+    var errorMsg = function(val){
             var alertPopup = $ionicPopup.alert({
                  title: 'Warning',
-                 template: 'Please select all the required field.'
+                 template:val
             });
 
              alertPopup.then(function(res) {
