@@ -167,6 +167,10 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                       if($scope.data.selectedreqtype.RequestTypeName === "Month end"){
                           if($scope.data.FromDate && $scope.data.ToDate){
                           
+                           var fromdatestring = new Date($scope.data.FromDate);
+                var todatestring = new Date($scope.data.ToDate);
+                if(fromdatestring<=todatestring)
+                {
                                 if($scope.data.SpecialNeed === "1"){
                                     if($scope.data.PleaseSpecify){
                                         submitApprovals();
@@ -176,6 +180,10 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                                 }else{
                                  submitApprovals();//specialneed=no
                                 }
+                }
+                else{
+                                        errorMsg();
+                                    }
                               }else{errorMsg();}
                         }else{ 
                             if($scope.data.Date){
