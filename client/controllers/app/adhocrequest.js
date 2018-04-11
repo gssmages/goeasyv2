@@ -148,10 +148,10 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
              }
         }
        
-        var errorMsg = function(){
+        var errorMsg = function(val){
             var alertPopup = $ionicPopup.alert({
                  title: 'Warning',
-                 template: 'Please select all the required field.'
+                 template: val
             });
 
              alertPopup.then(function(res) {
@@ -165,7 +165,8 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                  && $scope.data.selectedboarding){
                  
                       if($scope.data.selectedreqtype.RequestTypeName === "Month end"){
-                          if($scope.data.FromDate && $scope.data.ToDate){
+                          if($scope.data.FromDate && $scope.data.ToDate)
+                          {
                           
                            var fromdatestring = new Date($scope.data.FromDate);
                 var todatestring = new Date($scope.data.ToDate);
@@ -175,16 +176,16 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                                     if($scope.data.PleaseSpecify){
                                         submitApprovals();
                                     }else{
-                                        errorMsg();
+                                        errorMsg('Please choose PleaseSpecify.');
                                     }
                                 }else{
                                  submitApprovals();//specialneed=no
                                 }
                 }
                 else{
-                                        errorMsg();
+                                        errorMsg('To Date must be greater than From Date.');
                                     }
-                              }else{errorMsg();}
+                              }else{errorMsg('Please select FromDate and ToDate.');}
                         }else{ 
                             if($scope.data.Date){
                             
@@ -192,17 +193,17 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                                     if($scope.data.PleaseSpecify){
                                         submitApprovals();
                                     }else{
-                                        errorMsg();
+                                        errorMsg('Please choose PleaseSpecify.');
                                     }
                                 }else{
                                  submitApprovals();//specialneed=no
                                 }
                                 
                             }else{
-                                errorMsg();
+                                errorMsg('Please select Date.');
                             }
                         }
-                }else{ errorMsg(); }   
+                }else{ errorMsg('Please select all the required field.'); }   
             }
             
         var submitApprovals = function () {
