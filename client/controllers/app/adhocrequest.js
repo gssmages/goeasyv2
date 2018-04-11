@@ -150,7 +150,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
        
         var errorMsg = function(val){
             var alertPopup = $ionicPopup.alert({
-                 title: 'Warning',
+                 title: 'Adhoc Error Message',
                  template: val
             });
 
