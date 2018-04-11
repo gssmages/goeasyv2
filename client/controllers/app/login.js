@@ -14,7 +14,7 @@ function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
     });
     
     $scope.login = function () {
-     if($scope.data.username!="" && $scope.data.password!="")
+     if($scope.data.username!=undefined && $scope.data.password!=undefined)
      {
     var credentials = {'username': $scope.data.username, 'password': $scope.data.password};
     app.call('login.login', credentials);
