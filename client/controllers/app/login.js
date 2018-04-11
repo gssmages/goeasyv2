@@ -14,9 +14,11 @@ function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
     $scope.data.password="";
     });
    
+     $scope.data.username="";
+    $scope.data.password="";
     
     $scope.login = function () {
-     if(($scope.data.username=="" || $scope.data.username=='undefined')  && ($scope.data.password=="" ||  $scope.data.password=='undefined'))
+     if(($scope.data.username=="" || $scope.data.username==undefined)  && ($scope.data.password=="" ||  $scope.data.password=='undefined'))
      {
        errorMsg();
      }
