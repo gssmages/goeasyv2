@@ -6,8 +6,9 @@ function app_login($scope, app,$ionicLoading) {
 } */
 
 angular.module('app').controller('app_login', app_login);
-function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
+function app_login($scope, app, $q,$ionicPopup, powwowLoginNew,$ionicSideMenuDelegate) {
     'use strict';
+    $ionicSideMenuDelegate.canDragContent(false);
     app.init($scope,function(){
         //console.log("login-->"+$scope.data);
          $scope.data.username="";
