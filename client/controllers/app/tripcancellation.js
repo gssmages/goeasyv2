@@ -130,18 +130,18 @@ $scope.GetValue = function (item) {
              }
              else
              {
-                  errorMsg('Please select all the required field.');
+                  errorMsg('Please select From Date or To Date.');
              }
          }
          else
          {
-             errorMsg('Please select all the required field.');
+             errorMsg('Please select Request For.');
          }
 
    };
     var errorMsg = function(val){
             var alertPopup = $ionicPopup.alert({
-                 title: 'Warning',
+                 title: 'Trip Cancellation Error',
                  template:val
             });
 
