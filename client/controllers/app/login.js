@@ -14,10 +14,26 @@ function app_login($scope, app, $q,$ionicPopup, powwowLoginNew) {
     });
     
     $scope.login = function () {
-     
+     if($scope.data.username!="" && $scope.data.password!="")
+     {
     var credentials = {'username': $scope.data.username, 'password': $scope.data.password};
     app.call('login.login', credentials);
+     }
+     else
+     {
+         errorMsg();
+     }
     
     };
+    var errorMsg = function(){
+            var alertPopup = $ionicPopup.alert({
+                 title: 'Warning',
+                 template: 'Please enter username and password.'
+            });
+
+             alertPopup.then(function(res) {
+               // Custom functionality....
+             });
+        }
  
 }
