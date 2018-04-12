@@ -112,7 +112,7 @@ $scope.GetValue = function (item) {
                  var fromdatearray=FromDate.split('-');
                   var todatearray=ToDate.split('-');
                var fromdatestring = new Date(fromdatearray[2],fromdatearray[0],fromdatearray[1]);
-                var todatestring = new Date(todatearray[2],fromdatearray[0],fromdatearray[1]);
+                var todatestring = new Date(todatearray[2],todatearray[0]+1,todatearray[1]);
                  console.log(fromdatestring);
                 if(fromdatestring<=todatestring)
                 {
