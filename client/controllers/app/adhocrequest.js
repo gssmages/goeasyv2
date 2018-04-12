@@ -169,8 +169,8 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                           {
                  var fromdatearray=($scope.data.FromDate).split('-');
                   var todatearray=($scope.data.ToDate).split('-');
-               var fromdatestring = new Date(fromdatearray[2],fromdatearray[0]+1,fromdatearray[1]);
-                var todatestring = new Date(todatearray[2],todatearray[0]+1,todatearray[1]);
+               var fromdatestring = new Date(fromdatearray[2],fromdatearray[0]-1,fromdatearray[1]);
+                var todatestring = new Date(todatearray[2],todatearray[0]-1,todatearray[1]);
                 if(fromdatestring<=todatestring)
                 {
                                 if($scope.data.SpecialNeed === "1"){
