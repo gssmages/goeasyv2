@@ -109,8 +109,8 @@ $scope.GetValue = function (item) {
              if(FromDate!='' && ToDate!='')
              {
                  errorMsg(FromDate);
-                var fromdatestring = new Date(FromDate);
-                var todatestring = new Date(ToDate);
+                var fromdatestring = new Date(FromDate+"T00:00:00Z");
+                var todatestring = new Date(ToDate+"T00:00:00Z");
                 errorMsg(fromdatestring);
                 if(fromdatestring<=todatestring)
                 {
