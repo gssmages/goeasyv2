@@ -167,9 +167,10 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
                       if($scope.data.selectedreqtype.RequestTypeName === "Month end"){
                           if($scope.data.FromDate && $scope.data.ToDate)
                           {
-                          
-                           var fromdatestring = new Date($scope.data.FromDate);
-                var todatestring = new Date($scope.data.ToDate);
+                 var fromdatearray=($scope.data.FromDate).split('-');
+                  var todatearray=($scope.data.ToDate).split('-');
+               var fromdatestring = new Date(fromdatearray[2],fromdatearray[0],fromdatearray[1]);
+                var todatestring = new Date(todatearray[2],fromdatearray[0],fromdatearray[1]);
                 if(fromdatestring<=todatestring)
                 {
                                 if($scope.data.SpecialNeed === "1"){

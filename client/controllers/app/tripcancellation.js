@@ -108,17 +108,11 @@ $scope.GetValue = function (item) {
          {
              if(FromDate!='' && ToDate!='')
              {
-                 errorMsg(FromDate);
                  console.log(FromDate);
                  var fromdatearray=FromDate.split('-');
                   var todatearray=ToDate.split('-');
-               // var fromdatefull = $filter('date')(new Date(FromDate), 'yyyy-MM-ddTHH:mm:ss.sssZ');
-              //  var todatefull = $filter('date')(new Date(ToDate), 'yyyy-MM-ddTHH:mm:ss.sssZ');
-                 var fromdatestring = new Date(fromdatearray[2],fromdatearray[0],fromdatearray[1]);
+               var fromdatestring = new Date(fromdatearray[2],fromdatearray[0],fromdatearray[1]);
                 var todatestring = new Date(todatearray[2],fromdatearray[0],fromdatearray[1]);
-                // errorMsg(fromdatefull);
-                // console.log(fromdatefull);
-                errorMsg(fromdatestring);
                  console.log(fromdatestring);
                 if(fromdatestring<=todatestring)
                 {
