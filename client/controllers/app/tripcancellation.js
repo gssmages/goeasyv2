@@ -4,7 +4,9 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
     var selectid=0;
     app.init($scope,function(){
         $scope.date = $filter('date')(new Date(), 'MM-dd-yyyy');
+        errorMsg($scope.date);
         $scope.dbdate = $filter('date')(new Date(), 'yyyy-MM-dd');
+        errorMsg($scope.dbdate);
         var fromdate=$filter('date')($scope.data.tripinfo.FromDateOpnNoShow==null?$scope.date:$scope.data.tripinfo.FromDateOpnNoShow.split('T')[0],'MM-dd-yyyy');
         var todate=$filter('date')($scope.data.tripinfo.ToDateOpnNoShow==null?$scope.date:$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0],'MM-dd-yyyy');
         $scope.data.fromdate=$scope.data.tripinfo.FromDateOpnNoShow==null?$scope.date:fromdate;
