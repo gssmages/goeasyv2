@@ -41,7 +41,7 @@ app.loginIsAction = false;
           console.log("calling mytrips in menu call");
         if(menuname=="mytrips")
         {
-            params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate};
+            params={"employeeID":"588310","todaysdate":todaysdate};
             console.log(params);
             app.call('goeasymethods.getMytrips',params);
         }
