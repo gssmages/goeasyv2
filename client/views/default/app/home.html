@@ -104,8 +104,7 @@
                         <div class=" text-center" data-comp-id="text.19"
                             style="font-weight: bold; font-size: 10px;">Driver Contact</div>
                         <div class=" text-center" data-comp-id="text.20">
-                            <a href="tel:data.home.PickupRequestDetail.DriverContact"
-                                ng-bind="data.home.PickupRequestDetail.DriverContact"></a>
+                            <a href="tel:{{$scope.pickupDriverNumber}}">{{$scope.pickupDriverNumber}}</a>
                         </div>
                     </div>
                 </div>
@@ -186,8 +185,7 @@
                         <div class=" text-center" data-comp-id="text.37"
                             style="font-weight: bold; font-size: 10px;">Driver Contact</div>
                         <div class=" text-center" data-comp-id="text.38">
-                            <a href="tel:data.home.DropRequestDetail.DriverContact"
-                                ng-bind="data.home.DropRequestDetail.DriverContact"></a>
+                            <a href="tel:{{$scope.dropDriverNumber}}">{{$scope.dropDriverNumber}}</a>
                         </div>
                     </div>
                 </div>
