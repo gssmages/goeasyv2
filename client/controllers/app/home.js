@@ -1,5 +1,5 @@
 angular.module('app').controller('app_home', app_home);
-function app_home($scope, app, $localStorage) {
+function app_home($scope, app, $localStorage,$compileProvider) {
     'use strict';
     $scope.pickupDriverNumber ="";
     $scope.dropDriverNumber ="";
@@ -11,7 +11,7 @@ function app_home($scope, app, $localStorage) {
       
       $scope.pickupDriverNumber = $scope.data.home.PickupRequestDetail.DriverContact;
       $scope.dropDriverNumber =  $scope.data.home.DropRequestDetail.DriverContact;
-      
+       $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|tel|coui):/);
       
        $scope.pickupdropdiv = true;
        $scope.nopickupdiv = false;
