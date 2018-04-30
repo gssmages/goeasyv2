@@ -1,8 +1,8 @@
 angular.module('app').controller('app_home', app_home);
 function app_home($scope, app, $localStorage) {
     'use strict';
-    var pickupDriverNumber ="";
-    var dropDriverNumber ="";
+    $scope.pickupDriverNumber ="";
+    $scope.dropDriverNumber ="";
     app.init($scope,function(){
         
         //console.log('data in home page-->',$scope.data.home.PickupRequestDetail);
