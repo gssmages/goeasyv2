@@ -9,9 +9,10 @@ function app_home($scope, app, $localStorage) {
        $localStorage.displayName = $scope.data.home.EmployeeDetails.DisplayName;
        $localStorage.businessTitle = $scope.data.home.EmployeeDetails.BusinessTitle;
       
-      $scope.pickupDriverNumber = $scope.data.home.PickupRequestDetail.DriverContact;
+      $scope.pickupDriverNumber =  '<a href="tel:'+$scope.data.home.PickupRequestDetail.DriverContact+'">'+$scope.data.home.PickupRequestDetail.DriverContact+'</a>';
       $scope.dropDriverNumber =  $scope.data.home.DropRequestDetail.DriverContact;
-       
+      
+      
        $scope.pickupdropdiv = true;
        $scope.nopickupdiv = false;
        $scope.pickupdiv; $scope.dropdiv;
