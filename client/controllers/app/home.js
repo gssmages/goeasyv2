@@ -11,7 +11,7 @@ function app_home($scope, app, $localStorage,$compileProvider) {
       
       $scope.pickupDriverNumber = $scope.data.home.PickupRequestDetail.DriverContact;
       $scope.dropDriverNumber =  $scope.data.home.DropRequestDetail.DriverContact;
-       $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|tel|coui):/);
+      // $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|tel|coui):/);
       
        $scope.pickupdropdiv = true;
        $scope.nopickupdiv = false;
