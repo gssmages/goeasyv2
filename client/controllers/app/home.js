@@ -11,7 +11,7 @@ function app_home($scope, app, $localStorage) {
       
       pickupDriverNumber = $scope.data.home.PickupRequestDetail.DriverContact;
       dropDriverNumber =  $scope.data.home.DropRequestDetail.DriverContact;
-      
+      document.getElementById("pickupcontact").innerHTML=pickupDriverNumber
       document.getElementById("pickupcontact").setAttribute("href", "tel:"+pickupDriverNumber);
      // document.getElementById('').attr("","tel:"+pickupDriverNumber);
       // $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|tel|coui):/);
