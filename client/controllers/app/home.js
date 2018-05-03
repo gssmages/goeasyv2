@@ -12,7 +12,11 @@ function app_home($scope, app, $localStorage) {
       pickupDriverNumber = $scope.data.home.PickupRequestDetail.DriverContact;
       dropDriverNumber =  $scope.data.home.DropRequestDetail.DriverContact;
       
-      document.getElementById('pickupcontact').attr("href","tel:"+pickupDriverNumber);
+      var pickupid = document.getElementsById("pickupcontact");
+var att = document.createAttribute("href");       
+att.value = "tel:"+pickupDriverNumber;                           
+pickupid.setAttributeNode(att);
+     // document.getElementById('').attr("","tel:"+pickupDriverNumber);
       // $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|tel|coui):/);
       
        $scope.pickupdropdiv = true;
