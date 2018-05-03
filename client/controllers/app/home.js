@@ -1,5 +1,5 @@
 angular.module('app').controller('app_home', app_home).config(function($compileProvider){
-  $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
+   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|tel):/);
 });
 function app_home($scope, app, $localStorage) {
     'use strict';
