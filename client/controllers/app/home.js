@@ -12,7 +12,7 @@ function app_home($scope, app, $localStorage) {
       pickupDriverNumber = $scope.data.home.PickupRequestDetail.DriverContact;
       dropDriverNumber =  $scope.data.home.DropRequestDetail.DriverContact;
       
-      var pickupid = document.getElementsById("pickupcontact");
+      var pickupid = document.getElementById("pickupcontact");
 var att = document.createAttribute("href");       
 att.value = "tel:"+pickupDriverNumber;                           
 pickupid.setAttributeNode(att);
