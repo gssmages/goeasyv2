@@ -1,4 +1,6 @@
-angular.module('app').controller('app_home', app_home);
+angular.module('app').controller('app_home', app_home).config(function($compileProvider){
+  $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
+});
 function app_home($scope, app, $localStorage) {
     'use strict';
     $scope.pickupDriverNumber ="";
