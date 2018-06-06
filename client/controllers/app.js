@@ -67,7 +67,7 @@ app.loginIsAction = false;
         {
             params={"employeeID":$localStorage.employeeID};
             console.log(params);
-            app.call('goeasymethods.getMyApprovals',params);
+            app.call('goeasymethods.showFeedback',params);
         }
         else if(menuname=="sos")
         {
