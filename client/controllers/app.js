@@ -63,6 +63,12 @@ app.loginIsAction = false;
             console.log(params);
             app.call('goeasymethods.getMyApprovals',params);
         }
+         else if(menuname=="feedback")
+        {
+            params={"employeeID":$localStorage.employeeID};
+            console.log(params);
+            app.call('goeasymethods.getMyApprovals',params);
+        }
         else if(menuname=="sos")
         {
             var confirmPopup = $ionicPopup.confirm({
