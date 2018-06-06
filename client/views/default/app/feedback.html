@@ -55,7 +55,8 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.1">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select></select>
+                        <select ng-model="data.category"
+                            ng-options="item.RequestForName as item.RequestForName for item in feedbackfor"></select>
                     </label>
                 </div>
             </div>
@@ -69,7 +70,8 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.2">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select ng-model="data.feedbackfor"></select>
+                        <select ng-model="data.category"
+                            ng-options="item.CategoryName as item.CategoryName for item in category"></select>
                     </label>
                 </div>
             </div>
