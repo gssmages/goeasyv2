@@ -141,5 +141,14 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
+    }).state('app.feedback', {
+        views: {
+            app: {
+                controller: 'app_feedback',
+                templateProvider: function (app) {
+                    return app.templateProvider('app.feedback');
+                }
+            }
+        }
     });
 });

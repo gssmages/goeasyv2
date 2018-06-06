@@ -106,6 +106,12 @@
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank",
       "model": "homescreen"
+    },
+    {
+      "id": "feedback",
+      "name": "feedback",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank"
     }
   ],
   "sourceAppId": "_blank",
