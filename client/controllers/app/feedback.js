@@ -11,9 +11,11 @@ function app_feedback($scope, app) {
             
              $scope.category = [];
          $scope.category=[
-            { CategoryID:"0",CategoryName:"Pickup and Drop"},
-            { CategoryID:"1",CategoryName:"Pickup"},
-            { CategoryID:"2",CategoryName:"Drop"}
+            { CategoryID:"0",CategoryName:"Vehicle"},
+            { CategoryID:"1",CategoryName:"Route"},
+            { CategoryID:"2",CategoryName:"Driver"},
+             { CategoryID:"3",CategoryName:"Safety"},
+            { CategoryID:"4",CategoryName:"Timing"}
             ];
         
     });
