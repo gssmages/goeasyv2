@@ -19,7 +19,7 @@ function app_feedback($scope, app) {
             { CategoryID:"3",CategoryName:"Safety"},
             { CategoryID:"4",CategoryName:"Timing"}
             ];
-              $scope.data.category="Pickup and Drop";
+              $scope.data.category="Vehicle";
         
     });
 }
