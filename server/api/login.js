@@ -21,7 +21,14 @@ exports.login = function (page,params) {
              page.data(function(data) {
                 data.home = response;
              })
-             .screen("homesuccess");
+            .screen("homesuccess");
+/*if(response.LocationID==1)
+{
+    page.screen("homesuccess");
+}
+            else{
+               page.screen("login");
+            }*/
         }else{
             var response = JSON.parse(this.responseText);
              page.data(function(data) {

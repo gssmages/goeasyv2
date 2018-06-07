@@ -198,3 +198,9 @@ exports.adhocRequest = function (page, params) {
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send();
 }
+exports.showFeedback = function (page, params) { 
+               // page.data(function(data) {
+               //  data.tripinfo = params;
+             //})
+               page.screen("feedback");    
+}
