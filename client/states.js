@@ -150,12 +150,12 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
-    }).state('app.tripentryuser', {
+    }).state('app.usercheckin', {
         views: {
             app: {
-                controller: 'app_tripentryuser',
+                controller: 'app_usercheckin',
                 templateProvider: function (app) {
-                    return app.templateProvider('app.tripentryuser');
+                    return app.templateProvider('app.usercheckin');
                 }
             }
         }

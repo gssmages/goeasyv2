@@ -114,8 +114,8 @@
       "sourceAppId": "_blank"
     },
     {
-      "id": "tripentryuser",
-      "name": "tripentryuser",
+      "id": "usercheckin",
+      "name": "usercheckin",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank"
     }
