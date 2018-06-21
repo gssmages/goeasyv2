@@ -150,5 +150,14 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
+    }).state('app.tripentryuser', {
+        views: {
+            app: {
+                controller: 'app_tripentryuser',
+                templateProvider: function (app) {
+                    return app.templateProvider('app.tripentryuser');
+                }
+            }
+        }
     });
 });
