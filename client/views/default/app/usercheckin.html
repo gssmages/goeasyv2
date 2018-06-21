@@ -64,7 +64,8 @@
                         style="font-size: 32px; float: none; margin: 20px;">Enter OTP</div>
                     <label class="item item-input item-stacked-label item-outside-label"
                         data-comp-id="textInput.1">
-                        <input maxlength="6" size="6" style="font-size:24px;" type="text">
+                        <input onkeypress="if(this.value.length==10) return false;"
+                            style="font-size:24px;text-align:center;" type="number">
                     </label>
                 </div>
             </div>
