@@ -159,5 +159,14 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
+    }).state('app.drivercheckin', {
+        views: {
+            app: {
+                controller: 'app_drivercheckin',
+                templateProvider: function (app) {
+                    return app.templateProvider('app.drivercheckin');
+                }
+            }
+        }
     });
 });

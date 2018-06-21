@@ -118,6 +118,12 @@
       "name": "usercheckin",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank"
+    },
+    {
+      "id": "drivercheckin",
+      "name": "drivercheckin",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank"
     }
   ],
   "sourceAppId": "_blank",
