@@ -1,106 +1,34 @@
 <ion-view data-comp-id="ionic-view.1">
-    <ion-content data-comp-id="ionic-content.1"></ion-content>
     <ion-nav-bar align-title="" class=" bar-positive" data-comp-id="nav-bar.1">
         <ion-nav-buttons side="left">
             <button class="button button-icon ion-navicon" data-comp-id="button.1"
                 ng-click="app.showMenu()"></button>
         </ion-nav-buttons>
-        <ion-nav-title data-comp-id="nav-title.1">Trip Update</ion-nav-title>
+        <ion-nav-title data-comp-id="nav-title.1">Check in</ion-nav-title>
         <ion-nav-buttons side="right"></ion-nav-buttons>
     </ion-nav-bar>
-    <ion-content data-comp-id="ionic-content.2">
+    <ion-content data-comp-id="ionic-content.1">
         <div data-comp-id="div.1">
             <div class="row" data-comp-id="row.1">
                 <div class="col" data-comp-id="column.1">
-                    <div data-comp-id="text.1">Travel Date
-                        <span style="color:red;">*</span>
-                    </div>
-                    <label class="item item-input item-date-icon positive-icon"
-                        data-comp-id="dateInput.1">
-                        <span class="input-label" style="width: 0%;"></span>
-                        <input date-format="MM-DD-YYYY" max="2100-12-12" min="{{data.minDate}}"
-                            ng-model-options="{allowInvalid: true}" ng-model="data.Date" type="date">
-                    </label>
-                </div>
-            </div>
-            <div class="row" data-comp-id="row.2" style="">
-                <div class="col col-50" data-comp-id="column.2" ng-if="fromDateField" style="">
-                    <div data-comp-id="text.2">From Date
-                        <span style="color:red;">*</span>
-                    </div>
-                    <label class="item item-input item-date-icon positive-icon"
-                        data-comp-id="dateInput.2" style="padding:0;">
-                        <span class="input-label" style="width: 0%;"></span>
-                        <input date-format="MM-DD-YYYY" max="2100-12-12" min="{{data.minDate}}"
-                            ng-model-options="{allowInvalid: true}" ng-model="data.FromDate" type="date">
-                    </label>
-                </div>
-                <div class="col col-50" data-comp-id="column.3" ng-if="toDateField" style="">
-                    <div data-comp-id="text.3">To Date
-                        <span style="color:red;">*</span>
-                    </div>
-                    <label class="item item-input item-date-icon positive-icon"
-                        data-comp-id="dateInput.3" style="padding:0;">
-                        <span class="input-label" style="width: 0px;"></span>
-                        <input date-format="MM-DD-YYYY" max="2100-12-12" min="{{data.minDate}}"
-                            ng-model-options="{allowInvalid: true}" ng-model="data.ToDate" type="date">
-                    </label>
-                </div>
-            </div>
-            <div class="row" data-comp-id="row.3">
-                <div class="col" data-comp-id="column.4">
-                    <div data-comp-id="text.4">Feedback For
-                        <span style="color:red;">*</span>
-                    </div>
-                    <label class="item  item-input item-select-icon positive-icon"
-                        data-comp-id="selectInput.1">
-                        <!--<span class="input-label">Select Label</span>-->
-                        <select ng-model="data.feedbackfor"
-                            ng-options="item.RequestForName as item.RequestForName for item in feedbackfor"></select>
-                    </label>
-                </div>
-            </div>
-            <div class="row" data-comp-id="row.4">
-                <div class="col" data-comp-id="column.5">
-                    <div data-comp-id="text.5">Issue Category
-                        <span style="color:red;">*</span>
-                    </div>
-                    <!--<select-list data-comp-id="selectList.1" ng-change="submitApprovals()"-->
-                    <!--    ng-model="data.Area" no-label="true" select-class=" item-stacked-label"></select-list>-->
-                    <label class="item  item-input item-select-icon positive-icon"
-                        data-comp-id="selectInput.2">
-                        <!--<span class="input-label">Select Label</span>-->
-                        <select ng-model="data.category"
-                            ng-options="item.CategoryName as item.CategoryName for item in category"></select>
-                    </label>
-                </div>
-            </div>
-            <div class="row" data-comp-id="row.5">
-                <div class="col" data-comp-id="column.6" style="">
-                    <div data-comp-id="text.6" style="margin: 0px;">Any other comments
-                        <span style="color:red;">*</span>
-                    </div>
-                    <label class="item item-input item-stacked-label item-outside-label"
-                        data-comp-id="textAreaInput.1" style="margin: 0px; padding: 0px;">
-                        <!--<span class="input-label">Comments</span>-->
-                        <textarea rows="4" style="height: 200px;"></textarea>
+                    <div class=" text-center" data-comp-id="text.1"
+                        style="font-size: 32px; float: none; margin: 20px;">Enter OTP</div>
+                    <label class="item item-input" data-comp-id="textInput.1">
+                        <span class="input-label">Label</span>
+                        <input type="text">
                     </label>
                 </div>
             </div>
         </div>
     </ion-content>
-    <div class="footer-button-bar" data-comp-id="footer-bar-buttons.1"
-        dynamic-floating-footer="" style="padding: 0px;">
-        <div class="row" data-comp-id="row.6" style="padding: 0px;">
-            <div class="col" data-comp-id="column.7"
-                style="padding: 0px; margin: 0px; border-right: 1px solid rgb(221, 221, 221);">
-                <button class="button button-block button-positive" data-comp-id="button.2"
-                    ng-click="reset()" style="margin: 0px; border-radius: 0px;">Reset</button>
-            </div>
-            <div class="col text-center" data-comp-id="column.8" style="padding: 0px;">
-                <button class="button button-block button-positive" data-comp-id="button.3"
-                    ng-click="validate();" style="margin: 0px; border-radius: 0px;">Submit</button>
+    <ion-footer-bar data-comp-id="footer-bar.1" dynamic-fixed-footer="">
+        <div class="row" data-comp-id="row.2">
+            <div class="col text-center" data-comp-id="column.2">
+                <div class="footer-button button-footer-center" data-comp-id="footerButton.1">
+                    <button class="button icon ion-android-hand button-round"></button>
+                    <div class="label">Check in</div>
+                </div>
             </div>
         </div>
-    </div>
+    </ion-footer-bar>
 </ion-view>
