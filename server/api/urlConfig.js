@@ -1,5 +1,5 @@
 
- exports.urlData = {
+/* exports.urlData = {
      LoginReq : 'http://gssnt806.asia.ad.flextronics.com:85/api/login/CheckLoginDetailEncryption?',
      Dashboard: 'http://gssnt806.asia.ad.flextronics.com:85/api/DashBoardApi/GetDashboardDetails/?',
      MyTrips  : 'http://gssnt806.asia.ad.flextronics.com:85/api/MyTripsApi/GetMyTripsDetails?',
@@ -8,8 +8,8 @@
      NoShow   : 'http://gssnt806.asia.ad.flextronics.com:85/api/CancelTransportRequestApi/SaveCancelRequests?',
      ApprovalReq: 'http://gssnt806.asia.ad.flextronics.com:85/api/cabapprovalapi/ApprovePendingRequests?',
      AdhocReq :'http://gssnt806.asia.ad.flextronics.com:85/api/AdhocCabRequestApi/SaveCabOperationDetails?'
- };
-/*exports.urlData = {
+ };*/
+exports.urlData = {
     LoginReq : 'http://gssnte811.asia.ad.flextronics.com:4042/api/login/CheckLoginDetailEncryption?',
     Dashboard: 'http://gssnte811.asia.ad.flextronics.com:4042/api/DashBoardApi/GetDashboardDetails/?',
     MyTrips  : 'http://gssnte811.asia.ad.flextronics.com:4042/api/MyTripsApi/GetMyTripsDetails?',
@@ -17,5 +17,7 @@
     MyAproval: 'http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?',
     NoShow   : 'http://gssnte811.asia.ad.flextronics.com:4042/api/CancelTransportRequestApi/SaveCancelRequests?',
     ApprovalReq: 'http://gssnte811.asia.ad.flextronics.com:4042/api/cabapprovalapi/ApprovePendingRequests?',
-    AdhocReq :'http://gssnte811.asia.ad.flextronics.com:4042/api/AdhocCabRequestApi/SaveCabOperationDetails?'
-}*/
+    AdhocReq :'http://gssnte811.asia.ad.flextronics.com:4042/api/AdhocCabRequestApi/SaveCabOperationDetails?',
+ GetFeedback :'http://gssnte811.asia.ad.flextronics.com:4042/api/FeedbackApi/GetMobileQuestions?',
+ SaveFeedback :'http://gssnte811.asia.ad.flextronics.com:4042/api/FeedbackApi/SaveMobileFeedback?'
+}

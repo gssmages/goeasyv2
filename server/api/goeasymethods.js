@@ -199,8 +199,44 @@ exports.adhocRequest = function (page, params) {
     xmlhttp.send();
 }
 exports.showFeedback = function (page, params) { 
-               // page.data(function(data) {
-               //  data.tripinfo = params;
-             //})
-               page.screen("feedback");    
+                var xmlhttp = new XMLHttpRequest();
+    var url = urlConfig.urlData.GetFeedback+"employeeLocID="+params.employeeLocID;
+    var reqResponse = [];
+    
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+
+             page.data(function(data) {
+                 data.feedbackdetails = response;
+             })
+                 .screen("feedback");
+        }
+    };
+    xmlhttp.open("GET", url, false);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send();
+               //page.screen("feedback");    
+}
+exports.saveFeedback = function (page, params) { 
+                var xmlhttp = new XMLHttpRequest();
+    
+    
+    var url = urlConfig.urlData.SaveFeedback+"employeeID="+params.employeeID+"&questionID="+params.questionID+"&rating="+params.rating+"&comment="+params.comment+"date="+params.date;
+    var reqResponse = [];
+    
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+
+             page.data(function(data) {
+                 data.feedbackdetails = response;
+             })
+                 .screen("feedback");
+        }
+    };
+    xmlhttp.open("GET", url, false);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send();
+               //page.screen("feedback");    
 }
