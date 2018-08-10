@@ -65,7 +65,7 @@ app.loginIsAction = false;
         }
          else if(menuname=="feedback")
         {
-            params={"employeeID":$localStorage.employeeID};
+            params={"":$localStorage.locationID};
             console.log(params);
             app.call('goeasymethods.showFeedback',params);
         }
