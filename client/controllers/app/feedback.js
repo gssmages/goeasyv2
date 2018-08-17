@@ -1,5 +1,5 @@
 angular.module('app').controller('app_feedback', app_feedback);
-function app_feedback($scope, app,$filter) {
+function app_feedback($scope, app,$filter, $ionicPopup) {
     'use strict';
     app.init($scope,function(){
          console.log('data objects ', $scope.data);
