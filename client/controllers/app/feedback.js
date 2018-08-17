@@ -7,14 +7,14 @@ function app_feedback($scope, app) {
          $scope.date = $filter('date')(new Date(), 'MM-dd-yyyy');
         $scope.dbdate = $filter('date')(new Date(), 'yyyy-MM-dd');
          $scope.data.maxDate=$scope.dbdate;
-        $scope.feedbackfor = [];
+       /* $scope.feedbackfor = [];
          $scope.feedbackfor=[
             { RequestForID:"0",RequestForName:"Pickup and Drop"},
             { RequestForID:"1",RequestForName:"Pickup"},
             { RequestForID:"2",RequestForName:"Drop"}
             ];
             
-            $scope.data.feedbackfor="Pickup and Drop";
+            $scope.data.feedbackfor="Pickup and Drop";*/
             
              $scope.category = [];
          $scope.category=[
