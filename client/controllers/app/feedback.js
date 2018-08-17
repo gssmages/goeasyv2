@@ -10,7 +10,7 @@ function app_feedback($scope, app,$filter, $ionicPopup,$localStorage) {
         $scope.data.date=$scope.date;
          $scope.data.maxDate=$scope.dbdate;
          
-         $scope.rating=0;
+        /* $scope.rating=0;*/
          
          var RequestForID='';
          var categoryid='';
@@ -44,7 +44,7 @@ function app_feedback($scope, app,$filter, $ionicPopup,$localStorage) {
             if($scope.data.date && $scope.data.feedbackfor 
                 && $scope.data.category && $scope.data.Comments){
                                          var feedbacks ={"employeeID": $localStorage.employeeID,
-         "questionID":categoryid,"rating":$scope.rating,
+         "questionID":categoryid,"RequestForID":RequestForID,
          "comment":$scope.data.Comments,"date":$scope.data.date};
          console.log(feedbacks);
 		/*app.call('goeasymethods.sendNoshow',tripinfo);*/
