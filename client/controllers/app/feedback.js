@@ -7,7 +7,7 @@ function app_feedback($scope, app,$filter, $ionicPopup,$localStorage) {
         $scope.category= $scope.data.feedbackdetails.QuestionList;
          $scope.date = $filter('date')(new Date(), 'MM-dd-yyyy');
         $scope.dbdate = $filter('date')(new Date(), 'yyyy-MM-dd');
-        $scope.data.date=$scope.dbdate;
+        $scope.data.date=$scope.date;
          $scope.data.maxDate=$scope.dbdate;
          
          $scope.rating=0;
