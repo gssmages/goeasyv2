@@ -2,6 +2,8 @@ angular.module('app').controller('app_feedback', app_feedback);
 function app_feedback($scope, app) {
     'use strict';
     app.init($scope,function(){
+         console.log('data objects ', $scope.data);
+        // $scope.feedbackfor= $scope.data.adhocDataList[0].RequestTypeDetails;
          $scope.date = $filter('date')(new Date(), 'MM-dd-yyyy');
         $scope.dbdate = $filter('date')(new Date(), 'yyyy-MM-dd');
          $scope.data.maxDate=$scope.dbdate;

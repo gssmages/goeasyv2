@@ -23,46 +23,22 @@
                     </label>
                 </div>
             </div>
-            <div class="row" data-comp-id="row.2" style="">
-                <div class="col col-50" data-comp-id="column.2" ng-if="fromDateField" style="">
-                    <div data-comp-id="text.2">From Date
-                        <span style="color:red;">*</span>
-                    </div>
-                    <label class="item item-input item-date-icon positive-icon"
-                        data-comp-id="dateInput.2" style="padding:0;">
-                        <span class="input-label" style="width: 0%;"></span>
-                        <input date-format="MM-DD-YYYY" max="2100-12-12" min="{{data.minDate}}"
-                            ng-model-options="{allowInvalid: true}" ng-model="data.FromDate" type="date">
-                    </label>
-                </div>
-                <div class="col col-50" data-comp-id="column.3" ng-if="toDateField" style="">
-                    <div data-comp-id="text.3">To Date
-                        <span style="color:red;">*</span>
-                    </div>
-                    <label class="item item-input item-date-icon positive-icon"
-                        data-comp-id="dateInput.3" style="padding:0;">
-                        <span class="input-label" style="width: 0px;"></span>
-                        <input date-format="MM-DD-YYYY" max="2100-12-12" min="{{data.minDate}}"
-                            ng-model-options="{allowInvalid: true}" ng-model="data.ToDate" type="date">
-                    </label>
-                </div>
-            </div>
-            <div class="row" data-comp-id="row.3">
-                <div class="col" data-comp-id="column.4">
-                    <div data-comp-id="text.4">Feedback For
+            <div class="row" data-comp-id="row.2">
+                <div class="col" data-comp-id="column.2">
+                    <div data-comp-id="text.2">Feedback For
                         <span style="color:red;">*</span>
                     </div>
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.1">
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-model="data.feedbackfor"
-                            ng-options="item.RequestForName as item.RequestForName for item in feedbackfor"></select>
+                            ng-options="item.RequestTypeName for item in feedbackfor track by item.RequestTypeID"></select>
                     </label>
                 </div>
             </div>
-            <div class="row" data-comp-id="row.4">
-                <div class="col" data-comp-id="column.5">
-                    <div data-comp-id="text.5">Category
+            <div class="row" data-comp-id="row.3">
+                <div class="col" data-comp-id="column.3">
+                    <div data-comp-id="text.3">Category
                         <span style="color:red;">*</span>
                     </div>
                     <!--<select-list data-comp-id="selectList.1" ng-change="submitApprovals()"-->
@@ -75,9 +51,9 @@
                     </label>
                 </div>
             </div>
-            <div class="row" data-comp-id="row.5">
-                <div class="col" data-comp-id="column.6" style="">
-                    <div data-comp-id="text.6" style="margin: 0px;">Any other comments
+            <div class="row" data-comp-id="row.4">
+                <div class="col" data-comp-id="column.4" style="">
+                    <div data-comp-id="text.4" style="margin: 0px;">Any other comments
                         <span style="color:red;">*</span>
                     </div>
                     <label class="item item-input item-stacked-label item-outside-label"
@@ -87,9 +63,9 @@
                     </label>
                 </div>
             </div>
-            <div class="row" data-comp-id="row.6">
-                <div class="col" data-comp-id="column.7">
-                    <div data-comp-id="text.7">Ratings</div>
+            <div class="row" data-comp-id="row.5">
+                <div class="col" data-comp-id="column.5">
+                    <div data-comp-id="text.5">Ratings</div>
                     <star-rating-comp label-position="top"></star-rating-comp>
                 </div>
             </div>
@@ -97,13 +73,13 @@
     </ion-content>
     <div class="footer-button-bar" data-comp-id="footer-bar-buttons.1"
         dynamic-floating-footer="" style="padding: 0px;">
-        <div class="row" data-comp-id="row.7" style="padding: 0px;">
-            <div class="col" data-comp-id="column.8"
+        <div class="row" data-comp-id="row.6" style="padding: 0px;">
+            <div class="col" data-comp-id="column.6"
                 style="padding: 0px; margin: 0px; border-right: 1px solid rgb(221, 221, 221);">
                 <button class="button button-block button-positive" data-comp-id="button.2"
                     ng-click="reset()" style="margin: 0px; border-radius: 0px;">Reset</button>
             </div>
-            <div class="col text-center" data-comp-id="column.9" style="padding: 0px;">
+            <div class="col text-center" data-comp-id="column.7" style="padding: 0px;">
                 <button class="button button-block button-positive" data-comp-id="button.3"
                     ng-click="validate();" style="margin: 0px; border-radius: 0px;">Submit</button>
             </div>
