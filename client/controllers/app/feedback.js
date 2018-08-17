@@ -61,6 +61,11 @@ function app_feedback($scope, app,$filter, $ionicPopup,$localStorage) {
                // Custom functionality....
              });
         }
+         $scope.reset = function() {
+            //reset all the field in the page.
+            var  params={"employeeLocID":$localStorage.locationID};
+           app.call('goeasymethods.showFeedback',params);
+        }
         
     });
 }
