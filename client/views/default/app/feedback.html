@@ -32,7 +32,7 @@
                         data-comp-id="selectInput.1">
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-model="data.feedbackfor"
-                            ng-options="item.RequestTypeName for item in feedbackfor track by item.RequestTypeID"></select>
+                            ng-options="item.RequestForName for item in feedbackfor track by item.RequestForID"></select>
                     </label>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                         data-comp-id="selectInput.2">
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-model="data.category"
-                            ng-options="item.CategoryName as item.CategoryName for item in category"></select>
+                            ng-options="item.F_Question for item in category track by item.F_ID"></select>
                     </label>
                 </div>
             </div>
@@ -66,7 +66,6 @@
             <div class="row" data-comp-id="row.5">
                 <div class="col" data-comp-id="column.5">
                     <div data-comp-id="text.5">Ratings</div>
-                    <star-rating-comp label-position="top"></star-rating-comp>
                 </div>
             </div>
         </div>
