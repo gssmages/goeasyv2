@@ -17,7 +17,7 @@ function app_feedback($scope, app,$filter) {
             
             $scope.data.feedbackfor="Pickup and Drop";*/
             
-             $scope.category = [];
+          /*   $scope.category = [];
          $scope.category=[
             { CategoryID:"0",CategoryName:"Vehicle"},
             { CategoryID:"1",CategoryName:"Route"},
@@ -25,7 +25,7 @@ function app_feedback($scope, app,$filter) {
             { CategoryID:"3",CategoryName:"Safety"},
             { CategoryID:"4",CategoryName:"Timing"}
             ];
-              $scope.data.category="Vehicle";
+              $scope.data.category="Vehicle";*/
         
     });
 }
