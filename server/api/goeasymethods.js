@@ -229,10 +229,10 @@ exports.saveFeedback = function (page, params) {
         if (this.readyState == 4 && this.status == 200) {
             var response = JSON.parse(this.responseText);
 
-             page.data(function(data) {
-                 data.feedbackdetails = response;
+           page.data(function(data) {
+                 data.successmsg = response;
              })
-                 .screen("feedback");
+                 .screen("feedbackmsg");
         }
     };
     xmlhttp.open("GET", url, false);
