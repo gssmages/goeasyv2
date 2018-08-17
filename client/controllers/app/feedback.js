@@ -47,7 +47,7 @@ function app_feedback($scope, app,$filter, $ionicPopup,$localStorage) {
          "questionID":categoryid,"RequestForID":RequestForID,
          "comment":$scope.data.Comments,"date":$scope.data.date};
          console.log(feedbacks);
-		/*app.call('goeasymethods.saveFeedback',feedbacks);*/
+		app.call('goeasymethods.saveFeedback',feedbacks);
                                     }
                         else{ errorMsg('Please select all the required field.'); }   
             }
