@@ -2,6 +2,9 @@ angular.module('app').controller('app_feedback', app_feedback);
 function app_feedback($scope, app) {
     'use strict';
     app.init($scope,function(){
+         $scope.date = $filter('date')(new Date(), 'MM-dd-yyyy');
+        $scope.dbdate = $filter('date')(new Date(), 'yyyy-MM-dd');
+         $scope.data.maxDate=$scope.dbdate;
         $scope.feedbackfor = [];
          $scope.feedbackfor=[
             { RequestForID:"0",RequestForName:"Pickup and Drop"},
