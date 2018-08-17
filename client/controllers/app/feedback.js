@@ -42,8 +42,7 @@ function app_feedback($scope, app,$filter, $ionicPopup,$localStorage) {
               
                $scope.validate = function(){
             if($scope.data.date && $scope.data.feedbackfor 
-                && $scope.data.category && $scope.data.Comments 
-                 && $scope.rating){
+                && $scope.data.category && $scope.data.Comments){
                                          var feedbacks ={"employeeID": $localStorage.employeeID,
          "questionID":categoryid,"rating":$scope.rating,
          "comment":$scope.data.Comments,"date":$scope.data.date};
