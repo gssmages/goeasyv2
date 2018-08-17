@@ -30,7 +30,8 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.1">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select ng-model="data.feedbackfor"
+                        <select ng-change="feedbackforchange(data.feedbackfor)"
+                            ng-model="data.feedbackfor"
                             ng-options="item.RequestForName for item in feedbackfor track by item.RequestForID"></select>
                     </label>
                 </div>
@@ -45,7 +46,7 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.2">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select ng-model="data.category"
+                        <select ng-change="categorychange(data.category)" ng-model="data.category"
                             ng-options="item.F_Question for item in category track by item.F_ID"></select>
                     </label>
                 </div>

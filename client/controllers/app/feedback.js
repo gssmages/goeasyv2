@@ -11,6 +11,9 @@ function app_feedback($scope, app,$filter, $ionicPopup,$localStorage) {
          $scope.data.maxDate=$scope.dbdate;
          
          $scope.rating=0;
+         
+         var RequestForID='';
+         var categoryid='';
        /* $scope.feedbackfor = [];
          $scope.feedbackfor=[
             { RequestForID:"0",RequestForName:"Pickup and Drop"},
@@ -29,19 +32,23 @@ function app_feedback($scope, app,$filter, $ionicPopup,$localStorage) {
             { CategoryID:"4",CategoryName:"Timing"}
             ];
               $scope.data.category="Vehicle";*/
+              $scope.feedbackforchange = function (item) {
+            RequestForID = item.RequestForID;
+              };
+              
+                $scope.categorychange = function (item) {
+            categoryid = item.F_ID;
+              };
               
                $scope.validate = function(){
             if($scope.data.date && $scope.data.feedbackfor 
                 && $scope.data.category && $scope.data.Comments 
                  && $scope.rating){
-                                         var feedbacks ={"employeeID":employeeID,
-         "RequestTypeName":RequestTypeName,"RequestForName":RequestForName,
-         "ShiftTimeID":ShiftTimeID,"CabRequestID":CabRequestID,
-         "RequestForID":RequestForID,"RequestTypeID":RequestTypeID,
-         "FromDateOpnNoShow":FromDate,
-         "ToDateOpnNoShow":ToDate,"RequestedForName":RequestedForName,"ShiftTimeName":ShiftTimeName,"UserTime":UserTime};
-         console.log(tripinfo);
-		app.call('goeasymethods.sendNoshow',tripinfo);
+                                         var feedbacks ={"employeeID": $localStorage.employeeID,
+         "questionID":categoryid,"rating":$scope.rating,
+         "comment":$scope.data.Comments,"date":$scope.data.date};
+         console.log(feedbacks);
+		/*app.call('goeasymethods.sendNoshow',tripinfo);*/
                                     }
                         else{ errorMsg('Please select all the required field.'); }   
             }
