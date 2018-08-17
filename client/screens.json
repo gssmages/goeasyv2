@@ -124,6 +124,12 @@
       "name": "drivercheckin",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank"
+    },
+    {
+      "id": "feedbackmsg",
+      "name": "feedbackmsg",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank"
     }
   ],
   "sourceAppId": "_blank",
