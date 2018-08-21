@@ -35,7 +35,7 @@ function app_myapprovals($scope, app, $ionicPopup){
           var pendingitems=$scope.data.pendinglistitems;
          console.log(pendingitems + "---checking Myapproval list details");
          if(pendingitems!=undefined) {
-          if($scope.data.pendinglistitems==null)
+          if($scope.data.pendinglistitems==null || $scope.data.pendinglistitems=="" )
      {
         $scope.recordcount="No Request to approval";
      }
