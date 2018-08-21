@@ -32,6 +32,15 @@ function app_myapprovals($scope, app, $ionicPopup){
     'use strict';
      app.init($scope,function(data){
          $scope.recordcount="Tap on card to select or de-select";
+         
+          if($scope.data.pendinglistitems==null)
+     {
+        $scope.recordcount="No Request to approval";
+     }
+     else
+     {
+         $scope.recordcount="Tap on card to select or de-select";
+     }
    /*      var success=$scope.data.successmsg;
      console.log(success+"thisissuccesmsg");
       if(success!=undefined)
