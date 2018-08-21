@@ -32,7 +32,9 @@ function app_myapprovals($scope, app, $ionicPopup){
     'use strict';
      app.init($scope,function(data){
         // $scope.recordcount="Tap on card to select or de-select";
-         
+          var pendingitems=$scope.data.pendinglistitems;
+         console.log(pendingitems + "---checking Myapproval list details");
+         if(pendingitems!=undefined) {
           if($scope.data.pendinglistitems==null)
      {
         $scope.recordcount="No Request to approval";
@@ -41,6 +43,7 @@ function app_myapprovals($scope, app, $ionicPopup){
      {
          $scope.recordcount="Tap on card to select or de-select";
      }
+         }
    /*      var success=$scope.data.successmsg;
      console.log(success+"thisissuccesmsg");
       if(success!=undefined)
