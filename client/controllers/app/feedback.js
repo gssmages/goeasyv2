@@ -44,7 +44,7 @@ function app_feedback($scope, app,$filter, $ionicPopup,$localStorage) {
             if($scope.data.date && $scope.data.feedbackfor 
                 && $scope.data.category && $scope.data.Comments){
                                          var feedbacks ={"employeeID": $localStorage.employeeID,
-         "questionID":categoryid,"RequestForID":RequestForID,
+         "questionID":categoryid,"reqFor":RequestForID,
          "comment":$scope.data.Comments,"date":$scope.data.date};
          console.log(feedbacks);
 		app.call('goeasymethods.saveFeedback',feedbacks);
