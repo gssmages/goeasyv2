@@ -219,10 +219,9 @@ exports.showFeedback = function (page, params) {
                //page.screen("feedback");    
 }
 exports.saveFeedback = function (page, params) { 
-                var xmlhttp = new XMLHttpRequest();
+                var xmlhttp = new XMLHttpRequest();   
     
-    
-    var url = urlConfig.urlData.SaveFeedback+"employeeID="+params.employeeID+"&questionID="+params.questionID+"&rating=1"+"&comment="+params.comment+"date="+params.date;
+    var url = urlConfig.urlData.SaveFeedback+"employeeID="+params.employeeID+"&questionID="+params.questionID+"&comment="+params.comment+"&date="+params.date+"&reqFor="+params.reqFor;
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
