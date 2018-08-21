@@ -31,7 +31,7 @@ angular.module('app').controller('app_myapprovals',app_myapprovals)
 function app_myapprovals($scope, app, $ionicPopup){
     'use strict';
      app.init($scope,function(data){
-         $scope.recordcount="Tap on card to select or de-select";
+        // $scope.recordcount="Tap on card to select or de-select";
          
           if($scope.data.pendinglistitems==null)
      {
