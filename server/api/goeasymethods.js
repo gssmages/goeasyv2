@@ -233,6 +233,13 @@ exports.saveFeedback = function (page, params) {
              })
                  .screen("feedbackmsg");
         }
+         else{
+            var response = JSON.parse(this.responseText);
+             page.data(function(data) {
+                data.successmsg = response.Message;
+            })
+                .screen("feedbackmsg");
+        }
     };
     xmlhttp.open("GET", url, false);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
