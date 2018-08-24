@@ -221,7 +221,7 @@ exports.showFeedback = function (page, params) {
 exports.saveFeedback = function (page, params) { 
                 var xmlhttp = new XMLHttpRequest();   
     
-    var url = urlConfig.urlData.SaveFeedback+"employeeID="+params.employeeID+"&questionID="+params.questionID+"&comment="+params.comment+"&date="+params.date+"&reqFor="+params.reqFor;
+    var url = urlConfig.urlData.SaveFeedback+"employeeID="+params.employeeID+"&questionID="+params.questionID+"&comments="+params.comment+"&date="+params.date+"&reqFor="+params.reqFor;
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
