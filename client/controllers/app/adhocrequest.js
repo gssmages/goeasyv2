@@ -246,6 +246,6 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
             }
           app.call('goeasymethods.getAdhocdetails',params);
         }
-        /* }*/
+         }
     });
 }
