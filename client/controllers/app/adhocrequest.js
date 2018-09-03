@@ -16,6 +16,9 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
   /*$scope.data.successmsg=undefined;*/
 /* var params={"employeeID":$localStorage.employeeID,"locationID":$localStorage.locationID};
      app.call('goeasymethods.getAdhocdetails',params);*/
+     var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
+     var params={"employeeID":$localStorage.employeeID,"todaysdate":todaysdate,"locationname":$localStorage.locationName};
+            app.call('goeasymethods.getDashboard',params);
    });
          }
          else
