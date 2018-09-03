@@ -3,9 +3,9 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
     'use strict';
     app.init($scope, function () {
         
-  /*            var success=$scope.data.successmsg;
+              var commonerror=$scope.data.errormsg;
     // console.log(success+"thisissuccesmsg");
-      if(success!=undefined)
+      if(commonerror!=undefined)
          {
           var alertPopup = $ionicPopup.alert({
      title: 'Goeasy message',
@@ -13,16 +13,13 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
    });
 
    alertPopup.then(function(res) {
-     console.log('Reload adhoc page');
-  //   $scope.origData = $scope.data;
-  //    $scope.data = $scope.origData;
-  $scope.data.successmsg=undefined;
- var params={"employeeID":$localStorage.employeeID,"locationID":$localStorage.locationID};
-     app.call('goeasymethods.getAdhocdetails',params);
+  /*$scope.data.successmsg=undefined;*/
+/* var params={"employeeID":$localStorage.employeeID,"locationID":$localStorage.locationID};
+     app.call('goeasymethods.getAdhocdetails',params);*/
    });
          }
          else
-         {*/
+         {
        console.log('data objects ', $scope.data);
        var RequestTypeID ="";
        var RequestForID ="";
