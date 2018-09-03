@@ -11,8 +11,7 @@ function app_home($scope, app, $localStorage) {
        $localStorage.displayName = $scope.data.home.EmployeeDetails.DisplayName;
        $localStorage.businessTitle = $scope.data.home.EmployeeDetails.BusinessTitle;
       
-      $scope.pickupDriverNumber = $scope.data.home.PickupRequestDetail.DriverContact;
-     $scope.dropDriverNumber =  $scope.data.home.DropRequestDetail.DriverContact;
+      
       //document.getElementById("pickupcontact").innerHTML=pickupDriverNumber;
 //document.getElementById("pickupcontact").setAttribute("href", "tel:"+pickupDriverNumber);
      // document.getElementById('').attr("","tel:"+pickupDriverNumber);
@@ -28,6 +27,8 @@ function app_home($scope, app, $localStorage) {
             $scope.nopickupdiv = false;
               $scope.pickupdiv = true;
              $scope.dropdiv = false;
+             $scope.pickupDriverNumber = $scope.data.home.PickupRequestDetail.DriverContact;
+     $scope.dropDriverNumber =  $scope.data.home.DropRequestDetail.DriverContact;
      }
      else
      {
