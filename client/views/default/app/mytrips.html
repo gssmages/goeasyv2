@@ -89,9 +89,9 @@
                                 </div>
                                 <span data-comp-id="text.9" ng-bind="item.RequestForName"></span>
                                 <span data-comp-id="text.10" ng-bind="&quot; - &quot; + item.ShiftStartTime "
-                                    ng-if="item.RequestForID==1||item.RequestForID==2">Some text</span>
+                                    ng-if="item.RequestForName=='Pickup and Drop'||item.RequestForName=='Pickup'">Some text</span>
                                 <span data-comp-id="text.11" ng-bind="&quot; - &quot; +item.ShiftEndTime"
-                                    ng-if="item.RequestForID==1||item.RequestForID==3">Some text</span>
+                                    ng-if="item.RequestForName=='Pickup and Drop'||item.RequestForName=='Drop'">Some text</span>
                             </div>
                         </div>
                     </div>
@@ -128,9 +128,9 @@
                                 </div>
                                 <span data-comp-id="text.15" ng-bind="item.ReqForName">Drop at 5:00 pm</span>
                                 <span data-comp-id="text.16" ng-bind="&quot; - &quot;+item.ShiftStart"
-                                    ng-if="item.ReqForID==1||item.ReqForID==2">Some text</span>
+                                    ng-if="item.ReqForName=='Pickup and Drop'||item.ReqForName=='Pickup'">Some text</span>
                                 <span data-comp-id="text.17" ng-bind="&quot; - &quot;+item.ShiftEnd"
-                                    ng-if="item.ReqForID==1||item.ReqForID==3">Some text</span>
+                                    ng-if="item.ReqForName=='Pickup and Drop'||item.ReqForName=='Drop'">Some text</span>
                             </div>
                         </div>
                     </div>
