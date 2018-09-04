@@ -72,7 +72,7 @@ function app_mytrips($scope, app,$ionicPopup,$localStorage,$filter) {
     };
     $scope.noShowPopup = function(item){
         var employeeID=$localStorage.employeeID;
-        var locationID=1; 
+        var locationID=$localStorage.locationID; 
         var RequestForID=item.RequestForID;
         var RequestTypeID=item.RequestTypeID;
         var RequestTypeName=item.RequestTypeName; 
