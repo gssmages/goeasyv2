@@ -1,7 +1,7 @@
 angular.module('app').controller('app_tripcancellation', app_tripcancellation);
 function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
     'use strict';
-    var selectid=0;
+    /*var selectid=0;*/
     app.init($scope,function(){
         $scope.date = $filter('date')(new Date(), 'MM-dd-yyyy');
         $scope.dbdate = $filter('date')(new Date(), 'yyyy-MM-dd');
