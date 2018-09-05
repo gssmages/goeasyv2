@@ -49,9 +49,9 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
             $scope.data.reqfor = $scope.requestfor[0].RequestForName;
              selectid=3;
       }
-  }
+  }*/
     });
-    $scope.requestfor = [];*/
+   /* $scope.requestfor = [];*/
      
     
     //loadOptions(); ng-focus="loadOptions()"
@@ -88,7 +88,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
    $scope.reqForChange = function(item){
             //console.log("req for id-->"+item.RequestForID);
             RequestForID = item.RequestForID;
-   }
+   };
  
 /*$scope.GetValue = function (item) {
                 var selectname = $scope.data.reqfor;
