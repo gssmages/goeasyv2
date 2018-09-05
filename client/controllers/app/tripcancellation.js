@@ -163,7 +163,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
          "FromDateOpnNoShow":FromDate,
          "ToDateOpnNoShow":ToDate,"RequestedForName":RequestedForName,"ShiftTimeName":ShiftTimeName,"UserTime":UserTime};
          console.log(tripinfo);
-	//	app.call('goeasymethods.sendNoshow',tripinfo);
+	app.call('goeasymethods.sendNoshow',tripinfo);
                 }
                 else
                 {
