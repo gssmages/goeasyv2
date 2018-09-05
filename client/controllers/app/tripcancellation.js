@@ -15,6 +15,34 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
          $scope.requestfor= $scope.data.tripinfo.RequestForDetails;
          //console.log(requestfor);
          var RequestForID="";
+          var RequestForName="";
+          
+          
+           if($scope.data.tripinfo.RequestForName=="Pickup and Drop")
+      {
+   
+            $scope.data.reqfor = $scope.requestfor[0].RequestForName;
+             $scope.requestfordropdown=true;
+              $scope.requestfortext=false;
+         RequestForID=$scope.requestfor[0].RequestForName;
+          RequestForName=$scope.requestfor[0].RequestForID;
+      }
+      else if($scope.data.tripinfo.RequestForName=="Pickup"){
+          
+             $scope.requestfordropdown=false;
+              $scope.requestfortext=true;
+               $scope.data.reqfortext=$scope.data.tripinfo.RequestForName
+         RequestForID=$scope.data.tripinfo.RequestForID;
+          RequestForName=$scope.data.tripinfo.RequestForName;
+      }
+      else
+      {
+             $scope.requestfordropdown=false;
+              $scope.requestfortext=true;
+               $scope.data.reqfortext=$scope.data.tripinfo.RequestForName
+         RequestForID=$scope.data.tripinfo.RequestForID;
+          RequestForName=$scope.data.tripinfo.RequestForName;
+      }
       /*  $scope.requestfor=[
             { RequestForID:"1",RequestForName:"Pickup and Drop"},
             { RequestForID:"2",RequestForName:"Pickup"},
@@ -89,6 +117,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
    $scope.reqForChange = function(item){
             //console.log("req for id-->"+item.RequestForID);
             RequestForID = item.RequestForID;
+             RequestForName=item.RequestForName;
    };
  
 /*$scope.GetValue = function (item) {
@@ -103,10 +132,10 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
         var locationID=$scope.data.tripinfo.locationID; 
         /*var RequestForID=parseInt(selectid, 10);*/
         var RequestForID=RequestForID;
-        console.log(RequestForID+"--->selected id");
+        //console.log(RequestForID+"--->selected id");
         var RequestTypeID=$scope.data.tripinfo.RequestTypeID;
         var RequestTypeName=$scope.data.tripinfo.RequestTypeName; 
-        var RequestForName=$scope.data.reqfor;
+        var RequestForName=RequestForName;
          var RequestedForName=$scope.data.tripinfo.RequestForName;
         var ShiftTimeID=$scope.data.tripinfo.ShiftTimeID;
         var CabRequestID=$scope.data.tripinfo.CabRequestID;
