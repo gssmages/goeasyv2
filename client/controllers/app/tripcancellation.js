@@ -50,8 +50,8 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
     });
     $scope.requestfor = [];
      
-    //loadOptions();
-    $scope.loadOptions = function() {
+    //loadOptions(); ng-focus="loadOptions()"
+/*    $scope.loadOptions = function() {
   if ($scope.requestfor.length === 0) {
       if($scope.data.tripinfo.RequestForName=="Pickup and Drop")
       {
@@ -80,7 +80,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
            
       }
   }
-}
+}*/
  
 $scope.GetValue = function (item) {
                 var selectname = $scope.data.reqfor;
