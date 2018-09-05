@@ -81,13 +81,17 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
       }
   }
 }*/
+   $scope.reqForChange = function(item){
+            //console.log("req for id-->"+item.RequestForID);
+            RequestForID = item.RequestForID;
+   }
  
-$scope.GetValue = function (item) {
+/*$scope.GetValue = function (item) {
                 var selectname = $scope.data.reqfor;
                 selectid = $.grep($scope.requestfor, function (item) {
                     return item.RequestForName == selectname;
                 })[0].RequestForID;
-            }
+            }*/
      $scope.tripcancel = function(){
         // console.log($scope.data.reqfor.RequestForName+"fromdate"+$scope.fromdate+$scope.data.reqfor)
          var employeeID=$scope.data.tripinfo.employeeID;

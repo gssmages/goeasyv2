@@ -32,7 +32,7 @@
             <span class="input-label">Request For
                 <span style="color:red;">*</span>
             </span>
-            <select ng-change="GetValue()" ng-model="data.reqfor"
+            <select ng-change="reqForChange(data.reqfor)" ng-model="data.reqfor"
                 ng-options="item.RequestForName as item.RequestForName for item in requestfor"></select>
         </label>
     </ion-content>
