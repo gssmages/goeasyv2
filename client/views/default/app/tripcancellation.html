@@ -33,7 +33,7 @@
                 <span style="color:red;">*</span>
             </span>
             <select ng-change="reqForChange(data.reqfor)" ng-model="data.reqfor"
-                ng-options="item.RequestForName as item.RequestForName for item in requestfor"></select>
+                ng-options="item.RequestForName  for item in requestfor track by item.RequestForID"></select>
         </label>
     </ion-content>
     <ion-footer-bar class=" bar-positive" data-comp-id="footer-bar.1"

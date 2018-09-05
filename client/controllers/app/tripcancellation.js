@@ -11,6 +11,9 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
         $scope.data.todate=$scope.data.tripinfo.ToDateOpnNoShow==null?$scope.date:todate;
         $scope.data.minDate=$scope.data.tripinfo.FromDateOpnNoShow==null?$scope.dbdate:$scope.data.tripinfo.FromDateOpnNoShow.split('T')[0];
         $scope.data.maxDate=$scope.data.tripinfo.ToDateOpnNoShow==null?'':$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0];
+        
+         var requestfor= $scope.data.tripinfo.RequestForDetails;
+         var RequestForID="";l
       /*  $scope.requestfor=[
             { RequestForID:"1",RequestForName:"Pickup and Drop"},
             { RequestForID:"2",RequestForName:"Pickup"},
@@ -18,7 +21,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
             ];*/
             
        // console.log($scope.data.ma);
-       $scope.requestfor = [];
+/*       $scope.requestfor = [];
         if ($scope.requestfor.length === 0) {
       if($scope.data.tripinfo.RequestForName=="Pickup and Drop")
       {
@@ -48,8 +51,9 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
       }
   }
     });
-    $scope.requestfor = [];
+    $scope.requestfor = [];*/
      
+    
     //loadOptions(); ng-focus="loadOptions()"
 /*    $scope.loadOptions = function() {
   if ($scope.requestfor.length === 0) {
