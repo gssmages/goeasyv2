@@ -51,7 +51,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
              selectid=3;
       }
   }*/
-    });
+    
    /* $scope.requestfor = [];*/
      
     
@@ -162,4 +162,5 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
                // Custom functionality....
              });
         }
+    });
 }
