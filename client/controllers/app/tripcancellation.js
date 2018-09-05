@@ -12,7 +12,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
         $scope.data.minDate=$scope.data.tripinfo.FromDateOpnNoShow==null?$scope.dbdate:$scope.data.tripinfo.FromDateOpnNoShow.split('T')[0];
         $scope.data.maxDate=$scope.data.tripinfo.ToDateOpnNoShow==null?'':$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0];
         
-         var requestfor= $scope.data.tripinfo.RequestForDetails;
+         $scope.requestfor= $scope.data.tripinfo.RequestForDetails;
          console.log(requestfor);
          var RequestForID="";
       /*  $scope.requestfor=[
