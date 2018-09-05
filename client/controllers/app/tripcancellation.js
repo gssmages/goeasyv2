@@ -22,10 +22,12 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
       {
    
             $scope.data.reqfor = $scope.requestfor[0].RequestForName;
+            console.log($scope.requestfor[0].RequestForName)
+             console.log( $scope.data.reqfor+"----select data")
              $scope.requestfordropdown=true;
               $scope.requestfortext=false;
-         RequestForID=$scope.requestfor[0].RequestForName;
-          RequestForName=$scope.requestfor[0].RequestForID;
+         RequestForID=$scope.requestfor[0].RequestForID;
+          RequestForName=$scope.data.reqfor;
       }
       else if($scope.data.tripinfo.RequestForName=="Pickup"){
           
