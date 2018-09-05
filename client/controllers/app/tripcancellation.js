@@ -133,11 +133,11 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
          var employeeID=$scope.data.tripinfo.employeeID;
         var locationID=$scope.data.tripinfo.locationID; 
         /*var RequestForID=parseInt(selectid, 10);*/
-        var RequestForID=RequestForID;
+        //var RequestForID=RequestForID;
         //console.log(RequestForID+"--->selected id");
         var RequestTypeID=$scope.data.tripinfo.RequestTypeID;
         var RequestTypeName=$scope.data.tripinfo.RequestTypeName; 
-        var RequestForName=RequestForName;
+     //   var RequestForName=RequestForName;
          var RequestedForName=$scope.data.tripinfo.RequestForName;
         var ShiftTimeID=$scope.data.tripinfo.ShiftTimeID;
         var CabRequestID=$scope.data.tripinfo.CabRequestID;
