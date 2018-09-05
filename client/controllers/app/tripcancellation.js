@@ -13,7 +13,7 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
         $scope.data.maxDate=$scope.data.tripinfo.ToDateOpnNoShow==null?'':$scope.data.tripinfo.ToDateOpnNoShow.split('T')[0];
         
          var requestfor= $scope.data.tripinfo.RequestForDetails;
-         var RequestForID="";l
+         var RequestForID="";
       /*  $scope.requestfor=[
             { RequestForID:"1",RequestForName:"Pickup and Drop"},
             { RequestForID:"2",RequestForName:"Pickup"},
@@ -100,8 +100,9 @@ function app_tripcancellation($scope, app,$filter,$ionicPopup,$localStorage) {
         // console.log($scope.data.reqfor.RequestForName+"fromdate"+$scope.fromdate+$scope.data.reqfor)
          var employeeID=$scope.data.tripinfo.employeeID;
         var locationID=$scope.data.tripinfo.locationID; 
-        var RequestForID=parseInt(selectid, 10);
-        console.log(selectid+"--->selected id");
+        /*var RequestForID=parseInt(selectid, 10);*/
+        var RequestForID=RequestForID;
+        console.log(RequestForID+"--->selected id");
         var RequestTypeID=$scope.data.tripinfo.RequestTypeID;
         var RequestTypeName=$scope.data.tripinfo.RequestTypeName; 
         var RequestForName=$scope.data.reqfor;
