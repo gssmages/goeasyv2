@@ -26,6 +26,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
        console.log('data objects ', $scope.data);
        var RequestTypeID ="";
        var RequestForID ="";
+       var RequestForName ="";
        var shiftTiming ="";
        var shiftID ="";
        var boardingPointID="";
