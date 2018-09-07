@@ -133,12 +133,12 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         $scope.reqForChange = function(item){
             //console.log("req for id-->"+item.RequestForID);
             RequestForID = item.RequestForID;
-            
-            if(RequestForID == "1"){
+            RequestForName=item.RequestForName;
+            if(RequestForName == "Pickup and Drop"){
                  $scope.start_time=false;
                  $scope.end_time=false;
                  $scope.both_time=true;
-             }else if(RequestForID == "2"){
+             }else if(RequestForName == "Pickup"){
                  $scope.start_time=true;
                  $scope.end_time=false;
                  $scope.both_time=false;
