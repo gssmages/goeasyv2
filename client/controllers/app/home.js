@@ -27,8 +27,8 @@ function app_home($scope, app, $localStorage) {
             $scope.nopickupdiv = false;
               $scope.pickupdiv = true;
              $scope.dropdiv = false;
-             $scope.pickupDriverNumber = $scope.data.home.PickupRequestDetail.DriverContact;
-     $scope.dropDriverNumber =  $scope.data.home.DropRequestDetail.DriverContact;
+             $scope.pickupDriverNumber = $scope.data.home.PickupRequestDetail!==null ? $scope.data.home.PickupRequestDetail.DriverContact:"";
+     $scope.dropDriverNumber = $scope.data.home.DropRequestDetail!==null ? $scope.data.home.DropRequestDetail.DriverContact:"";
      }
      else
      {
