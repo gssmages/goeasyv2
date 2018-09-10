@@ -49,7 +49,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         $scope.specialNeedList = ["Please Specify","Pregnant","Undergoing Medical Treatment"];
         $scope.data.minDate = $filter('date')(new Date(), 'yyyy-MM-dd');
         var systemdate = new Date();
-        systemdate.setMonth(systemdate.getMonth()+1,0);
+        systemdate.setMonth(systemdate.getMonth()+1,31);
         $scope.data.maxDate = $filter('date')(systemdate, 'yyyy-MM-dd');
         console.log('max date --> ',  $scope.data.maxDate);
              
