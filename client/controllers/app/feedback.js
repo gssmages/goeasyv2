@@ -12,6 +12,8 @@ function app_feedback($scope, app,$filter, $ionicPopup,$localStorage) {
            var systemdate = new Date();
         systemdate.setMonth(systemdate.getMonth()-3,31);
         $scope.data.minDate = $filter('date')(systemdate, 'yyyy-MM-dd');
+        
+           console.log('min date --> ',  $scope.data.minDate);
         /* $scope.rating=0;*/
          
          var RequestForID='';
