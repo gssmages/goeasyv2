@@ -51,7 +51,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         var systemdate = new Date();
     systemdate.setMonth(systemdate.getMonth()+1);
           $scope.data.maxDate = $filter('date')(systemdate, 'yyyy-MM-dd');
-             console.log('data objects ',  $scope.data.maxDate);
+             console.log('max date --> ',  $scope.data.maxDate);
              
              
         $scope.shiftSelection = function(item){
