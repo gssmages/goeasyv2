@@ -9,7 +9,9 @@ function app_feedback($scope, app,$filter, $ionicPopup,$localStorage) {
         $scope.dbdate = $filter('date')(new Date(), 'yyyy-MM-dd');
         $scope.data.date=$scope.date;
          $scope.data.maxDate=$scope.dbdate;
-         
+           var systemdate = new Date();
+        systemdate.setMonth(systemdate.getMonth()-3,31);
+        $scope.data.minDate = $filter('date')(systemdate, 'yyyy-MM-dd');
         /* $scope.rating=0;*/
          
          var RequestForID='';
