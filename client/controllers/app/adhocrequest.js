@@ -48,6 +48,7 @@ function app_adhocrequest($scope, app, $ionicPopup, $filter, $localStorage) {
         $scope.area= $scope.data.adhocDataList[0].AreaDetails
         $scope.specialNeedList = ["Please Specify","Pregnant","Undergoing Medical Treatment"];
         $scope.data.minDate = $filter('date')(new Date(), 'yyyy-MM-dd');
+          $scope.data.maxDate = $filter('date')(new Date().getMonth()+1, 'yyyy-MM-dd');
           
         $scope.shiftSelection = function(item){
             // var date = new Date();
