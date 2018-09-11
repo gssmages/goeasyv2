@@ -112,8 +112,8 @@
                     <label class="item  item-input item-select-icon positive-icon"
                         data-comp-id="selectInput.6">
                         <!--<span class="input-label">Select Label</span>-->
-                        <select ng-change="areaSelect(data.selectedarea);" ng-model="data.Area.selected"
-                            ng-options="item as item.label for item in data.Area.options"></select>
+                        <select ng-change="areaSelect(data.selectedarea);" ng-model="data.selectedarea"
+                            ng-options="item.AreaName for item in area track by item.RelAreaID"></select>
                     </label>
                 </div>
             </div>
@@ -129,8 +129,8 @@
                         data-comp-id="selectInput.7">
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-change="selectedBoarding(data.selectedboarding)"
-                            ng-model="data.BordingPoint.selected"
-                            ng-options="item as item.label for item in data.BordingPoint.options"></select>
+                            ng-model="data.selectedboarding"
+                            ng-options="item.BoardingPointName for item in boardingPoint"></select>
                     </label>
                 </div>
             </div>
