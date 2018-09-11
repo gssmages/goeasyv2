@@ -83,5 +83,33 @@
     }
   },
   "FromDate": "03/09/2017",
-  "ToDate": "10/20/2017"
+  "ToDate": "10/20/2017",
+  "BordingPoint": {
+    "options": [
+      {
+        "label": "bus stop bus stop bus stop bus stop",
+        "value": "1"
+      },
+      {
+        "label": "bus stop bus stop bus stop bus stop",
+        "value": "2"
+      },
+      {
+        "label": "bus stop bus stop bus stop bus stop",
+        "value": "3"
+      },
+      {
+        "label": "bus stop bus stop",
+        "value": "4"
+      },
+      {
+        "label": "bus stop",
+        "value": "5"
+      }
+    ],
+    "selected": {
+      "label": "bus stop bus stop bus stop bus stop",
+      "value": "1"
+    }
+  }
 }
