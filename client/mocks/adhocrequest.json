@@ -111,5 +111,21 @@
       "label": "bus stop bus stop bus stop bus stop",
       "value": "1"
     }
+  },
+  "Area": {
+    "options": [
+      {
+        "label": "area area area area area area",
+        "value": "1"
+      },
+      {
+        "label": "area area area area area area area",
+        "value": "2"
+      },
+      {
+        "label": "area area",
+        "value": "3"
+      }
+    ]
   }
 }
