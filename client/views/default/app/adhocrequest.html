@@ -129,8 +129,8 @@
                         data-comp-id="selectInput.7">
                         <!--<span class="input-label">Select Label</span>-->
                         <select ng-change="selectedBoarding(data.selectedboarding)"
-                            ng-model="data.selectedboarding"
-                            ng-options="item.BoardingPointName for item in boardingPoint"></select>
+                            ng-model="data.BordingPoint.selected"
+                            ng-options="item as item.label for item in data.BordingPoint.options"></select>
                     </label>
                 </div>
             </div>
