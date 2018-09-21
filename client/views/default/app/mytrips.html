@@ -88,10 +88,9 @@
                                     <!--ng-bind="item.FromDate.split('T')[0] +&quot; to &quot; +item.ToDate.split('T')[0]"-->
                                 </div>
                                 <span data-comp-id="text.9" ng-bind="item.RequestForName"></span>
-                                <span data-comp-id="text.10" ng-bind="&quot; - &quot; + item.ShiftStartTime "
-                                    ng-if="item.RequestForName=='Pickup and Drop'||item.RequestForName=='Pickup'">Some text</span>
-                                <span data-comp-id="text.11" ng-bind="&quot; - &quot; +item.ShiftEndTime"
-                                    ng-if="item.RequestForName=='Pickup and Drop'||item.RequestForName=='Drop'">Some text</span>
+                                <span data-comp-id="text.10" ng-bind="&quot; - &quot; + item.shiftForGrid">Some text</span>
+                                <!-- <span data-comp-id="text.11" ng-bind="&quot; - &quot; +item.ShiftEndTime"
+                                    ng-if="item.RequestForName=='Pickup and Drop'||item.RequestForName=='Drop'">Some text</span>-->
                             </div>
                         </div>
                     </div>
@@ -99,7 +98,7 @@
             </div>
             <div class="row" data-comp-id="row.7" ng-show="recordlist">
                 <div class="col" data-comp-id="column.11">
-                    <div data-comp-id="text.12">No record to be displayed</div>
+                    <div data-comp-id="text.11">No record to be displayed</div>
                 </div>
             </div>
         </div>
@@ -108,7 +107,7 @@
                 ng-repeat="item in data.mytrips.CancelMyTripDetails" style="padding: 0px;">
                 <div class="row stable" data-comp-id="row.8" style="padding: 0px;">
                     <div class="col text-left stable-bg" data-comp-id="column.12" style="">
-                        <div class="text-center" data-comp-id="text.13" ng-bind="item.ReqTypeName"
+                        <div class="text-center" data-comp-id="text.12" ng-bind="item.ReqTypeName"
                             style="color: rgb(4, 3, 3); font-weight: bold; float: left;">Adhoc</div>
                     </div>
                     <div class="col stable stable-bg" data-comp-id="column.13"></div>
@@ -121,16 +120,15 @@
                                     style="font-size: 32px;"></i>
                             </div>
                             <div class="col" data-comp-id="column.16">
-                                <div data-comp-id="text.14"
+                                <div data-comp-id="text.13"
                                     ng-bind="item.StartDateString +&quot; to &quot; +item.EndDateString"
                                     style="font-weight: bold;">
                                     <!--ng-bind="item.StartDate.split('T')[0] +&quot; to &quot; +item.EndDate.split('T')[0]"-->
                                 </div>
-                                <span data-comp-id="text.15" ng-bind="item.ReqForName">Drop at 5:00 pm</span>
-                                <span data-comp-id="text.16" ng-bind="&quot; - &quot;+item.ShiftStart"
-                                    ng-if="item.ReqForName=='Pickup and Drop'||item.ReqForName=='Pickup'">Some text</span>
-                                <span data-comp-id="text.17" ng-bind="&quot; - &quot;+item.ShiftEnd"
-                                    ng-if="item.ReqForName=='Pickup and Drop'||item.ReqForName=='Drop'">Some text</span>
+                                <span data-comp-id="text.14" ng-bind="item.ReqForName">Drop at 5:00 pm</span>
+                                <span data-comp-id="text.15" ng-bind="&quot; - &quot;+item.shiftForGrid">Some text</span>
+                                <!-- <span data-comp-id="text.17" ng-bind="&quot; - &quot;+item.ShiftEnd"
+                                    ng-if="item.ReqForName=='Pickup and Drop'||item.ReqForName=='Drop'">Some text</span>-->
                             </div>
                         </div>
                     </div>
@@ -138,7 +136,7 @@
             </div>
             <div class="row" data-comp-id="row.11" ng-show="cancelllist">
                 <div class="col" data-comp-id="column.17">
-                    <div data-comp-id="text.18">No record to be displayed</div>
+                    <div data-comp-id="text.16">No record to be displayed</div>
                 </div>
             </div>
         </div>
@@ -168,7 +166,7 @@
                 ng-repeat="item in data.noshowlist" style="padding: 0px;">
                 <div class="row stable" data-comp-id="row.14" style="padding: 0px;">
                     <div class="col text-left stable-bg" data-comp-id="column.21" style="">
-                        <div class="text-center" data-comp-id="text.19" ng-bind="item.date"
+                        <div class="text-center" data-comp-id="text.17" ng-bind="item.date"
                             style="color: rgb(4, 3, 3); font-weight: bold; float: left;">Adhoc</div>
                     </div>
                     <div class="col stable stable-bg" data-comp-id="column.22"></div>
@@ -181,10 +179,10 @@
                                     style="font-size: 32px;"></i>
                             </div>
                             <div class="col" data-comp-id="column.25">
-                                <div data-comp-id="text.20"
+                                <div data-comp-id="text.18"
                                     ng-bind="item.shift +&quot;- &quot;+ item.pickupdrop" style="font-weight: bold;">Date :
                                     {{item.date}}</div>
-                                <div data-comp-id="text.21"
+                                <div data-comp-id="text.19"
                                     ng-bind="&quot;Route : &quot;+item.routeno +&quot; and &quot;+ &quot;Tripsheet No &quot;+ item.tripsheetno"></div>
                             </div>
                         </div>
@@ -196,7 +194,7 @@
                 ng-repeat="item in data.adhochistory">
                 <div class="row" data-comp-id="row.17" style="padding: 0px; margin: 0px;">
                     <div class="col stable-bg dark" data-comp-id="column.26">
-                        <div data-comp-id="text.22" ng-bind="item.requesttype"
+                        <div data-comp-id="text.20" ng-bind="item.requesttype"
                             style="font-weight: bold;">Some text</div>
                     </div>
                 </div>
@@ -207,12 +205,12 @@
                             style="font-size: 32px;"></i>
                     </div>
                     <div class="col" data-comp-id="column.28" style="padding: 10px;">
-                        <div data-comp-id="text.23" ng-bind="item.fromdate" style="font-weight: bold;">Some text</div>
-                        <div data-comp-id="text.24"
+                        <div data-comp-id="text.21" ng-bind="item.fromdate" style="font-weight: bold;">Some text</div>
+                        <div data-comp-id="text.22"
                             ng-bind="item.requestfor +&quot; at &quot;+ item.shifttime">Some text</div>
-                        <div class=" positive" data-comp-id="text.25"
+                        <div class=" positive" data-comp-id="text.23"
                             ng-bind="&quot;Status : &quot; + item.status" style="font-weight: bold;">Some text</div>
-                        <div data-comp-id="text.26" ng-bind="&quot;Approver : &quot; + item.approver"
+                        <div data-comp-id="text.24" ng-bind="&quot;Approver : &quot; + item.approver"
                             ng-if="item.approver!=&quot;&quot;" style="font-size: 10px;">Some text</div>
                     </div>
                 </div>
