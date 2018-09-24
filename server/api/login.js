@@ -12,7 +12,8 @@ exports.login = function (page,params) {
     //var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/login/CheckLoginDetailEncryption?userName="+btoa(params.UserName)+"&password ="+btoa(params.PassWord
    /* page.screen("home");*/
     //var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/login/CheckLoginDetailEncryption?userName="+params.username+"&password="+params.password;
-    var url = urlConfig.urlData.LoginReq+"username="+params.username+"&password="+params.password;
+    var pass=encodeURIComponent(params.password);
+    var url = urlConfig.urlData.LoginReq+"username="+params.username+"&password="+pass;
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var response = JSON.parse(this.responseText);
