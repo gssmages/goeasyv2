@@ -205,8 +205,8 @@ exports.adhocRequest = function (page, params) {
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send();
 }
-exports.showFeedback = function (page, params) { 
-                var xmlhttp = new XMLHttpRequest();
+exports.showFeedback = function (page, params) {
+    var xmlhttp = new XMLHttpRequest();
     var url = urlConfig.urlData.GetFeedback+"employeeLocID="+params.employeeLocID;
     var reqResponse = [];
     
@@ -225,8 +225,9 @@ exports.showFeedback = function (page, params) {
     xmlhttp.send();
                //page.screen("feedback");    
 }
-exports.saveFeedback = function (page, params) { 
-                var xmlhttp = new XMLHttpRequest();   
+exports.saveFeedback = function (page, params) {
+    
+    var xmlhttp = new XMLHttpRequest();
     
     var url = urlConfig.urlData.SaveFeedback+"employeeID="+params.employeeID+"&questionID="+params.questionID+"&comments="+params.comment+"&date="+params.date+"&reqFor="+params.reqFor;
     var reqResponse = [];
