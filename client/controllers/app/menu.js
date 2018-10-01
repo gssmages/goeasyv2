@@ -7,10 +7,12 @@ function app_menu($scope,app,$localStorage) {
         //$scope.businessTitle = $localStorage.businessTitle;
         if(($localStorage.locationName=="Chennai") || ($localStorage.locationName=="Pune"))
         {
+            console.log("getting full menu : "+$localStorage.locationName);
             $scope.showfullmenu=true;
         }
         else
         {
+            console.log("getting full menu : "+$localStorage.locationName);
             $scope.showfullmenu=false;
         }
     });
