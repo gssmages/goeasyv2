@@ -34,6 +34,16 @@ app.loginIsAction = false;
  $scope.businessTitle = $localStorage.businessTitle;
 }, 1000);
    
+   if(($localStorage.locationName=="Chennai") || ($localStorage.locationName=="Pune"))
+        {
+            console.log("getting full menu : "+$localStorage.locationName);
+            $scope.showfullmenu=true;
+        }
+        else
+        {
+            console.log("getting full menu : "+$localStorage.locationName);
+            $scope.showfullmenu=false;
+        }
     var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
     
  $scope.menudata = function(menuname) {
