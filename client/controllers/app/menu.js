@@ -5,6 +5,14 @@ function app_menu($scope,app,$localStorage) {
        //console.log("getting display name : "+$localStorage.displayName);
         //$scope.displayName = $localStorage.displayName;
         //$scope.businessTitle = $localStorage.businessTitle;
+        if(($localStorage.locationName=="Chennai") || ($localStorage.locationName=="Pune"))
+        {
+            $scope.showfullmenu=true;
+        }
+        else
+        {
+            $scope.showfullmenu=false;
+        }
     });
  
 }
