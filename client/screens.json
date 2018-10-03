@@ -135,7 +135,8 @@
       "id": "myapprovalscip",
       "name": "myapprovals-cip",
       "sourceScreenId": "app.blank",
-      "sourceAppId": "_blank"
+      "sourceAppId": "_blank",
+      "model": "myapprovalscip"
     }
   ],
   "sourceAppId": "_blank",
