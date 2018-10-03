@@ -659,5 +659,18 @@
         }
       }
     }
+  },
+  "myapprovalscip": {
+    "type": "object",
+    "comment": "",
+    "properties": {
+      "pendinglistitems": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    }
   }
 }
