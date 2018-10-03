@@ -186,5 +186,14 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
+    }).state('app.myapprovalsdashboard', {
+        views: {
+            app: {
+                controller: 'app_myapprovalsdashboard',
+                templateProvider: function (app) {
+                    return app.templateProvider('app.myapprovalsdashboard');
+                }
+            }
+        }
     });
 });
