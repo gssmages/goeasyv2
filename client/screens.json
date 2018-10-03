@@ -130,6 +130,12 @@
       "name": "feedbackmsg",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank"
+    },
+    {
+      "id": "myapprovalscip",
+      "name": "myapprovals-cip",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank"
     }
   ],
   "sourceAppId": "_blank",

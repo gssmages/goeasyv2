@@ -177,5 +177,14 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
+    }).state('app.myapprovalscip', {
+        views: {
+            app: {
+                controller: 'app_myapprovalscip',
+                templateProvider: function (app) {
+                    return app.templateProvider('app.myapprovalscip');
+                }
+            }
+        }
     });
 });
