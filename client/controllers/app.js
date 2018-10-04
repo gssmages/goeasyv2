@@ -83,7 +83,7 @@ app.loginIsAction = false;
         {
             params={"employeeID":$localStorage.employeeID};
             console.log(params+"--->Specialcabapprovals");
-            app.call('goeasymethods.getMyApprovalsCIP',params);
+            app.call('goeasymethods.getSpecialCab',params);
         }
          else if(menuname=="feedback")
         {
