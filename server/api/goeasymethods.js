@@ -258,7 +258,7 @@ exports.showappdash = function (page, params) {
              })
                  .screen("approvaldashboard");    
 }
-/*exports.getSpecialCab = function (page, params) {
+exports.getSpecialCab = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
@@ -271,12 +271,12 @@ exports.showappdash = function (page, params) {
             var response = JSON.parse(this.responseText);
 
              page.data(function(data) {
-                 data.pendinglistitems = response;
+                 data.specialcabpending = response;
              })
-                 .screen("myapprovalscip");
+                 .screen("specialcabapproval");
         }
     };
     xmlhttp.open("GET", url, false);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send();
-}*/
+}
