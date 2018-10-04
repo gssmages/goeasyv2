@@ -136,6 +136,12 @@
       "name": "approvaldashboard",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank"
+    },
+    {
+      "id": "specialcabapproval",
+      "name": "specialcabapproval",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank"
     }
   ],
   "sourceAppId": "_blank",

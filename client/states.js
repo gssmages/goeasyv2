@@ -186,5 +186,14 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
+    }).state('app.specialcabapproval', {
+        views: {
+            app: {
+                controller: 'app_specialcabapproval',
+                templateProvider: function (app) {
+                    return app.templateProvider('app.specialcabapproval');
+                }
+            }
+        }
     });
 });
