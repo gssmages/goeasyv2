@@ -76,7 +76,7 @@ app.loginIsAction = false;
           else if(menuname=="myapprovalscip")
         {
             params={"employeeID":$localStorage.employeeID};
-            console.log(params);
+            console.log(params+"--->Specialcabapprovals");
             app.call('goeasymethods.getMyApprovalsCIP',params);
         }
          else if(menuname=="feedback")
