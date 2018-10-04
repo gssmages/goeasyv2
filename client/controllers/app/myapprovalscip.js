@@ -33,7 +33,7 @@ function app_myapprovalscip($scope, app) {
    app.init($scope,function(data){
         // $scope.recordcount="Tap on card to select or de-select";
           var pendingitems=$scope.data.pendinglistitems;
-         console.log(pendingitems + "---checking Myapproval list details");
+         console.log(pendingitems + "---> Specialcab pending list details");
          if(pendingitems!=undefined) {
           if($scope.data.pendinglistitems==null || $scope.data.pendinglistitems=="" )
      {
@@ -44,22 +44,7 @@ function app_myapprovalscip($scope, app) {
          $scope.recordcount="Tap on card to select or de-select";
      }
          }
-   /*      var success=$scope.data.successmsg;
-     console.log(success+"thisissuccesmsg");
-      if(success!=undefined)
-         {
-          var alertPopup = $ionicPopup.alert({
-     title: 'Goeasy message',
-     template: success
-   });
-
-   alertPopup.then(function(res) {
-      $scope.data.successmsg=undefined;
-     console.log('Reload same approval page');
-     var params={"employeeID":$localStorage.employeeID};
-     app.call('goeasymethods.getMyApprovals',params);
-   });
-         }*/
+  
      });
       
      
