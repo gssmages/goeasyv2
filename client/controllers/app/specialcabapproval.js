@@ -28,7 +28,101 @@ angular.module('app').controller('app_specialcabapproval', app_specialcabapprova
         }
     };
 });
-function app_specialcabapproval($scope, app) {
+function app_specialcabapproval($scope, app, $ionicPopup) {
     'use strict';
-    app.init($scope);
+         app.init($scope,function(data){
+        // $scope.recordcount="Tap on card to select or de-select";
+          var pendingitems=$scope.data.pendinglistitems;
+         console.log(pendingitems + "---checking Myapproval list details");
+         if(pendingitems!=undefined) {
+          if($scope.data.pendinglistitems==null || $scope.data.pendinglistitems=="" )
+     {
+        $scope.recordcount="No Request to approval";
+     }
+     else
+     {
+         $scope.recordcount="Tap on card to select or de-select";
+     }
+         }
+   /*      var success=$scope.data.successmsg;
+     console.log(success+"thisissuccesmsg");
+      if(success!=undefined)
+         {
+          var alertPopup = $ionicPopup.alert({
+     title: 'Goeasy message',
+     template: success
+   });
+
+   alertPopup.then(function(res) {
+      $scope.data.successmsg=undefined;
+     console.log('Reload same approval page');
+     var params={"employeeID":$localStorage.employeeID};
+     app.call('goeasymethods.getMyApprovals',params);
+   });
+         }*/
+     });
+      
+     
+ $scope.selectbox = function(idvalue,elem) {
+        
+            if($(this).hasClass("selected"))
+            {	
+                $(this).removeClass("selected").css('background','#fff').find(".tickmark").css("display","none");
+            }
+            else
+            {
+                $(this).addClass("selected").css('background','#bddfed').find(".tickmark").css("display","block");
+                
+            }
+    };  
+    $scope.selectionall = function() {
+        $(".card").each(function($index){
+            if($(this).find(".approvallist").not("selected"))
+            {	
+                $(this).find(".approvallist").addClass("selected").css('background','#fff').find(".tickmark").css("display","block");
+                $(this).find(".calendericon").css("display","none");
+            }
+        });
+    };
+    $scope.clearselection = function() {
+        $(".card").each(function($index){
+            if($(this).find(".approvallist").hasClass("selected"))
+            {
+                $(this).find(".approvallist").removeClass("selected").css('background','#fff').find(".tickmark").css("display","none");
+                $(this).find(".calendericon").css("display","block");
+            }
+        });
+    };
+    $scope.submitApprovals=function(selectiontype){
+         $scope.listarray = [];
+    var sendtoconfirm = '';
+        $(".card").each(function(){
+            if($(this).find(".approvallist").hasClass("selected"))
+            {
+                var selectedvalue=$(this).find(".approvallist").find(".id").html();
+                $scope.listarray.push(selectedvalue);
+            }
+        });
+        //console.log($scope.listarray)
+          //  console.log(JSON.stringify($scope.listarray))
+            if($scope.listarray.length>0)
+            {
+        if(selectiontype=="approve"){
+           // console.log($scope.listarray)
+            //console.log(JSON.stringify($scope.listarray))
+            sendtoconfirm={"cabRequestID":$scope.listarray,"status":"2"};
+            app.call("goeasymethods.approvalconfirm",sendtoconfirm);
+            //console.log($scope.sendtoconfirm+"approve" );
+        }
+        else{
+            sendtoconfirm={"cabRequestID":$scope.listarray,"status":"3"};
+             app.call("goeasymethods.approvalconfirm",sendtoconfirm);
+            //console.log($scope.sendtoconfirm+"rejectlist");
+        }
+            }
+            else
+            {
+                $scope.recordcount="No Request to approval";
+            }
+    };
 }
