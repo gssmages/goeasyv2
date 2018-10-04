@@ -140,7 +140,7 @@
     },
     {
       "id": "myapprovalsdashboard",
-      "name": "myapprovals dashboard",
+      "name": "myapprovalsdashboard",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank"
     }
