@@ -254,3 +254,31 @@ exports.saveFeedback = function (page, params) {
     xmlhttp.send();
                //page.screen("feedback");    
 }
+/************************CIP Approvals***********************************/
+exports.showapprovaldashboard = function (page, params) { 
+                page.data(function(data) {
+             })
+                 .screen("myapprovalsdashboard");    
+}
+exports.getMyApprovalsCIP = function (page, params) {
+
+    var xmlhttp = new XMLHttpRequest();
+    
+    //var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?status=1&loggedUser="+params.employeeID; //880781
+    var url = urlConfig.urlData.SpecialCabCIP+"status=1&employeeID="+params.employeeID;
+    var reqResponse = [];
+    
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+
+             page.data(function(data) {
+                 data.pendinglistitems = response;
+             })
+                 .screen("myapprovalscip");
+        }
+    };
+    xmlhttp.open("GET", url, false);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send();
+}
