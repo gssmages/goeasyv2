@@ -73,6 +73,12 @@ app.loginIsAction = false;
             console.log(params);
             app.call('goeasymethods.getMyApprovals',params);
         }
+          else if(menuname=="myapprovalscip")
+        {
+            params={"employeeID":$localStorage.employeeID};
+            console.log(params);
+            app.call('goeasymethods.getMyApprovalsCIP',params);
+        }
          else if(menuname=="feedback")
         {
             params={"employeeLocID":$localStorage.locationID};
