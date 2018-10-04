@@ -79,7 +79,7 @@ app.loginIsAction = false;
             console.log(params);
             app.call('goeasymethods.getMyApprovals',params);
         }
-        else if(menuname=="myapprovalscip")
+        else if(menuname=="specialcabcip")
         {
             params={"employeeID":$localStorage.employeeID};
             console.log(params+"--->Specialcabapprovals");
