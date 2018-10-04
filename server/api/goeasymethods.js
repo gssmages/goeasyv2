@@ -275,6 +275,13 @@ exports.getSpecialCab = function (page, params) {
              })
                  .screen("specialcabapproval");
         }
+        else{
+            var response = JSON.parse(this.responseText);
+             page.data(function(data) {
+                data.recordcount = "No Response from server";
+            })
+                 .screen("specialcabapproval");
+        }
     };
     xmlhttp.open("GET", url, false);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
