@@ -259,7 +259,7 @@ exports.showappdash = function (page, params) {
              })
                  .screen("approvaldashboard");    
 }
-exports.getMyApprovalsCIP = function (page, params) {
+exports.getSpecialCab = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
