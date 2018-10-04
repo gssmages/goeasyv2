@@ -1,5 +1,5 @@
 angular.module('app').controller('app_specialcabapproval', app_specialcabapproval)
-.directive("approvallist",function($ionicGesture,$rootScope){
+.directive("apprlist",function($ionicGesture,$rootScope){
     return {
         scope: {},
         restrict: "A",
