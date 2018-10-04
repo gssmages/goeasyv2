@@ -141,7 +141,6 @@ exports.approvalconfirm = function (page, params) {
              })
                  .screen("alertwin");    
 }
-
 exports.gettripinfo = function (page, params) { 
                 page.data(function(data) {
                  data.tripinfo = params;
@@ -256,10 +255,11 @@ exports.saveFeedback = function (page, params) {
 }
 exports.showappdash = function (page, params) { 
                 page.data(function(data) {
+                    data.showappdashinfo = params;
              })
                  .screen("approvaldashboard");    
 }
-exports.getSpecialCab = function (page, params) {
+/*exports.getSpecialCab = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
@@ -280,4 +280,4 @@ exports.getSpecialCab = function (page, params) {
     xmlhttp.open("GET", url, false);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send();
-}
+}*/
