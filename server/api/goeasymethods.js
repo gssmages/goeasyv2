@@ -54,7 +54,6 @@ exports.getMytrips = function (page,params) {
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send();
 }
-
 exports.getAdhocdetails = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
