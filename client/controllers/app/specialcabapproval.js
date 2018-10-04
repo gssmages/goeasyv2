@@ -37,11 +37,11 @@ function app_specialcabapproval($scope, app, $ionicPopup) {
          if(pendingitems!=undefined) {
           if($scope.data.specialcabpending==null || $scope.data.specialcabpending=="" )
      {
-        $scope.recordcount="No Request to approval";
+        $scope.data.recordcount="No Request to approval";
      }
      else
      {
-         $scope.recordcount="Tap on card to select or de-select";
+         $scope.data.recordcount="Tap on card to select or de-select";
      }
          }
    /*      var success=$scope.data.successmsg;
@@ -124,7 +124,7 @@ function app_specialcabapproval($scope, app, $ionicPopup) {
             }
             else
             {
-                $scope.recordcount="No Request to approval";
+                $scope.data.recordcount="No Request to approval";
             }
     };
 }
