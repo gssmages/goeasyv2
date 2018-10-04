@@ -94,14 +94,16 @@ function app_myapprovalscip($scope, app) {
             {
         if(selectiontype=="approve"){
            // console.log($scope.listarray)
-            //console.log(JSON.stringify($scope.listarray))
+            
             sendtoconfirm={"cabRequestID":$scope.listarray,"status":"2"};
-            app.call("goeasymethods.approvalconfirm",sendtoconfirm);
+            console.log(sendtoconfirm)
+           // app.call("goeasymethods.approvalconfirm",sendtoconfirm);
             //console.log($scope.sendtoconfirm+"approve" );
         }
         else{
             sendtoconfirm={"cabRequestID":$scope.listarray,"status":"3"};
-             app.call("goeasymethods.approvalconfirm",sendtoconfirm);
+            console.log(sendtoconfirm)
+            // app.call("goeasymethods.approvalconfirm",sendtoconfirm);
             //console.log($scope.sendtoconfirm+"rejectlist");
         }
             }
