@@ -67,7 +67,7 @@ app.loginIsAction = false;
             console.log(params);
             app.call('goeasymethods.getAdhocdetails',params);
         }
-        else if(menuname=="myapprovalsdashboard")
+        else if(menuname=="approvaldashboard")
         {
             params={"employeeID":$localStorage.employeeID};
             console.log(params);
