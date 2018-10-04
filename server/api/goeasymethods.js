@@ -254,11 +254,10 @@ exports.saveFeedback = function (page, params) {
     xmlhttp.send();
                //page.screen("feedback");    
 }
-/************************CIP Approvals***********************************/
 exports.showapprovaldashboard = function (page, params) { 
                 page.data(function(data) {
              })
-                 .screen("myapprovalsdashboard");    
+                 .screen("approvaldashboard");    
 }
 exports.getMyApprovalsCIP = function (page, params) {
 
