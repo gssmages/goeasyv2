@@ -254,7 +254,7 @@ exports.saveFeedback = function (page, params) {
     xmlhttp.send();
                //page.screen("feedback");    
 }
-exports.showapprovaldashboard = function (page, params) { 
+exports.showappdash = function (page, params) { 
                 page.data(function(data) {
              })
                  .screen("approvaldashboard");    
