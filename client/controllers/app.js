@@ -71,7 +71,7 @@ app.loginIsAction = false;
         {
             params={"employeeID":$localStorage.employeeID};
             console.log(params);
-            app.call('goeasymethods.showapprovaldashboard',params);
+            app.call('goeasymethods.showappdash',params);
         }
         else if(menuname=="myapprovals")
         {
