@@ -33,6 +33,7 @@ function app_specialcabapproval($scope, app, $ionicPopup) {
          app.init($scope,function(data){
         // $scope.recordcount="Tap on card to select or de-select";
           var pendingitems=$scope.data.specialcabpending;
+          console.log(JSON.stringify($scope.data));
          console.log(pendingitems + "---checking Myapproval list details");
          if(pendingitems!=undefined) {
           if($scope.data.specialcabpending==null || $scope.data.specialcabpending=="" )
