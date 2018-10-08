@@ -122,7 +122,15 @@ function app_myapprovals($scope, app, $ionicPopup){
             }
             else
             {
-                $scope.recordcount="Please select the Cab Request";
+                     if($scope.data.pendinglistitems==null || $scope.data.pendinglistitems=="" )
+                     {
+                        $scope.recordcount="No Request to approval";
+                     }
+                     else
+                     {
+                        $scope.recordcount="Please select the Cab Request";
+                     }
+                
             }
     };
 }
