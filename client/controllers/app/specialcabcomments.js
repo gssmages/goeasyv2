@@ -30,7 +30,7 @@ function app_specialcabcomments($scope, app) {
                     'remarks': comment
                 };
                 console.log(sendtoconfirm);
-                app.call('goeasymethods.approvalrequest', sendtoconfirm);
+                //app.call('goeasymethods.approvalrequest', sendtoconfirm);
             } else {
                 errorMsg();
             }
@@ -42,7 +42,7 @@ function app_specialcabcomments($scope, app) {
                 'remarks': comment
             };
             console.log(sendtoconfirm);
-            app.call('goeasymethods.approvalrequest', sendtoconfirm);
+            //app.call('goeasymethods.approvalrequest', sendtoconfirm);
         }
     };
     var errorMsg = function () {
