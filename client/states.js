@@ -195,5 +195,14 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
+    }).state('app.specialcabcomments', {
+        views: {
+            app: {
+                controller: 'app_specialcabcomments',
+                templateProvider: function (app) {
+                    return app.templateProvider('app.specialcabcomments');
+                }
+            }
+        }
     });
 });
