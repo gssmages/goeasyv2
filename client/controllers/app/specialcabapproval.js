@@ -125,7 +125,15 @@ function app_specialcabapproval($scope, app, $ionicPopup) {
             }
             else
             {
-                $scope.data.recordcount="Please select the Cab Request";
+                if($scope.data.specialcabpending==null || $scope.data.specialcabpending=="" )
+                 {
+                    $scope.data.recordcount="No Request to approval";
+                 }
+                 else
+                 {
+                     $scope.data.recordcount="Please select the Cab Request";
+                 }
+               
             }
     };
 }
