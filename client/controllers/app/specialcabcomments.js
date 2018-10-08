@@ -1,5 +1,5 @@
 angular.module('app').controller('app_specialcabcomments', app_specialcabcomments);
-function app_specialcabcomments($scope, app) {
+function app_specialcabcomments($scope, app,$ionicPopup, $localStorage) {
     'use strict';
     app.init($scope, function (data) {
               if($scope.data.approvalinfo.status==2)
