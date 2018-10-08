@@ -263,7 +263,7 @@ exports.getSpecialCab = function (page, params) {
     var xmlhttp = new XMLHttpRequest();
     
     //var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?status=1&loggedUser="+params.employeeID; //880781
-    var url = urlConfig.urlData.SpecialCabCIP+"status=1&employeeID=848645";
+    var url = urlConfig.urlData.SpecialCabCIP+"statusID=1&employeeID=848645";
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -286,4 +286,10 @@ exports.getSpecialCab = function (page, params) {
     xmlhttp.open("GET", url, false);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send();
+}
+exports.specialcabconfirm = function (page, params) { 
+                page.data(function(data) {
+                 data.approvalinfo = params;
+             })
+                 .screen("specialcabcomments");    
 }
