@@ -2,6 +2,14 @@ angular.module('app').controller('app_specialcabcomments', app_specialcabcomment
 function app_specialcabcomments($scope, app) {
     'use strict';
     app.init($scope, function (data) {
+              if($scope.data.approvalinfo.status==2)
+     {
+        $scope.data.commentlabel="Approve Comments";
+     }
+     else
+     {
+         $scope.data.commentlabel="Reject Comments";
+     }
     });
     $scope.sendrequest = function () {
         var sendtoconfirm = '';
