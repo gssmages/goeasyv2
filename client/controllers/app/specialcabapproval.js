@@ -113,13 +113,13 @@ function app_specialcabapproval($scope, app, $ionicPopup) {
             //console.log(JSON.stringify($scope.listarray))
             sendtoconfirm={"cabRequestID":$scope.listarray,"status":"2"};
             console.log(sendtoconfirm)
-            //app.call("goeasymethods.approvalconfirm",sendtoconfirm);
+            app.call("goeasymethods.specialcabconfirm",sendtoconfirm);
             //console.log($scope.sendtoconfirm+"approve" );
         }
         else{
             sendtoconfirm={"cabRequestID":$scope.listarray,"status":"3"};
             console.log(sendtoconfirm)
-            // app.call("goeasymethods.approvalconfirm",sendtoconfirm);
+            app.call("goeasymethods.specialcabconfirm",sendtoconfirm);
             //console.log($scope.sendtoconfirm+"rejectlist");
         }
             }
