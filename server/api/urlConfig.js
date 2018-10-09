@@ -22,5 +22,6 @@ exports.urlData = {
     AdhocReq : 'http://gssnte811.asia.ad.flextronics.com:4042/api/AdhocCabRequestApi/SaveCabOperationDetails?',
     GetFeedback : 'http://gssnte811.asia.ad.flextronics.com:4042/api/FeedbackApi/GetMobileQuestions?',
     SaveFeedback : 'http://gssnte811.asia.ad.flextronics.com:4042/api/FeedbackApi/SaveMobileFeedback?',
-    SpecialCabCIP: 'http://gssnte811.asia.ad.flextronics.com:4042/api/SpecialCabRequestApi/GetSpecialCabDetails/?'
+    SpecialCabCIP: 'http://gssnte811.asia.ad.flextronics.com:4042/api/SpecialCabRequestApi/GetSpecialCabDetails/?',
+    SpecialCabApproval: 'http://gssnte811.asia.ad.flextronics.com:4042/api/SpecialCabRequestApi/SaveApproveRejectData/?'
 };
