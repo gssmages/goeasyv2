@@ -293,3 +293,25 @@ exports.specialcabconfirm = function (page, params) {
              })
                  .screen("specialcabcomments");    
 }
+exports.specialcabapproval = function (page, params) {
+
+    var xmlhttp = new XMLHttpRequest();
+ 
+    var url = urlConfig.urlData.SpecialCabApproval+"SpecialCabRequestID="+params.cabRequestID+"&StatusID="+params.status+"&Remarks="+params.remarks+"&RequestForEmployeeName=&FromDate=&ToDate=&NoOfPersons=&VerticalName=&StatusName=&ApproverMailID=&userMailID=&ApprovedBy=848645"
+        //+params.approver;
+    var reqResponse = [];
+    
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+
+             page.data(function(data) {
+                 data.successmsg = response;
+             })
+                 .screen("specialcabmsg");
+        }
+    };
+    xmlhttp.open("GET", url, false);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send();
+}
