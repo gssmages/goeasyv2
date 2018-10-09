@@ -148,6 +148,12 @@
       "name": "specialcabcomments",
       "sourceScreenId": "app.blank",
       "sourceAppId": "_blank"
+    },
+    {
+      "id": "specialcabmsg",
+      "name": "specialcabmsg",
+      "sourceScreenId": "app.blank",
+      "sourceAppId": "_blank"
     }
   ],
   "sourceAppId": "_blank",

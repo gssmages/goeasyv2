@@ -204,5 +204,14 @@ angular.module('app').config(function ($stateProvider) {
                 }
             }
         }
+    }).state('app.specialcabmsg', {
+        views: {
+            app: {
+                controller: 'app_specialcabmsg',
+                templateProvider: function (app) {
+                    return app.templateProvider('app.specialcabmsg');
+                }
+            }
+        }
     });
 });
