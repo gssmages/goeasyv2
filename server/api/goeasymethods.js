@@ -263,7 +263,7 @@ exports.getSpecialCab = function (page, params) {
     var xmlhttp = new XMLHttpRequest();
     
     //var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?status=1&loggedUser="+params.employeeID; //880781
-    var url = urlConfig.urlData.SpecialCabCIP+"statusID=1&employeeID=848645";
+    var url = urlConfig.urlData.SpecialCabCIP+"statusID=1&viewId=2&employeeID="+params.employeeID+"&locationName="+params.locationName+"&employeeName="+params.employeeName;
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -297,8 +297,8 @@ exports.specialcabapproval = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
  
-    var url = urlConfig.urlData.SpecialCabApproval+"SpecialCabRequestID="+params.cabRequestID+"&StatusID="+params.status+"&Remarks="+params.remarks+"&RequestForEmployeeName=&FromDate=&ToDate=&NoOfPersons=&VerticalName=&StatusName=&ApproverMailID=&userMailID=&ApprovedBy=848645"
-        //+params.approver;
+    var url = urlConfig.urlData.SpecialCabApproval+"SpecialCabRequestID="+params.cabRequestID+"&StatusID="+params.status+"&Remarks="+params.remarks+"&RequestForEmployeeName=&FromDate=&ToDate=&NoOfPersons=&VerticalName=&StatusName=&ApproverMailID=&userMailID=&ApprovedBy="+params.approver;
+
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
