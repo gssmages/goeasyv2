@@ -10,7 +10,16 @@ function app_home($scope, app, $localStorage) {
         //console.log('data in home page-->',$scope.data.home.PickupRequestDetail);
        $localStorage.displayName = $scope.data.home.EmployeeDetails.DisplayName;
        $localStorage.businessTitle = $scope.data.home.EmployeeDetails.BusinessTitle;
-      
+       if(($localStorage.locationName=="Chennai") || ($localStorage.locationName=="Pune"))
+        {
+            console.log("getting full menu : "+$localStorage.locationName);
+            $scope.showfullmenu=true;
+        }
+        else
+        {
+            console.log("getting full menu : "+$localStorage.locationName);
+            $scope.showfullmenu=false;
+        }
       
       //document.getElementById("pickupcontact").innerHTML=pickupDriverNumber;
 //document.getElementById("pickupcontact").setAttribute("href", "tel:"+pickupDriverNumber);
