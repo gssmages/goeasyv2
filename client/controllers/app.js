@@ -81,7 +81,7 @@ app.loginIsAction = false;
         }
         else if(menuname=="specialcabcip")
         {
-            params={"employeeID":$localStorage.employeeID};
+            params={"employeeID":$localStorage.employeeID,"employeeName":$localStorage.displayName,"locationName":$localStorage.locationName};
             console.log(params+"--->Specialcabapprovals");
             app.call('goeasymethods.getSpecialCab',params);
         }
