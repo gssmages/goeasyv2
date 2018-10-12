@@ -151,7 +151,7 @@ exports.approvalrequest = function (page, params) {
     var xmlhttp = new XMLHttpRequest();
     
     //var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/cabapprovalapi/ApprovePendingRequests?cabRequestID="+params.cabRequestID+"&remarks="+params.remarks+"&status="+params.status+"&approver="+params.approver;
-    var url = urlConfig.urlData.ApprovalReq+"cabRequestID="+params.cabRequestID+"&remarks="+params.remarks+"&status="+params.status+"&approver="+params.approver;
+    var url = urlConfig.urlData.ApprovalReq+"cabRequestID="+params.cabRequestID+"&remarks="+encodeURIComponent(params.remarks)+"&status="+params.status+"&approver="+params.approver;
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -227,7 +227,7 @@ exports.saveFeedback = function (page, params) {
     
     var xmlhttp = new XMLHttpRequest();
     
-    var url = urlConfig.urlData.SaveFeedback+"employeeID="+params.employeeID+"&questionID="+params.questionID+"&comments="+params.comment+"&date="+params.date+"&reqFor="+params.reqFor;
+    var url = urlConfig.urlData.SaveFeedback+"employeeID="+params.employeeID+"&questionID="+params.questionID+"&comments="+encodeURIComponent(params.comment)+"&date="+params.date+"&reqFor="+params.reqFor;
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
@@ -297,7 +297,7 @@ exports.specialcabapproval = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
  
-    var url = urlConfig.urlData.SpecialCabApproval+"SpecialCabRequestID="+params.cabRequestID+"&StatusID="+params.status+"&Remarks="+params.remarks+"&RequestForEmployeeName=&FromDate=&ToDate=&NoOfPersons=&VerticalName=&StatusName=&ApproverMailID=&userMailID=&ApprovedBy="+params.approver;
+    var url = urlConfig.urlData.SpecialCabApproval+"SpecialCabRequestID="+params.cabRequestID+"&StatusID="+params.status+"&Remarks="+encodeURIComponent(params.remarks)+"&RequestForEmployeeName=&FromDate=&ToDate=&NoOfPersons=&VerticalName=&StatusName=&ApproverMailID=&userMailID=&ApprovedBy="+params.approver;
 
     var reqResponse = [];
     
