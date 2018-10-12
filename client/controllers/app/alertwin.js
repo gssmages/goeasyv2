@@ -5,10 +5,16 @@ function app_alertwin($scope, app, $ionicPopup, $localStorage) {
         if($scope.data.approvalinfo.status==2)
      {
         $scope.data.commentlabel="Enter Approve Comments";
+         $scope.required={
+        "color" : "white"
+    };
      }
      else
      {
          $scope.data.commentlabel="Enter Reject Comments";
+          $scope.required={
+        "color" : "red"
+    };
      }
     });
     $scope.sendrequest = function () {
