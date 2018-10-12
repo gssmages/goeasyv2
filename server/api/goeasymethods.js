@@ -262,8 +262,8 @@ exports.getSpecialCab = function (page, params) {
 
     var xmlhttp = new XMLHttpRequest();
     
-    //var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?status=1&loggedUser="+params.employeeID; //880781
-    var url = urlConfig.urlData.SpecialCabCIP+"statusID=1&viewId=2&employeeID="+params.employeeID+"&locationName="+params.locationName+"&employeeName="+params.employeeName;
+    //var url = "http://gssnte811.asia.ad.flextronics.com:4042/api/CabApprovalApi/ReadPendingRequests/?status=1&loggedUser="+params.employeeID; //880781 
+    var url = urlConfig.urlData.SpecialCabCIP+"viewId=2&employeeID="+params.employeeID+"&locationName="+params.locationName+"&employeeName="+params.employeeName;
     var reqResponse = [];
     
     xmlhttp.onreadystatechange = function () {
