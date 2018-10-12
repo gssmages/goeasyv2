@@ -52,26 +52,26 @@
                         style="padding: 10px; border-radius: 0px;">
                         <div class=" id" data-comp-id="text.2" ng-bind="item.ID" ng-show="false">Some text</div>
                         <div class=" energized" data-comp-id="text.3"
-                            ng-bind="&quot;<b>Request For : </b></div> &quot;+ item.RequestForName"
+                            ng-bind-html="&quot;<b>Request For : </b></div> &quot;+ item.RequestForName"
                             style="font-size: 14px; line-height: 28px; font-weight: bold;"></div>
                         <div class=" dark" data-comp-id="text.4"
-                            ng-bind="&quot;<b>Request By : </b> &quot;+ item.CreatedByName"
+                            ng-bind-html="&quot;<b> Request By : </b> &quot;+ item.CreatedByName"
                             style="font-size: 12px; line-height: 24px;">Some text</div>
                         <div class=" dark" data-comp-id="text.5"
-                            ng-bind="&quot; <b>Type of Duty : </b>&quot;+ item.DutyType"
+                            ng-bind-html="&quot; <b>Type of Duty : </b>&quot;+ item.DutyType"
                             style="font-size: 12px; line-height: 24px;">Some text</div>
                         <div class=" dark" data-comp-id="text.6"
-                            ng-bind="&quot;<b> Travel Date : </b>&quot;+ item.FromDate +&quot; to &quot;+item.ToDate"
+                            ng-bind-html="&quot;<b> Travel Date : </b>&quot;+ item.FromDate +&quot; to &quot;+item.ToDate"
                             style="font-size: 12px;">Some text</div>
                         <div class=" dark" data-comp-id="text.7"
-                            ng-bind="&quot;<b> Pick-up : </b>&quot;+item.PickupAddress"
+                            ng-bind-html="&quot;<b> Pick-up : </b>&quot;+item.PickupAddress"
                             style="font-size: 12px;">Some text</div>
                         <div class=" dark" data-comp-id="text.8"
-                            ng-bind="&quot;<b> Destination : </b>&quot;+item.DropAddress"
+                            ng-bind-html="&quot;<b> Destination : </b>&quot;+item.DropAddress"
                             style="font-size: 12px;">Some text</div>
                         <!--ng-bind="item.FromDate.split('T')[0]"-->
                         <div class=" dark" data-comp-id="text.9"
-                            ng-bind="&quot;<b> No. of Person(s) : </b>&quot;+item.NumberOfPerson"
+                            ng-bind-html="&quot;<b> No. of Person(s) : </b>&quot;+item.NumberOfPerson"
                             style="font-size: 12px;">Some text</div>
                     </div>
                 </div>
