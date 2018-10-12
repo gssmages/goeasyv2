@@ -8,7 +8,7 @@ function app_specialcabcomments($scope, app,$ionicPopup, $localStorage) {
      }
      else
      {
-         $scope.data.commentlabel="Enter Reject Comments(*)";
+         $scope.data.commentlabel="Enter Reject Comments <span style='color:red'>*</span>";
      }
     });
     $scope.sendrequest = function () {
