@@ -12,7 +12,7 @@ function app_alertwin($scope, app, $ionicPopup, $localStorage) {
         }, cabid);
         var employeeID = $localStorage.employeeID;
         var statusid = $scope.data.approvalinfo.status;
-        var comment = $scope.data.comments;
+        var comment = $scope.data.comments==undefined?"":$scope.data.comments;
         if (statusid == 3) {
             if ($scope.data.comments) {
                 sendtoconfirm = {
