@@ -1,5 +1,5 @@
 angular.module('app').controller('app_specialcabcomments', app_specialcabcomments);
-function app_specialcabcomments($scope, app,$ionicPopup, $localStorage) {
+function app_specialcabcomments($scope, app,$ionicPopup, $localStorage,) {
     'use strict';
     app.init($scope, function (data) {
               if($scope.data.approvalinfo.status==2)
@@ -8,7 +8,7 @@ function app_specialcabcomments($scope, app,$ionicPopup, $localStorage) {
      }
      else
      {
-         $scope.data.commentlabel="Enter Reject Comments <span style=\"color:red\">*</span>";
+         $scope.data.commentlabel=$sce.trustAsHtml("Enter Reject Comments <span style='color:red'>*</span>");
      }
     });
     $scope.sendrequest = function () {
