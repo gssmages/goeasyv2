@@ -8,7 +8,7 @@ function app_alertwin($scope, app, $ionicPopup, $localStorage) {
      }
      else
      {
-         $scope.data.commentlabel="Enter Reject Comments <span style=\"color:red\">*</span>";
+         $scope.data.commentlabel="Enter Reject Comments";
      }
     });
     $scope.sendrequest = function () {
