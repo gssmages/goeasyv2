@@ -5,10 +5,12 @@ function app_specialcabcomments($scope, app,$ionicPopup, $localStorage) {
               if($scope.data.approvalinfo.status==2)
      {
         $scope.data.commentlabel="Enter Approve Comments";
+        $scope.required="";
      }
      else
      {
          $scope.data.commentlabel="Enter Reject Comments";
+         $scope.required="assertive";
      }
     });
     $scope.sendrequest = function () {
