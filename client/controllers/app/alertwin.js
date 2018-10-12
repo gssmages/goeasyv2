@@ -2,6 +2,14 @@ angular.module('app').controller('app_alertwin', app_alertwin);
 function app_alertwin($scope, app, $ionicPopup, $localStorage) {
     'use strict';
     app.init($scope, function (data) {
+        if($scope.data.approvalinfo.status==2)
+     {
+        $scope.data.commentlabel="Enter Approve Comments";
+     }
+     else
+     {
+         $scope.data.commentlabel="Enter Reject Comments(*)";
+     }
     });
     $scope.sendrequest = function () {
         var sendtoconfirm = '';
