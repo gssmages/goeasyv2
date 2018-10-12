@@ -25,43 +25,43 @@
         </div>
     </ion-header-bar>
     <ion-content class=" stable-bg" data-comp-id="ionic-content.1">
-        <div class="row" data-comp-id="row.3" style="margin: 0px; padding: 0px;">
-            <div class="col" data-comp-id="column.4" style="margin: 0px; padding: 0px;">
-                <div class=" text-center" data-comp-id="text.2" ng-bind="recordcount"
+        <div class="row" data-comp-id="row.2" style="margin: 0px; padding: 0px;">
+            <div class="col" data-comp-id="column.3" style="margin: 0px; padding: 0px;">
+                <div class=" text-center" data-comp-id="text.1" ng-bind="recordcount"
                     style="margin: 0px;"></div>
             </div>
         </div>
         <ion-list class="" data-comp-id="ionic-list.1"
             ng-if="item.date!=&quot;No data available in table&quot;"
             ng-repeat="item in data.pendinglistitems" type=" card">
-            <div approvallist="" class="light-bg approvallist" data-comp-id="div.2"
+            <div approvallist="" class="light-bg approvallist" data-comp-id="div.1"
                 ng-click="" style="border-radius: 0px;">
-                <div class="row" data-comp-id="row.4"
+                <div class="row" data-comp-id="row.3"
                     style="margin: 0px; padding: 0px; border-radius: 0px;">
-                    <div class="col positive-bg col-10 text-center tickmark" data-comp-id="column.5"
+                    <div class="col positive-bg col-10 text-center tickmark" data-comp-id="column.4"
                         style="padding: 0px; margin: 0px; display:none;">
                         <i class="icon ion-checkmark light" data-comp-id="icon.1"
                             style="font-size: 24px; line-height:100px;"></i>
                     </div>
-                    <div class="col col-10 text-center calendericon" data-comp-id="column.6"
+                    <div class="col col-10 text-center calendericon" data-comp-id="column.5"
                         style="padding: 10px 5px;">
                         <i class="icon ion-android-calendar positive" data-comp-id="icon.2"
                             style="font-size: 24px;"></i>
                     </div>
-                    <div class="col" data-comp-id="column.7"
+                    <div class="col" data-comp-id="column.6"
                         style="padding: 10px; border-radius: 0px;">
-                        <div class=" id" data-comp-id="text.3" ng-bind="item.ID" ng-show="false">Some text</div>
-                        <div class=" energized" data-comp-id="text.4"
-                            ng-bind="item.EmployeeDetails.DisplayName"
+                        <div class=" id" data-comp-id="text.2" ng-bind="item.ID" ng-show="false">Some text</div>
+                        <div class=" energized" data-comp-id="text.3"
+                            ng-bind-html="&quot;<b>Request For : </b> &quot;item.EmployeeDetails.DisplayName"
                             style="font-size: 14px; line-height: 28px; font-weight: normal;"></div>
-                        <div class=" dark" data-comp-id="text.5"
+                        <div class=" dark" data-comp-id="text.4"
                             ng-bind="item.RequestTypeName + &quot; for &quot;+ item.RequestForName"
                             style="font-size: 12px; line-height: 24px;">Some text</div>
-                        <div class=" dark" data-comp-id="text.6"
+                        <div class=" dark" data-comp-id="text.5"
                             ng-bind="item.FromDateString+&quot; - &quot;+item.ToDateString +&quot; at  &quot;+item.ShiftTime"
                             style="font-size: 12px;">Some text</div>
                         <!--ng-bind="item.FromDate.split('T')[0]"-->
-                        <div class=" dark" data-comp-id="text.7" ng-bind="item.BoardingPointName"
+                        <div class=" dark" data-comp-id="text.6" ng-bind="item.BoardingPointName"
                             style="font-size: 12px;">Some text</div>
                     </div>
                 </div>
@@ -70,15 +70,15 @@
     </ion-content>
     <div class="footer-button-bar" data-comp-id="footer-bar-buttons.1"
         dynamic-floating-footer="" style="padding: 0px; margin: 0px;">
-        <div class="row" data-comp-id="row.5" style="padding: 0px; margin: 0px;">
-            <div class="col text-center" data-comp-id="column.8"
+        <div class="row" data-comp-id="row.4" style="padding: 0px; margin: 0px;">
+            <div class="col text-center" data-comp-id="column.7"
                 style="padding: 0px; border-right: 1px solid rgb(221, 221, 221);">
                 <button class="button ion-android-close button-positive button-block"
                     data-comp-id="button.4" ng-click="submitApprovals(&quot;reject&quot;)"
                     style="padding: 0px; border-radius: 0px; margin: 0px;">
                     Reject</button>
             </div>
-            <div class="col text-center positive nocolor-bg" data-comp-id="column.9"
+            <div class="col text-center positive nocolor-bg" data-comp-id="column.8"
                 style="padding: 0px; margin: 0px;">
                 <button class="button ion-android-done button-full button-positive"
                     data-comp-id="button.5" ng-click="submitApprovals(&quot;approve&quot;)"
