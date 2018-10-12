@@ -4,11 +4,11 @@ function app_specialcabcomments($scope, app,$ionicPopup, $localStorage) {
     app.init($scope, function (data) {
               if($scope.data.approvalinfo.status==2)
      {
-        $scope.data.commentlabel="Approve Comments";
+        $scope.data.commentlabel="Enter Approve Comments";
      }
      else
      {
-         $scope.data.commentlabel="Reject Comments";
+         $scope.data.commentlabel="Enter Reject Comments";
      }
     });
     $scope.sendrequest = function () {
