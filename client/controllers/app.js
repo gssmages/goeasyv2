@@ -43,7 +43,10 @@ app.loginIsAction = false;
             $scope.showfullmenu=false;
         }
 }, 2000);
-   
+   $scope.logout = function() {
+         $localStorage.$reset();
+         app.logout();
+     };
    
     var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
     
