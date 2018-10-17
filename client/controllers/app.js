@@ -42,7 +42,7 @@ app.loginIsAction = false;
             console.log("getting full menu : "+$localStorage.locationName);
             $scope.showfullmenu=false;
         }
-}, 1000);
+}, 2000);
    
    
     var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
