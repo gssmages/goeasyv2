@@ -7,10 +7,4 @@ function app_menu($scope,app,$localStorage) {
         //$scope.businessTitle = $localStorage.businessTitle;
         
     });
-    
-     $scope.logout = function() {
-         $localStorage.$reset();
-         app.logout();
-     };
- 
 }
