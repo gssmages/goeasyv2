@@ -32,9 +32,7 @@ app.loginIsAction = false;
     setInterval(function(){
  $scope.displayName = $localStorage.displayName;
  $scope.businessTitle = $localStorage.businessTitle;
-}, 1000);
-   
-   if(($localStorage.locationName=="Chennai") || ($localStorage.locationName=="Pune"))
+ if(($localStorage.locationName=="Chennai") || ($localStorage.locationName=="Pune"))
         {
             console.log("getting full menu : "+$localStorage.locationName);
             $scope.showfullmenu=true;
@@ -44,6 +42,9 @@ app.loginIsAction = false;
             console.log("getting full menu : "+$localStorage.locationName);
             $scope.showfullmenu=false;
         }
+}, 1000);
+   
+   
     var todaysdate=$filter('date')(new Date(), 'MM-dd-yyyy');
     
  $scope.menudata = function(menuname) {
