@@ -10,8 +10,8 @@
      AdhocReq :'http://gssnt806.asia.ad.flextronics.com:85/api/AdhocCabRequestApi/SaveCabOperationDetails?',
      GetFeedback :'http://gssnt806.asia.ad.flextronics.com:85/api/FeedbackApi/GetMobileQuestions?',
      SaveFeedback :'http://gssnt806.asia.ad.flextronics.com:85/api/FeedbackApi/SaveMobileFeedback?',
-     SpecialCabCIP: 'http://gssnt806.asia.ad.flextronics.com:85/api/SpecialCabRequestApi/GetSpecialCabDetails/?',
-    SpecialCabApproval: 'http://gssnt806.asia.ad.flextronics.com:85/api/SpecialCabRequestApi/SaveApproveRejectData/?'
+     SpecialCabCIP: 'http://hkdnt955.asia.ad.flextronics.com:94/api/SpecialCabRequestApi/GetSpecialCabDetails/?',
+    SpecialCabApproval: 'http://hkdnt955.asia.ad.flextronics.com:94/api/SpecialCabRequestApi/SaveApproveRejectData/?'
  };
 /*exports.urlData = {
     LoginReq : 'http://gssnte811.asia.ad.flextronics.com:4042/api/login/CheckLoginDetailEncryption?',
